@@ -8,6 +8,8 @@ layout: "single"
 
 Last updated: January 25, 2026
 
+*This Privacy Policy is provided in English only.*
+
 ## Introduction
 
 This Privacy Policy describes how Deep Breath ("we", "our", or "the app") collects, uses, and protects your information when you use our mobile application.
