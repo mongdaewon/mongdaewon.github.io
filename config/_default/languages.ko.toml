@@ -1,0 +1,19 @@
+languageCode = "ko-KR"
+languageName = "한국어"
+weight = 2
+title = "Mongdaewon"
+
+[params]
+  displayName = "KO"
+  isoCode = "ko"
+  description = "일상에 도움이 되는 앱을 만듭니다."
+  logo = "img/logo.png"
+
+[params.author]
+  name = "Mongdaewon"
+  image = "img/logo.png"
+  headline = "일상에 도움이 되는 앱을 만듭니다."
+  links = [
+    { github = "https://github.com/mongdaewon" },
+    { email = "mailto:mongdaewon@naver.com" },
+  ]

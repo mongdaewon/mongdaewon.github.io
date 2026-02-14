@@ -1,0 +1,8 @@
+baseURL = "https://mongdaewon.github.io/"
+theme = "blowfish"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

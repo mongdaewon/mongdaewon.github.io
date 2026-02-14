@@ -1,0 +1,19 @@
+languageCode = "en-US"
+languageName = "English"
+weight = 1
+title = "Mongdaewon"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  description = "We build apps that help your daily life."
+  logo = "img/logo.png"
+
+[params.author]
+  name = "Mongdaewon"
+  image = "img/logo.png"
+  headline = "We build apps that help your daily life."
+  links = [
+    { github = "https://github.com/mongdaewon" },
+    { email = "mailto:mongdaewon@naver.com" },
+  ]

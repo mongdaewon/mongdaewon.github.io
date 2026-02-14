@@ -1,0 +1,9 @@
+[[main]]
+  name = "홈"
+  pageRef = "/"
+  weight = 1
+
+[[main]]
+  name = "앱"
+  pageRef = "/apps/"
+  weight = 2
