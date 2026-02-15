@@ -24,4 +24,4 @@ summary: "간단하고 효과적인 호흡 운동 앱으로 휴식과 집중을 
 
 ### 링크
 
-- [개인정보처리방침](/ko/apps/deep-breath/privacy-policy/)
+- [개인정보처리방침](/apps/deep-breath/privacy-policy/)
