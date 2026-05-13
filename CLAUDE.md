@@ -69,3 +69,11 @@ content/
 - *.md 파일은 반드시 UTF-8 인코딩
 - Front matter는 YAML 형식 (`---` 구분자) 사용
 - 한국어로 소통
+
+## my-wiki 연동
+
+작업 전 읽기:
+- `wiki/mobile/landing-site.md` — 사이트 구조·등록 앱 현황
+
+작업 완료 후 갱신:
+- `wiki/mobile/landing-site.md` — 앱 현황 테이블 갱신
