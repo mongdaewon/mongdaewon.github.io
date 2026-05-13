@@ -6,7 +6,7 @@ summary: "Keep all your QR codes and barcodes in one place. Access them instantl
 params:
   tagline: "Your passes, always one tap away."
   icon: "icon.png"
-  ios_url: "https://apps.apple.com/app/widpass/id-PLACEHOLDER"
+  ios_url: "https://apps.apple.com/app/id6768950302"
   platform_note: "Available on iOS. Android version is not planned at this time."
   features:
     - "Auto-detect QR codes and barcodes from photos using Vision"
