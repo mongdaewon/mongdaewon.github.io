@@ -42,11 +42,15 @@ content/
 ├── _index.md / _index.ko.md          # 홈페이지
 └── apps/
     ├── _index.md / _index.ko.md      # 앱 목록 페이지
-    └── deep-breath/                   # 개별 앱 (Hugo Page Bundle)
-        ├── _index.md / _index.ko.md
-        └── privacy-policy/
-            └── index.md               # 프라이버시 정책 (영어 단일)
+    ├── deep-breath/                   # 개별 앱 (Hugo Page Bundle)
+    │   ├── _index.md / _index.ko.md
+    │   └── privacy-policy/
+    │       └── index.md               # 프라이버시 정책 (영어 단일)
+    ├── ivy-todo/                       # 동일 번들 구조
+    └── widpass/                        # 동일 번들 구조
 ```
+
+현재 등록 앱: Deep Breath, Ivy To Do, WidPass.
 
 새 앱 추가 시 `content/apps/` 아래에 동일한 번들 구조로 디렉토리 생성. 카드 썸네일은 번들 내 `feature.png` 또는 `feature.jpg` 파일로 자동 생성.
 
