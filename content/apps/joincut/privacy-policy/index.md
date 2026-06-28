@@ -21,7 +21,6 @@ This Privacy Policy describes how JoinCut ("we", "our", or "the app") collects, 
 The app uses Firebase Analytics to collect anonymous usage data to improve the app experience:
 
 - App usage patterns and feature interactions
-- App performance and crash reports
 - Device type and operating system version
 
 This data is collected automatically and cannot be used to identify you personally.
