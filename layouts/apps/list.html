@@ -1,0 +1,4 @@
+{{ define "main" }}
+  <h1>{{ if eq .Site.Language.Lang "ko" }}앱{{ else }}Apps{{ end }}</h1>
+  {{ partial "applist.html" . }}
+{{ end }}

@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <div class="hero">
+    <h1>{{ if eq .Site.Language.Lang "ko" }}앱{{ else }}Apps{{ end }}</h1>
+    <p>{{ .Site.Params.description }}</p>
+  </div>
+  {{ partial "applist.html" . }}
+{{ end }}

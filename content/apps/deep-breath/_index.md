@@ -1,10 +1,9 @@
 ---
+type: app
 title: "Deep Breath - Breathing Exercise"
 description: "A simple and effective breathing exercise app for relaxation and focus."
 summary: "A simple and effective breathing exercise app for relaxation and focus."
 ---
-
-## Deep Breath
 
 A breathing exercise app designed to help you relax, focus, and manage stress through guided breathing patterns.
 
@@ -17,11 +16,3 @@ A breathing exercise app designed to help you relax, focus, and manage stress th
 - Home screen widget
 - Reminder notifications
 - Dark mode support
-
-### Download
-
-- [Google Play Store](https://play.google.com/store/apps/details?id=com.deepbreath.app)
-
-### Links
-
-- [Privacy Policy](/apps/deep-breath/privacy-policy/)

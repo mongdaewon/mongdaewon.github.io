@@ -1,10 +1,9 @@
 ---
+type: app
 title: "Deep Breath - 호흡 운동"
 description: "간단하고 효과적인 호흡 운동 앱으로 휴식과 집중을 도와줍니다."
 summary: "간단하고 효과적인 호흡 운동 앱으로 휴식과 집중을 도와줍니다."
 ---
-
-## Deep Breath
 
 가이드 호흡 패턴을 통해 휴식, 집중, 스트레스 관리를 도와주는 호흡 운동 앱입니다.
 
@@ -17,11 +16,3 @@ summary: "간단하고 효과적인 호흡 운동 앱으로 휴식과 집중을 
 - 홈 화면 위젯
 - 리마인더 알림
 - 다크 모드 지원
-
-### 다운로드
-
-- [Google Play Store](https://play.google.com/store/apps/details?id=com.deepbreath.app)
-
-### 링크
-
-- [개인정보처리방침](/apps/deep-breath/privacy-policy/)

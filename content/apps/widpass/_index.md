@@ -13,6 +13,6 @@ params:
     - "Home screen widget with quick navigation (◀▶)"
     - "Full-screen display with maximum brightness for easy scanning"
     - "Label and reorder your passes"
-    - "100% free — no ads, no in-app purchases"
+    - "100% free - no ads, no in-app purchases"
     - "All data stored locally on your device"
 ---

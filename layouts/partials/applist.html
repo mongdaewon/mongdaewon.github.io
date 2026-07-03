@@ -1,0 +1,19 @@
+<div class="app-list">
+  {{ range $a := hugo.Data.apps.app }}
+    {{ with site.GetPage (printf "/apps/%s" $a.slug) }}
+      <div class="app-row">
+        {{ $icon := .Resources.GetMatch "icon.png" }}
+        {{ if $icon }}
+          <img class="app-ico" src="{{ $icon.RelPermalink }}" alt="{{ $a.name }}" width="60" height="60">
+        {{ else }}
+          <span class="app-ico" style="background:{{ $a.color }}">{{ $a.emoji }}</span>
+        {{ end }}
+        <span class="app-info">
+          <a class="name" href="{{ .RelPermalink }}">{{ $a.name }}</a>
+          <span class="desc">{{ .Params.summary }}</span>
+        </span>
+        <span class="app-dl">{{ partial "storebadges.html" $a }}</span>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>

@@ -1,0 +1,40 @@
+# App metadata (non-localized). Order here = display order on home & /apps.
+# Localized title/summary/body live in content/apps/<slug>/_index.md(.ko).
+# Icon = content/apps/<slug>/icon.png (real app icon). emoji/color are fallback only.
+
+[[app]]
+  slug = "ivy-todo"
+  name = "Ivy To Do"
+  emoji = "✅"
+  color = "#10b981"
+  appstore = "https://apps.apple.com/app/id6760008576"
+  googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.ivytodo"
+
+[[app]]
+  slug = "widpass"
+  name = "WidPass"
+  emoji = "🎫"
+  color = "#6366f1"
+  appstore = "https://apps.apple.com/app/id6768950302"
+
+[[app]]
+  slug = "deep-breath"
+  name = "Deep Breath"
+  emoji = "🫁"
+  color = "#0ea5e9"
+  appstore = "https://apps.apple.com/app/id6760803299"
+  googleplay = "https://play.google.com/store/apps/details?id=com.deepbreath.app"
+
+[[app]]
+  slug = "whereismycursor"
+  name = "Where Is My Cursor"
+  emoji = "🖱️"
+  color = "#f59e0b"
+  macappstore = "https://apps.apple.com/app/id6770836427"
+
+[[app]]
+  slug = "joincut"
+  name = "JoinCut"
+  emoji = "✂️"
+  color = "#ef4444"
+  appstore = "https://apps.apple.com/app/id6783549579"

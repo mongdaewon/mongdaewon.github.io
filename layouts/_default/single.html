@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <p class="backlink"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
+  <article>
+    {{ .Content }}
+  </article>
+{{ end }}

@@ -1,22 +1,2 @@
-colorScheme = "blowfish"
-defaultAppearance = "dark"
-autoSwitchAppearance = true
-enableSearch = true
-showScrollToTop = true
-showBreadcrumbs = true
-
-[homepage]
-  layout = "card"
-  showRecent = true
-  showRecentItems = 6
-  cardView = true
-  cardViewScreenWidth = false
-
-[article]
-  showSummary = true
-  showTableOfContents = false
-
-[list]
-  showCards = true
-  groupByYear = false
-  cardView = true
+# Theme params removed with Blowfish. Custom pico.css layouts live in /layouts.
+# Per-language params (description, author) are in languages.*.toml.
