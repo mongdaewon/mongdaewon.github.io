@@ -1,0 +1,16 @@
+{{ $ko := eq site.Language.Lang "ko" }}
+<h2 class="tools-title">{{ if $ko }}도구{{ else }}Tools{{ end }}</h2>
+<div class="app-list">
+  {{ range $t := hugo.Data.tools.tool }}
+    <div class="app-row">
+      <a class="app-main" href="{{ $t.url }}" target="_blank" rel="noopener">
+        <img class="app-ico" src="{{ (printf "img/tools/%s.png" $t.slug) | relURL }}" alt="" width="60" height="60">
+        <span class="app-info">
+          <span class="name">{{ if $ko }}{{ $t.name_ko | default $t.name }}{{ else }}{{ $t.name }}{{ end }}</span>
+          <span class="desc">{{ if $ko }}{{ $t.desc_ko | default $t.desc }}{{ else }}{{ $t.desc }}{{ end }}</span>
+        </span>
+      </a>
+      <span class="tool-cta"><a class="tool-link" href="{{ $t.url }}" target="_blank" rel="noopener">{{ if eq $t.kind "chrome" }}Chrome Web Store{{ else }}{{ if $ko }}웹사이트{{ else }}Visit{{ end }}{{ end }} ↗</a></span>
+    </div>
+  {{ end }}
+</div>

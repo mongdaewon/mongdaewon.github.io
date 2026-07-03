@@ -1,0 +1,39 @@
+# Web tools & browser extensions (홈 Apps 섹션 아래 "Tools"에 표시).
+# kind = "web" → "Visit/웹사이트" 버튼, "chrome" → "Chrome Web Store" 버튼.
+# 아이콘: static/img/tools/<slug>.png
+
+[[tool]]
+  slug = "itool"
+  name = "iTool"
+  name_ko = "아이툴"
+  desc = "50+ free browser-based tools for PDF, images, and text. No install, no sign-up."
+  desc_ko = "PDF·이미지·텍스트 등 50가지 넘는 무료 웹 도구. 설치·가입 없이 브라우저에서."
+  url = "https://itool.co.kr"
+  kind = "web"
+
+[[tool]]
+  slug = "youtube-transcript"
+  name = "YouTube Transcript Helper"
+  name_ko = "유튜브 자막 도우미"
+  desc = "Extract, translate, and export YouTube captions from a side panel."
+  desc_ko = "사이드패널에서 유튜브 자막을 추출·번역하고 내보내세요."
+  url = "https://chromewebstore.google.com/detail/transcript-helper-for-you/ebjhmanmdepnaebcdmlnpdcofobmocpa"
+  kind = "chrome"
+
+[[tool]]
+  slug = "naver-blog-tool"
+  name = "Naver Blog Tool"
+  name_ko = "네이버 블로그 도구"
+  desc = "Real-time character count, stats, and text-to-speech for Naver Blog."
+  desc_ko = "네이버 블로그 글쓰기에 실시간 글자수·통계·음성 읽기를 더하세요."
+  url = "https://chromewebstore.google.com/detail/%EB%84%A4%EC%9D%B4%EB%B2%84-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%8F%84%EA%B5%AC/jkkjkghapodkidgggffphckpljpkcgmg"
+  kind = "chrome"
+
+[[tool]]
+  slug = "oh-my-table"
+  name = "Oh My Table"
+  name_ko = "오 마이 테이블"
+  desc = "Detect any web table and export it to Excel, CSV, Markdown, or PNG."
+  desc_ko = "웹페이지의 표를 감지해 엑셀·CSV·마크다운·PNG로 내보내세요."
+  url = "https://chromewebstore.google.com/detail/oh-my-table/fafphgbanjjiihbnadkcbnnmnhfnpejk"
+  kind = "chrome"
