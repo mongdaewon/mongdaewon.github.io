@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 프로젝트 개요
 
-Mongdaewon 개발사의 Hugo 기반 정적 웹사이트. 모바일·데스크톱 앱 제품을 소개하는 회사 웹사이트.
+Mongdaewon 개발사의 Hugo 기반 정적 웹사이트. 모바일·맥 앱 + 웹 도구(itool.co.kr) + 크롬 확장을 소개하는 회사 웹사이트.
 
 - **사이트 URL:** https://mongdaewon.github.io/
 - **Hugo 버전:** 0.163.2 (extended) — GitHub Actions 워크플로에 고정
@@ -63,11 +63,21 @@ content/
 - 스토어 링크는 **글로벌 형태**로: 애플은 `https://apps.apple.com/app/id{ID}` (country 코드·`mt=` 제거 → Apple이 접속자 지역으로 자동 리다이렉트). Google Play는 지역 파라미터 없이 `?id=...`.
 - 필드: `appstore`, `macappstore`, `googleplay`, (선택) `comingsoon`.
 
+### 웹 도구·크롬 확장 — `data/tools.toml` (홈 "Tools" 섹션)
+
+앱 외 자사 웹 도구·브라우저 확장은 `data/tools.toml`에서 관리하며, 홈/`apps` 페이지의 Apps 리스트 **아래 "Tools" 섹션**(`partials/toolslist.html`)에 노출.
+
+- 필드: `slug`, `name`/`name_ko`, `desc`/`desc_ko`, `url`, `kind`(`"web"` | `"chrome"`).
+- `kind = "web"` → "Visit/웹사이트" 텍스트 버튼. `kind = "chrome"` → **공식 Chrome Web Store 배지**(라이트/다크 두 변형을 CSS로 테마 스왑).
+- 아이콘: `static/img/tools/<slug>.png`. (앱 아이콘과 동일하게 CSS 테두리로 크기 통일)
+- 현재: iTool(web) + 크롬 확장 3개(유튜브 자막 도우미·네이버 블로그 도구·Oh My Table).
+
 ### ⚠️ 스토어 다운로드 배지 — 순서·정렬 규칙
 
 - **버튼 순서는 홈·앱 목록·앱 상세 등 어디서든 항상 동일하게 애플(App Store) → 안드로이드(Google Play) 순으로 정렬한다.** (Mac App Store는 애플 계열이므로 App Store 다음.) 있는 것만 노출하고 없으면 생략.
 - 이 순서는 `layouts/partials/storebadges.html` **단일 파샬**이 강제한다(렌더 순서: `appstore` → `macappstore` → `googleplay`). 배지를 새로 렌더하는 곳이 생기면 반드시 이 파샬을 재사용할 것 — 순서를 손으로 나열하지 말 것.
 - 배지 이미지(`static/img/badges/app-store.png`, `google-play.png`)는 **버튼만 있는 불투명 검은 사각형**(테두리·여백 없음, 동일 크기). 라운드(`border-radius`)·테두리(`border`)·간격(`gap`)은 전부 CSS가 담당하며, 다크모드에서는 테두리를 밝게 처리해 경계를 확보한다.
+- 크롬 확장은 공식 **Chrome Web Store 배지**(`static/img/badges/chrome-web-store-light.png` = 흰배경용 투명, `-dark.png` = 컬러배경용 흰색 채움)를 `.chrome-badge.light`/`.chrome-badge.dark` 클래스로 테마 스왑한다.
 
 ### 레이아웃 (`layouts/`)
 
@@ -75,11 +85,12 @@ content/
 layouts/
 ├── _default/baseof.html      # 뼈대(pico.css + 인라인 스타일 + 헤더/푸터 + 테마 토글)
 ├── _default/single.html      # 처리방침 등 단일 페이지
-├── index.html                # 홈 (히어로 + 앱 리스트)
-├── apps/list.html            # /apps/ 목록
+├── index.html                # 홈 (히어로 + 앱 리스트 + 도구 리스트)
+├── apps/list.html            # /apps/ (앱 리스트 + 도구 리스트)
 ├── app/list.html             # 앱 상세 (type="app" 섹션)
 └── partials/
     ├── applist.html          # 앱 리스트 행 (홈·목록 공용)
+    ├── toolslist.html        # Tools 섹션 (data/tools.toml 기반)
     └── storebadges.html      # 스토어 배지 (순서 강제, 위 규칙 참조)
 ```
 
@@ -93,8 +104,8 @@ layouts/
 - `languages.en.toml` / `languages.ko.toml` — 언어별 title/description/author (`locale`/`label` 키 사용)
 - `params.toml` — 거의 비어 있음(테마 파라미터 없음)
 - `markup.toml` — goldmark(`unsafe = true`)
-- `static/` — 정적 파일(`app-ads.txt`, `img/badges/` 등), 빌드 시 사이트 루트로 복사
-- `data/apps.toml` — 앱 메타 단일 출처(위 참조)
+- `static/` — 정적 파일, 빌드 시 사이트 루트로 복사: `app-ads.txt`, 파비콘(`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `site.webmanifest` — favicon.io 패키지, head 링크는 baseof.html), `img/badges/`(스토어·크롬 배지), `img/tools/`(도구 아이콘)
+- `data/apps.toml` / `data/tools.toml` — 앱·도구 메타 단일 출처(위 참조)
 
 **경로(URL) 안정성:** 콘텐츠 슬러그/경로는 SEO·색인에 영향을 주므로 함부로 바꾸지 않는다.
 

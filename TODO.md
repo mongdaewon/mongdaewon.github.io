@@ -8,6 +8,10 @@
 - [x] 스토어 링크 글로벌 형태로 정리, ko 페이지 처리방침 링크 노출
 - [x] JoinCut·Where Is My Cursor 등록(총 5개 앱)
 - [x] CLAUDE.md 전면 갱신 + 배지 순서(애플→안드로이드) 규칙 명시
+- [x] 파비콘 적용(favicon.io 패키지 + head 링크 + webmanifest)
+- [x] 헤더 로고 사각형 제거, 브랜드·언어 스위처 소문자화(mongdaewon, en/ko)
+- [x] 홈 Apps 아래 Tools 섹션 추가(itool.co.kr + 크롬 확장 3개), data/tools.toml 단일 출처
+- [x] 크롬 확장 공식 Chrome Web Store 배지(라이트/다크 테마 스왑)
 
 ---
 
