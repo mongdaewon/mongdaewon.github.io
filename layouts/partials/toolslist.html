@@ -10,7 +10,16 @@
           <span class="desc">{{ if $ko }}{{ $t.desc_ko | default $t.desc }}{{ else }}{{ $t.desc }}{{ end }}</span>
         </span>
       </a>
-      <span class="tool-cta"><a class="tool-link" href="{{ $t.url }}" target="_blank" rel="noopener">{{ if eq $t.kind "chrome" }}Chrome Web Store{{ else }}{{ if $ko }}웹사이트{{ else }}Visit{{ end }}{{ end }} ↗</a></span>
+      <span class="tool-cta">
+        {{ if eq $t.kind "chrome" }}
+          <a class="chrome-badge-link" href="{{ $t.url }}" target="_blank" rel="noopener" aria-label="Available in the Chrome Web Store">
+            <img class="chrome-badge light" src="{{ "img/badges/chrome-web-store-light.png" | relURL }}" alt="Available in the Chrome Web Store">
+            <img class="chrome-badge dark" src="{{ "img/badges/chrome-web-store-dark.png" | relURL }}" alt="Available in the Chrome Web Store">
+          </a>
+        {{ else }}
+          <a class="tool-link" href="{{ $t.url }}" target="_blank" rel="noopener">{{ if $ko }}웹사이트{{ else }}Visit{{ end }} ↗</a>
+        {{ end }}
+      </span>
     </div>
   {{ end }}
 </div>

@@ -54,6 +54,14 @@
     .tool-cta { flex: 0 0 auto; }
     .tool-link { display: inline-block; font-size: .82rem; padding: .45rem .95rem; border-radius: 8px; border: 1px solid var(--pico-primary); color: var(--pico-primary); text-decoration: none; white-space: nowrap; }
     .tool-link:hover { background: var(--pico-primary); color: var(--pico-primary-inverse); }
+    .chrome-badge-link { display: inline-flex; line-height: 0; }
+    .chrome-badge { width: 158px; height: auto; display: block; }
+    .chrome-badge.dark { display: none; }
+    @media (prefers-color-scheme: dark) { .chrome-badge.light { display: none; } .chrome-badge.dark { display: block; } }
+    :root[data-theme="light"] .chrome-badge.light { display: block; }
+    :root[data-theme="light"] .chrome-badge.dark { display: none; }
+    :root[data-theme="dark"] .chrome-badge.light { display: none; }
+    :root[data-theme="dark"] .chrome-badge.dark { display: block; }
 
     /* app detail */
     .app-head { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.5rem; border: 0; padding: 0; }
