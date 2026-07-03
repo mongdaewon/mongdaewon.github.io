@@ -4,7 +4,7 @@ weight = 2
 title = "Mongdaewon"
 
 [params]
-  displayName = "KO"
+  displayName = "ko"
   isoCode = "ko"
   description = "일상에 도움이 되는 앱을 만듭니다."
   logo = "img/logo.png"

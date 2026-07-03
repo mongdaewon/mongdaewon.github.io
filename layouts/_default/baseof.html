@@ -17,8 +17,7 @@
 
     /* header */
     .site-header { display: flex; align-items: center; gap: 1rem; padding-block: 1rem; }
-    .brand { display: flex; align-items: center; gap: .55rem; font-weight: 700; font-size: 1.15rem; text-decoration: none; color: inherit; }
-    .brand .logo { width: 30px; height: 30px; border-radius: 7px; background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+    .brand { display: flex; align-items: center; font-weight: 700; font-size: 1.15rem; text-decoration: none; color: inherit; }
     .site-header nav { margin-left: auto; display: flex; align-items: center; gap: 1rem; font-size: .9rem; }
     .site-header nav a { text-decoration: none; }
     .langs { display: flex; gap: .4rem; }
@@ -79,7 +78,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="{{ .Site.Home.RelPermalink }}"><span class="logo"></span>Mongdaewon</a>
+    <a class="brand" href="{{ .Site.Home.RelPermalink }}">mongdaewon</a>
     <nav>
       <a href="{{ with .Site.GetPage "/apps" }}{{ .RelPermalink }}{{ end }}">{{ if eq .Site.Language.Lang "ko" }}앱{{ else }}Apps{{ end }}</a>
       <span class="langs">
