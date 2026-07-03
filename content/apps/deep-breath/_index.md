@@ -3,16 +3,10 @@ type: app
 title: "Deep Breath - Breathing Exercise"
 description: "A simple and effective breathing exercise app for relaxation and focus."
 summary: "A simple and effective breathing exercise app for relaxation and focus."
+params:
+  tagline: "Calm your mind in just a few breaths."
 ---
 
-A breathing exercise app designed to help you relax, focus, and manage stress through guided breathing patterns.
-
-### Features
-
-- Multiple breathing techniques (Box Breathing, 4-7-8 Breathing, Power Breathing, and more)
-- Beautiful animations with visual guidance
-- Background music and sound effects
-- Session history and statistics
-- Home screen widget
-- Reminder notifications
-- Dark mode support
+Follow the on-screen guide and your racing thoughts settle within minutes, no classes or equipment needed.  
+Build a daily habit that lets stress out before it piles up.  
+You get a calmer, more focused mind whenever you need it, in just a few minutes a day.

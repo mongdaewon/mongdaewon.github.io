@@ -3,17 +3,10 @@ type: app
 title: "JoinCut - Lossless Video Merge"
 description: "Cut a video into pieces, keep the parts you want, and merge them losslessly into one."
 summary: "Cut a video into pieces, keep the parts you want, and merge them losslessly into one."
+params:
+  tagline: "Merge your clips without losing a single pixel."
 ---
 
-Pick only the parts you want and join them into a single video, losslessly, with no quality loss, and fast. JoinCut splits one video into sections, lets you choose the ones you like, and stitches them together without re-encoding.
-
-### Features
-
-- Split a video into multiple sections and select the ones you want
-- Reorder sections by dragging, add or remove them anytime
-- Fine-tune each cut with a touch trimmer (1 - 8× zoom + minimap)
-- Merge everything into one clean video, losslessly, no re-encoding
-- Save straight to Photos, or share anywhere
-- Export as a GIF
-- Works on iPhone and iPad
-- Light and Dark mode
+Keep only the parts you want and join them into one clean video, with zero quality loss.  
+Because there is no re-encoding, it finishes in seconds instead of minutes.  
+You save time, storage space, and the frustration of blurry exports.

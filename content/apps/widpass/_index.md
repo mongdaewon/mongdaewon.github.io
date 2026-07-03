@@ -4,15 +4,9 @@ title: "WidPass - QR & Barcode Wallet"
 description: "Keep all your QR codes and barcodes in one place. Access them instantly from your home screen widget."
 summary: "Keep all your QR codes and barcodes in one place. Access them instantly from your home screen widget."
 params:
-  tagline: "Your passes, always one tap away."
-  icon: "icon.png"
-  ios_url: "https://apps.apple.com/app/id6768950302"
-  platform_note: "Available on iOS. Android version is not planned at this time."
-  features:
-    - "Auto-detect QR codes and barcodes from photos using Vision"
-    - "Home screen widget with quick navigation (◀▶)"
-    - "Full-screen display with maximum brightness for easy scanning"
-    - "Label and reorder your passes"
-    - "100% free - no ads, no in-app purchases"
-    - "All data stored locally on your device"
+  tagline: "All your passes, one tap away."
 ---
+
+Keep every QR code and barcode in one place and pull it up right from your home screen widget.  
+No more digging through apps or old screenshots while people wait behind you.  
+You save a few seconds at every checkout, gate, and check-in.

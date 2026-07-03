@@ -5,7 +5,7 @@
 
   <p class="backlink"><a href="{{ with .Site.GetPage "/apps" }}{{ .RelPermalink }}{{ end }}">← {{ if $ko }}앱 목록{{ else }}All apps{{ end }}</a></p>
 
-  <article>
+  <div class="app-detail">
     <header class="app-head">
       {{ $icon := .Resources.GetMatch "icon.png" }}
       {{ if $icon }}
@@ -16,21 +16,18 @@
       <div>
         <h1>{{ $a.name }}</h1>
         {{ with .Params.tagline }}<p class="tagline">{{ . }}</p>{{ end }}
-        <div class="app-dl">{{ partial "storebadges.html" $a }}</div>
-        {{ with .Params.platform_note }}<p class="platform-note">{{ . }}</p>{{ end }}
       </div>
     </header>
 
-    {{ .Content }}
+    <div class="app-benefits">
+      {{ .Content }}
+    </div>
 
-    {{/* front-matter feature list (whereismycursor, widpass) */}}
-    {{ with .Params.features }}
-      <h2>{{ if $ko }}기능{{ else }}Features{{ end }}</h2>
-      <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
-    {{ end }}
+    <div class="app-download">{{ partial "storebadges.html" $a }}</div>
 
-    {{ with .GetPage "privacy-policy" }}
-      <p><a href="{{ .RelPermalink }}">{{ if $ko }}개인정보 처리방침{{ else }}Privacy Policy{{ end }}</a></p>
-    {{ end }}
-  </article>
+    {{/* Privacy policy is English-only; on the ko site fall back to that URL. */}}
+    {{ $purl := (printf "/apps/%s/privacy-policy/" $slug) | relURL }}
+    {{ with .GetPage "privacy-policy" }}{{ $purl = .RelPermalink }}{{ end }}
+    <p class="privacy"><a href="{{ $purl }}">{{ if $ko }}개인정보 처리방침{{ else }}Privacy Policy{{ end }}</a></p>
+  </div>
 {{ end }}

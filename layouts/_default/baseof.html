@@ -30,11 +30,12 @@
     .app-list { margin-block: 1rem; }
     .app-row { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--pico-muted-border-color); }
     .app-list .app-row:last-child { border-bottom: 1px solid var(--pico-muted-border-color); }
-    .app-ico { flex: 0 0 auto; width: 60px; height: 60px; border-radius: 14px; display: grid; place-items: center; font-size: 1.9rem; color: #fff; object-fit: cover; }
-    .app-info { flex: 1; min-width: 0; }
-    .app-info a.name { display: block; font-size: 1.02rem; font-weight: 600; text-decoration: none; color: inherit; }
-    .app-info a.name:hover { color: var(--pico-primary); }
-    .app-info span.desc { color: var(--pico-muted-color); font-size: .86rem; }
+    .app-ico { flex: 0 0 auto; width: 60px; height: 60px; border-radius: 14px; display: grid; place-items: center; font-size: 1.9rem; color: #fff; object-fit: cover; border: 1px solid var(--pico-muted-border-color); }
+    .app-main { display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 0; text-decoration: none; color: inherit; }
+    .app-info { min-width: 0; }
+    .app-info .name { display: block; font-size: 1.02rem; font-weight: 600; }
+    .app-main:hover .name { color: var(--pico-primary); }
+    .app-info .desc { color: var(--pico-muted-color); font-size: .86rem; }
     .app-dl { flex: 0 0 auto; display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; justify-content: flex-end; }
     .app-dl a { display: inline-flex; line-height: 0; }
     .app-dl img.store-badge { width: 150px; height: auto; display: block; }
@@ -44,10 +45,12 @@
     .app-head { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.5rem; border: 0; padding: 0; }
     .app-head .app-ico { width: 84px; height: 84px; border-radius: 19px; font-size: 2.6rem; }
     .app-head h1 { margin: 0; font-size: 1.5rem; }
-    .app-head .tagline { margin: .2rem 0 .6rem; color: var(--pico-muted-color); }
-    .app-head .app-dl { justify-content: flex-start; margin-top: .6rem; gap: .6rem; }
-    .app-head .app-dl img.store-badge { width: 176px; }
-    .platform-note { color: var(--pico-muted-color); font-size: .82rem; margin-top: .5rem; }
+    .app-head .tagline { margin: .3rem 0 0; color: var(--pico-muted-color); font-size: 1.05rem; }
+    .app-benefits { font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; }
+    .app-download { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.5rem; }
+    .app-download a { display: inline-flex; line-height: 0; }
+    .app-download img.store-badge { width: 176px; }
+    .privacy { font-size: .85rem; }
     .backlink { font-size: .85rem; }
 
     /* home hero */

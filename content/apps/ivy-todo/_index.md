@@ -3,15 +3,10 @@ type: app
 title: "Ivy To Do - Task Checklist"
 description: "A minimal daily task manager based on the Ivy Lee Method. Focus on 6 priorities a day."
 summary: "A minimal daily task manager based on the Ivy Lee Method. Focus on 6 priorities a day."
+params:
+  tagline: "Six tasks a day. That is all you need."
 ---
 
-A minimal daily task manager based on the Ivy Lee Method. Write down up to 6 tasks each day, prioritize them, and focus on what matters most.
-
-### Features
-
-- Up to 6 tasks per day, sorted by priority
-- Check off completed tasks and carry over unfinished ones
-- History calendar with daily records and memos
-- Home screen widgets (5 types)
-- Evening and morning reminder notifications
-- Ad-free option via in-app purchase
+Write down just your six priorities and stop drowning in an endless to-do list.  
+Focus on what actually matters and finish each day with a clear head.  
+You get more done with less stress, one simple habit at a time.
