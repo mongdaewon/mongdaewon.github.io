@@ -63,7 +63,12 @@
 
     @media (max-width: 520px) {
       .app-row { flex-wrap: wrap; }
-      .app-dl { flex-basis: 100%; justify-content: flex-start; padding-left: 76px; }
+      .app-dl { flex-basis: 100%; flex-wrap: nowrap; justify-content: flex-start; padding-left: 76px; }
+      .app-dl a { flex: 0 1 150px; min-width: 0; }
+      .app-dl img.store-badge { width: 100%; }
+      .app-download { flex-wrap: nowrap; }
+      .app-download a { flex: 0 1 176px; min-width: 0; }
+      .app-download img.store-badge { width: 100%; }
       .app-head { flex-direction: column; align-items: flex-start; text-align: left; }
     }
   </style>
