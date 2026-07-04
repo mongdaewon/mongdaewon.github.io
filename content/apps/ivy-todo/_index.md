@@ -1,12 +1,12 @@
 ---
 type: app
 title: "Ivy To Do - Task Checklist"
-description: "A minimal daily task manager based on the Ivy Lee Method. Focus on 6 priorities a day."
-summary: "A minimal daily task manager based on the Ivy Lee Method. Focus on 6 priorities a day."
+description: "A simple daily to-do app based on the Ivy Lee Method. Just six tasks a day."
+summary: "A simple daily to-do app based on the Ivy Lee Method. Just six tasks a day."
 params:
-  tagline: "Six tasks a day. That is all you need."
+  tagline: "Six tasks a day. That's all you need."
 ---
 
-Write down just your six priorities and stop drowning in an endless to-do list.  
-Focus on what actually matters and finish each day with a clear head.  
-You get more done with less stress, one simple habit at a time.
+Write down just six things, and escape the endless to-do list.  
+Focus only on what really matters, and your life gets better.  
+One simple habit: less stress, more done.

@@ -1,12 +1,12 @@
 ---
 type: app
 title: "JoinCut - Lossless Video Merge"
-description: "Cut a video into pieces, keep the parts you want, and merge them losslessly into one."
-summary: "Cut a video into pieces, keep the parts you want, and merge them losslessly into one."
+description: "Pick the parts you want and merge them fast, with no quality loss."
+summary: "Pick the parts you want and merge them fast, with no quality loss."
 params:
-  tagline: "Merge your clips without losing a single pixel."
+  tagline: "Join your clips with no quality loss."
 ---
 
-Keep only the parts you want and join them into one clean video, with zero quality loss.  
-Because there is no re-encoding, it finishes in seconds instead of minutes.  
-You save time, storage space, and the frustration of blurry exports.
+Pick just the parts you want and make one clean video.  
+Merge them fast, with no quality loss.  
+Save your time and storage space.
