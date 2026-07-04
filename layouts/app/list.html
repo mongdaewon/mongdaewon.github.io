@@ -3,6 +3,28 @@
   {{ $slug := path.Base .Path }}
   {{ $a := index (where hugo.Data.apps.app "slug" $slug) 0 }}
 
+  {{/* SoftwareApplication JSON-LD for SEO/AIO. OS + sameAs derived from data/apps.toml store links. */}}
+  {{ $os := slice }}
+  {{ with $a.appstore }}{{ $os = $os | append "iOS" }}{{ end }}
+  {{ with $a.macappstore }}{{ $os = $os | append "macOS" }}{{ end }}
+  {{ with $a.googleplay }}{{ $os = $os | append "Android" }}{{ end }}
+  {{ $sameAs := slice }}
+  {{ with $a.appstore }}{{ $sameAs = $sameAs | append . }}{{ end }}
+  {{ with $a.macappstore }}{{ $sameAs = $sameAs | append . }}{{ end }}
+  {{ with $a.googleplay }}{{ $sameAs = $sameAs | append . }}{{ end }}
+  {{ $ld := dict
+    "@context" "https://schema.org"
+    "@type" "SoftwareApplication"
+    "name" $a.name
+    "description" (.Description | default .Params.summary)
+    "operatingSystem" (delimit $os ", ")
+    "url" .Permalink
+    "sameAs" $sameAs
+    "author" (dict "@type" "Organization" "name" "Mongdaewon" "url" .Site.Home.Permalink)
+  }}
+  {{ with .Resources.GetMatch "icon.png" }}{{ $ld = merge $ld (dict "image" .Permalink) }}{{ end }}
+  <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+
   <p class="backlink"><a href="{{ with .Site.GetPage "/apps" }}{{ .RelPermalink }}{{ end }}">← {{ if $ko }}앱 목록{{ else }}All apps{{ end }}</a></p>
 
   <div class="app-detail">
