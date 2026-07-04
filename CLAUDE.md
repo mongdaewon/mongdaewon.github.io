@@ -97,6 +97,7 @@ layouts/
 - CSS는 `baseof.html` 내 인라인 `<style>`에 집중. pico.css는 CDN(`jsdelivr`)에서 로드.
 - 테마(라이트/다크) 토글은 헤더에 있으며 `data-theme` + `localStorage`로 유지. 미설정 시 `prefers-color-scheme` 따름.
 - 앱 아이콘은 `.app-ico`에 CSS 테두리(`--pico-muted-border-color`)로 박스 경계를 통일.
+- **⚠️ JSON-LD 함정:** `<script type="application/ld+json">` 안에서 `{{ $dict | jsonify }}`만 쓰면 Go html/template이 `<script>` 컨텍스트로 보고 JSON 문자열을 **JS 문자열로 한 번 더 인코딩**해(`>"{\"@context\"...` 이중 이스케이프 → 구글이 파싱 못 함). 반드시 **`jsonify | safeJS`**로 끝낼 것. 현재 `app/list.html`의 SoftwareApplication 스키마가 이 패턴. 새 스키마 추가 시 동일 적용. (수정 커밋 3e4e61e)
 
 ### 설정 (`config/_default/`)
 
