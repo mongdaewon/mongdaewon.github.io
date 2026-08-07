@@ -25,7 +25,7 @@
   {{ with .Resources.GetMatch "icon.png" }}{{ $ld = merge $ld (dict "image" .Permalink) }}{{ end }}
   <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
 
-  <p class="backlink"><a href="{{ with .Site.GetPage "/apps" }}{{ .RelPermalink }}{{ end }}">← {{ if $ko }}앱 목록{{ else }}All apps{{ end }}</a></p>
+  <p class="backlink"><a href="{{ .Site.Home.RelPermalink }}">← {{ if $ko }}앱 목록{{ else }}All apps{{ end }}</a></p>
 
   <div class="app-detail">
     <header class="app-head">

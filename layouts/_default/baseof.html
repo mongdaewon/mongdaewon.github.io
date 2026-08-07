@@ -119,8 +119,9 @@
 <body>
   <header class="site-header">
     <a class="brand" href="{{ .Site.Home.RelPermalink }}">mongdaewon</a>
+    {{/* No "Apps" link: the home page IS the app list, and /apps/ is a duplicate of it
+         (GSC 2026-08: unknown to Google, 0 impressions). The brand link covers going home. */}}
     <nav>
-      <a href="{{ with .Site.GetPage "/apps" }}{{ .RelPermalink }}{{ end }}">{{ if eq .Site.Language.Lang "ko" }}앱{{ else }}Apps{{ end }}</a>
       <span class="langs">
         {{ range .AllTranslations }}
           <a href="{{ .RelPermalink }}"{{ if eq .Language.Lang $.Site.Language.Lang }} class="active"{{ end }}>{{ .Language.Params.displayName }}</a>
