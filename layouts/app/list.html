@@ -53,10 +53,12 @@
     {{/* Support mailto with the app name prefilled in the subject, so replies land in context.
          querify encodes spaces as "+"; mailto clients want %20 (RFC 6068). */}}
     {{ $subject := replace (querify "subject" (printf "[%s] %s" $a.name (cond $ko "문의" "Support"))) "+" "%20" }}
-    <p class="privacy">
-      <a href="{{ $purl }}">{{ if $ko }}개인정보 처리방침{{ else }}Privacy Policy{{ end }}</a>
-      ·
-      <a href="{{ printf "mailto:mongdaewon@naver.com?%s" $subject | safeURL }}">{{ if $ko }}문의·버그 신고{{ else }}Support &amp; Feedback{{ end }}</a>
-    </p>
+    <div class="app-links">
+      <a class="tool-link" href="{{ printf "mailto:mongdaewon@naver.com?%s" $subject | safeURL }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        {{ if $ko }}문의·버그 신고{{ else }}Support &amp; Feedback{{ end }}
+      </a>
+      <a class="quiet" href="{{ $purl }}">{{ if $ko }}개인정보 처리방침{{ else }}Privacy Policy{{ end }}</a>
+    </div>
   </div>
 {{ end }}
