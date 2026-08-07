@@ -155,7 +155,8 @@ layouts/
 ## my-wiki 연동
 
 작업 전 읽기:
-- `wiki/mobile/landing-site.md` — 사이트 구조·등록 앱 현황
+- `wiki/mobile/landing-site.md` — 앱 출시 시 이 사이트에서 하는 일의 **순서**(처리방침 URL 선확보)와 앱 쪽이 준비해 올 payload
 
-작업 완료 후 갱신:
-- `wiki/mobile/landing-site.md` — 앱 현황 테이블 갱신
+**이 파일이 구조·포맷의 진실이다.** landing-site는 디렉토리 구조·front matter·CSS 규칙을 복제하지 않고 여기로 넘긴다. 위키를 갱신할 때도 그것들을 옮겨 적지 말 것.
+
+작업 완료 후: 앱 등록·출시 상태가 바뀐 경우에만 `/wiki-sync`. (등록 앱 목록은 `data/apps.toml`이 단일 출처라 위키에 표를 두지 않는다.)
