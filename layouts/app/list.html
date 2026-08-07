@@ -50,6 +50,13 @@
     {{/* Privacy policy is English-only; on the ko site fall back to that URL. */}}
     {{ $purl := (printf "/apps/%s/privacy-policy/" $slug) | relURL }}
     {{ with .GetPage "privacy-policy" }}{{ $purl = .RelPermalink }}{{ end }}
-    <p class="privacy"><a href="{{ $purl }}">{{ if $ko }}개인정보 처리방침{{ else }}Privacy Policy{{ end }}</a></p>
+    {{/* Support mailto with the app name prefilled in the subject, so replies land in context.
+         querify encodes spaces as "+"; mailto clients want %20 (RFC 6068). */}}
+    {{ $subject := replace (querify "subject" (printf "[%s] %s" $a.name (cond $ko "문의" "Support"))) "+" "%20" }}
+    <p class="privacy">
+      <a href="{{ $purl }}">{{ if $ko }}개인정보 처리방침{{ else }}Privacy Policy{{ end }}</a>
+      ·
+      <a href="{{ printf "mailto:mongdaewon@naver.com?%s" $subject | safeURL }}">{{ if $ko }}문의·버그 신고{{ else }}Support &amp; Feedback{{ end }}</a>
+    </p>
   </div>
 {{ end }}
