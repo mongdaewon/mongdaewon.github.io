@@ -6,7 +6,7 @@ layout: "single"
 
 **WidPass - QR & Barcode Wallet**
 
-Last updated: May 13, 2026
+Last updated: August 7, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -21,7 +21,6 @@ This Privacy Policy describes how WidPass ("we", "our", or "the app") collects, 
 The app uses Firebase Analytics to collect anonymous usage data to improve the app experience:
 
 - App usage patterns and feature interactions
-- App performance and crash reports
 - Device type and operating system version
 
 This data is collected automatically and cannot be used to identify you personally.

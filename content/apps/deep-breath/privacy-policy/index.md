@@ -6,7 +6,7 @@ layout: "single"
 
 **Deep Breath - Breathing Exercise**
 
-Last updated: January 25, 2026
+Last updated: August 7, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -21,7 +21,6 @@ This Privacy Policy describes how Deep Breath ("we", "our", or "the app") collec
 The app uses Firebase Analytics to collect anonymous usage data to improve the app experience:
 
 - App usage patterns and feature interactions
-- App performance and crash reports
 - Device type and operating system version
 
 This data is collected automatically and cannot be used to identify you personally.
@@ -57,7 +56,7 @@ Our app uses the following third-party services:
 
 - **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
 - **Google AdMob** ([Privacy Policy](https://policies.google.com/privacy))
-- **Google Play Billing** - For in-app purchases, handled entirely by Google
+- **Apple StoreKit** (iOS) / **Google Play Billing** (Android) - For in-app purchases, handled entirely by Apple or Google
 
 ## Data Security
 

@@ -6,7 +6,7 @@ layout: "single"
 
 **Ivy To Do - Task Checklist**
 
-Last updated: March 7, 2026
+Last updated: August 7, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -16,7 +16,16 @@ This Privacy Policy describes how Ivy To Do ("we", "our", or "the app") collects
 
 ## Information We Collect
 
-### 1. Advertising Data
+### 1. Analytics Data
+
+The app uses Firebase Analytics to collect anonymous usage data to improve the app experience:
+
+- App usage patterns and feature interactions
+- Device type and operating system version
+
+This data is collected automatically and cannot be used to identify you personally.
+
+### 2. Advertising Data
 
 Google AdMob displays advertisements. AdMob may collect:
 
@@ -25,7 +34,7 @@ Google AdMob displays advertisements. AdMob may collect:
 
 You can opt out of personalized ads through your device's privacy settings.
 
-### 2. Local Data
+### 3. Local Data
 
 The following data is stored only on your device and is never transmitted to our servers:
 
@@ -46,12 +55,13 @@ The following data is stored only on your device and is never transmitted to our
 
 Our app uses the following third-party services:
 
+- **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
 - **Google AdMob** ([Privacy Policy](https://policies.google.com/privacy))
-- **Apple StoreKit** - For in-app purchases, handled entirely by Apple
+- **Apple StoreKit** (iOS) / **Google Play Billing** (Android) - For in-app purchases, handled entirely by Apple or Google
 
 ## Data Storage
 
-All your task data is stored locally on your device using Apple's SwiftData framework with App Groups for widget support. We do not operate any servers and have no access to your data.
+All your task data is stored locally on your device using each platform's standard app storage - Apple's SwiftData with App Groups on iOS, and Android's app storage - so that widgets can read it. We do not operate any servers and have no access to your data.
 
 ## Data Security
 

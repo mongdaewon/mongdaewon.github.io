@@ -6,7 +6,7 @@ layout: "single"
 
 **JoinCut - Lossless Video Merge**
 
-Last updated: June 28, 2026
+Last updated: August 7, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -51,7 +51,7 @@ The app requests access to your photo library only to let you pick videos to edi
 Our app uses the following third-party services:
 
 - **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
-- **Apple App Store / StoreKit** - For in-app purchases, handled entirely by Apple
+- **Apple StoreKit** (iOS) / **Google Play Billing** (Android) - For in-app purchases, handled entirely by Apple or Google
 
 ## Data Security
 
