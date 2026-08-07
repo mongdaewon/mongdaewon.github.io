@@ -2,8 +2,10 @@
 <h2 class="tools-title">{{ if $ko }}도구{{ else }}Tools{{ end }}</h2>
 <div class="app-list">
   {{ range $t := hugo.Data.tools.tool }}
+    {{/* url is the English target; url_ko overrides it on the ko site (same rule as name/desc). */}}
+    {{ $url := cond $ko ($t.url_ko | default $t.url) $t.url }}
     <div class="app-row">
-      <a class="app-main" href="{{ $t.url }}" target="_blank" rel="noopener">
+      <a class="app-main" href="{{ $url }}" target="_blank" rel="noopener">
         <img class="app-ico" src="{{ (printf "img/tools/%s.png" $t.slug) | relURL }}" alt="" width="60" height="60">
         <span class="app-info">
           <span class="name">{{ if $ko }}{{ $t.name_ko | default $t.name }}{{ else }}{{ $t.name }}{{ end }} <span class="ext" aria-hidden="true">↗</span></span>
@@ -12,12 +14,12 @@
       </a>
       <span class="tool-cta">
         {{ if eq $t.kind "chrome" }}
-          <a class="chrome-badge-link" href="{{ $t.url }}" target="_blank" rel="noopener" aria-label="Available in the Chrome Web Store">
+          <a class="chrome-badge-link" href="{{ $url }}" target="_blank" rel="noopener" aria-label="Available in the Chrome Web Store">
             <img class="chrome-badge light" src="{{ "img/badges/chrome-web-store-light.png" | relURL }}" alt="Available in the Chrome Web Store">
             <img class="chrome-badge dark" src="{{ "img/badges/chrome-web-store-dark.png" | relURL }}" alt="Available in the Chrome Web Store">
           </a>
         {{ else }}
-          <a class="tool-link" href="{{ $t.url }}" target="_blank" rel="noopener">{{ if $ko }}웹사이트{{ else }}Visit{{ end }}</a>
+          <a class="tool-link" href="{{ $url }}" target="_blank" rel="noopener">{{ if $ko }}웹사이트{{ else }}Visit{{ end }}</a>
         {{ end }}
       </span>
     </div>

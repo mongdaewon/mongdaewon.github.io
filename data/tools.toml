@@ -8,7 +8,8 @@
   name_ko = "아이툴"
   desc = "50+ free browser-based tools for PDF, images, and text. No install, no sign-up."
   desc_ko = "PDF·이미지·텍스트 등 50가지 넘는 무료 웹 도구. 설치·가입 없이 브라우저에서."
-  url = "https://itool.co.kr"
+  url = "https://itool.co.kr/en/"
+  url_ko = "https://itool.co.kr"
   kind = "web"
 
 [[tool]]

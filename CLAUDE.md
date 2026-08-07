@@ -67,7 +67,8 @@ content/
 
 앱 외 자사 웹 도구·브라우저 확장은 `data/tools.toml`에서 관리하며, 홈/`apps` 페이지의 Apps 리스트 **아래 "Tools" 섹션**(`partials/toolslist.html`)에 노출.
 
-- 필드: `slug`, `name`/`name_ko`, `desc`/`desc_ko`, `url`, `kind`(`"web"` | `"chrome"`).
+- 필드: `slug`, `name`/`name_ko`, `desc`/`desc_ko`, `url`/`url_ko`, `kind`(`"web"` | `"chrome"`).
+- **base 필드는 영어, `_ko` 접미사가 한국어 override**(없으면 base로 fallback). `url_ko`도 동일 — 예: iTool은 en `https://itool.co.kr/en/`, ko `https://itool.co.kr`.
 - `kind = "web"` → "Visit/웹사이트" 텍스트 버튼. `kind = "chrome"` → **공식 Chrome Web Store 배지**(라이트/다크 두 변형을 CSS로 테마 스왑).
 - 아이콘: `static/img/tools/<slug>.png`. (앱 아이콘과 동일하게 CSS 테두리로 크기 통일)
 - 현재: iTool(web) + 크롬 확장 3개(유튜브 자막 도우미·네이버 블로그 도구·Oh My Table).
