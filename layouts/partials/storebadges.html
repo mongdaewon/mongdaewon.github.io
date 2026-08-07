@@ -1,6 +1,8 @@
 {{- /* Official store badges, normalized to identical dimensions. Context = app data entry. */ -}}
 {{ $a := . }}
-{{ with $a.appstore }}<a href="{{ . }}" target="_blank" rel="noopener"><img class="store-badge" src="{{ "img/badges/app-store.png" | relURL }}" alt="Download on the App Store"></a>{{ end }}
-{{ with $a.macappstore }}<a href="{{ . }}" target="_blank" rel="noopener"><img class="store-badge" src="{{ "img/badges/app-store.png" | relURL }}" alt="Download on the Mac App Store"></a>{{ end }}
-{{ with $a.googleplay }}<a href="{{ . }}" target="_blank" rel="noopener"><img class="store-badge" src="{{ "img/badges/google-play.png" | relURL }}" alt="Get it on Google Play"></a>{{ end }}
+{{- /* b-apple / b-android pin each badge to its column in .app-dl, so an app with only one
+       store still leaves the other column empty instead of sliding across. */ -}}
+{{ with $a.appstore }}<a class="b-apple" href="{{ . }}" target="_blank" rel="noopener"><img class="store-badge" src="{{ "img/badges/app-store.png" | relURL }}" alt="Download on the App Store"></a>{{ end }}
+{{ with $a.macappstore }}<a class="b-apple" href="{{ . }}" target="_blank" rel="noopener"><img class="store-badge" src="{{ "img/badges/app-store.png" | relURL }}" alt="Download on the Mac App Store"></a>{{ end }}
+{{ with $a.googleplay }}<a class="b-android" href="{{ . }}" target="_blank" rel="noopener"><img class="store-badge" src="{{ "img/badges/google-play.png" | relURL }}" alt="Get it on Google Play"></a>{{ end }}
 {{ with $a.comingsoon }}<span class="badge">{{ if eq site.Language.Lang "ko" }}곧 출시{{ else }}Coming soon{{ end }}</span>{{ end }}
