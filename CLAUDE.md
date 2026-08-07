@@ -40,7 +40,7 @@ content/
 └── apps/
     ├── _index.md / _index.ko.md      # 앱 목록 페이지
     └── <slug>/                        # 개별 앱 (Hugo branch bundle)
-        ├── _index.md / _index.ko.md   # type = "app"
+        ├── _index.md / _index.ko.md   # YAML front matter, type: app
         ├── icon.png                   # 실물 앱 아이콘 (256×256)
         └── privacy-policy/
             └── index.md               # 처리방침 (영어 단일)
@@ -50,11 +50,39 @@ content/
 
 **앱 상세 페이지 콘텐츠 구조:** 앱 이름 → 1줄 킬링멘트(`params.tagline`) → 3줄 혜택(본문) → 다운로드 배지(하단) → 처리방침 링크. 본문은 기능 나열이 아니라 "사용자가 얻는 혜택" 중심으로 작성.
 
-**새 앱 추가 시:**
-1. `content/apps/<slug>/` 에 `_index.md`(+`.ko.md`) 생성, front matter에 `type = "app"`, `params.tagline`, 본문에 3줄 혜택.
+**새 앱 추가 시:** 가장 빠른 길은 기존 번들을 통째로 복사하는 것이다 — 모바일 앱은 `content/apps/joincut/`, 맥 단독은 `content/apps/whereismycursor/`.
+
+1. `content/apps/<slug>/_index.md`(+`.ko.md`). front matter는 **YAML**이며 `params.tagline`은 중첩이다:
+   ```yaml
+   ---
+   type: app
+   title: "JoinCut - Lossless Video Merge"
+   description: "..."
+   summary: "..."        # 목록에 뜨는 한 줄
+   params:
+     tagline: "..."      # 상세 페이지 1줄 킬링멘트
+   ---
+   ```
+   본문은 3줄 혜택. 줄바꿈은 줄 끝 공백 2개(hard break).
 2. `content/apps/<slug>/icon.png` (256×256 실물 아이콘) 배치.
 3. `data/apps.toml`에 `[[app]]` 항목 추가(slug, name, 스토어 URL 등).
-4. `content/apps/<slug>/privacy-policy/index.md` 처리방침 작성.
+4. `content/apps/<slug>/privacy-policy/index.md` 처리방침 작성(아래 규칙).
+
+**처리방침 섹션 규칙** (실물 5개에서 확립. 영어 단일, `layout: "single"`)
+
+항상 넣는 8개: `Introduction` / `Information We Collect` / `Information We Do NOT Collect` / `Third-Party Services` / `Data Security` / `Children's Privacy` / `Your Rights` / `Changes to This Policy` / `Contact Us`
+
+수집 실태에 따라 추가:
+
+| 섹션 | 넣는 경우 | 실물 |
+|---|---|---|
+| `Photo Library Access` | 사진·영상 라이브러리 접근 | joincut |
+| `Data Storage` · `Local Data` | 로컬·iCloud 저장 | ivy-todo · whereismycursor |
+| `Advertising` | 광고 SDK(AdMob 등) | widpass · whereismycursor |
+| `In-App Purchases` | IAP·구독 | widpass · whereismycursor |
+
+⚠️ **실태와 문구가 어긋나면 스토어 심사에서 걸린다.** Analytics만 쓰면서 crash·성능 수집 문구를 넣지 말 것.
+⚠️ **처리방침 URL은 스토어 제출 전에 확보한다.** 페이지 생성 → main push → `https://mongdaewon.github.io/apps/<slug>/privacy-policy/` 200 확인 순서.
 
 ### 앱 메타데이터 단일 출처 — `data/apps.toml`
 
