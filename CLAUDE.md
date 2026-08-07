@@ -72,14 +72,15 @@ content/
 
 항상 넣는 8개: `Introduction` / `Information We Collect` / `Information We Do NOT Collect` / `Third-Party Services` / `Data Security` / `Children's Privacy` / `Your Rights` / `Changes to This Policy` / `Contact Us`
 
-수집 실태에 따라 추가:
+`Advertising`·`In-App Purchases`는 **있든 없든 넣는다** — 없으면 "does not display any advertisements" 처럼 명시적으로 부정한다(스토어 설문과 대조되는 항목이라 침묵보다 명시가 안전).
+
+앱 기능에 따라 추가:
 
 | 섹션 | 넣는 경우 | 실물 |
 |---|---|---|
 | `Photo Library Access` | 사진·영상 라이브러리 접근 | joincut |
+| `Screen and Audio Recording` | 화면 캡처·마이크 | recnow |
 | `Data Storage` · `Local Data` | 로컬·iCloud 저장 | ivy-todo · whereismycursor |
-| `Advertising` | 광고 SDK(AdMob 등) | widpass · whereismycursor |
-| `In-App Purchases` | IAP·구독 | widpass · whereismycursor |
 
 ⚠️ **실태와 문구가 어긋나면 스토어 심사에서 걸린다.** Analytics만 쓰면서 crash·성능 수집 문구를 넣지 말 것.
 ⚠️ **처리방침 URL은 스토어 제출 전에 확보한다.** 페이지 생성 → main push → `https://mongdaewon.github.io/apps/<slug>/privacy-policy/` 200 확인 순서.
