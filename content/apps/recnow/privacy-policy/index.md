@@ -40,7 +40,7 @@ The following data is stored only on your device and is never transmitted to our
 RecNow records your screen and, if you choose, audio. This is the core function of the app, and it works entirely on your device.
 
 - **Screen capture** starts only after you grant Android's screen recording permission, and Android shows an ongoing indicator while it is active.
-- **Microphone access** is requested only when you select an audio source that includes the microphone. If you record without audio or with system audio only, the microphone is not used.
+- **Microphone permission** is requested whenever you select any audio source, including system audio only. Android requires the same permission to capture system audio as it does for the microphone. When you record system audio only, the microphone itself is never used to capture sound. If you record without audio, the permission is not requested at all.
 - Recordings are written directly to your device's storage. **They are never uploaded, transmitted, or accessible to us.**
 - You can delete any recording from within the app or from your device's gallery at any time.
 
@@ -79,7 +79,7 @@ Our app is not directed to children under 13. We do not knowingly collect person
 
 - **Delete recordings:** Remove any recording from within the app or from your device's gallery
 - **Delete local data:** Uninstalling the app removes its settings. Recordings saved to `Movies/RecNow` remain in your device's storage until you delete them
-- **Opt out of analytics:** Disable usage and diagnostics sharing in your device's Android settings
+- **Analytics data cannot identify you:** The usage data we collect is anonymous and aggregated. It contains no name, email, account, or device identifier that could be traced back to you, and it never includes the contents of your recordings. There is nothing personally identifiable for us to look up, export, or delete on request.
 
 ## Changes to This Policy
 
