@@ -95,6 +95,11 @@ layouts/
 ```
 
 - CSS는 `baseof.html` 내 인라인 `<style>`에 집중. pico.css는 CDN(`jsdelivr`)에서 로드.
+- **폰트: Pretendard Variable**(jsdelivr, dynamic-subset). `--pico-font-family`로 주입.
+- **타이포는 `:root`의 5단계 토큰만 쓴다** — `--fs-sm`(.875) `--fs-base`(1) `--fs-lg`(1.125) `--fs-xl`(1.25) `--fs-2xl`(1.5). 새 `font-size`에 임의값(`.86rem` 등)을 쓰지 말 것. 웨이트는 400·700 두 개만.
+- **radius는 `--pico-border-radius`(8px) 하나.** 앱 아이콘(14/19px)만 iOS 아이콘 관례상 예외.
+- 리스트 행은 구분선이 아니라 **간격**으로 나눈다(`.app-list { gap: 1.5rem }`). 다크에서 구분선이 ~1.3:1로 사라졌던 이력.
+- `<link rel=canonical>`은 baseof에서 생성. front matter `canonicalHome: true`인 페이지(`content/apps/_index.md*`)는 홈을 가리켜 홈/`/apps/` 중복을 정리한다.
 - 테마(라이트/다크) 토글은 헤더에 있으며 `data-theme` + `localStorage`로 유지. 미설정 시 `prefers-color-scheme` 따름.
 - 앱 아이콘은 `.app-ico`에 CSS 테두리(`--pico-muted-border-color`)로 박스 경계를 통일.
 - **⚠️ JSON-LD 함정:** `<script type="application/ld+json">` 안에서 `{{ $dict | jsonify }}`만 쓰면 Go html/template이 `<script>` 컨텍스트로 보고 JSON 문자열을 **JS 문자열로 한 번 더 인코딩**해(`>"{\"@context\"...` 이중 이스케이프 → 구글이 파싱 못 함). 반드시 **`jsonify | safeJS`**로 끝낼 것. 현재 `app/list.html`의 SoftwareApplication 스키마가 이 패턴. 새 스키마 추가 시 동일 적용. (수정 커밋 3e4e61e)

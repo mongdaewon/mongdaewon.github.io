@@ -6,7 +6,7 @@
       <a class="app-main" href="{{ $t.url }}" target="_blank" rel="noopener">
         <img class="app-ico" src="{{ (printf "img/tools/%s.png" $t.slug) | relURL }}" alt="" width="60" height="60">
         <span class="app-info">
-          <span class="name">{{ if $ko }}{{ $t.name_ko | default $t.name }}{{ else }}{{ $t.name }}{{ end }}</span>
+          <span class="name">{{ if $ko }}{{ $t.name_ko | default $t.name }}{{ else }}{{ $t.name }}{{ end }} <span class="ext" aria-hidden="true">↗</span></span>
           <span class="desc">{{ if $ko }}{{ $t.desc_ko | default $t.desc }}{{ else }}{{ $t.desc }}{{ end }}</span>
         </span>
       </a>
@@ -17,7 +17,7 @@
             <img class="chrome-badge dark" src="{{ "img/badges/chrome-web-store-dark.png" | relURL }}" alt="Available in the Chrome Web Store">
           </a>
         {{ else }}
-          <a class="tool-link" href="{{ $t.url }}" target="_blank" rel="noopener">{{ if $ko }}웹사이트{{ else }}Visit{{ end }} ↗</a>
+          <a class="tool-link" href="{{ $t.url }}" target="_blank" rel="noopener">{{ if $ko }}웹사이트{{ else }}Visit{{ end }}</a>
         {{ end }}
       </span>
     </div>
