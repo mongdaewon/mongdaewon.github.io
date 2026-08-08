@@ -39,3 +39,11 @@
   color = "#ef4444"
   appstore = "https://apps.apple.com/app/id6783549579"
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.joincut"
+
+[[app]]
+  slug = "recnow"
+  name = "RecNow"
+  emoji = "⏺"
+  color = "#e53935"
+  # Play 출시 후 googleplay URL로 교체할 것
+  comingsoon = true
