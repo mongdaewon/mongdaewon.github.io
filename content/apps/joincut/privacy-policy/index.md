@@ -53,6 +53,14 @@ Our app uses the following third-party services:
 - **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
 - **Apple StoreKit** (iOS) / **Google Play Billing** (Android) - For in-app purchases, handled entirely by Apple or Google
 
+## Advertising
+
+JoinCut does not display any advertisements. We do not use any advertising SDKs.
+
+## In-App Purchases
+
+JoinCut offers a one-time in-app purchase (JoinCut Plus) that unlocks premium features. Purchases are processed entirely by Apple or Google. We never receive or store your payment details - we only receive confirmation of whether a purchase is active.
+
 ## Data Security
 
 Your local data is stored securely on your device. We do not have access to this data. Analytics data is handled by Google according to their security standards.
