@@ -4,7 +4,7 @@ description: "Privacy Policy for iTool Mouser - Mouse Gestures for Chrome"
 layout: "single"
 ---
 
-**iTool Mouser - Right Hand**
+**iTool Mouser**
 
 Last updated: August 19, 2026
 
