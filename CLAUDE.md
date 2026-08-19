@@ -102,6 +102,15 @@ content/
 - 아이콘: `static/img/tools/<slug>.png`. (앱 아이콘과 동일하게 CSS 테두리로 크기 통일)
 - 현재: iTool(web) + 크롬 확장 3개(유튜브 자막 도우미·네이버 블로그 도구·Oh My Table).
 
+**크롬 확장의 처리방침**은 `content/apps/<slug>/privacy-policy/index.md`에 둔다(앱과 같은 경로).
+`data/apps.toml`에는 **등록하지 않는다** — `applist.html`이 apps.toml을 순회하므로 등록하지 않으면
+앱 목록·홈에 뜨지 않고 처리방침 페이지만 생긴다. 확장은 `tools.toml`이 자리이기 때문이다.
+`_index.md` 없이 `privacy-policy/`만 두면 되고, Hugo가 leaf bundle로 렌더한다(itool-mouser가 그 예).
+
+확장 처리방침에는 앱에 없는 두 절을 넣는다:
+- `Website Access` — `<all_urls>` 같은 광범위 권한이 왜 필요한지, 무엇을 **하지 않는지**
+- 외부로 나가는 통신이 있으면 그 절(예: 선택한 글자를 검색엔진으로 보내는 경우)
+
 ### ⚠️ 스토어 다운로드 배지 — 순서·정렬 규칙
 
 - **버튼 순서는 홈·앱 목록·앱 상세 등 어디서든 항상 동일하게 애플(App Store) → 안드로이드(Google Play) 순으로 정렬한다.** (Mac App Store는 애플 계열이므로 App Store 다음.) 있는 것만 노출하고 없으면 생략.
