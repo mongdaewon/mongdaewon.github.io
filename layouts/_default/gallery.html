@@ -1,0 +1,52 @@
+{{ define "main" }}
+  {{ $ko := eq .Site.Language.Lang "ko" }}
+  {{ $sites := index site.Data "quicksearch-gallery" "site" }}
+
+  <p class="backlink"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
+  <h1>{{ .Title }}</h1>
+  <div>{{ .Content }}</div>
+
+  {{/* Korean page leads with the Korean sites; the English page leads with the global ones. */}}
+  {{ $groups := cond $ko (slice "ko" "en") (slice "en" "ko") }}
+  {{ range $locale := $groups }}
+    {{ $rows := where $sites "locale" $locale }}
+    {{ with $rows }}
+      <h2 class="tools-title">
+        {{ if eq $locale "ko" }}{{ if $ko }}한국 사이트{{ else }}Korea{{ end }}
+        {{ else }}{{ if $ko }}해외 사이트{{ else }}Global{{ end }}{{ end }}
+        <small>({{ len . }})</small>
+      </h2>
+      <div class="app-list">
+        {{ range . }}
+          {{ $name := cond ($ko) (default .name .name_ko) .name }}
+          {{/* querify encodes spaces as "+"; the app reads the value literally, so make them %20.
+               Safe here because no url/name in the data file contains a real "+". */}}
+          {{ $add := printf "mdquicksearch://add?%s" (replace (querify "k" .keyword "n" $name "u" .url) "+" "%20") }}
+          <div class="app-row">
+            <code class="kw">{{ .keyword }}</code>
+            <span class="app-info">
+              <span class="name">{{ $name }}</span>
+              <span class="desc">{{ (urls.Parse .url).Host }}</span>
+            </span>
+            <a class="tool-link" href="{{ $add | safeURL }}">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              {{ if $ko }}추가{{ else }}Add{{ end }}
+            </a>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+
+  <p class="gallery-note">
+    {{ if $ko }}
+      찾는 사이트가 없나요? 앱에서 직접 추가할 수 있고, 이 목록에 넣고 싶으면
+      <a href="https://github.com/mongdaewon/mongdaewon.github.io/blob/main/data/quicksearch-gallery.toml" target="_blank" rel="noopener">quicksearch-gallery.toml</a>
+      에 PR 을 보내주세요. 주소는 그 사이트에서 실제로 한 번 검색해 확인한 것으로 부탁드립니다.
+    {{ else }}
+      Missing a site? You can add any site inside the app. To get it into this list, send a PR to
+      <a href="https://github.com/mongdaewon/mongdaewon.github.io/blob/main/data/quicksearch-gallery.toml" target="_blank" rel="noopener">quicksearch-gallery.toml</a>.
+      Please check the address on the live site first.
+    {{ end }}
+  </p>
+{{ end }}

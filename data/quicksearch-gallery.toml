@@ -1,0 +1,176 @@
+# QuickSearch for Safari - keyword gallery (/apps/quicksearch/gallery/).
+# Tapping an entry opens mdquicksearch://add and prefills the app's add form.
+#
+# Conventions (same as tools.toml): base field = English, `_ko` = Korean override.
+#   keyword  short letters typed in the address bar. Unique across this file, and
+#            must not collide with the app's built-ins: nv, az, yt, wk.
+#   name     site name shown in the app. name_ko overrides it on the Korean page.
+#   url      search address with {query} where the search words go.
+#   locale   which group it shows under: "ko" (Korea) or "en" (global/English).
+#
+# ⚠️ Every url here was checked against the live site. If you add one in a PR,
+#    search that site for a real word first and copy the resulting address -
+#    a guessed address sends people to a broken page.
+
+# ---------- Korea ----------
+
+[[site]]
+  keyword = "nm"
+  name = "Namu Wiki"
+  name_ko = "나무위키"
+  url = "https://namu.wiki/Search?q={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "dm"
+  name = "Daum"
+  name_ko = "다음"
+  url = "https://search.daum.net/search?q={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "bl"
+  name = "Naver Blog"
+  name_ko = "네이버 블로그"
+  url = "https://search.naver.com/search.naver?where=blog&query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "kn"
+  name = "Naver Knowledge iN"
+  name_ko = "네이버 지식iN"
+  url = "https://kin.naver.com/search/list.naver?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "dc"
+  name = "Naver Dictionary"
+  name_ko = "네이버 사전"
+  url = "https://dict.naver.com/search.dict?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "wt"
+  name = "Naver Webtoon"
+  name_ko = "네이버 웹툰"
+  url = "https://comic.naver.com/search?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "dn"
+  name = "Danawa"
+  name_ko = "다나와"
+  url = "https://search.danawa.com/dsearch.php?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ms"
+  name = "Musinsa"
+  name_ko = "무신사"
+  url = "https://www.musinsa.com/search/goods?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "dg"
+  name = "Daangn"
+  name_ko = "당근"
+  url = "https://www.daangn.com/search/{query}/"
+  locale = "ko"
+
+[[site]]
+  keyword = "kb"
+  name = "Kyobo Book"
+  name_ko = "교보문고"
+  url = "https://search.kyobobook.co.kr/search?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "wa"
+  name = "Watcha Pedia"
+  name_ko = "왓챠피디아"
+  url = "https://pedia.watcha.com/ko-KR/search?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "cl"
+  name = "Clien"
+  name_ko = "클리앙"
+  url = "https://www.clien.net/service/search?q={query}"
+  locale = "ko"
+
+# ---------- Global ----------
+
+[[site]]
+  keyword = "gh"
+  name = "GitHub"
+  url = "https://github.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "md"
+  name = "MDN Web Docs"
+  url = "https://developer.mozilla.org/en-US/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "hn"
+  name = "Hacker News"
+  url = "https://hn.algolia.com/?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "dh"
+  name = "Docker Hub"
+  url = "https://hub.docker.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "mp"
+  name = "Google Maps"
+  name_ko = "구글 지도"
+  url = "https://www.google.com/maps/search/{query}"
+  locale = "en"
+
+[[site]]
+  keyword = "we"
+  name = "Wikipedia (English)"
+  name_ko = "위키백과 (영문)"
+  url = "https://en.wikipedia.org/w/index.php?search={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "sc"
+  name = "Google Scholar"
+  name_ko = "구글 학술검색"
+  url = "https://scholar.google.com/scholar?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ax"
+  name = "arXiv"
+  url = "https://arxiv.org/search/?query={query}&searchtype=all"
+  locale = "en"
+
+[[site]]
+  keyword = "wf"
+  name = "Wolfram Alpha"
+  url = "https://www.wolframalpha.com/input?i={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "st"
+  name = "Steam"
+  url = "https://store.steampowered.com/search/?term={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "rt"
+  name = "Rotten Tomatoes"
+  url = "https://www.rottentomatoes.com/search?search={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "gr"
+  name = "Goodreads"
+  url = "https://www.goodreads.com/search?q={query}"
+  locale = "en"

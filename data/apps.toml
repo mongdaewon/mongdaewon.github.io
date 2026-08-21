@@ -46,3 +46,10 @@
   emoji = "⏺"
   color = "#e53935"
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.recnow"
+
+[[app]]
+  slug = "quicksearch"
+  name = "QuickSearch for Safari"
+  emoji = "🔍"
+  color = "#0a84ff"
+  comingsoon = true
