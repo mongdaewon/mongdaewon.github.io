@@ -38,3 +38,12 @@
   desc_ko = "웹페이지의 표를 감지해 엑셀·CSV·마크다운·PNG로 내보내세요."
   url = "https://chromewebstore.google.com/detail/oh-my-table/fafphgbanjjiihbnadkcbnnmnhfnpejk"
   kind = "chrome"
+
+[[tool]]
+  slug = "itool-mouser"
+  name = "iTool Mouser"
+  name_ko = "아이툴 마우저"
+  desc = "Right-drag to control tabs and pages. The path you draw and the action about to run are shown on screen."
+  desc_ko = "오른쪽 버튼을 누른 채 드래그해 탭·페이지를 조작하세요. 그리는 경로와 실행될 동작이 화면에 보입니다."
+  url = "https://chromewebstore.google.com/detail/itool-mouser/fengdkahbigcaclmhhlkgbbbmkhkpabm"
+  kind = "chrome"
