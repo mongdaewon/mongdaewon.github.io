@@ -6,7 +6,7 @@ layout: "single"
 
 **JoinCut - Lossless Video Merge**
 
-Last updated: August 7, 2026
+Last updated: August 21, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -38,6 +38,10 @@ The following data is stored only on your device and is never transmitted to our
 ## Photo Library Access
 
 The app requests access to your photo library only to let you pick videos to edit and to save the results back to Photos. Selected videos are read and processed entirely on your device, and are never uploaded anywhere.
+
+## File Access on Mac
+
+On an Apple Silicon Mac, the app also lets you open videos directly from Finder or drag them into the window, and finished videos are saved to the location you choose rather than to Photos. Files opened this way are copied into the app's own folder so they can be edited, and they never leave your Mac. The app only reads the files you pick or drop - it does not scan or browse your disk.
 
 ## Information We Do NOT Collect
 
