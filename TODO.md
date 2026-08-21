@@ -1,5 +1,15 @@
 # TODO
 
+## 20260821.1
+- [x] RecNow 앱 페이지 등록 + Google Play 출시 링크 연결 (총 6개 앱)
+- [x] JoinCut 여러 영상 합치기 기능 반영 + 처리방침 보강
+- [x] iTool Mouser 크롬 확장 처리방침 페이지 작성
+- [x] iTool Mouser 크롬 확장 Tools 목록 등록 (확장 4개)
+- [x] CLAUDE.md 갱신 (앱 6개, 확장 4개, robots.txt·서치콘솔 인증 파일 명시)
+- [ ] my-wiki `wiki/mobile/landing-site.md` 등록 현황 갱신 (RecNow·확장 4종)
+
+---
+
 ## 20260703.1
 - [x] Blowfish 테마 제거 → pico.css 기반 커스텀 layouts 재설계 (기존 URL 경로 유지)
 - [x] 앱 리스트 UI(실물 아이콘 + 공식 스토어 배지), 테마 토글, data/apps.toml 단일 출처

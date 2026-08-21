@@ -46,7 +46,7 @@ content/
             └── index.md               # 처리방침 (영어 단일)
 ```
 
-현재 등록 앱(5개): Deep Breath, Ivy To Do, WidPass, Where Is My Cursor, JoinCut.
+현재 등록 앱(6개): Deep Breath, Ivy To Do, WidPass, Where Is My Cursor, JoinCut, RecNow.
 
 **앱 상세 페이지 콘텐츠 구조:** 앱 이름 → 1줄 킬링멘트(`params.tagline`) → 3줄 혜택(본문) → 다운로드 배지(하단) → 처리방침 링크. 본문은 기능 나열이 아니라 "사용자가 얻는 혜택" 중심으로 작성.
 
@@ -100,7 +100,8 @@ content/
 - **base 필드는 영어, `_ko` 접미사가 한국어 override**(없으면 base로 fallback). `url_ko`도 동일 — 예: iTool은 en `https://itool.co.kr/en/`, ko `https://itool.co.kr`.
 - `kind = "web"` → "Visit/웹사이트" 텍스트 버튼. `kind = "chrome"` → **공식 Chrome Web Store 배지**(라이트/다크 두 변형을 CSS로 테마 스왑).
 - 아이콘: `static/img/tools/<slug>.png`. (앱 아이콘과 동일하게 CSS 테두리로 크기 통일)
-- 현재: iTool(web) + 크롬 확장 3개(유튜브 자막 도우미·네이버 블로그 도구·Oh My Table).
+- 현재: iTool(web) + 크롬 확장 4개(유튜브 자막 도우미·네이버 블로그 도구·Oh My Table·iTool Mouser).
+- **확장 문구는 확장 저장소의 `public/_locales/{en,ko}/messages.json`(`extDesc`)를 그대로 옮긴다.** 여기서 새로 쓰면 스토어 설명과 어긋난다. 아이콘도 확장의 `public/icons/icon128.png`를 복사(128px가 관례).
 
 **크롬 확장의 처리방침**은 `content/apps/<slug>/privacy-policy/index.md`에 둔다(앱과 같은 경로).
 `data/apps.toml`에는 **등록하지 않는다** — `applist.html`이 apps.toml을 순회하므로 등록하지 않으면
@@ -131,6 +132,8 @@ layouts/
     ├── applist.html          # 앱 리스트 행 (홈·목록 공용)
     ├── toolslist.html        # Tools 섹션 (data/tools.toml 기반)
     └── storebadges.html      # 스토어 배지 (순서 강제, 위 규칙 참조)
+
+layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = true)
 ```
 
 - CSS는 `baseof.html` 내 인라인 `<style>`에 집중. pico.css는 CDN(`jsdelivr`)에서 로드.
@@ -145,11 +148,11 @@ layouts/
 
 ### 설정 (`config/_default/`)
 
-- `hugo.toml` — baseURL, 다국어 기본, `disableKinds = ["taxonomy","term","RSS"]` (RSS·태그·JSON 미생성)
+- `hugo.toml` — baseURL, 다국어 기본, `enableRobotsTXT = true`, `disableKinds = ["taxonomy","term","RSS"]` (RSS·태그·JSON 미생성)
 - `languages.en.toml` / `languages.ko.toml` — 언어별 title/description/author (`locale`/`label` 키 사용)
 - `params.toml` — 거의 비어 있음(테마 파라미터 없음)
 - `markup.toml` — goldmark(`unsafe = true`)
-- `static/` — 정적 파일, 빌드 시 사이트 루트로 복사: `app-ads.txt`, 파비콘(`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `site.webmanifest` — favicon.io 패키지, head 링크는 baseof.html), `img/badges/`(스토어·크롬 배지), `img/tools/`(도구 아이콘)
+- `static/` — 정적 파일, 빌드 시 사이트 루트로 복사: `app-ads.txt`, 파비콘(`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `site.webmanifest` — favicon.io 패키지, head 링크는 baseof.html), `img/badges/`(스토어·크롬 배지), `img/tools/`(도구 아이콘), `googled24a750a4d1fac6e.html`(구글 서치콘솔 소유확인 — 지우면 인증이 풀린다)
 - `data/apps.toml` / `data/tools.toml` — 앱·도구 메타 단일 출처(위 참조)
 
 **경로(URL) 안정성:** 콘텐츠 슬러그/경로는 SEO·색인에 영향을 주므로 함부로 바꾸지 않는다.
