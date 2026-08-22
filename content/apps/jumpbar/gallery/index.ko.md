@@ -2,8 +2,6 @@
 title: "키워드 갤러리"
 description: "Jumpbar 에 바로 넣을 수 있는 키워드 모음. 추가를 누르면 앱이 열립니다."
 layout: "gallery"
-aliases:
-  - /apps/quicksearch/gallery/
 ---
 
 아래 주소는 전부 실제 사이트에서 확인한 것입니다. Jumpbar 가 깔린 아이폰에서 **추가**를 누르면 값이 채워진 채로 앱이 열립니다. 저장할지는 직접 고르세요.

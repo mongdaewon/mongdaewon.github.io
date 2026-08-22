@@ -6,8 +6,6 @@ summary: "Type a keyword before your search and Safari jumps straight to that si
 params:
   tagline: "Search any site straight from the Safari address bar."
   gallery: true
-aliases:
-  - /apps/quicksearch/
 ---
 
 Type `yt swiftui` in the address bar and land on YouTube results, not on a search page you still have to click through.  

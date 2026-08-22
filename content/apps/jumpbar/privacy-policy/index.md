@@ -2,8 +2,6 @@
 title: "Privacy Policy - Jumpbar"
 description: "Privacy Policy for Jumpbar - Keyword Search Shortcuts"
 layout: "single"
-aliases:
-  - /apps/quicksearch/privacy-policy/
 ---
 
 **Jumpbar**

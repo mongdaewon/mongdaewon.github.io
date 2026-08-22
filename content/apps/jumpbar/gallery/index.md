@@ -2,8 +2,6 @@
 title: "Keyword Gallery"
 description: "Ready-made keyword shortcuts for Jumpbar. Tap Add to send one to the app."
 layout: "gallery"
-aliases:
-  - /apps/quicksearch/gallery/
 ---
 
 Every address below was checked against the live site. Tap **Add** on an iPhone with Jumpbar installed and the app opens with the fields filled in - you decide whether to save.
