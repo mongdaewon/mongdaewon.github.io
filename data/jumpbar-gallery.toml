@@ -1,5 +1,5 @@
-# QuickSearch for Safari - keyword gallery (/apps/quicksearch/gallery/).
-# Tapping an entry opens mdquicksearch://add and prefills the app's add form.
+# Jumpbar - keyword gallery (/apps/jumpbar/gallery/).
+# Tapping an entry opens mdjumpbar://add and prefills the app's add form.
 #
 # Conventions (same as tools.toml): base field = English, `_ko` = Korean override.
 #   keyword  what you type in the address bar. Unique across this file, and must not

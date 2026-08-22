@@ -48,8 +48,8 @@
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.recnow"
 
 [[app]]
-  slug = "quicksearch"
-  name = "QuickSearch for Safari"
+  slug = "jumpbar"
+  name = "Jumpbar"
   emoji = "🔍"
   color = "#0a84ff"
   comingsoon = true

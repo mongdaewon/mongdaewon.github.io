@@ -1,10 +1,12 @@
 ---
-title: "Privacy Policy - QuickSearch for Safari"
-description: "Privacy Policy for QuickSearch for Safari - Keyword Search Shortcuts"
+title: "Privacy Policy - Jumpbar"
+description: "Privacy Policy for Jumpbar - Keyword Search Shortcuts"
 layout: "single"
+aliases:
+  - /apps/quicksearch/privacy-policy/
 ---
 
-**QuickSearch for Safari**
+**Jumpbar**
 
 Last updated: August 22, 2026
 
@@ -12,7 +14,7 @@ Last updated: August 22, 2026
 
 ## Introduction
 
-This Privacy Policy describes how QuickSearch for Safari ("we", "our", or "the app") handles your information when you use the app and its Safari extension.
+This Privacy Policy describes how Jumpbar ("we", "our", or "the app") handles your information when you use the app and its Safari extension.
 
 The short version: the app collects nothing and sends nothing to us. There is no server, no account, and no analytics. Everything below explains that in detail.
 
@@ -26,7 +28,7 @@ The following is stored on your device only, in a shared app group container tha
 
 - The sites you added, each with its keywords, site name, and search address
 - Which built-in keywords you turned off
-- Whether you own QuickSearch Plus (a yes/no flag, mirrored from the App Store)
+- Whether you own Jumpbar Plus (a yes/no flag, mirrored from the App Store)
 
 Deleting the app removes this data.
 
@@ -51,7 +53,7 @@ The redirect then loads the site you chose, so that site receives your search wo
 
 ## Adding Sites from the Web Gallery
 
-Our website offers a gallery of ready-made keywords. Tapping one opens a link (`mdquicksearch://`) that fills in the add form inside the app. The app never saves anything from such a link on its own - you see the values first and choose whether to save them.
+Our website offers a gallery of ready-made keywords. Tapping one opens a link (`mdjumpbar://`) that fills in the add form inside the app. The app never saves anything from such a link on its own - you see the values first and choose whether to save them.
 
 The gallery is a static page on GitHub Pages. It has no forms, no accounts, and we run no analytics on it.
 
@@ -76,7 +78,7 @@ The app does not display any advertisements.
 
 ## In-App Purchases
 
-The app offers one optional purchase, **QuickSearch Plus**. It is a one-time purchase, not a subscription, and it removes the limit on how many sites and keywords you can add yourself.
+The app offers one optional purchase, **Jumpbar Plus**. It is a one-time purchase, not a subscription, and it removes the limit on how many sites and keywords you can add yourself.
 
 Apple processes the payment. We never see or receive your payment details, and no purchase information is sent to us - the app asks the App Store directly whether this Apple Account owns Plus, and stores only a yes/no answer on your device. Apple's handling of the transaction is covered by [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
 

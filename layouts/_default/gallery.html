@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ $ko := eq .Site.Language.Lang "ko" }}
-  {{ $sites := index site.Data "quicksearch-gallery" "site" }}
+  {{ $sites := index site.Data "jumpbar-gallery" "site" }}
 
   <p class="backlink"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
   <h1>{{ .Title }}</h1>
@@ -24,7 +24,7 @@
                anyway, and a column of two-letter codes is noise on a phone. */}}
           {{/* querify encodes spaces as "+"; the app reads the value literally, so make them %20.
                Safe here because no url/name in the data file contains a real "+". */}}
-          {{ $add := printf "mdquicksearch://add?%s" (replace (querify "k" .keyword "n" $name "u" .url) "+" "%20") }}
+          {{ $add := printf "mdjumpbar://add?%s" (replace (querify "k" .keyword "n" $name "u" .url) "+" "%20") }}
           <div class="gal-row">
             <p class="gal-head">
               <span class="gal-name">{{ $name }}</span>
@@ -44,11 +44,11 @@
   <p class="gallery-note">
     {{ if $ko }}
       찾는 사이트가 없나요? 앱에서 직접 추가할 수 있고, 이 목록에 넣고 싶으면
-      <a href="https://github.com/mongdaewon/mongdaewon.github.io/blob/main/data/quicksearch-gallery.toml" target="_blank" rel="noopener">quicksearch-gallery.toml</a>
+      <a href="https://github.com/mongdaewon/mongdaewon.github.io/blob/main/data/jumpbar-gallery.toml" target="_blank" rel="noopener">jumpbar-gallery.toml</a>
       에 PR 을 보내주세요. 주소는 그 사이트에서 실제로 한 번 검색해 확인한 것으로 부탁드립니다.
     {{ else }}
       Missing a site? You can add any site inside the app. To get it into this list, send a PR to
-      <a href="https://github.com/mongdaewon/mongdaewon.github.io/blob/main/data/quicksearch-gallery.toml" target="_blank" rel="noopener">quicksearch-gallery.toml</a>.
+      <a href="https://github.com/mongdaewon/mongdaewon.github.io/blob/main/data/jumpbar-gallery.toml" target="_blank" rel="noopener">jumpbar-gallery.toml</a>.
       Please check the address on the live site first.
     {{ end }}
   </p>

@@ -1,11 +1,13 @@
 ---
 type: app
-title: "QuickSearch for Safari - 키워드로 바로 검색"
+title: "Jumpbar - 키워드로 바로 검색"
 description: "주소창에 키워드를 먼저 치면 그 사이트 검색 결과로 바로 갑니다."
 summary: "주소창에 키워드를 먼저 치면 그 사이트 검색 결과로 바로 갑니다."
 params:
   tagline: "사파리 주소창에서 원하는 사이트를 바로 검색하세요."
   gallery: true
+aliases:
+  - /apps/quicksearch/
 ---
 
 주소창에 `yt 커피` 라고 치면 유튜브 검색 결과로 바로 갑니다.  
