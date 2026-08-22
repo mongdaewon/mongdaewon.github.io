@@ -139,6 +139,14 @@
 # ---------- Global ----------
 
 [[site]]
+  keyword = "dd"
+  name = "DuckDuckGo"
+  desc = "Search without being tracked or profiled."
+  desc_ko = "추적·프로파일링 없는 검색."
+  url = "https://duckduckgo.com/?q={query}"
+  locale = "en"
+
+[[site]]
   keyword = "gh"
   name = "GitHub"
   url = "https://github.com/search?q={query}"
