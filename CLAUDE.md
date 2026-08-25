@@ -50,6 +50,11 @@ content/
 
 **앱 상세 페이지 콘텐츠 구조:** 앱 이름 → 1줄 킬링멘트(`params.tagline`) → 3줄 혜택(본문) → 다운로드 배지(하단) → 처리방침 링크. 본문은 기능 나열이 아니라 "사용자가 얻는 혜택" 중심으로 작성.
 
+**동작 데모(선택):** 번들에 `demo-<lang>.gif`(예: `demo-ko.gif`)를 두면 혜택 본문 옆(모바일은 위)에
+자동으로 붙는다. **언어가 맞는 파일이 없으면 아무것도 안 나온다** — 한국어 사파리 화면을 영어
+페이지에 붙이면 없느니만 못하다. 실기기 화면 기록에서 뽑고, 변환은
+`ffmpeg`(palettegen/paletteuse) → `gifsicle -O3 --lossy` 순서. 폭 540px 이면 모바일에서 딱 2배다.
+
 **새 앱 추가 시:** 가장 빠른 길은 기존 번들을 통째로 복사하는 것이다 — 모바일 앱은 `content/apps/joincut/`, 맥 단독은 `content/apps/whereismycursor/`.
 
 1. `content/apps/<slug>/_index.md`(+`.ko.md`). front matter는 **YAML**이며 `params.tagline`은 중첩이다:
