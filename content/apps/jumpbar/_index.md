@@ -8,7 +8,7 @@ params:
   gallery: true
 ---
 
-Type `yt swiftui` in the address bar and land on YouTube results, not on a search page you still have to click through.  
+Type `yt coffee` in the address bar and land on YouTube results, not on a search page you still have to click through.  
 Add any site yourself - search it once, paste the address, and the app works out the rest.  
 Your search words never leave your iPhone. No account, no tracking, no ads.  
 Browse the [keyword gallery](gallery/) and add ready-made sites with one tap.
