@@ -23,12 +23,22 @@
 #    a guessed address sends people to a broken page.
 
 # ---------- Korea ----------
+# Keywords are hangul initials so a Korean typist never switches keyboards mid-search.
+# Grouped by what people are looking for, because the page renders in file order.
 
+# 검색·뉴스
 [[site]]
   keyword = "ㄷ"
   name = "Daum"
   name_ko = "다음"
   url = "https://search.daum.net/search?q={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄴ"
+  name = "Naver News"
+  name_ko = "네이버 뉴스"
+  url = "https://search.naver.com/search.naver?where=news&query={query}"
   locale = "ko"
 
 [[site]]
@@ -39,24 +49,54 @@
   locale = "ko"
 
 [[site]]
+  keyword = "ㅋㅍ"
+  name = "Naver Cafe"
+  name_ko = "네이버 카페"
+  url = "https://cafe.naver.com/ca-fe/home/search/articles?q={query}"
+  locale = "ko"
+
+[[site]]
   keyword = "ㅈ"
   name = "Naver Knowledge iN"
   name_ko = "네이버 지식iN"
   url = "https://kin.naver.com/search/list.naver?query={query}"
   locale = "ko"
 
+# 지도
 [[site]]
-  keyword = "ㅅ"
-  name = "Naver Dictionary"
-  name_ko = "네이버 사전"
-  url = "https://dict.naver.com/search.dict?query={query}"
+  keyword = "ㅈㄷ"
+  name = "Naver Map"
+  name_ko = "네이버 지도"
+  url = "https://map.naver.com/p/search/{query}"
   locale = "ko"
 
 [[site]]
-  keyword = "ㅇ"
-  name = "Naver Webtoon"
-  name_ko = "네이버 웹툰"
-  url = "https://comic.naver.com/search?keyword={query}"
+  keyword = "ㅋㅁ"
+  name = "KakaoMap"
+  name_ko = "카카오맵"
+  url = "https://map.kakao.com/?q={query}"
+  locale = "ko"
+
+# 쇼핑
+[[site]]
+  keyword = "ㅅㅍ"
+  name = "Naver Shopping"
+  name_ko = "네이버 쇼핑"
+  url = "https://search.shopping.naver.com/search/all?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅅㅇ"
+  name = "11st"
+  name_ko = "11번가"
+  url = "https://search.11st.co.kr/Search.tmall?kwd={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅈㅁ"
+  name = "Gmarket"
+  name_ko = "G마켓"
+  url = "https://www.gmarket.co.kr/n/search?keyword={query}"
   locale = "ko"
 
 [[site]]
@@ -67,6 +107,13 @@
   locale = "ko"
 
 [[site]]
+  keyword = "ㄷㄱ"
+  name = "Daangn"
+  name_ko = "당근"
+  url = "https://www.daangn.com/search/{query}/"
+  locale = "ko"
+
+[[site]]
   keyword = "ㅁ"
   name = "Musinsa"
   name_ko = "무신사"
@@ -74,12 +121,20 @@
   locale = "ko"
 
 [[site]]
-  keyword = "ㄷㄱ"
-  name = "Daangn"
-  name_ko = "당근"
-  url = "https://www.daangn.com/search/{query}/"
+  keyword = "ㅇㄴ"
+  name = "Ohou"
+  name_ko = "오늘의집"
+  url = "https://ohou.se/search/index?query={query}"
   locale = "ko"
 
+[[site]]
+  keyword = "ㅋㄹ"
+  name = "Kurly"
+  name_ko = "마켓컬리"
+  url = "https://www.kurly.com/search?sword={query}"
+  locale = "ko"
+
+# 책
 [[site]]
   keyword = "ㄱ"
   name = "Kyobo Book"
@@ -88,6 +143,28 @@
   locale = "ko"
 
 [[site]]
+  keyword = "ㅇㅅ"
+  name = "YES24"
+  name_ko = "예스24"
+  url = "https://www.yes24.com/product/search?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇㄹ"
+  name = "Aladin"
+  name_ko = "알라딘"
+  url = "https://www.aladin.co.kr/search/wsearchresult.aspx?SearchWord={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄹㄷ"
+  name = "RIDIBOOKS"
+  name_ko = "리디"
+  url = "https://ridibooks.com/search?q={query}"
+  locale = "ko"
+
+# 영상·음악·웹툰
+[[site]]
   keyword = "ㅇㅊ"
   name = "Watcha Pedia"
   name_ko = "왓챠피디아"
@@ -95,10 +172,111 @@
   locale = "ko"
 
 [[site]]
+  keyword = "ㅌㅂ"
+  name = "TVING"
+  name_ko = "티빙"
+  url = "https://www.tving.com/search?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄹㅍ"
+  name = "Laftel"
+  name_ko = "라프텔"
+  url = "https://laftel.net/search?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅁㄹ"
+  name = "Melon"
+  name_ko = "멜론"
+  url = "https://www.melon.com/search/total/index.htm?q={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇ"
+  name = "Naver Webtoon"
+  name_ko = "네이버 웹툰"
+  url = "https://comic.naver.com/search?keyword={query}"
+  locale = "ko"
+
+# 커뮤니티
+[[site]]
   keyword = "ㅋ"
   name = "Clien"
   name_ko = "클리앙"
   url = "https://www.clien.net/service/search?q={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄷㅅ"
+  name = "DCinside"
+  name_ko = "디시인사이드"
+  url = "https://search.dcinside.com/post/q/{query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄹㄹ"
+  name = "Ruliweb"
+  name_ko = "루리웹"
+  url = "https://bbs.ruliweb.com/search?q={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅃ"
+  name = "Ppomppu"
+  name_ko = "뽐뿌"
+  url = "https://www.ppomppu.co.kr/search_bbs.php?search_type=sub_memo&keyword={query}"
+  locale = "ko"
+
+# 사전·논문
+[[site]]
+  keyword = "ㅅ"
+  name = "Naver Dictionary"
+  name_ko = "네이버 사전"
+  url = "https://dict.naver.com/search.dict?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄱㅇ"
+  name = "Korean Standard Dictionary"
+  name_ko = "표준국어대사전"
+  url = "https://stdict.korean.go.kr/search/searchResult.do?searchKeyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄴㅁ"
+  name = "RISS"
+  name_ko = "RISS 논문"
+  url = "https://www.riss.kr/search/Search.do?query={query}"
+  locale = "ko"
+
+# 생활
+[[site]]
+  keyword = "ㅈㅋ"
+  name = "JobKorea"
+  name_ko = "잡코리아"
+  url = "https://www.jobkorea.co.kr/Search/?stext={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅅㄹ"
+  name = "Saramin"
+  name_ko = "사람인"
+  url = "https://www.saramin.co.kr/zf_user/search?searchword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄴㅈ"
+  name = "Yanolja"
+  name_ko = "야놀자"
+  url = "https://www.yanolja.com/search/{query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅈㅂ"
+  name = "Government24"
+  name_ko = "정부24"
+  url = "https://www.gov.kr/search?srhQuery={query}"
   locale = "ko"
 
 # ---------- Global ----------

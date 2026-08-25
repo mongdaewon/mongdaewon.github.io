@@ -84,9 +84,12 @@
     .gal-row { display: flex; align-items: center; gap: .6rem; min-height: 44px;
                padding-block: .35rem; border-top: 1px solid var(--rule); }
     .gal-list .gal-row:last-child { border-bottom: 1px solid var(--rule); }
-    .gal-kw { flex: 0 0 2.2rem; text-align: center; font-size: var(--fs-sm); font-weight: 700;
-              color: var(--pico-primary); border: 1px solid var(--pico-muted-border-color);
-              border-radius: var(--pico-border-radius); padding: .1rem 0; }
+    /* min-width, not a fixed basis: every current keyword (1-2 glyphs) lands on the same
+       width so the column stays straight, and a longer one grows instead of spilling out. */
+    .gal-kw { flex: 0 0 auto; min-width: 2.4rem; text-align: center;
+              font-size: var(--fs-sm); font-weight: 700; color: var(--pico-primary);
+              border: 1px solid var(--pico-muted-border-color);
+              border-radius: var(--pico-border-radius); padding: .1rem .25rem; }
     .gal-name { font-size: var(--fs-base); font-weight: 700; white-space: nowrap; }
     /* Pushed to the right edge and clipped rather than wrapped - a wrapped host would break
        the fixed row height that makes the list scannable. */
