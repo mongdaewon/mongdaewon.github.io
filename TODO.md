@@ -1,5 +1,21 @@
 # TODO
 
+## 20260825.1
+- [x] 갤러리 목록을 한 줄(44px)로 슬림화 - 설명 제거, 키워드 노출, 호스트를 사이트 링크로
+- [x] 기본 키워드와 겹치던 5개 제거 (나무위키·한국어 위키백과·DuckDuckGo·GitHub·Google Maps)
+- [x] 갤러리 사이트 25 → 66개 (한국 35 · 해외 31), 주소 전부 실측 검증
+- [x] 앱과 같은 3x3 아이콘 (갤러리 제목 + 앱 상세 링크, `partials/galleryicon.html`)
+- [x] UI 감사 지적 8건 수정 (칩/버튼 혼동, 안 보이는 테두리 4곳, h1~h3 토큰화, 호스트 잘림)
+- [x] 갤러리 하단을 PR 요청 → 문의 메일로 교체 + 무료 한도(직접 추가 1개) 안내
+- [x] Jumpbar 동작 데모 GIF (ko/en, 4.0초, 언어별 `demo-<lang>.gif`)
+- [x] 영문 예시 `yt swiftui` → `yt coffee` (앱 온보딩과 결이 맞게)
+- [x] CLAUDE.md 갱신 (앱 7개, 갤러리 규약, 데모 GIF 규약, 레이아웃 트리)
+- [ ] my-wiki `wiki/mobile/landing-site.md` 등록 현황 갱신 (RecNow·확장 4종·Jumpbar)
+- [ ] Jumpbar 심사 통과 후 `data/apps.toml`의 `comingsoon` → 실제 App Store 링크로 교체
+- [ ] 영문 데모 GIF 중간에 구글 스피너만 도는 0.7초 - 거슬리면 그 구간만 더 당길 것 (보류: 4초 중 0.7초라 흐름은 읽힘)
+
+---
+
 ## 20260821.1
 - [x] RecNow 앱 페이지 등록 + Google Play 출시 링크 연결 (총 6개 앱)
 - [x] JoinCut 여러 영상 합치기 기능 반영 + 처리방침 보강

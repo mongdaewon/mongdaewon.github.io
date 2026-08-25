@@ -46,7 +46,7 @@ content/
             └── index.md               # 처리방침 (영어 단일)
 ```
 
-현재 등록 앱(6개): Deep Breath, Ivy To Do, WidPass, Where Is My Cursor, JoinCut, RecNow.
+현재 등록 앱(7개): Deep Breath, Ivy To Do, WidPass, Where Is My Cursor, JoinCut, RecNow, Jumpbar.
 
 **앱 상세 페이지 콘텐츠 구조:** 앱 이름 → 1줄 킬링멘트(`params.tagline`) → 3줄 혜택(본문) → 다운로드 배지(하단) → 처리방침 링크. 본문은 기능 나열이 아니라 "사용자가 얻는 혜택" 중심으로 작성.
 
@@ -152,13 +152,15 @@ content/
 layouts/
 ├── _default/baseof.html      # 뼈대(pico.css + 인라인 스타일 + 헤더/푸터 + 테마 토글)
 ├── _default/single.html      # 처리방침 등 단일 페이지
+├── _default/gallery.html     # Jumpbar 키워드 갤러리 (layout: "gallery")
 ├── index.html                # 홈 (히어로 + 앱 리스트 + 도구 리스트)
 ├── apps/list.html            # /apps/ (앱 리스트 + 도구 리스트)
-├── app/list.html             # 앱 상세 (type="app" 섹션)
+├── app/list.html             # 앱 상세 (type="app" 섹션, 데모 GIF 포함)
 └── partials/
     ├── applist.html          # 앱 리스트 행 (홈·목록 공용)
     ├── toolslist.html        # Tools 섹션 (data/tools.toml 기반)
-    └── storebadges.html      # 스토어 배지 (순서 강제, 위 규칙 참조)
+    ├── storebadges.html      # 스토어 배지 (순서 강제, 위 규칙 참조)
+    └── galleryicon.html      # 3x3 아이콘 (갤러리 제목 + 앱 상세 링크 공용)
 
 layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = true)
 ```
