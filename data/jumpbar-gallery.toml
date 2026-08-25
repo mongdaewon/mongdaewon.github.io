@@ -18,9 +18,10 @@
 # Do not list a site the app already ships as a built-in - it would show up twice on the
 # user's screen with a different keyword.
 #
-# ⚠️ Every url here was checked against the live site. If you add one in a PR,
-#    search that site for a real two-word phrase first and copy the resulting address -
-#    a guessed address sends people to a broken page.
+# ⚠️ Every url here was checked against the live site. Before adding one, search that
+#    site for a real two-word phrase and copy the resulting address - a guessed address
+#    sends people to a broken page. Nothing here goes through a PR review, so nobody else
+#    checks the address for you.
 
 # ---------- Korea ----------
 # Keywords are hangul initials so a Korean typist never switches keyboards mid-search.

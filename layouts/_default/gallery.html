@@ -40,15 +40,20 @@
     {{ end }}
   {{ end }}
 
+  {{/* Same mailto pattern as the app page - a subject that says which page it came from,
+       so the reply lands in context. querify encodes spaces as "+"; mailto wants %20.
+       Worded as a support line, not a request form - "보내주시면 넣어드립니다" reads like a
+       promise to add every site someone sends. */}}
+  {{ $subject := replace (querify "subject" (cond $ko "[Jumpbar] 갤러리 문의" "[Jumpbar] Gallery")) "+" "%20" }}
   <p class="gallery-note">
     {{ if $ko }}
-      찾는 사이트가 없나요? 앱에서 직접 추가할 수 있고, 이 목록에 넣고 싶으면
-      <a href="https://github.com/mongdaewon/mongdaewon.github.io/blob/main/data/jumpbar-gallery.toml" target="_blank" rel="noopener">jumpbar-gallery.toml</a>
-      에 PR 을 보내주세요. 주소는 그 사이트에서 실제로 한 번 검색해 확인한 것으로 부탁드립니다.
+      찾는 사이트가 없나요? 앱에서 직접 추가할 수 있습니다.<br>
+      궁금한 점이나 여기 주소가 잘못 열리는 게 있으면
+      <a href="{{ printf "mailto:mongdaewon@naver.com?%s" $subject | safeURL }}">메일로 알려주세요</a>.
     {{ else }}
-      Missing a site? You can add any site inside the app. To get it into this list, send a PR to
-      <a href="https://github.com/mongdaewon/mongdaewon.github.io/blob/main/data/jumpbar-gallery.toml" target="_blank" rel="noopener">jumpbar-gallery.toml</a>.
-      Please check the address on the live site first.
+      Missing a site? You can add any site inside the app.<br>
+      If you have a question, or an address here does not work,
+      <a href="{{ printf "mailto:mongdaewon@naver.com?%s" $subject | safeURL }}">email us</a>.
     {{ end }}
   </p>
 {{ end }}
