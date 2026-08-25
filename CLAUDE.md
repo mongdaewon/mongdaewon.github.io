@@ -100,6 +100,8 @@ content/
 - 필드: `keyword`, `name`(+`name_ko`), `url`(검색어 자리는 `{query}`), `locale`(`"ko"` | `"en"`).
   **설명 필드는 없다** — 66줄짜리 목록에 한 줄씩 붙으면 벽이 된다.
 - 행은 `키워드 - 이름 - 호스트 - ＋` 한 줄(44px)이고, **호스트는 그 사이트로 나가는 링크**다.
+  행에서 테두리·primary 색을 쓰는 건 `＋` 하나뿐이다 — 키워드에도 칩을 두르면 안 눌리는 게 버튼처럼 보인다.
+  좁은 화면에서 자리가 모자라면 **호스트가 줄고 이름은 안 줄인다**(이름이 그 행의 정체다).
 - **파일 순서가 곧 페이지 순서다.** 카테고리 주석으로 묶어 둔다.
 - 키워드는 파일 안에서 유일해야 하고 **앱 기본 키워드(`Shared/Presets.swift`)와도 겹치면 안 된다**
   — 겹치면 한 화면에 같은 사이트가 두 번 뜬다. 지역별 기본(`rk` `kl` `lb` `fk` `ch`)까지 본다.
@@ -156,6 +158,7 @@ layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = tru
 - CSS는 `baseof.html` 내 인라인 `<style>`에 집중. pico.css는 CDN(`jsdelivr`)에서 로드.
 - **폰트: Pretendard Variable**(jsdelivr, dynamic-subset). `--pico-font-family`로 주입.
 - **타이포는 `:root`의 5단계 토큰만 쓴다** — `--fs-sm`(.875) `--fs-base`(1) `--fs-lg`(1.125) `--fs-xl`(1.25) `--fs-2xl`(1.5). 새 `font-size`에 임의값(`.86rem` 등)을 쓰지 말 것. 웨이트는 400·700 두 개만.
+  `h1`·`h2`·`h3`도 이 토큰에 묶여 있다(`baseof.html`) — pico 기본값(2rem/1.75rem/1.5rem)은 스케일 밖이라 제목 크기가 페이지마다 달라졌었다.
 - **radius는 `--pico-border-radius`(8px) 하나.** 앱 아이콘(14/19px)만 iOS 아이콘 관례상 예외.
 - 리스트 행은 구분선이 아니라 **간격**으로 나눈다(`.app-list { gap: 1.5rem }`). 다크에서 구분선이 ~1.3:1로 사라졌던 이력.
 - `<link rel=canonical>`은 baseof에서 생성. front matter `canonicalHome: true`인 페이지(`content/apps/_index.md*`)는 홈을 가리켜 홈/`/apps/` 중복을 정리한다.
