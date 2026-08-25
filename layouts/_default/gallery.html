@@ -30,7 +30,9 @@
             <span class="gal-name">{{ $name }}</span>
             {{/* The host doubles as a link to the site itself - the row is the only place that
                  says which site (and which country's edition) this actually is. */}}
-            <a class="gal-host" href="{{ printf "%s://%s/" $u.Scheme $u.Host }}" target="_blank" rel="noopener">{{ $u.Host }}</a>
+            {{/* Drop the leading www. like the app's displayHost does - four characters back,
+                 nothing lost, and it keeps more hosts off the ellipsis on a phone. */}}
+            <a class="gal-host" href="{{ printf "%s://%s/" $u.Scheme $u.Host }}" target="_blank" rel="noopener">{{ strings.TrimPrefix "www." $u.Host }}</a>
             <a class="gal-add" href="{{ $add | safeURL }}" aria-label="{{ $name }} {{ if $ko }}추가{{ else }}Add{{ end }}" title="{{ if $ko }}추가{{ else }}Add{{ end }}">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
             </a>

@@ -37,6 +37,11 @@
     @media (prefers-color-scheme: dark) { :root { --rule: rgba(255, 255, 255, 0.16); } }
     :root[data-theme="dark"] { --rule: rgba(255, 255, 255, 0.16); }
     :root[data-theme="light"] { --rule: rgba(0, 0, 0, 0.2); }
+    /* pico's own h1/h2/h3 (2rem / 1.75rem / 1.5rem) sit outside the five steps above, so the
+       page ended up with seven sizes and a title that changed size between page types. */
+    h1 { font-size: var(--fs-2xl); }
+    h2 { font-size: var(--fs-xl); }
+    h3 { font-size: var(--fs-lg); }
     body > header, body > main, body > footer { max-width: 46rem; margin-inline: auto; padding-inline: 1.25rem; }
     body > main { padding-block: 1rem 2rem; }
 
@@ -57,7 +62,7 @@
     .app-list { margin-block: 1.5rem; }
     .app-row { display: flex; align-items: center; gap: 1rem; padding-block: .75rem; }
     .app-row + .app-row { border-top: 1px solid var(--rule); }
-    .app-ico { flex: 0 0 auto; width: 60px; height: 60px; border-radius: 14px; display: grid; place-items: center; font-size: 1.9rem; color: #fff; object-fit: cover; border: 1px solid var(--pico-muted-border-color); }
+    .app-ico { flex: 0 0 auto; width: 60px; height: 60px; border-radius: 14px; display: grid; place-items: center; font-size: 1.9rem; color: #fff; object-fit: cover; border: 1px solid var(--rule); }
     .app-main { display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 0; text-decoration: none; color: inherit; }
     .app-info { min-width: 0; }
     .app-info .name { display: block; font-size: var(--fs-base); font-weight: 700; }
@@ -71,12 +76,12 @@
     .app-dl .b-apple { grid-column: 1; }
     .app-dl .b-android { grid-column: 2; }
     .app-dl a { display: inline-flex; line-height: 0; }
-    .store-badge { border-radius: var(--pico-border-radius); border: 1px solid var(--pico-muted-border-color); box-sizing: border-box; }
+    .store-badge { border-radius: var(--pico-border-radius); border: 1px solid var(--rule); box-sizing: border-box; }
     @media (prefers-color-scheme: dark) { .store-badge { border-color: rgba(255, 255, 255, 0.3); } }
     :root[data-theme="dark"] .store-badge { border-color: rgba(255, 255, 255, 0.3); }
-    :root[data-theme="light"] .store-badge { border-color: var(--pico-muted-border-color); }
+    :root[data-theme="light"] .store-badge { border-color: var(--rule); }
     .app-dl img.store-badge { width: 100%; height: auto; display: block; }
-    .app-dl .badge { display: inline-block; font-size: var(--fs-sm); padding: .25rem .75rem; border-radius: var(--pico-border-radius); border: 1px solid var(--pico-muted-border-color); color: var(--pico-muted-color); }
+    .app-dl .badge { display: inline-block; font-size: var(--fs-sm); padding: .25rem .75rem; border-radius: var(--pico-border-radius); border: 1px solid var(--rule); color: var(--pico-muted-color); }
 
     /* keyword gallery - one 44px row per site, so a 20-item list is scannable on a phone.
        Order: keyword (what you type) - name - host (leaves the site) - add. */
@@ -84,16 +89,21 @@
     .gal-row { display: flex; align-items: center; gap: .6rem; min-height: 44px;
                padding-block: .35rem; border-top: 1px solid var(--rule); }
     .gal-list .gal-row:last-child { border-bottom: 1px solid var(--rule); }
-    /* min-width, not a fixed basis: every current keyword (1-2 glyphs) lands on the same
+    /* No box, no primary colour: this is the text you type, not a button. It used to be a
+       primary-tinted rounded outline sitting next to `.gal-add`, which is exactly that - so
+       two things that looked identical did different things, 66 rows in a row.
+       min-width, not a fixed basis: every current keyword (1-2 glyphs) lands on the same
        width so the column stays straight, and a longer one grows instead of spilling out. */
     .gal-kw { flex: 0 0 auto; min-width: 2.4rem; text-align: center;
-              font-size: var(--fs-sm); font-weight: 700; color: var(--pico-primary);
-              border: 1px solid var(--pico-muted-border-color);
-              border-radius: var(--pico-border-radius); padding: .1rem .25rem; }
-    .gal-name { font-size: var(--fs-base); font-weight: 700; white-space: nowrap; }
+              font-size: var(--fs-sm); font-weight: 700; color: var(--pico-muted-color); }
+    /* The name is what identifies the row, so it never gives up space - the host does.
+       Letting both shrink truncated five names AND five hosts at 390px; this truncates none
+       of the names. max-width is only a backstop against a pathological entry. */
+    .gal-name { flex: 0 0 auto; max-width: 60%; font-size: var(--fs-base); font-weight: 700;
+                white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     /* Pushed to the right edge and clipped rather than wrapped - a wrapped host would break
        the fixed row height that makes the list scannable. */
-    .gal-host { margin-left: auto; max-width: 40%; text-align: right; font-size: var(--fs-sm);
+    .gal-host { margin-left: auto; flex: 0 1 auto; min-width: 3rem; text-align: right; font-size: var(--fs-sm);
                 color: var(--pico-muted-color); text-decoration: none;
                 overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .gal-host:hover { color: var(--pico-primary); text-decoration: underline; }
@@ -106,6 +116,8 @@
 
     /* tools section */
     .tools-title { margin: 2.5rem 0 .25rem; }
+    /* The count is context, not a heading - at pico's inherited size it read as loud as the title. */
+    .tools-title small { font-size: var(--fs-base); font-weight: 400; color: var(--pico-muted-color); }
     .tool-cta { flex: 0 0 calc(var(--dl-col) * 2 + var(--dl-gap)); display: flex; justify-content: flex-start; align-items: center; }
     .tool-link { display: inline-flex; align-items: center; gap: .5rem; font-size: var(--fs-sm); padding: .5rem 1rem; border-radius: var(--pico-border-radius); border: 1px solid var(--pico-primary); color: var(--pico-primary); text-decoration: none; white-space: nowrap; }
     .tool-link svg { width: 16px; height: 16px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
@@ -115,6 +127,8 @@
     svg.ico-grid { fill: currentColor; stroke: none; }
     .gal-title { display: flex; align-items: center; gap: .5rem; }
     .gal-title svg.ico-grid { width: .8em; height: .8em; flex: 0 0 auto; color: var(--pico-primary); }
+    /* Optically matched to the stroked icons beside it - a filled glyph reads heavier at the same box. */
+    .tool-link svg.ico-grid { width: 14px; height: 14px; }
     .chrome-badge-link { display: inline-flex; line-height: 0; }
     .chrome-badge { width: 158px; height: auto; display: block; }
     .chrome-badge.dark { display: none; }
@@ -127,7 +141,7 @@
     /* app detail */
     .app-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; border: 0; padding: 0; }
     .app-head .app-ico { width: 84px; height: 84px; border-radius: 19px; font-size: 2.6rem; }
-    .app-head h1 { margin: 0; font-size: var(--fs-2xl); }
+    .app-head h1 { margin: 0; }
     .app-head .tagline { margin: .25rem 0 0; color: var(--pico-muted-color); font-size: var(--fs-lg); }
     .app-benefits { font-size: var(--fs-lg); line-height: 1.7; margin-bottom: 2rem; }
     .app-download { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
@@ -139,7 +153,10 @@
     /* Underline stays at currentColor: the text is muted, not link-blue, so the underline
        is the only "this is a link" signal and must not fade out. */
     .app-links .quiet { color: var(--pico-muted-color); font-size: var(--fs-sm); text-decoration: underline; text-underline-offset: 2px; }
-    .backlink { font-size: var(--fs-sm); }
+    /* Same distance to whatever follows on every page. Left alone, pico's heading margin made
+       this 48px before an h1 and 16px before a plain div. */
+    .backlink { font-size: var(--fs-sm); margin-bottom: 1rem; }
+    .backlink + h1 { margin-top: 0; }
 
     /* home hero */
     .hero { margin: 1rem 0 .5rem; }
