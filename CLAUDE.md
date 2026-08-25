@@ -92,6 +92,23 @@ content/
 - 스토어 링크는 **글로벌 형태**로: 애플은 `https://apps.apple.com/app/id{ID}` (country 코드·`mt=` 제거 → Apple이 접속자 지역으로 자동 리다이렉트). Google Play는 지역 파라미터 없이 `?id=...`.
 - 필드: `appstore`, `macappstore`, `googleplay`, (선택) `comingsoon`.
 
+### Jumpbar 키워드 갤러리 — `data/jumpbar-gallery.toml`
+
+`/apps/jumpbar/gallery/`(`layouts/_default/gallery.html`). `＋` 를 누르면
+`mdjumpbar://add?k=&n=&u=` 로 Jumpbar 앱의 사이트 추가 폼이 채워진다.
+
+- 필드: `keyword`, `name`(+`name_ko`), `url`(검색어 자리는 `{query}`), `locale`(`"ko"` | `"en"`).
+  **설명 필드는 없다** — 66줄짜리 목록에 한 줄씩 붙으면 벽이 된다.
+- 행은 `키워드 - 이름 - 호스트 - ＋` 한 줄(44px)이고, **호스트는 그 사이트로 나가는 링크**다.
+- **파일 순서가 곧 페이지 순서다.** 카테고리 주석으로 묶어 둔다.
+- 키워드는 파일 안에서 유일해야 하고 **앱 기본 키워드(`Shared/Presets.swift`)와도 겹치면 안 된다**
+  — 겹치면 한 화면에 같은 사이트가 두 번 뜬다. 지역별 기본(`rk` `kl` `lb` `fk` `ch`)까지 본다.
+- 한국 사이트는 한글 초성(자판을 안 바꾸게), 나머지는 영문 2글자.
+- ⚠️ **주소는 그 사이트에서 실제로 두 단어를 검색해 확인한다.** curl 이 403·캡차로 막히는 곳
+  (Reddit·npm·IMDb·G마켓·오늘의집·올리브영 등)은 **주소가 틀린 게 아니라 자동화를 막는 것**이므로
+  브라우저를 띄워 결과 페이지를 보거나, 그 사이트의 검색 폼 `action` 을 읽어 맞춘다.
+- `#` 뒤(fragment)에 검색어가 붙는 사이트는 넣지 않는다 — 확장이 넘기지 못한다.
+
 ### 웹 도구·크롬 확장 — `data/tools.toml` (홈 "Tools" 섹션)
 
 앱 외 자사 웹 도구·브라우저 확장은 `data/tools.toml`에서 관리하며, 홈/`apps` 페이지의 Apps 리스트 **아래 "Tools" 섹션**(`partials/toolslist.html`)에 노출.

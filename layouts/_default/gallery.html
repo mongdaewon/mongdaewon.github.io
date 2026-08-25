@@ -19,37 +19,41 @@
       <div class="gal-list">
         {{ range . }}
           {{ $name := cond ($ko) (default .name .name_ko) .name }}
-          {{ $desc := cond ($ko) (default .desc .desc_ko) .desc }}
-          {{/* The keyword rides along in the link but isn't shown - it's editable in the app
-               anyway, and a column of two-letter codes is noise on a phone. */}}
+          {{ $u := urls.Parse .url }}
           {{/* querify encodes spaces as "+"; the app reads the value literally, so make them %20.
                Safe here because no url/name in the data file contains a real "+". */}}
           {{ $add := printf "mdjumpbar://add?%s" (replace (querify "k" .keyword "n" $name "u" .url) "+" "%20") }}
           <div class="gal-row">
-            <p class="gal-head">
-              <span class="gal-name">{{ $name }}</span>
-              <span class="gal-host">{{ (urls.Parse .url).Host }}</span>
-            </p>
-            <a class="gal-add" href="{{ $add | safeURL }}" aria-label="{{ $name }} {{ if $ko }}추가{{ else }}Add{{ end }}">
+            {{/* The keyword is why people come here - it's the thing they have to type. It also
+                 stays editable in the app, so showing it is a suggestion, not a commitment. */}}
+            <span class="gal-kw">{{ .keyword }}</span>
+            <span class="gal-name">{{ $name }}</span>
+            {{/* The host doubles as a link to the site itself - the row is the only place that
+                 says which site (and which country's edition) this actually is. */}}
+            <a class="gal-host" href="{{ printf "%s://%s/" $u.Scheme $u.Host }}" target="_blank" rel="noopener">{{ $u.Host }}</a>
+            <a class="gal-add" href="{{ $add | safeURL }}" aria-label="{{ $name }} {{ if $ko }}추가{{ else }}Add{{ end }}" title="{{ if $ko }}추가{{ else }}Add{{ end }}">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-              <span>{{ if $ko }}추가{{ else }}Add{{ end }}</span>
             </a>
-            <p class="gal-desc">{{ $desc }}</p>
           </div>
         {{ end }}
       </div>
     {{ end }}
   {{ end }}
 
+  {{/* Same mailto pattern as the app page - a subject that says which page it came from,
+       so the reply lands in context. querify encodes spaces as "+"; mailto wants %20.
+       Worded as a support line, not a request form - "보내주시면 넣어드립니다" reads like a
+       promise to add every site someone sends. */}}
+  {{ $subject := replace (querify "subject" (cond $ko "[Jumpbar] 갤러리 문의" "[Jumpbar] Gallery")) "+" "%20" }}
   <p class="gallery-note">
     {{ if $ko }}
-      찾는 사이트가 없나요? 앱에서 직접 추가할 수 있고, 이 목록에 넣고 싶으면
-      <a href="https://github.com/mongdaewon/mongdaewon.github.io/blob/main/data/jumpbar-gallery.toml" target="_blank" rel="noopener">jumpbar-gallery.toml</a>
-      에 PR 을 보내주세요. 주소는 그 사이트에서 실제로 한 번 검색해 확인한 것으로 부탁드립니다.
+      찾는 사이트가 없나요? 앱에서 직접 추가할 수 있습니다.<br>
+      궁금한 점이나 여기 주소가 잘못 열리는 게 있으면
+      <a href="{{ printf "mailto:mongdaewon@naver.com?%s" $subject | safeURL }}">메일로 알려주세요</a>.
     {{ else }}
-      Missing a site? You can add any site inside the app. To get it into this list, send a PR to
-      <a href="https://github.com/mongdaewon/mongdaewon.github.io/blob/main/data/jumpbar-gallery.toml" target="_blank" rel="noopener">jumpbar-gallery.toml</a>.
-      Please check the address on the live site first.
+      Missing a site? You can add any site inside the app.<br>
+      If you have a question, or an address here does not work,
+      <a href="{{ printf "mailto:mongdaewon@naver.com?%s" $subject | safeURL }}">email us</a>.
     {{ end }}
   </p>
 {{ end }}

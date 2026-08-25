@@ -3,38 +3,43 @@
 #
 # Conventions (same as tools.toml): base field = English, `_ko` = Korean override.
 #   keyword  what you type in the address bar. Unique across this file, and must not
-#            collide with the app's built-ins: nv, az, yt, wk.
-#            Korean entries use hangul initials (ㄴ = 나무위키) so a Korean typist
-#            never has to switch the keyboard to English mid-search. One letter where
-#            it is free, two where it collides (ㄷ 다음 / ㄷㄴ 다나와 / ㄷㄱ 당근).
-#            Other languages can do the same with their own script.
+#            collide with the app's built-ins (Shared/Presets.swift): yt wk az mp tr
+#            gh gg dd nv nm cp rk kl lb fk ch.
+#            Korean entries use hangul initials so a Korean typist never has to switch
+#            the keyboard to English mid-search. One letter where it is free, two where
+#            it collides. Other languages can do the same with their own script.
 #   name     site name shown in the app. name_ko overrides it on the Korean page.
 #   url      search address with {query} where the search words go.
-#   desc     one line on what the site is for. desc_ko overrides it on the Korean page.
 #   locale   which group it shows under: "ko" (Korea) or "en" (global/English).
 #
-# ⚠️ Every url here was checked against the live site. If you add one in a PR,
-#    search that site for a real word first and copy the resulting address -
-#    a guessed address sends people to a broken page.
+# The row shows name + host only. There is no description field - the list is long and a
+# sentence per row turns it into a wall. The host is a link to the site itself.
+#
+# Do not list a site the app already ships as a built-in - it would show up twice on the
+# user's screen with a different keyword.
+#
+# ⚠️ Every url here was checked against the live site. Before adding one, search that
+#    site for a real two-word phrase and copy the resulting address - a guessed address
+#    sends people to a broken page. Nothing here goes through a PR review, so nobody else
+#    checks the address for you.
 
 # ---------- Korea ----------
+# Keywords are hangul initials so a Korean typist never switches keyboards mid-search.
+# Grouped by what people are looking for, because the page renders in file order.
 
-[[site]]
-  keyword = "ㄴ"
-  name = "Namu Wiki"
-  name_ko = "나무위키"
-  url = "https://namu.wiki/Search?q={query}"
-  desc = "Korean wiki that goes deep on pop culture, games, and internet slang."
-  desc_ko = "대중문화·게임·인터넷 유행어까지 깊게 다루는 한국어 위키."
-  locale = "ko"
-
+# 검색·뉴스
 [[site]]
   keyword = "ㄷ"
   name = "Daum"
   name_ko = "다음"
   url = "https://search.daum.net/search?q={query}"
-  desc = "Korean portal search. Often surfaces different results than Naver."
-  desc_ko = "네이버와는 다른 결과를 보여주는 한국 포털 검색."
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄴ"
+  name = "Naver News"
+  name_ko = "네이버 뉴스"
+  url = "https://search.naver.com/search.naver?where=news&query={query}"
   locale = "ko"
 
 [[site]]
@@ -42,8 +47,13 @@
   name = "Naver Blog"
   name_ko = "네이버 블로그"
   url = "https://search.naver.com/search.naver?where=blog&query={query}"
-  desc = "Reviews, restaurants, and travel logs written by Korean bloggers."
-  desc_ko = "후기·맛집·여행기처럼 사람이 직접 쓴 글만 모아 봅니다."
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅋㅍ"
+  name = "Naver Cafe"
+  name_ko = "네이버 카페"
+  url = "https://cafe.naver.com/ca-fe/home/search/articles?q={query}"
   locale = "ko"
 
 [[site]]
@@ -51,26 +61,43 @@
   name = "Naver Knowledge iN"
   name_ko = "네이버 지식iN"
   url = "https://kin.naver.com/search/list.naver?query={query}"
-  desc = "Q&A archive where Koreans answer each other's everyday questions."
-  desc_ko = "나와 같은 걸 궁금해했던 사람들의 질문과 답."
+  locale = "ko"
+
+# 지도
+[[site]]
+  keyword = "ㅈㄷ"
+  name = "Naver Map"
+  name_ko = "네이버 지도"
+  url = "https://map.naver.com/p/search/{query}"
   locale = "ko"
 
 [[site]]
-  keyword = "ㅅ"
-  name = "Naver Dictionary"
-  name_ko = "네이버 사전"
-  url = "https://dict.naver.com/search.dict?query={query}"
-  desc = "Korean, English, Japanese, Chinese dictionaries in one search."
-  desc_ko = "국어·영어·일본어·중국어 사전을 한 번에."
+  keyword = "ㅋㅁ"
+  name = "KakaoMap"
+  name_ko = "카카오맵"
+  url = "https://map.kakao.com/?q={query}"
+  locale = "ko"
+
+# 쇼핑
+[[site]]
+  keyword = "ㅅㅍ"
+  name = "Naver Shopping"
+  name_ko = "네이버 쇼핑"
+  url = "https://search.shopping.naver.com/search/all?query={query}"
   locale = "ko"
 
 [[site]]
-  keyword = "ㅇ"
-  name = "Naver Webtoon"
-  name_ko = "네이버 웹툰"
-  url = "https://comic.naver.com/search?keyword={query}"
-  desc = "Find webtoons by title or author."
-  desc_ko = "웹툰을 제목이나 작가로 찾습니다."
+  keyword = "ㅅㅇ"
+  name = "11st"
+  name_ko = "11번가"
+  url = "https://search.11st.co.kr/Search.tmall?kwd={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅈㅁ"
+  name = "Gmarket"
+  name_ko = "G마켓"
+  url = "https://www.gmarket.co.kr/n/search?keyword={query}"
   locale = "ko"
 
 [[site]]
@@ -78,17 +105,6 @@
   name = "Danawa"
   name_ko = "다나와"
   url = "https://search.danawa.com/dsearch.php?query={query}"
-  desc = "Price and spec comparison for electronics and PC parts."
-  desc_ko = "가전·PC 부품의 최저가와 스펙을 비교합니다."
-  locale = "ko"
-
-[[site]]
-  keyword = "ㅁ"
-  name = "Musinsa"
-  name_ko = "무신사"
-  url = "https://www.musinsa.com/search/goods?keyword={query}"
-  desc = "Korea's online fashion store. Search by brand or item."
-  desc_ko = "한국 온라인 패션 스토어. 브랜드나 아이템으로 찾습니다."
   locale = "ko"
 
 [[site]]
@@ -96,142 +112,369 @@
   name = "Daangn"
   name_ko = "당근"
   url = "https://www.daangn.com/search/{query}/"
-  desc = "Local secondhand marketplace. Search what neighbors are selling."
-  desc_ko = "동네 중고 거래. 이웃이 내놓은 물건을 찾습니다."
   locale = "ko"
 
+[[site]]
+  keyword = "ㅁ"
+  name = "Musinsa"
+  name_ko = "무신사"
+  url = "https://www.musinsa.com/search/goods?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇㄴ"
+  name = "Ohou"
+  name_ko = "오늘의집"
+  url = "https://ohou.se/search/index?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅋㄹ"
+  name = "Kurly"
+  name_ko = "마켓컬리"
+  url = "https://www.kurly.com/search?sword={query}"
+  locale = "ko"
+
+# 책
 [[site]]
   keyword = "ㄱ"
   name = "Kyobo Book"
   name_ko = "교보문고"
   url = "https://search.kyobobook.co.kr/search?keyword={query}"
-  desc = "Korea's largest bookstore. Search by title, author, or ISBN."
-  desc_ko = "한국 최대 서점. 제목·저자·ISBN으로 찾습니다."
   locale = "ko"
 
+[[site]]
+  keyword = "ㅇㅅ"
+  name = "YES24"
+  name_ko = "예스24"
+  url = "https://www.yes24.com/product/search?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇㄹ"
+  name = "Aladin"
+  name_ko = "알라딘"
+  url = "https://www.aladin.co.kr/search/wsearchresult.aspx?SearchWord={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄹㄷ"
+  name = "RIDIBOOKS"
+  name_ko = "리디"
+  url = "https://ridibooks.com/search?q={query}"
+  locale = "ko"
+
+# 영상·음악·웹툰
 [[site]]
   keyword = "ㅇㅊ"
   name = "Watcha Pedia"
   name_ko = "왓챠피디아"
   url = "https://pedia.watcha.com/ko-KR/search?query={query}"
-  desc = "Ratings and reviews for movies and TV shows."
-  desc_ko = "영화·드라마 평점과 리뷰."
   locale = "ko"
 
 [[site]]
-  keyword = "ㅇㅋ"
-  name = "Wikipedia (Korean)"
-  name_ko = "위키백과 (한국어)"
-  url = "https://ko.wikipedia.org/w/index.php?search={query}"
-  desc = "Korean-language Wikipedia."
-  desc_ko = "한국어판 위키백과."
+  keyword = "ㅌㅂ"
+  name = "TVING"
+  name_ko = "티빙"
+  url = "https://www.tving.com/search?keyword={query}"
   locale = "ko"
 
+[[site]]
+  keyword = "ㄹㅍ"
+  name = "Laftel"
+  name_ko = "라프텔"
+  url = "https://laftel.net/search?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅁㄹ"
+  name = "Melon"
+  name_ko = "멜론"
+  url = "https://www.melon.com/search/total/index.htm?q={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇ"
+  name = "Naver Webtoon"
+  name_ko = "네이버 웹툰"
+  url = "https://comic.naver.com/search?keyword={query}"
+  locale = "ko"
+
+# 커뮤니티
 [[site]]
   keyword = "ㅋ"
   name = "Clien"
   name_ko = "클리앙"
   url = "https://www.clien.net/service/search?q={query}"
-  desc = "Korean IT community. Hands-on reviews and deal posts."
-  desc_ko = "한국 IT 커뮤니티. 사용기와 특가 정보가 많습니다."
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄷㅅ"
+  name = "DCinside"
+  name_ko = "디시인사이드"
+  url = "https://search.dcinside.com/post/q/{query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄹㄹ"
+  name = "Ruliweb"
+  name_ko = "루리웹"
+  url = "https://bbs.ruliweb.com/search?q={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅃ"
+  name = "Ppomppu"
+  name_ko = "뽐뿌"
+  url = "https://www.ppomppu.co.kr/search_bbs.php?search_type=sub_memo&keyword={query}"
+  locale = "ko"
+
+# 사전·논문
+[[site]]
+  keyword = "ㅅ"
+  name = "Naver Dictionary"
+  name_ko = "네이버 사전"
+  url = "https://dict.naver.com/search.dict?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄱㅇ"
+  name = "Korean Standard Dictionary"
+  name_ko = "표준국어대사전"
+  url = "https://stdict.korean.go.kr/search/searchResult.do?searchKeyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄴㅁ"
+  name = "RISS"
+  name_ko = "RISS 논문"
+  url = "https://www.riss.kr/search/Search.do?query={query}"
+  locale = "ko"
+
+# 생활
+[[site]]
+  keyword = "ㅈㅋ"
+  name = "JobKorea"
+  name_ko = "잡코리아"
+  url = "https://www.jobkorea.co.kr/Search/?stext={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅅㄹ"
+  name = "Saramin"
+  name_ko = "사람인"
+  url = "https://www.saramin.co.kr/zf_user/search?searchword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄴㅈ"
+  name = "Yanolja"
+  name_ko = "야놀자"
+  url = "https://www.yanolja.com/search/{query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅈㅂ"
+  name = "Government24"
+  name_ko = "정부24"
+  url = "https://www.gov.kr/search?srhQuery={query}"
   locale = "ko"
 
 # ---------- Global ----------
+# Grouped by what people are looking for, because the page renders in file order.
 
+# 검색·뉴스
 [[site]]
-  keyword = "dd"
-  name = "DuckDuckGo"
-  desc = "Search without being tracked or profiled."
-  desc_ko = "추적·프로파일링 없는 검색."
-  url = "https://duckduckgo.com/?q={query}"
+  keyword = "bi"
+  name = "Bing"
+  url = "https://www.bing.com/search?q={query}"
   locale = "en"
 
 [[site]]
-  keyword = "gh"
-  name = "GitHub"
-  url = "https://github.com/search?q={query}"
-  desc = "Search repositories, issues, and people across GitHub."
-  desc_ko = "GitHub 전체에서 저장소·이슈·사용자를 찾습니다."
+  keyword = "bs"
+  name = "Brave Search"
+  url = "https://search.brave.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "gn"
+  name = "Google News"
+  name_ko = "구글 뉴스"
+  url = "https://news.google.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "rd"
+  name = "Reddit"
+  url = "https://www.reddit.com/search/?q={query}"
+  locale = "en"
+
+# 개발
+[[site]]
+  keyword = "so"
+  name = "Stack Overflow"
+  url = "https://stackoverflow.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "np"
+  name = "npm"
+  url = "https://www.npmjs.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "py"
+  name = "PyPI"
+  url = "https://pypi.org/search/?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "hf"
+  name = "Hugging Face"
+  url = "https://huggingface.co/models?search={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ci"
+  name = "Can I Use"
+  url = "https://caniuse.com/?search={query}"
   locale = "en"
 
 [[site]]
   keyword = "md"
   name = "MDN Web Docs"
   url = "https://developer.mozilla.org/en-US/search?q={query}"
-  desc = "Web standards reference for HTML, CSS, and JavaScript."
-  desc_ko = "HTML·CSS·자바스크립트 표준 문서."
-  locale = "en"
-
-[[site]]
-  keyword = "hn"
-  name = "Hacker News"
-  url = "https://hn.algolia.com/?q={query}"
-  desc = "Search Hacker News posts and comments, powered by Algolia."
-  desc_ko = "해커뉴스 글과 댓글을 Algolia 검색으로."
   locale = "en"
 
 [[site]]
   keyword = "dh"
   name = "Docker Hub"
   url = "https://hub.docker.com/search?q={query}"
-  desc = "Find container images and their tags."
-  desc_ko = "컨테이너 이미지와 태그를 찾습니다."
   locale = "en"
 
 [[site]]
-  keyword = "mp"
-  name = "Google Maps"
-  name_ko = "구글 지도"
-  url = "https://www.google.com/maps/search/{query}"
-  desc = "Places, addresses, and directions."
-  desc_ko = "장소·주소·길찾기."
+  keyword = "hn"
+  name = "Hacker News"
+  url = "https://hn.algolia.com/?q={query}"
   locale = "en"
 
+# 지식·논문
 [[site]]
   keyword = "sc"
   name = "Google Scholar"
   name_ko = "구글 학술검색"
   url = "https://scholar.google.com/scholar?q={query}"
-  desc = "Academic papers with citation counts."
-  desc_ko = "학술 논문과 인용 수."
+  locale = "en"
+
+[[site]]
+  keyword = "pm"
+  name = "PubMed"
+  url = "https://pubmed.ncbi.nlm.nih.gov/?term={query}"
   locale = "en"
 
 [[site]]
   keyword = "ax"
   name = "arXiv"
   url = "https://arxiv.org/search/?query={query}&searchtype=all"
-  desc = "Preprints in physics, math, and computer science."
-  desc_ko = "물리·수학·전산 분야 논문 초고."
   locale = "en"
 
 [[site]]
   keyword = "wf"
   name = "Wolfram Alpha"
   url = "https://www.wolframalpha.com/input?i={query}"
-  desc = "Computation, unit conversion, and step-by-step math."
-  desc_ko = "계산·단위 변환·수식 풀이."
   locale = "en"
 
 [[site]]
-  keyword = "st"
-  name = "Steam"
-  url = "https://store.steampowered.com/search/?term={query}"
-  desc = "PC game store. Search by title, tag, or genre."
-  desc_ko = "PC 게임 스토어. 제목·태그·장르로 찾습니다."
+  keyword = "wh"
+  name = "wikiHow"
+  url = "https://www.wikihow.com/wikiHowTo?search={query}"
+  locale = "en"
+
+# 사전
+[[site]]
+  keyword = "cd"
+  name = "Cambridge Dictionary"
+  name_ko = "케임브리지 사전"
+  url = "https://dictionary.cambridge.org/search/direct/?datasetsearch=english&q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "wt"
+  name = "Wiktionary"
+  name_ko = "위키낱말사전"
+  url = "https://en.wiktionary.org/w/index.php?search={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ud"
+  name = "Urban Dictionary"
+  url = "https://www.urbandictionary.com/define.php?term={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ep"
+  name = "Emojipedia"
+  url = "https://emojipedia.org/search?q={query}"
+  locale = "en"
+
+# 영화·음악·게임
+[[site]]
+  keyword = "im"
+  name = "IMDb"
+  url = "https://www.imdb.com/find/?q={query}"
   locale = "en"
 
 [[site]]
   keyword = "rt"
   name = "Rotten Tomatoes"
   url = "https://www.rottentomatoes.com/search?search={query}"
-  desc = "Movie and TV ratings, critics and audience side by side."
-  desc_ko = "영화·드라마 평점. 평론가와 관객 점수를 함께."
+  locale = "en"
+
+[[site]]
+  keyword = "jw"
+  name = "JustWatch"
+  url = "https://www.justwatch.com/us/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ma"
+  name = "MyAnimeList"
+  url = "https://myanimelist.net/search/all?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "sp"
+  name = "Spotify"
+  url = "https://open.spotify.com/search/{query}"
+  locale = "en"
+
+[[site]]
+  keyword = "st"
+  name = "Steam"
+  url = "https://store.steampowered.com/search/?term={query}"
   locale = "en"
 
 [[site]]
   keyword = "gr"
   name = "Goodreads"
   url = "https://www.goodreads.com/search?q={query}"
-  desc = "Book reviews and ratings from readers."
-  desc_ko = "독자들이 남긴 책 리뷰와 평점."
+  locale = "en"
+
+# 이미지
+[[site]]
+  keyword = "us"
+  name = "Unsplash"
+  url = "https://unsplash.com/s/photos/{query}"
+  locale = "en"
+
+[[site]]
+  keyword = "px"
+  name = "Pexels"
+  url = "https://www.pexels.com/search/{query}/"
+  locale = "en"
+
+[[site]]
+  keyword = "gp"
+  name = "GIPHY"
+  url = "https://giphy.com/search/{query}"
   locale = "en"
