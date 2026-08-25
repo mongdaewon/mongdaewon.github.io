@@ -102,17 +102,69 @@
   locale = "ko"
 
 # ---------- Global ----------
+# Grouped by what people are looking for, because the page renders in file order.
+
+# 검색·뉴스
+[[site]]
+  keyword = "bi"
+  name = "Bing"
+  url = "https://www.bing.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "bs"
+  name = "Brave Search"
+  url = "https://search.brave.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "gn"
+  name = "Google News"
+  name_ko = "구글 뉴스"
+  url = "https://news.google.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "rd"
+  name = "Reddit"
+  url = "https://www.reddit.com/search/?q={query}"
+  locale = "en"
+
+# 개발
+[[site]]
+  keyword = "so"
+  name = "Stack Overflow"
+  url = "https://stackoverflow.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "np"
+  name = "npm"
+  url = "https://www.npmjs.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "py"
+  name = "PyPI"
+  url = "https://pypi.org/search/?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "hf"
+  name = "Hugging Face"
+  url = "https://huggingface.co/models?search={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ci"
+  name = "Can I Use"
+  url = "https://caniuse.com/?search={query}"
+  locale = "en"
 
 [[site]]
   keyword = "md"
   name = "MDN Web Docs"
   url = "https://developer.mozilla.org/en-US/search?q={query}"
-  locale = "en"
-
-[[site]]
-  keyword = "hn"
-  name = "Hacker News"
-  url = "https://hn.algolia.com/?q={query}"
   locale = "en"
 
 [[site]]
@@ -122,10 +174,23 @@
   locale = "en"
 
 [[site]]
+  keyword = "hn"
+  name = "Hacker News"
+  url = "https://hn.algolia.com/?q={query}"
+  locale = "en"
+
+# 지식·논문
+[[site]]
   keyword = "sc"
   name = "Google Scholar"
   name_ko = "구글 학술검색"
   url = "https://scholar.google.com/scholar?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "pm"
+  name = "PubMed"
+  url = "https://pubmed.ncbi.nlm.nih.gov/?term={query}"
   locale = "en"
 
 [[site]]
@@ -141,9 +206,43 @@
   locale = "en"
 
 [[site]]
-  keyword = "st"
-  name = "Steam"
-  url = "https://store.steampowered.com/search/?term={query}"
+  keyword = "wh"
+  name = "wikiHow"
+  url = "https://www.wikihow.com/wikiHowTo?search={query}"
+  locale = "en"
+
+# 사전
+[[site]]
+  keyword = "cd"
+  name = "Cambridge Dictionary"
+  name_ko = "케임브리지 사전"
+  url = "https://dictionary.cambridge.org/search/direct/?datasetsearch=english&q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "wt"
+  name = "Wiktionary"
+  name_ko = "위키낱말사전"
+  url = "https://en.wiktionary.org/w/index.php?search={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ud"
+  name = "Urban Dictionary"
+  url = "https://www.urbandictionary.com/define.php?term={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ep"
+  name = "Emojipedia"
+  url = "https://emojipedia.org/search?q={query}"
+  locale = "en"
+
+# 영화·음악·게임
+[[site]]
+  keyword = "im"
+  name = "IMDb"
+  url = "https://www.imdb.com/find/?q={query}"
   locale = "en"
 
 [[site]]
@@ -153,7 +252,50 @@
   locale = "en"
 
 [[site]]
+  keyword = "jw"
+  name = "JustWatch"
+  url = "https://www.justwatch.com/us/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ma"
+  name = "MyAnimeList"
+  url = "https://myanimelist.net/search/all?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "sp"
+  name = "Spotify"
+  url = "https://open.spotify.com/search/{query}"
+  locale = "en"
+
+[[site]]
+  keyword = "st"
+  name = "Steam"
+  url = "https://store.steampowered.com/search/?term={query}"
+  locale = "en"
+
+[[site]]
   keyword = "gr"
   name = "Goodreads"
   url = "https://www.goodreads.com/search?q={query}"
+  locale = "en"
+
+# 이미지
+[[site]]
+  keyword = "us"
+  name = "Unsplash"
+  url = "https://unsplash.com/s/photos/{query}"
+  locale = "en"
+
+[[site]]
+  keyword = "px"
+  name = "Pexels"
+  url = "https://www.pexels.com/search/{query}/"
+  locale = "en"
+
+[[site]]
+  keyword = "gp"
+  name = "GIPHY"
+  url = "https://giphy.com/search/{query}"
   locale = "en"
