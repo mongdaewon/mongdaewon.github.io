@@ -19,22 +19,21 @@
       <div class="gal-list">
         {{ range . }}
           {{ $name := cond ($ko) (default .name .name_ko) .name }}
-          {{ $desc := cond ($ko) (default .desc .desc_ko) .desc }}
-          {{/* The keyword rides along in the link but isn't shown - it's editable in the app
-               anyway, and a column of two-letter codes is noise on a phone. */}}
+          {{ $u := urls.Parse .url }}
           {{/* querify encodes spaces as "+"; the app reads the value literally, so make them %20.
                Safe here because no url/name in the data file contains a real "+". */}}
           {{ $add := printf "mdjumpbar://add?%s" (replace (querify "k" .keyword "n" $name "u" .url) "+" "%20") }}
           <div class="gal-row">
-            <p class="gal-head">
-              <span class="gal-name">{{ $name }}</span>
-              <span class="gal-host">{{ (urls.Parse .url).Host }}</span>
-            </p>
-            <a class="gal-add" href="{{ $add | safeURL }}" aria-label="{{ $name }} {{ if $ko }}추가{{ else }}Add{{ end }}">
+            {{/* The keyword is why people come here - it's the thing they have to type. It also
+                 stays editable in the app, so showing it is a suggestion, not a commitment. */}}
+            <span class="gal-kw">{{ .keyword }}</span>
+            <span class="gal-name">{{ $name }}</span>
+            {{/* The host doubles as a link to the site itself - the row is the only place that
+                 says which site (and which country's edition) this actually is. */}}
+            <a class="gal-host" href="{{ printf "%s://%s/" $u.Scheme $u.Host }}" target="_blank" rel="noopener">{{ $u.Host }}</a>
+            <a class="gal-add" href="{{ $add | safeURL }}" aria-label="{{ $name }} {{ if $ko }}추가{{ else }}Add{{ end }}" title="{{ if $ko }}추가{{ else }}Add{{ end }}">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-              <span>{{ if $ko }}추가{{ else }}Add{{ end }}</span>
             </a>
-            <p class="gal-desc">{{ $desc }}</p>
           </div>
         {{ end }}
       </div>
