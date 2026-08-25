@@ -41,8 +41,19 @@
       </div>
     </header>
 
-    <div class="app-benefits">
-      {{ .Content }}
+    {{/* A demo only exists where one was recorded (demo-<lang>.gif in the page bundle).
+         No fallback to the other language - a Korean Safari on the English page is worse
+         than no demo at all. */}}
+    {{ $demo := .Resources.GetMatch (printf "demo-%s.gif" .Site.Language.Lang) }}
+    <div class="app-showcase">
+      <div class="app-benefits">
+        {{ .Content }}
+      </div>
+      {{ with $demo }}
+        <img class="app-demo" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+             loading="lazy" decoding="async"
+             alt="{{ if $ko }}사파리 주소창에 'yt coffee' 를 치면 유튜브 검색 결과로 바로 넘어가는 화면{{ else }}Typing 'yt coffee' in the Safari address bar and landing straight on YouTube search results{{ end }}">
+      {{ end }}
     </div>
 
     <div class="app-download">{{ partial "storebadges.html" $a }}</div>

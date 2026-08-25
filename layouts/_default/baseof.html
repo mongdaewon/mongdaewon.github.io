@@ -143,7 +143,12 @@
     .app-head .app-ico { width: 84px; height: 84px; border-radius: 19px; font-size: 2.6rem; }
     .app-head h1 { margin: 0; }
     .app-head .tagline { margin: .25rem 0 0; color: var(--pico-muted-color); font-size: var(--fs-lg); }
-    .app-benefits { font-size: var(--fs-lg); line-height: 1.7; margin-bottom: 2rem; }
+    /* Text and demo share the row on a wide screen - the column is 46rem and the benefits
+       are three short lines, so a phone-shaped demo beside them costs no extra height. */
+    .app-showcase { display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 2rem; }
+    .app-benefits { font-size: var(--fs-lg); line-height: 1.7; min-width: 0; }
+    .app-demo { flex: 0 0 auto; width: 240px; height: auto; display: block;
+                border-radius: 20px; border: 1px solid var(--rule); }
     .app-download { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
     .app-download a { display: inline-flex; line-height: 0; }
     .app-download img.store-badge { width: 150px; }
@@ -174,6 +179,11 @@
       .app-download img.store-badge { width: 100%; }
       .tool-cta { flex-basis: 100%; padding-left: 76px; }
       .app-head { flex-direction: column; align-items: flex-start; text-align: left; }
+      /* column-reverse, so the demo comes first on a phone: stacked the other way it
+         starts ~1400px down and nobody scrolls that far to find out what the app does.
+         The DOM keeps text first for readers and search engines. */
+      .app-showcase { flex-direction: column-reverse; align-items: flex-start; gap: 1.25rem; }
+      .app-demo { width: 100%; max-width: 260px; }
     }
 
     /* Below ~400px the 76px indent squeezed paired badges to 98–118px while lone badges stayed 128px.
