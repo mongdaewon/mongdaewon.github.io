@@ -1,5 +1,12 @@
 # AGENTS.md
 
+## 작업 운영
+
+- 조회·분석만 하는 작업에는 브랜치가 필요 없다. 파일을 수정할 때는 먼저 `git status`를 확인하고 `feat/<name>`, `fix/<name>`, `chore/<name>`, `docs/<name>` 중 맞는 작업 브랜치를 만든다.
+- 작고 명확하며 한 번에 끝낼 수 있는 저위험 변경은 바로 구현한다. 절차를 위한 `TODO.md`는 만들거나 수정하지 않는다.
+- 여러 단계이거나 한 번에 끝내기 어렵고 조사·반복 수정이 필요한 작업은 구현 전에 `TODO.md`에 목표와 실행 가능한 체크리스트를 작성하고 진행 중 갱신한다.
+- 아키텍처·대규모 리팩터링·보안·데이터 손실·회귀 위험이 있는 중요한 TODO 작업은 검사 후 `AGENTS.md`, `TODO.md`, `git diff`를 기준으로 독립 리뷰를 요청한다. 발견된 문제를 해결한 뒤 `finish-work`로 마무리한다.
+
 This file provides guidance to 개발 에이전트 when working with code in this repository.
 
 ## 프로젝트 개요
