@@ -176,6 +176,23 @@
     .app-links .quiet { color: var(--pico-muted-color); font-size: var(--fs-sm); text-decoration: underline; text-underline-offset: 2px; }
     /* Same distance to whatever follows on every page. Left alone, pico's heading margin made
        this 48px before an h1 and 16px before a plain div. */
+    /* how-to 진입 카드. 혜택과 배지 사이에 끼는 자리라 배지보다 조용해야 한다 -
+       테두리만 있는 블록이고 채운 버튼은 스토어 배지 몫으로 남긴다. */
+    .howto-card { display: block; margin: 0 0 1.5rem; padding: .9rem 1.1rem; border: 1px solid var(--rule);
+                  border-radius: var(--pico-border-radius); text-decoration: none; color: inherit; }
+    .howto-card:hover { border-color: var(--pico-primary); }
+    .howto-card .hc-t { display: block; font-weight: 600; }
+    .howto-card:hover .hc-t { color: var(--pico-primary); }
+    .howto-card .hc-d { display: block; margin-top: .15rem; color: var(--pico-muted-color); font-size: var(--fs-sm); }
+    /* how-to 상단 앱 줄: 아이콘·이름 왼쪽, 배지 오른쪽. 좁으면 배지가 아래로 내려간다. */
+    .howto-head { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .app-ico.ico-sm { width: 40px; height: 40px; border-radius: 10px; }
+    .howto-app { font-weight: 700; text-decoration: none; color: inherit; }
+    .howto-app:hover { color: var(--pico-primary); }
+    .howto-head .howto-dl { display: flex; gap: .5rem; margin-left: auto; }
+    .howto-foot { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+                  margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+    .howto-get { margin: 0; font-weight: 600; }
     .backlink { font-size: var(--fs-sm); margin-bottom: 1rem; }
     .backlink + h1 { margin-top: 0; }
 

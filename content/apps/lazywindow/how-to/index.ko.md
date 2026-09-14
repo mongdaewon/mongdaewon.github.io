@@ -1,7 +1,7 @@
 ---
 title: "LazyWindow 사용법"
 description: "LazyWindow 단축키 전체: 창 배치, 크기 순환, 옆 모니터 이동, 되돌리기."
-layout: "single"
+layout: "howto"
 ---
 
 **LazyWindow - 키보드 창 배치**

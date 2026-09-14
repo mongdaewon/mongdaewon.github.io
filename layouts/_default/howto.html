@@ -1,0 +1,25 @@
+{{ define "main" }}
+  {{ $ko := eq .Site.Language.Lang "ko" }}
+  {{ $slug := path.Base .Parent.Path }}
+  {{ $a := index (where hugo.Data.apps.app "slug" $slug) 0 }}
+
+  <p class="backlink"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
+
+  {{/* 사용법만 검색해서 들어온 사람은 어느 앱 이야기인지 모른다. 이름·아이콘과 함께
+       받는 곳을 위에 두고, 다 읽은 사람을 위해 아래에 한 번 더 둔다. */}}
+  <div class="howto-head">
+    {{ with .Parent.Resources.GetMatch "icon.png" }}
+      <img class="app-ico ico-sm" src="{{ .RelPermalink }}" alt="{{ $a.name }}" width="40" height="40">
+    {{ end }}
+    <a class="howto-app" href="{{ .Parent.RelPermalink }}">{{ $a.name }}</a>
+    <span class="howto-dl">{{ partial "storebadges.html" $a }}</span>
+  </div>
+
+  <h1>{{ .Title }}</h1>
+  <div>{{ .Content }}</div>
+
+  <div class="howto-foot">
+    <p class="howto-get">{{ if $ko }}{{ $a.name }} 받기{{ else }}Get {{ $a.name }}{{ end }}</p>
+    {{ partial "storebadges.html" $a }}
+  </div>
+{{ end }}
