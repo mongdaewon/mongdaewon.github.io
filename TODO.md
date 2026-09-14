@@ -5,12 +5,12 @@
 목표: 앱별 영문 how-to 페이지를 늘려 롱테일 검색 유입 → 스토어 배지로 전환.
 현황: GSC 등록·사이트맵 제출 완료, 28일 노출 16·클릭 0. GA4 미설치.
 
-- [ ] 1. GA4 속성 생성 + gtag 설치 (측정값이 쌓이기 시작해야 이후가 판단 가능)
-  - [ ] 사용자: GA4 웹 스트림 생성 → `G-XXXXXXX` 전달
-  - [ ] 사용자: 속성 액세스에 `examine@dround.iam.gserviceaccount.com` 뷰어 추가
-  - [ ] `baseof.html`에 gtag 삽입 (`hugo.IsProduction` 조건으로 로컬 제외)
-  - [ ] `~/.agents/skills/analytics/SKILL.md` GA4 표에 속성 추가
-- [ ] 2. how-to를 고아 페이지에서 구출 — 앱 상세에서 링크 + how-to 하단에 스토어 배지
+- [x] 1. GA4 속성 생성 + gtag 설치 + 전환 클릭 이벤트(`cta_click`) + examine 일일 리포트 연결
+  - [x] 사용자: GA4 웹 스트림 생성 (`G-TKWBWE14J8`, `properties/554013286`)
+  - [x] 서비스 계정 접근 — 계정 단위 권한이 이미 있어 추가 작업 불필요
+  - [x] `baseof.html`에 gtag 삽입 (`hugo.IsProduction` 조건으로 로컬 제외)
+  - [x] `~/.agents/skills/analytics/SKILL.md` GA4 표에 속성 추가
+- [x] 2. how-to를 고아 페이지에서 구출 — 앱 상세 혜택 아래 진입 카드(A2안) + how-to 상·하단 스토어 배지
 - [ ] 3. 앱별 영문 how-to 작성 (출시된 앱부터: JoinCut·RecNow·Where Is My Cursor…)
 - [ ] 4. `/index-request`로 새 URL 색인 요청, 이후 GSC로 검색어 확인
 

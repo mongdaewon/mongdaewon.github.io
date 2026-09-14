@@ -56,6 +56,15 @@
       {{ end }}
     </div>
 
+    {{/* 혜택 바로 다음, 배지보다 위. 아직 설치를 망설이는 사람이 사용법을 먼저 보게 한다.
+         how-to 번들이 있는 앱에만 뜬다. */}}
+    {{ with .GetPage "how-to" }}
+      <a class="howto-card" data-ev="howto" data-app="{{ $a.name }}" href="{{ .RelPermalink }}">
+        <span class="hc-t">📖 {{ .Title }} →</span>
+        <span class="hc-d">{{ .Description }}</span>
+      </a>
+    {{ end }}
+
     <div class="app-download">{{ partial "storebadges.html" $a }}</div>
 
     {{/* Privacy policy is English-only; on the ko site fall back to that URL. */}}

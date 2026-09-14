@@ -1,7 +1,7 @@
 ---
 title: "How to Use LazyWindow"
 description: "Every LazyWindow shortcut: snap a window, cycle sizes, reach the next display, and undo."
-layout: "single"
+layout: "howto"
 ---
 
 **LazyWindow - Keyboard Window Snapping**
