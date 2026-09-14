@@ -1,6 +1,7 @@
 # App metadata (non-localized). Order here = display order on home & /apps.
 # Localized title/summary/body live in content/apps/<slug>/_index.md(.ko).
 # Icon = content/apps/<slug>/icon.png (real app icon). emoji/color are fallback only.
+# hidden = true: 목록에서만 감춘다. 상세 페이지·처리방침 URL은 그대로 살아 있다 (내부 테스트용).
 
 [[app]]
   slug = "ivy-todo"
@@ -67,3 +68,4 @@
   emoji = "🪟"
   color = "#2b2b2b"
   comingsoon = true
+  hidden = true

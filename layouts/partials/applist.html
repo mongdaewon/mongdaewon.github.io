@@ -1,5 +1,6 @@
 <div class="app-list">
   {{ range $a := hugo.Data.apps.app }}
+    {{ if $a.hidden }}{{ continue }}{{ end }}
     {{ with site.GetPage (printf "/apps/%s" $a.slug) }}
       <div class="app-row">
         <a class="app-main" href="{{ .RelPermalink }}">
