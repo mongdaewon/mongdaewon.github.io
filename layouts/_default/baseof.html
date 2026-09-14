@@ -217,7 +217,7 @@
     <nav>
       <span class="langs">
         {{ range .AllTranslations }}
-          <a href="{{ .RelPermalink }}"{{ if eq .Language.Lang $.Site.Language.Lang }} class="active"{{ end }}>{{ .Language.Params.displayName }}</a>
+          <a data-ev="lang_{{ .Language.Lang }}" href="{{ .RelPermalink }}"{{ if eq .Language.Lang $.Site.Language.Lang }} class="active"{{ end }}>{{ .Language.Params.displayName }}</a>
         {{ end }}
       </span>
       <button class="theme-toggle" type="button" aria-label="Toggle theme">☾</button>
@@ -229,7 +229,7 @@
   </main>
 
   <footer class="site-footer">
-    © {{ now.Year }} Mongdaewon · <a href="mailto:mongdaewon@naver.com">mongdaewon@naver.com</a>
+    © {{ now.Year }} Mongdaewon · <a data-ev="support" href="mailto:mongdaewon@naver.com">mongdaewon@naver.com</a>
   </footer>
 
   <script>
@@ -244,6 +244,7 @@
         root.setAttribute('data-theme', next);
         localStorage.setItem('theme', next);
         paint();
+        if (window.gtag) gtag('event', 'cta_click', { cta: 'theme_' + next });
       });
     })();
   </script>
