@@ -1,5 +1,23 @@
 # TODO
 
+## 20260914.1 영문 사용법 콘텐츠로 앱 설치 늘리기
+
+목표: 앱별 영문 how-to 페이지를 늘려 롱테일 검색 유입 → 스토어 배지로 전환.
+현황: GSC 등록·사이트맵 제출 완료, 28일 노출 16·클릭 0. GA4 미설치.
+
+- [ ] 1. GA4 속성 생성 + gtag 설치 (측정값이 쌓이기 시작해야 이후가 판단 가능)
+  - [ ] 사용자: GA4 웹 스트림 생성 → `G-XXXXXXX` 전달
+  - [ ] 사용자: 속성 액세스에 `examine@dround.iam.gserviceaccount.com` 뷰어 추가
+  - [ ] `baseof.html`에 gtag 삽입 (`hugo.IsProduction` 조건으로 로컬 제외)
+  - [ ] `~/.agents/skills/analytics/SKILL.md` GA4 표에 속성 추가
+- [ ] 2. how-to를 고아 페이지에서 구출 — 앱 상세에서 링크 + how-to 하단에 스토어 배지
+- [ ] 3. 앱별 영문 how-to 작성 (출시된 앱부터: JoinCut·RecNow·Where Is My Cursor…)
+- [ ] 4. `/index-request`로 새 URL 색인 요청, 이후 GSC로 검색어 확인
+
+보류: 블로그 섹션. 앱에 묶이지 않는 문제 중심 글을 쓸 때 만든다.
+
+---
+
 ## 20260825.1
 - [x] 갤러리 목록을 한 줄(44px)로 슬림화 - 설명 제거, 키워드 노출, 호스트를 사이트 링크로
 - [x] 기본 키워드와 겹치던 5개 제거 (나무위키·한국어 위키백과·DuckDuckGo·GitHub·Google Maps)
