@@ -11,7 +11,8 @@
   - [x] `baseof.html`에 gtag 삽입 (`hugo.IsProduction` 조건으로 로컬 제외)
   - [x] `~/.agents/skills/analytics/SKILL.md` GA4 표에 속성 추가
 - [x] 2. how-to를 고아 페이지에서 구출 — 앱 상세 혜택 아래 진입 카드(A2안) + how-to 상·하단 스토어 배지
-- [ ] 3. 앱별 영문 how-to 작성 (출시된 앱부터: JoinCut·RecNow·Where Is My Cursor…)
+- [x] 3. 기본 how-to 8개 앱 ko/en 생성 (앱 설명에 적힌 사실만으로 구성 — 내용 보강 예정)
+- [ ] 3-1. 앱별 how-to 내용 보강 (실제 화면·단축키·세부 동작 추가, 하나씩)
 - [ ] 4. `/index-request`로 새 URL 색인 요청, 이후 GSC로 검색어 확인
 
 보류: 블로그 섹션. 앱에 묶이지 않는 문제 중심 글을 쓸 때 만든다.
