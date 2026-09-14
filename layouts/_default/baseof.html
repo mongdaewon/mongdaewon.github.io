@@ -10,6 +10,12 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-TKWBWE14J8');
+    /* 전환 링크 클릭. data-ev가 붙은 a만 보낸다 - 클릭 타깃은 보통 안쪽 <img>라 closest로 올라간다.
+       page_location은 모든 이벤트에 자동으로 실려서 페이지별 구분은 따로 안 보낸다. */
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[data-ev]');
+      if (a) gtag('event', 'cta_click', { cta: a.dataset.ev, cta_app: a.dataset.app });
+    });
   </script>
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1">
