@@ -12,8 +12,8 @@
       `disabled` 가 키워드 문자열로 저장되므로(`Shared/Keywords.swift:97`) 知恵袋를 꺼둔 사용자는 다시 켜진다.
 - [ ] 3. 앱 버전 올려 심사 제출 → 배포 확인. **배포 전에 갤러리를 main 에 머지하지 말 것**
       (ChatGPT 행이 먼저 나가면 일본어 기기에서 `ch` 가 두 번 뜬다)
-- [ ] 4. 미검증 2개 확인 후 추가 — `cl` Claude(`claude.ai/new?q=`), `am` Google AI 모드(`google.com/search?udm=50&q=`)
-      — 브라우저 pane 차단·구글 봇 감지로 이 환경에서 확인 불가. 실기기 주소창에서 확인한다.
+- [x] 4. `cl` Claude · `am` Google AI 모드 추가 — 사용자가 실기기 주소창에서 확인(로그인 상태면 정상 동작).
+      딥시크는 같은 방식으로 확인했을 때 입력창이 비어 있어(질문 유실) 제외를 유지한다.
 - [ ] 5. 봇 차단으로 검증 못 한 후보를 ego-browser 로 재확인 — Etsy · Indeed · Tripadvisor · Booking.com ·
       Yelp · Britannica · Discogs · BoardGameGeek · Swift Package Index · CoinGecko · Investopedia ·
       Mayo Clinic · Pixabay · Flaticon · Dribbble · Stack Exchange · Internet Archive · Maven Central

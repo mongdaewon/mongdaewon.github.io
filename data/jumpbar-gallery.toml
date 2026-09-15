@@ -491,9 +491,22 @@
   locale = "en"
 
 [[site]]
+  keyword = "cl"
+  name = "Claude"
+  url = "https://claude.ai/new?q={query}"
+  locale = "en"
+
+[[site]]
   keyword = "pp"
   name = "Perplexity"
   url = "https://www.perplexity.ai/search/new?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "am"
+  name = "Google AI Mode"
+  name_ko = "구글 AI 모드"
+  url = "https://www.google.com/search?udm=50&q={query}"
   locale = "en"
 
 # 개발
