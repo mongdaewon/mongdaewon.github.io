@@ -35,10 +35,11 @@
       {{ else }}
         <span class="app-ico" style="background:{{ $a.color }}">{{ $a.emoji }}</span>
       {{ end }}
-      <div>
+      <div class="app-head-txt">
         <h1>{{ $a.name }}</h1>
         {{ with .Params.tagline }}<p class="tagline">{{ . }}</p>{{ end }}
       </div>
+      <span class="dl-row">{{ partial "storebadges.html" $a }}</span>
     </header>
 
     {{/* A demo only exists where one was recorded (demo-<lang>.gif in the page bundle).
@@ -65,7 +66,11 @@
       </a>
     {{ end }}
 
-    <div class="app-download">{{ partial "storebadges.html" $a }}</div>
+    {{/* 다 읽은 사람을 위해 본문 끝에 한 번 더. 위치·크기는 헤더와 같은 .dl-row 다. */}}
+    <div class="dl-foot">
+      <p class="dl-get">{{ if $ko }}{{ $a.name }} 받기{{ else }}Get {{ $a.name }}{{ end }}</p>
+      <span class="dl-row">{{ partial "storebadges.html" $a }}</span>
+    </div>
 
     {{/* Privacy policy is English-only; on the ko site fall back to that URL. */}}
     {{ $purl := (printf "/apps/%s/privacy-policy/" $slug) | relURL }}

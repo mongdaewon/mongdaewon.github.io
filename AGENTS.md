@@ -149,6 +149,10 @@ content/
 ### ⚠️ 스토어 다운로드 배지 — 순서·정렬 규칙
 
 - **버튼 순서는 홈·앱 목록·앱 상세 등 어디서든 항상 동일하게 애플(App Store) → 안드로이드(Google Play) 순으로 정렬한다.** (Mac App Store는 애플 계열이므로 App Store 다음.) 있는 것만 노출하고 없으면 생략.
+- **자리도 고정이다.** 배지는 어느 페이지에서든 **앱 아이콘이 있는 줄**에 붙는다 — 앱 목록은 행 우측,
+  앱 상세·how-to 는 헤더 우측(모바일은 아이콘 아래 왼쪽 정렬). 긴 페이지(앱 상세·how-to)만 본문 끝에서
+  `.dl-foot`(「받기」 라벨 + 배지)로 한 번 더 노출한다. 배지를 새로 두는 곳은 `.dl-row`를 쓴다 —
+  폭은 `--dl-col`(128px) 한 값이고, 페이지마다 크기를 따로 정하지 않는다.
 - 이 순서는 `layouts/partials/storebadges.html` **단일 파샬**이 강제한다(렌더 순서: `appstore` → `macappstore` → `googleplay`). 배지를 새로 렌더하는 곳이 생기면 반드시 이 파샬을 재사용할 것 — 순서를 손으로 나열하지 말 것.
 - 배지 이미지(`static/img/badges/app-store.png`, `google-play.png`)는 **버튼만 있는 불투명 검은 사각형**(테두리·여백 없음, 동일 크기). 라운드(`border-radius`)·테두리(`border`)·간격(`gap`)은 전부 CSS가 담당하며, 다크모드에서는 테두리를 밝게 처리해 경계를 확보한다.
 - 크롬 확장은 공식 **Chrome Web Store 배지**(`static/img/badges/chrome-web-store-light.png` = 흰배경용 투명, `-dark.png` = 컬러배경용 흰색 채움)를 `.chrome-badge.light`/`.chrome-badge.dark` 클래스로 테마 스왑한다.
@@ -160,6 +164,7 @@ layouts/
 ├── _default/baseof.html      # 뼈대(pico.css + 인라인 스타일 + 헤더/푸터 + 테마 토글)
 ├── _default/single.html      # 처리방침 등 단일 페이지
 ├── _default/gallery.html     # Jumpbar 키워드 갤러리 (layout: "gallery")
+├── _default/howto.html       # 앱 사용법 (content/apps/<slug>/how-to/)
 ├── index.html                # 홈 (히어로 + 앱 리스트 + 도구 리스트)
 ├── apps/list.html            # /apps/ (앱 리스트 + 도구 리스트)
 ├── app/list.html             # 앱 상세 (type="app" 섹션, 데모 GIF 포함)
