@@ -192,6 +192,12 @@
     .howto-head .howto-dl { display: flex; gap: .5rem; margin-left: auto; }
     .howto-foot { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
                   margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+    /* 배지 원본은 523px 이다 - 폭을 안 주면 그대로 뜬다. 상단 줄은 아이콘·이름 옆에
+       붙는 보조라 작게, 하단 CTA 는 앱 상세(.app-download)와 같은 150px 로 맞춘다. */
+    .howto-head .b-apple, .howto-head .b-android,
+    .howto-foot .b-apple, .howto-foot .b-android { display: inline-flex; line-height: 0; }
+    .howto-head img.store-badge { width: 112px; height: auto; display: block; }
+    .howto-foot img.store-badge { width: 150px; height: auto; display: block; }
     .howto-get { margin: 0; font-weight: 600; }
     .backlink { font-size: var(--fs-sm); margin-bottom: 1rem; }
     .backlink + h1 { margin-top: 0; }
@@ -217,6 +223,10 @@
          The DOM keeps text first for readers and search engines. */
       .app-showcase { flex-direction: column-reverse; align-items: flex-start; gap: 1.25rem; }
       .app-demo { width: 100%; max-width: 260px; }
+      /* 배지가 아랫줄로 내려가면 margin-left:auto 가 오른쪽 끝으로 밀어붙인다 - 아이콘·이름과 같은
+         왼쪽 선에 맞춘다. 하단은 "받기" 문구가 한 줄을 통째로 가져가야 배지 둘이 같은 줄에 선다. */
+      .howto-head .howto-dl { margin-left: 0; }
+      .howto-get { flex-basis: 100%; }
     }
 
     /* Below ~400px the 76px indent squeezed paired badges to 98–118px while lone badges stayed 128px.
