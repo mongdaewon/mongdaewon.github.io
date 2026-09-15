@@ -97,7 +97,7 @@
     :root[data-theme="dark"] .store-badge { border-color: rgba(255, 255, 255, 0.3); }
     :root[data-theme="light"] .store-badge { border-color: var(--rule); }
     .app-dl img.store-badge { width: 100%; height: auto; display: block; }
-    .app-dl .badge { display: inline-block; font-size: var(--fs-sm); padding: .25rem .75rem; border-radius: var(--pico-border-radius); border: 1px solid var(--rule); color: var(--pico-muted-color); }
+    .app-dl .badge, .dl-row .badge { display: inline-block; font-size: var(--fs-sm); padding: .25rem .75rem; border-radius: var(--pico-border-radius); border: 1px solid var(--rule); color: var(--pico-muted-color); }
 
     /* keyword gallery - one 44px row per site, so a 20-item list is scannable on a phone.
        Order: keyword (what you type) - name - host (leaves the site) - add. */
@@ -158,6 +158,7 @@
     .app-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; border: 0; padding: 0; }
     .app-head .app-ico { width: 84px; height: 84px; border-radius: 19px; font-size: 2.6rem; }
     .app-head h1 { margin: 0; }
+    .app-head .app-head-txt { min-width: 0; }
     .app-head .tagline { margin: .25rem 0 0; color: var(--pico-muted-color); font-size: var(--fs-lg); }
     /* Text and demo share the row on a wide screen - the column is 46rem and the benefits
        are three short lines, so a phone-shaped demo beside them costs no extra height. */
@@ -165,12 +166,9 @@
     .app-benefits { font-size: var(--fs-lg); line-height: 1.7; min-width: 0; }
     .app-demo { flex: 0 0 auto; width: 240px; height: auto; display: block;
                 border-radius: 20px; border: 1px solid var(--rule); }
-    .app-download { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
-    .app-download a { display: inline-flex; line-height: 0; }
-    .app-download img.store-badge { width: 150px; }
     /* Support gets the button, the privacy policy stays quiet: only one of the two is
        something a user goes looking for, and a second box would rival the store badges. */
-    .app-links { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .app-links { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.25rem; }
     /* Underline stays at currentColor: the text is muted, not link-blue, so the underline
        is the only "this is a link" signal and must not fade out. */
     .app-links .quiet { color: var(--pico-muted-color); font-size: var(--fs-sm); text-decoration: underline; text-underline-offset: 2px; }
@@ -189,10 +187,15 @@
     .app-ico.ico-sm { width: 40px; height: 40px; border-radius: 10px; }
     .howto-app { font-weight: 700; text-decoration: none; color: inherit; }
     .howto-app:hover { color: var(--pico-primary); }
-    .howto-head .howto-dl { display: flex; gap: .5rem; margin-left: auto; }
-    .howto-foot { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
-                  margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
-    .howto-get { margin: 0; font-weight: 600; }
+    /* 받기 버튼은 어느 페이지에서도 아이콘 줄에 붙는다(앱 상세·how-to 동일). 폭은 앱 목록과 같은
+       --dl-col(128px) - 안 정하면 PNG 원본 523px이 그대로 나온다. 긴 페이지는 본문 끝에서 .dl-foot로 한 번 더. */
+    .dl-row { display: flex; gap: var(--dl-gap); }
+    .dl-row a { display: inline-flex; line-height: 0; }
+    .dl-row img.store-badge { width: var(--dl-col); height: auto; display: block; }
+    .app-head .dl-row, .howto-head .dl-row { margin-left: auto; }
+    .dl-foot { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+               margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+    .dl-get { margin: 0; font-weight: 600; }
     .backlink { font-size: var(--fs-sm); margin-bottom: 1rem; }
     .backlink + h1 { margin-top: 0; }
 
@@ -207,10 +210,11 @@
     @media (max-width: 520px) {
       .app-row { flex-wrap: wrap; }
       .app-dl { flex-basis: 100%; justify-content: start; padding-left: 76px; }
-      .app-download { flex-wrap: nowrap; }
-      .app-download a { flex: 0 1 150px; min-width: 0; }
-      .app-download img.store-badge { width: 100%; }
       .tool-cta { flex-basis: 100%; padding-left: 76px; }
+      /* 배지 두 개(128px*2 + gap)와 라벨이 한 줄에 못 들어간다 - 라벨을 윗줄로 보내 배지를 나란히 둔다.
+         상단 줄도 앱 목록처럼 왼쪽 정렬로 떨어뜨린다(margin-left:auto 는 넓은 화면 전용). */
+      .dl-get { flex-basis: 100%; }
+      .app-head .dl-row, .howto-head .dl-row { margin-left: 0; }
       .app-head { flex-direction: column; align-items: flex-start; text-align: left; }
       /* column-reverse, so the demo comes first on a phone: stacked the other way it
          starts ~1400px down and nobody scrolls that far to find out what the app does.

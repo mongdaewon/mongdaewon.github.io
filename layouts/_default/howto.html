@@ -12,14 +12,14 @@
       <img class="app-ico ico-sm" src="{{ .RelPermalink }}" alt="{{ $a.name }}" width="40" height="40">
     {{ end }}
     <a class="howto-app" href="{{ .Parent.RelPermalink }}">{{ $a.name }}</a>
-    <span class="howto-dl">{{ partial "storebadges.html" $a }}</span>
+    <span class="dl-row">{{ partial "storebadges.html" $a }}</span>
   </div>
 
   <h1>{{ .Title }}</h1>
   <div>{{ .Content }}</div>
 
-  <div class="howto-foot">
-    <p class="howto-get">{{ if $ko }}{{ $a.name }} 받기{{ else }}Get {{ $a.name }}{{ end }}</p>
-    {{ partial "storebadges.html" $a }}
+  <div class="dl-foot">
+    <p class="dl-get">{{ if $ko }}{{ $a.name }} 받기{{ else }}Get {{ $a.name }}{{ end }}</p>
+    <span class="dl-row">{{ partial "storebadges.html" $a }}</span>
   </div>
 {{ end }}
