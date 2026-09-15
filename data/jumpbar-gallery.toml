@@ -509,6 +509,12 @@
   url = "https://www.google.com/search?udm=50&q={query}"
   locale = "en"
 
+[[site]]
+  keyword = "de"
+  name = "DeepSeek"
+  url = "https://chat.deepseek.com/?q={query}"
+  locale = "en"
+
 # 개발
 [[site]]
   keyword = "so"
