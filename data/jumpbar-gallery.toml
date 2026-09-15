@@ -4,7 +4,11 @@
 # Conventions (same as tools.toml): base field = English, `_ko` = Korean override.
 #   keyword  what you type in the address bar. Unique across this file, and must not
 #            collide with the app's built-ins (Shared/Presets.swift): yt wk az mp tr
-#            gh gg dd nv nm cp rk kl lb fk ch.
+#            gh gg dd nv nm cp rk kl lb fk yh.
+#            ⚠ yh was ch until the release that follows this file - ch went to ChatGPT here,
+#            because Yahoo!知恵袋 only shows on Japanese-language devices while ChatGPT is
+#            everywhere. Ship the app update before this row goes live, or a Japanese device
+#            sees ch twice.
 #            Korean entries use hangul initials so a Korean typist never has to switch
 #            the keyboard to English mid-search. One letter where it is free, two where
 #            it collides. Other languages can do the same with their own script.
@@ -61,6 +65,20 @@
   name = "Naver Knowledge iN"
   name_ko = "네이버 지식iN"
   url = "https://kin.naver.com/search/list.naver?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅈㅅ"
+  name = "Chosun Ilbo"
+  name_ko = "조선일보"
+  url = "https://www.chosun.com/nsearch/?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇㅎ"
+  name = "Yonhap News"
+  name_ko = "연합뉴스"
+  url = "https://www.yna.co.kr/search/index?query={query}"
   locale = "ko"
 
 # 지도
@@ -135,6 +153,49 @@
   url = "https://www.kurly.com/search?sword={query}"
   locale = "ko"
 
+[[site]]
+  keyword = "ㅇㄹㅇ"
+  name = "AliExpress"
+  name_ko = "알리익스프레스"
+  url = "https://ko.aliexpress.com/w/wholesale-{query}.html"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇㅇ"
+  name = "Olive Young"
+  name_ko = "올리브영"
+  url = "https://www.oliveyoung.co.kr/store/search/getSearchMain.do?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇㄱ"
+  name = "29CM"
+  name_ko = "29CM"
+  url = "https://search.29cm.co.kr/search?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅉ"
+  name = "Zigzag"
+  name_ko = "지그재그"
+  url = "https://zigzag.kr/search?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅈㄱ"
+  name = "Joongna"
+  name_ko = "중고나라"
+  url = "https://web.joongna.com/search/{query}"
+  locale = "ko"
+
+# 부동산
+[[site]]
+  keyword = "ㅎㄱ"
+  name = "Hogangnono"
+  name_ko = "호갱노노"
+  url = "https://hogangnono.com/search?q={query}"
+  locale = "ko"
+
 # 책
 [[site]]
   keyword = "ㄱ"
@@ -200,6 +261,34 @@
   url = "https://comic.naver.com/search?keyword={query}"
   locale = "ko"
 
+[[site]]
+  keyword = "ㄹㅈ"
+  name = "Lezhin Comics"
+  name_ko = "레진코믹스"
+  url = "https://www.lezhin.com/ko/search?t=all&q={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅍㅈ"
+  name = "KakaoPage"
+  name_ko = "카카오페이지"
+  url = "https://page.kakao.com/search/result?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄴㅅ"
+  name = "Naver Series"
+  name_ko = "네이버 시리즈"
+  url = "https://series.naver.com/search/search.series?t=all&q={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅈㄴ"
+  name = "Genie Music"
+  name_ko = "지니뮤직"
+  url = "https://www.genie.co.kr/search/searchMain?query={query}"
+  locale = "ko"
+
 # 커뮤니티
 [[site]]
   keyword = "ㅋ"
@@ -229,6 +318,34 @@
   url = "https://www.ppomppu.co.kr/search_bbs.php?search_type=sub_memo&keyword={query}"
   locale = "ko"
 
+[[site]]
+  keyword = "ㅍㅋ"
+  name = "FM Korea"
+  name_ko = "에펨코리아"
+  url = "https://www.fmkorea.com/search.php?mid=home&search_keyword={query}&search_target=title_content"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄷㅋ"
+  name = "theqoo"
+  name_ko = "더쿠"
+  url = "https://theqoo.net/index.php?mid=square&search_keyword={query}&search_target=title_content"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇㅈ"
+  name = "instiz"
+  name_ko = "인스티즈"
+  url = "https://www.instiz.net/name?srt=1&srh={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅍㄱ"
+  name = "82cook"
+  name_ko = "82쿡"
+  url = "https://www.82cook.com/entiz/enti.php?bn=15&searchType=subject&keyword={query}"
+  locale = "ko"
+
 # 사전·논문
 [[site]]
   keyword = "ㅅ"
@@ -249,6 +366,27 @@
   name = "RISS"
   name_ko = "RISS 논문"
   url = "https://www.riss.kr/search/Search.do?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅂㄱ"
+  name = "Naver Encyclopedia"
+  name_ko = "네이버 지식백과"
+  url = "https://terms.naver.com/search?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㄷㅂ"
+  name = "DBpia"
+  name_ko = "디비피아"
+  url = "https://www.dbpia.co.kr/search/topSearch?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅌㅎ"
+  name = "KIPRIS"
+  name_ko = "키프리스"
+  url = "https://www.kipris.or.kr/khome/search/searchResult.do?queryText={query}"
   locale = "ko"
 
 # 생활
@@ -280,6 +418,41 @@
   url = "https://www.gov.kr/search?srhQuery={query}"
   locale = "ko"
 
+[[site]]
+  keyword = "ㅇㅋ"
+  name = "Work24"
+  name_ko = "워크넷"
+  url = "https://www.work24.go.kr/wk/a/b/1200/retriveDtlEmpSrchList.do?keyword={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅈㅍ"
+  name = "JobPlanet"
+  name_ko = "잡플래닛"
+  url = "https://www.jobplanet.co.kr/search?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇㅌ"
+  name = "Wanted"
+  name_ko = "원티드"
+  url = "https://www.wanted.co.kr/search?query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅂㄹ"
+  name = "Korea Law"
+  name_ko = "국가법령정보센터"
+  url = "https://www.law.go.kr/lsSc.do?menuId=1&query={query}"
+  locale = "ko"
+
+[[site]]
+  keyword = "ㅇㅂ"
+  name = "EBS"
+  name_ko = "EBS"
+  url = "https://www.ebs.co.kr/search?query={query}"
+  locale = "ko"
+
 # ---------- Global ----------
 # Grouped by what people are looking for, because the page renders in file order.
 
@@ -307,6 +480,20 @@
   keyword = "rd"
   name = "Reddit"
   url = "https://www.reddit.com/search/?q={query}"
+  locale = "en"
+
+# AI
+# 검색어가 그대로 질문이 된다 - 주소창 단축키와 궁합이 가장 좋은 분류다.
+[[site]]
+  keyword = "ch"
+  name = "ChatGPT"
+  url = "https://chatgpt.com/?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "pp"
+  name = "Perplexity"
+  url = "https://www.perplexity.ai/search/new?q={query}"
   locale = "en"
 
 # 개발
@@ -356,6 +543,18 @@
   keyword = "hn"
   name = "Hacker News"
   url = "https://hn.algolia.com/?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "go"
+  name = "pkg.go.dev"
+  url = "https://pkg.go.dev/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ph"
+  name = "Product Hunt"
+  url = "https://www.producthunt.com/search?q={query}"
   locale = "en"
 
 # 지식·논문
@@ -417,6 +616,26 @@
   url = "https://emojipedia.org/search?q={query}"
   locale = "en"
 
+# 책
+[[site]]
+  keyword = "gb"
+  name = "Google Books"
+  name_ko = "구글 도서"
+  url = "https://www.google.com/search?tbm=bks&q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ol"
+  name = "Open Library"
+  url = "https://openlibrary.org/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "pg"
+  name = "Project Gutenberg"
+  url = "https://www.gutenberg.org/ebooks/search/?query={query}"
+  locale = "en"
+
 # 영화·음악·게임
 [[site]]
   keyword = "im"
@@ -460,6 +679,42 @@
   url = "https://www.goodreads.com/search?q={query}"
   locale = "en"
 
+[[site]]
+  keyword = "lt"
+  name = "Letterboxd"
+  url = "https://letterboxd.com/search/{query}/"
+  locale = "en"
+
+[[site]]
+  keyword = "mc"
+  name = "Metacritic"
+  url = "https://www.metacritic.com/search/{query}/"
+  locale = "en"
+
+[[site]]
+  keyword = "lf"
+  name = "Last.fm"
+  url = "https://www.last.fm/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "sd"
+  name = "SoundCloud"
+  url = "https://soundcloud.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ge"
+  name = "Genius"
+  url = "https://genius.com/search?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "hl"
+  name = "HowLongToBeat"
+  url = "https://howlongtobeat.com/?q={query}"
+  locale = "en"
+
 # 이미지
 [[site]]
   keyword = "us"
@@ -477,4 +732,57 @@
   keyword = "gp"
   name = "GIPHY"
   url = "https://giphy.com/search/{query}"
+  locale = "en"
+
+[[site]]
+  keyword = "pi"
+  name = "Pinterest"
+  url = "https://www.pinterest.com/search/pins/?q={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "gi"
+  name = "Google Images"
+  name_ko = "구글 이미지"
+  url = "https://www.google.com/search?q={query}&udm=2"
+  locale = "en"
+
+# 디자인
+[[site]]
+  keyword = "gf"
+  name = "Google Fonts"
+  name_ko = "구글 폰트"
+  url = "https://fonts.google.com/?query={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "bh"
+  name = "Behance"
+  url = "https://www.behance.net/search/projects?search={query}"
+  locale = "en"
+
+# 쇼핑
+[[site]]
+  keyword = "eb"
+  name = "eBay"
+  url = "https://www.ebay.com/sch/i.html?_nkw={query}"
+  locale = "en"
+
+[[site]]
+  keyword = "ae"
+  name = "AliExpress"
+  url = "https://www.aliexpress.com/w/wholesale-{query}.html"
+  locale = "en"
+
+# 여행·금융
+[[site]]
+  keyword = "ab"
+  name = "Airbnb"
+  url = "https://www.airbnb.com/s/{query}/homes"
+  locale = "en"
+
+[[site]]
+  keyword = "yf"
+  name = "Yahoo Finance"
+  url = "https://finance.yahoo.com/lookup/?s={query}"
   locale = "en"

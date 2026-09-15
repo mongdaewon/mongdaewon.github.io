@@ -1,5 +1,28 @@
 # TODO
 
+## 20260915.1 Jumpbar 갤러리 확장 (66 → 111)
+
+목표: Jumpbar 출시에 맞춰 갤러리를 채운다. 근거는 네이버 월 검색량(사이트명 = 내비게이션 수요)
++ 기존 목록의 카테고리 공백. 주소는 전부 실측 검증한 것만 넣는다.
+
+- [ ] 1. 갤러리 45개 추가 — 한국 24 · 글로벌 21 (`data/jumpbar-gallery.toml`)
+- [ ] 2. 앱 기본 키워드 `ch` 를 `yh` 로 옮긴다 (`ios-jumpbar`: `Shared/Presets.swift`, `Tests/PresetsTests.swift`)
+      — `ch` 를 ChatGPT(월 1,557만)에 내주기 위한 교환. 출시 당일이라 일본어 사용자가 사실상 없어 지금이 최저 비용.
+      `disabled` 가 키워드 문자열로 저장되므로(`Shared/Keywords.swift:97`) 知恵袋를 꺼둔 사용자는 다시 켜진다.
+- [ ] 3. 앱 업데이트 배포 후 갤러리 헤더 주석의 기본 키워드 목록을 `ch` → `yh` 로 갱신
+- [ ] 4. 미검증 2개 확인 후 추가 — `cl` Claude(`claude.ai/new?q=`), `am` Google AI 모드(`google.com/search?udm=50&q=`)
+      — 브라우저 pane 차단·구글 봇 감지로 이 환경에서 확인 불가. 실기기 주소창에서 확인한다.
+- [ ] 5. 봇 차단으로 검증 못 한 후보를 ego-browser 로 재확인 — Etsy · Indeed · Tripadvisor · Booking.com ·
+      Yelp · Britannica · Discogs · BoardGameGeek · Swift Package Index · CoinGecko · Investopedia ·
+      Mayo Clinic · Pixabay · Flaticon · Dribbble · Stack Exchange · Internet Archive · Maven Central
+
+검증 실패로 제외(검색량은 컸음): 제미나이 698만·네이버증권 415만·홈택스 262만·스카이스캐너 186만·
+엔카 182만·넷플릭스 168만·보배드림 165만·네이버항공권 143만·아고다 106만·치지직 87만·나라장터 70만·
+번개장터 66만·여기어때 38만·에이블리 35만·직방 25만·딥시크 1.4만.
+사유는 로그인 벽 / 검색 URL 없음 / 파라미터 무시 / 봇 차단 / SPA.
+
+---
+
 ## 20260914.1 영문 사용법 콘텐츠로 앱 설치 늘리기
 
 목표: 앱별 영문 how-to 페이지를 늘려 롱테일 검색 유입 → 스토어 배지로 전환.
