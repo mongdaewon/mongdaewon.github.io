@@ -12,7 +12,12 @@
   - [x] `~/.agents/skills/analytics/SKILL.md` GA4 표에 속성 추가
 - [x] 2. how-to를 고아 페이지에서 구출 — 앱 상세 혜택 아래 진입 카드(A2안) + how-to 상·하단 스토어 배지
 - [x] 3. 기본 how-to 8개 앱 ko/en 생성 (앱 설명에 적힌 사실만으로 구성 — 내용 보강 예정)
-- [ ] 3-1. 앱별 how-to 내용 보강 (실제 화면·단축키·세부 동작 추가, 하나씩)
+- [x] 3-1. 스토어 등록 정보 기준으로 how-to 보강 — Jumpbar·JoinCut·Ivy To Do·Deep Breath·WidPass·Where Is My Cursor·RecNow (7개)
+  - 근거 수집: iOS는 `itunes.apple.com/lookup?id=<id>&country=<kr|us>`, Android는 Play 상세 페이지의 `data-g-id="description"`.
+    한 번에 여러 개를 연속 호출하면 iTunes가 막는다 — 앱마다 따로 호출할 것.
+  - [ ] AudioJoin·LazyWindow는 미출시라 스토어 근거 없음. 출시 후 같은 방식으로 보강
+  - [ ] RecNow 권한 안내(화면 녹화·마이크·알림) 별도 섹션 검토 — 권한 창 뜰 때 실제로 검색되는 내용
+  - [ ] Deep Breath "4-7-8 호흡이 뭔가" 설명 문단 검토 — 검색어가 붙는 자리
 - [ ] 4. `/index-request`로 새 URL 색인 요청, 이후 GSC로 검색어 확인
 
 보류: 블로그 섹션. 앱에 묶이지 않는 문제 중심 글을 쓸 때 만든다.

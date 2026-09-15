@@ -1,26 +1,33 @@
 ---
 title: "How to Use Ivy To Do"
-description: "Write six tasks for the day and work through them in order — the Ivy Lee Method in one app."
+description: "Six tasks a day, dragged into priority order, with unfinished ones carried over automatically — plus widgets, calendar, and reminders."
 layout: "howto"
 ---
 
 **Ivy To Do - Task Checklist**
 
-Six tasks a day. Nothing else to manage.
+Up to six tasks a day, in priority order. That is the whole method.
 
-## Write down six tasks
+## Write down up to six tasks
 
-At the start of the day, write only six things. Six is the limit on purpose — it forces you to choose what actually matters.
+Six is the limit on purpose. It forces you to choose what actually matters instead of keeping an endless list.
 
-## Put them in order
+## Drag them into priority order
 
-Order the six by importance, most important first. This is the Ivy Lee Method the app is built on.
+Drag the tasks to reorder them, most important first, then work from the top. This is the Ivy Lee Method the app is built on — a technique that has been in use for over a hundred years.
 
-## Work from the top
+## Let unfinished tasks carry over
 
-Start with the first task and stay on it until it is done. Then move to the next.
+Anything you don't check off is carried over to the next day automatically. You don't rewrite yesterday's list.
 
-## Good to know
+## Plan tomorrow and look back on today
 
-- In the Ivy Lee Method, anything you don't finish becomes the first of tomorrow's six.
-- Less to manage means less stress, and more actually done.
+Prepare tomorrow's tasks in advance, and leave a short reflection memo on the day you just finished.
+
+## Find what you did before
+
+The calendar view shows your record day by day, and search finds a task you wrote earlier.
+
+## Keep it in front of you
+
+On iPhone, five widget types are available for the lock screen and home screen. Evening and morning reminders nudge you to plan and to start.
