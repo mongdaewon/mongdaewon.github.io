@@ -33,7 +33,11 @@
             {{/* Drop the leading www. like the app's displayHost does - four characters back,
                  nothing lost, and it keeps more hosts off the ellipsis on a phone. */}}
             <a class="gal-host" href="{{ printf "%s://%s/" $u.Scheme $u.Host }}" target="_blank" rel="noopener">{{ strings.TrimPrefix "www." $u.Host }}</a>
-            <a class="gal-add" href="{{ $add | safeURL }}" aria-label="{{ $name }} {{ if $ko }}추가{{ else }}Add{{ end }}" title="{{ if $ko }}추가{{ else }}Add{{ end }}">
+            {{/* baseof 의 cta_click 핸들러가 data-ev 붙은 a 만 본다. cta_app 에 키워드를 실어
+                 어느 사이트가 실제로 추가되는지까지 남긴다 - 갤러리를 어느 쪽으로 키울지
+                 정하는 근거다. 링크가 mdjumpbar:// 라 누르면 앱으로 빠져나가므로,
+                 이 이벤트가 없으면 '추가했다' 는 아무 데도 안 남는다. */}}
+            <a class="gal-add" data-ev="gallery_add" data-app="{{ .keyword }}" href="{{ $add | safeURL }}" aria-label="{{ $name }} {{ if $ko }}추가{{ else }}Add{{ end }}" title="{{ if $ko }}추가{{ else }}Add{{ end }}">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
             </a>
           </div>

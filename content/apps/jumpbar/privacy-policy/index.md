@@ -6,7 +6,7 @@ layout: "single"
 
 **Jumpbar**
 
-Last updated: August 22, 2026
+Last updated: September 15, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -14,7 +14,7 @@ Last updated: August 22, 2026
 
 This Privacy Policy describes how Jumpbar ("we", "our", or "the app") handles your information when you use the app and its Safari extension.
 
-The short version: the app collects nothing and sends nothing to us. There is no server we operate, no account with us, and no analytics.
+The short version: the app collects nothing and sends nothing to us. There is no server we operate, no account with us, and no analytics inside the app. Our website is separate and is covered below.
 
 One thing does leave your device, and only if you switch it on: **iCloud sync** copies your keyword list to your own Apple Account. Your search words never leave your device either way. Everything below explains that in detail.
 
@@ -68,7 +68,9 @@ The redirect then loads the site you chose, so that site receives your search wo
 
 Our website offers a gallery of ready-made keywords. Tapping one opens a link (`mdjumpbar://`) that fills in the add form inside the app. The app never saves anything from such a link on its own - you see the values first and choose whether to save them.
 
-The gallery is a static page on GitHub Pages. It has no forms, no accounts, and we run no analytics on it.
+The gallery is a page on our website, not a part of the app. Like the rest of the site it is hosted on GitHub Pages and uses Google Analytics, which records which pages were visited and which gallery entry's Add button was tapped. That is website traffic, tied to no account and to nothing inside the app - we cannot tell which keywords you actually keep, how often you jump, or what you search for. It has no forms and no accounts.
+
+The app itself sends nothing, including when it opens this page.
 
 ## Information We Do NOT Collect
 
