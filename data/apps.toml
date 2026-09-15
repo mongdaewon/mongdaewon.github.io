@@ -60,7 +60,7 @@
   name = "Jumpbar"
   emoji = "🔍"
   color = "#0a84ff"
-  comingsoon = true
+  appstore = "https://apps.apple.com/app/id6804220240"
 
 [[app]]
   slug = "lazywindow"

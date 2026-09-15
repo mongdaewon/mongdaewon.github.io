@@ -30,7 +30,7 @@
 - [x] 영문 예시 `yt swiftui` → `yt coffee` (앱 온보딩과 결이 맞게)
 - [x] CLAUDE.md 갱신 (앱 7개, 갤러리 규약, 데모 GIF 규약, 레이아웃 트리)
 - [ ] my-wiki `wiki/mobile/landing-site.md` 등록 현황 갱신 (RecNow·확장 4종·Jumpbar)
-- [ ] Jumpbar 심사 통과 후 `data/apps.toml`의 `comingsoon` → 실제 App Store 링크로 교체
+- [x] Jumpbar 심사 통과 후 `data/apps.toml`의 `comingsoon` → 실제 App Store 링크로 교체 (2026-09-15 출시, id6804220240)
 - [ ] 영문 데모 GIF 중간에 구글 스피너만 도는 0.7초 - 거슬리면 그 구간만 더 당길 것 (보류: 4초 중 0.7초라 흐름은 읽힘)
 
 ---
