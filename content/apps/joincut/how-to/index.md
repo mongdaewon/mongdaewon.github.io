@@ -30,6 +30,14 @@ JoinCut also points out which video is the one forcing a re-encode, so you can d
 
 Drag videos in from Finder on a Mac, or from Files on an iPad. Save straight to Photos — or pick a folder when you're on a Mac. You can also export as a GIF.
 
+## Open MKV files too
+
+MKV files open as well, not just MP4 and MOV. Pick one in the Files app the same way, and nothing is re-encoded.
+
+There is a rule. The video has to be H.264 or HEVC, and the audio has to be AAC, AC-3 or MP3. A file outside that rule is not opened at all, and JoinCut tells you which part to change. If only the audio is the problem, convert just the audio to AAC and leave the picture untouched.
+
+AVI is not supported.
+
 ## Why lossless matters
 
 Most editors re-encode your video, which costs time and quality. JoinCut leaves the original frames untouched and only stitches the parts together, so the file you save looks identical to the source and finishes quickly.
