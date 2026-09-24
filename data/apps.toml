@@ -46,7 +46,7 @@
   name = "AudioJoin"
   emoji = "🎵"
   color = "#f5453d"
-  comingsoon = true
+  appstore = "https://apps.apple.com/app/id6809171081"
 
 [[app]]
   slug = "recnow"
