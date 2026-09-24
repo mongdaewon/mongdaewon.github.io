@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div>{{ . }}</div>{{ end }}
+
+  {{/* 글 목록은 앱 목록과 같은 행 구조를 쓴다 - 아이콘 자리만 비었을 뿐 간격·구분선·호버가 같다. */}}
+  <div class="app-list">
+    {{ range .Pages }}
+      <article class="app-row">
+        <a class="app-main" href="{{ .RelPermalink }}">
+          <span class="app-info">
+            <span class="name">{{ .Title }}</span>
+            <span class="desc">{{ .Date.Format "Jan 2, 2006" }} · {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}</span>
+          </span>
+        </a>
+      </article>
+    {{ end }}
+  </div>
+{{ end }}
