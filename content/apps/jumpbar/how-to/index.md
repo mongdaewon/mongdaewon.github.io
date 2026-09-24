@@ -14,7 +14,7 @@ Jumpbar is a Safari extension, so turn it on in Safari's extension settings firs
 
 ## Search a site from the address bar
 
-Type the keyword, a space, then your search words. `yt cats` lands on YouTube results — no search page in between, and no extra tap.
+Type the keyword, a space, then your search words. `yt cats` lands on YouTube results, no search page in between, and no extra tap.
 
 ## Add your own site
 
@@ -44,7 +44,7 @@ Korean devices also get Naver, Namuwiki, and Coupang. Japanese ones get Rakuten 
 
 Built-in keywords and one site of your own are free, forever.
 
-Jumpbar Plus is a one-time purchase, not a subscription. It removes the limit on how many sites and keywords you can add, and turns on iCloud sync — your keyword list lives on your own Apple Account, so your sites show up on every device. Sync is off until you turn it on, and turning it off removes the copy. Your search words are never part of it.
+Jumpbar Plus is a one-time purchase, not a subscription. It removes the limit on how many sites and keywords you can add, and turns on iCloud sync. Your keyword list lives on your own Apple Account, so your sites show up on every device. Sync is off until you turn it on, and turning it off removes the copy. Your search words are never part of it.
 
 ## Good to know
 

@@ -37,9 +37,9 @@ layout: "howto"
 
 메뉴 막대 아이콘 → **Settings…**
 
-- **Launch at login** — 로그인할 때 LazyWindow를 실행합니다.
-- **Hide the menu bar icon** — 아이콘을 숨겨도 단축키는 그대로 동작합니다. 설정 창을 다시 열려면 LazyWindow를 한 번 더 실행하세요.
-- **Continue onto the next display** — 끄면 옆 모니터로 넘어가지 않고 현재 모니터에서만 크기를 순환합니다.
+- **Launch at login** - 로그인할 때 LazyWindow를 실행합니다.
+- **Hide the menu bar icon** - 아이콘을 숨겨도 단축키는 그대로 동작합니다. 설정 창을 다시 열려면 LazyWindow를 한 번 더 실행하세요.
+- **Continue onto the next display** - 끄면 옆 모니터로 넘어가지 않고 현재 모니터에서만 크기를 순환합니다.
 
 ## 특정 앱 제외하기
 

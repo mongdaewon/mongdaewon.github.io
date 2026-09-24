@@ -23,7 +23,7 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 - Which screens and features are used, and how often
 - Device type and operating system version
 
-This data is tied to a per-install identifier, never to an account — the app has no login. It cannot be used to identify you personally, and it never includes your audio, your file names, or anything you typed.
+This data is tied to a per-install identifier, never to an account. The app has no login. It cannot be used to identify you personally, and it never includes your audio, your file names, or anything you typed.
 
 ### 2. Local Data
 
@@ -37,7 +37,7 @@ Imported copies live in a temporary folder and are removed when you remove the c
 
 ## File Access
 
-The app opens audio only when you choose it — through the file picker, or by sharing a file into AudioJoin from another app such as Voice Memos. A file shared into AudioJoin is placed in a private folder that only AudioJoin and its share extension can read.
+The app opens audio only when you choose it, either through the file picker or by sharing a file into AudioJoin from another app such as Voice Memos. A file shared into AudioJoin is placed in a private folder that only AudioJoin and its share extension can read.
 
 **All audio processing happens entirely on your device.** Your recordings and their contents are never uploaded to our servers or to any third party.
 
@@ -65,7 +65,7 @@ AudioJoin does not display any advertisements. We do not use any advertising SDK
 
 AudioJoin offers one optional in-app purchase, **AudioJoin Plus**: a single payment, not a subscription, that unlocks joining three or more clips and exporting as MP3 or WAV. Trimming and saving as M4A are free and always will be.
 
-Purchases are handled entirely by Apple. We never see or store your payment details — the app only receives, and keeps on your device, whether the purchase is active.
+Purchases are handled entirely by Apple. We never see or store your payment details. The app only receives, and keeps on your device, whether the purchase is active.
 
 ## Data Security
 
