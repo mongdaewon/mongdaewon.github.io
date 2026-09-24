@@ -40,12 +40,17 @@
 - [x] 3-1. 스토어 등록 정보 기준으로 how-to 보강 — Jumpbar·JoinCut·Ivy To Do·Deep Breath·WidPass·Where Is My Cursor·RecNow (7개)
   - 근거 수집: iOS는 `itunes.apple.com/lookup?id=<id>&country=<kr|us>`, Android는 Play 상세 페이지의 `data-g-id="description"`.
     한 번에 여러 개를 연속 호출하면 iTunes가 막는다 — 앱마다 따로 호출할 것.
-  - [ ] AudioJoin·LazyWindow는 미출시라 스토어 근거 없음. 출시 후 같은 방식으로 보강
+  - [ ] AudioJoin 출시(2026-09-24, id6809171081)로 스토어 근거가 생겼다 — how-to 를 등록 정보 기준으로 보강. LazyWindow 는 여전히 미출시
   - [ ] RecNow 권한 안내(화면 녹화·마이크·알림) 별도 섹션 검토 — 권한 창 뜰 때 실제로 검색되는 내용
   - [ ] Deep Breath "4-7-8 호흡이 뭔가" 설명 문단 검토 — 검색어가 붙는 자리
-- [ ] 4. `/index-request`로 새 URL 색인 요청, 이후 GSC로 검색어 확인
+- [ ] 4. `/index-request`로 새 URL 색인 요청(how-to + 블로그 3편), 이후 GSC로 검색어 확인
 
-보류: 블로그 섹션. 앱에 묶이지 않는 문제 중심 글을 쓸 때 만든다.
+- [x] 5. 영어 블로그 `/blog/` 개설 + 첫 3편 발행 (JoinCut 무손실 합치기·MKV 불러오기, Ivy To Do 아이비 리 방법)
+      구조·front matter·근거 규칙은 AGENTS `### 블로그`. 키워드는 구글 자동완성에서 뽑았다.
+- [ ] 6. 블로그 다음 글 — 소재는 문의로 들어온 요청과 개선 릴리즈다. 발행 전 앱 레포(`app-listing.md`)와
+      대조하고, 낡은 how-to 를 발견하면 같이 고친다.
+- [ ] 7. 4주 뒤 GA4 에서 블로그 성과 확인 — 글별 페이지뷰와 `cta_click`(store_ios·store_android) 전환.
+      숫자가 안 붙는 글이 있으면 제목 키워드부터 다시 본다.
 
 ---
 
@@ -59,7 +64,6 @@
 - [x] Jumpbar 동작 데모 GIF (ko/en, 4.0초, 언어별 `demo-<lang>.gif`)
 - [x] 영문 예시 `yt swiftui` → `yt coffee` (앱 온보딩과 결이 맞게)
 - [x] CLAUDE.md 갱신 (앱 7개, 갤러리 규약, 데모 GIF 규약, 레이아웃 트리)
-- [ ] my-wiki `wiki/mobile/landing-site.md` 등록 현황 갱신 (RecNow·확장 4종·Jumpbar)
 - [x] Jumpbar 심사 통과 후 `data/apps.toml`의 `comingsoon` → 실제 App Store 링크로 교체 (2026-09-15 출시, id6804220240)
 - [ ] 영문 데모 GIF 중간에 구글 스피너만 도는 0.7초 - 거슬리면 그 구간만 더 당길 것 (보류: 4초 중 0.7초라 흐름은 읽힘)
 
@@ -71,7 +75,6 @@
 - [x] iTool Mouser 크롬 확장 처리방침 페이지 작성
 - [x] iTool Mouser 크롬 확장 Tools 목록 등록 (확장 4개)
 - [x] CLAUDE.md 갱신 (앱 6개, 확장 4개, robots.txt·서치콘솔 인증 파일 명시)
-- [ ] my-wiki `wiki/mobile/landing-site.md` 등록 현황 갱신 (RecNow·확장 4종)
 
 ---
 
