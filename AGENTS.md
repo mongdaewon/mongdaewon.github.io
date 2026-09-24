@@ -100,6 +100,18 @@ content/
 ⚠️ **실태와 문구가 어긋나면 스토어 심사에서 걸린다.** Analytics만 쓰면서 crash·성능 수집 문구를 넣지 말 것.
 ⚠️ **처리방침 URL은 스토어 제출 전에 확보한다.** 페이지 생성 → main push → `https://mongdaewon.github.io/apps/<slug>/privacy-policy/` 200 확인 순서.
 
+### 블로그 — `content/blog/`
+
+앱 개발 문의를 푼 기록과 앱으로 끌어오는 글을 **영어로만** 발행한다(`.ko.md` 없음).
+
+- 글 하나는 leaf bundle: `content/blog/<slug>/index.md` → `/blog/<slug>/`. 스크린샷은 같은 번들에 둔다.
+- front matter는 `title`·`description`·`date` 셋 다 필수다. **`date`가 없으면** 목록 정렬이 무너지고 본문에 `Jan 1, 0001`이 찍힌다. `layout`은 지정하지 않는다(섹션 템플릿이 자동).
+- 목록의 한 줄 설명은 `description`이고, 없으면 본문 앞부분(`.Summary`)이 대신 들어간다.
+- `app: <slug>`(선택)를 넣으면 how-to 와 같은 앱 줄(아이콘·이름·배지)이 글 위에, `.dl-foot`(받기 + 배지)이 글 끝에 붙는다. **글의 목적이 설치라면 넣는다.** 배지는 `storebadges.html` 파샬이므로 순서는 자동이다.
+- 글은 영어 검색 의도에서 출발한다. 제목·소제목은 구글 자동완성에 실제로 나오는 질문을 쓴다(`/naver-keyword`의 구글 자동완성). 앱 기능을 말할 때는 `content/apps/<slug>/how-to/`에 이미 쓴 문구를 근거로 삼고, 거기 없는 사양(코덱·해상도 조건 등)을 새로 지어내지 않는다.
+- 헤더 `Blog` 링크는 `GetPage "/blog"`라 ko 사이트에는 뜨지 않는다.
+- RSS는 `disableKinds`로 꺼져 있다. 구독을 열려면 블로그 섹션에만 `outputs`를 주고 켠다(전역 해제는 홈·앱 섹션 피드까지 만든다).
+
 ### 앱 메타데이터 단일 출처 — `data/apps.toml`
 
 언어 무관 앱 메타(표시 순서, 이름, 스토어 링크, 이모지/색 fallback)는 `data/apps.toml`에서 한 곳으로 관리. 레이아웃이 slug로 매칭해 콘텐츠(제목/요약/본문, 언어별)와 결합.
@@ -165,6 +177,8 @@ layouts/
 ├── _default/single.html      # 처리방침 등 단일 페이지
 ├── _default/gallery.html     # Jumpbar 키워드 갤러리 (layout: "gallery")
 ├── _default/howto.html       # 앱 사용법 (content/apps/<slug>/how-to/)
+├── blog/list.html            # /blog/ 글 목록
+├── blog/single.html          # 블로그 글 (제목 + 날짜 + 본문, app: 있으면 앱 줄·배지)
 ├── index.html                # 홈 (히어로 + 앱 리스트 + 도구 리스트)
 ├── apps/list.html            # /apps/ (앱 리스트 + 도구 리스트)
 ├── app/list.html             # 앱 상세 (type="app" 섹션, 데모 GIF 포함)
