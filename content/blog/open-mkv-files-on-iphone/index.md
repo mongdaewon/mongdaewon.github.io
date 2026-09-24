@@ -55,4 +55,4 @@ The Android version got MKV in the same release, by the same codec rule.
 
 The difference is at the other end. On Android, AC-3 or MP3 audio is re-encoded when you save, because the Android muxer cannot carry those tracks over. On iPhone they pass through untouched.
 
-If you have a folder of MKV clips you have been unable to touch on your phone, pick them in the Files app and see if they open. If one does not, the app will tell you exactly which piece to change.
+If you have a folder of MKV clips you have been unable to touch on your phone, pick them in the Files app and see if they open. From there you can merge several MKV files into one, and if a file does not open, the app tells you exactly which piece to change.

@@ -37,9 +37,9 @@ Press the opposite arrow and the window keeps its current size but flips to the 
 
 Open the menu bar icon and choose **Settings…**
 
-- **Launch at login** — start LazyWindow when you log in.
-- **Hide the menu bar icon** — shortcuts keep working. Open LazyWindow again to bring the settings window back.
-- **Continue onto the next display** — turn this off to keep cycling sizes on the current display instead of moving to the next one.
+- **Launch at login** - start LazyWindow when you log in.
+- **Hide the menu bar icon** - shortcuts keep working. Open LazyWindow again to bring the settings window back.
+- **Continue onto the next display** - turn this off to keep cycling sizes on the current display instead of moving to the next one.
 
 ## Skipping an app
 

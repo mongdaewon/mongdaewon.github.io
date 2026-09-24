@@ -6,7 +6,7 @@ layout: "howto"
 
 **JoinCut - Lossless Video Merge**
 
-Cut one video into pieces, keep the ones you want, and join them back into a single video — without re-encoding.
+Cut one video into pieces, keep the ones you want, and join them back into a single video, without re-encoding.
 
 ## Keep only the parts you want
 
@@ -28,7 +28,7 @@ JoinCut also points out which video is the one forcing a re-encode, so you can d
 
 ## Bring videos in and save them out
 
-Drag videos in from Finder on a Mac, or from Files on an iPad. Save straight to Photos — or pick a folder when you're on a Mac. You can also export as a GIF.
+Drag videos in from Finder on a Mac, or from Files on an iPad. Save straight to Photos, or pick a folder when you're on a Mac. You can also export as a GIF.
 
 ## Open MKV files too
 
@@ -44,7 +44,7 @@ Most editors re-encode your video, which costs time and quality. JoinCut leaves 
 
 ## Free and Plus
 
-Merging your chosen parts and saving losslessly — the core of the app — is free forever, with no ads.
+Merging your chosen parts and saving losslessly, the core of the app, is free forever, with no ads.
 
 JoinCut Plus is a one-time purchase that removes the GIF watermark, lifts the segment limit past three, lets you join three or more videos at once, and saves selected segments as separate files.
 

@@ -10,7 +10,7 @@ A petal animation guides your breathing. Follow the rhythm of inhale, hold, and 
 
 ## Breathe along with the petals
 
-Open the app and match your breathing to the petal animation. Inhale, hold, exhale — the shape tells you which phase you are in, so you don't have to count.
+Open the app and match your breathing to the petal animation. Inhale, hold, exhale - the shape tells you which phase you are in, so you don't have to count.
 
 ## Pick a breathing pattern
 
@@ -18,7 +18,7 @@ Six presets are built in, including 4-7-8 breathing and box breathing. If none o
 
 ## Choose how long to sit
 
-A session runs from one minute to as long as you want. Add one of 19 ambient sounds — nature, water, melody, or space — if silence isn't what you need.
+A session runs from one minute to as long as you want. Add one of 19 ambient sounds (nature, water, melody, or space) if silence isn't what you need.
 
 ## Build the habit
 

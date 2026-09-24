@@ -27,4 +27,4 @@ Rename labels and change the order whenever you want.
 ## Good to know
 
 - Everything stays on your device. No cloud sync, no tracking, no account.
-- No ads and no in-app purchases — the app is free.
+- No ads and no in-app purchases - the app is free.
