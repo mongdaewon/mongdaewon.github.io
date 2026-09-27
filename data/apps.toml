@@ -69,3 +69,11 @@
   color = "#2b2b2b"
   comingsoon = true
   hidden = true
+
+[[app]]
+  slug = "sulsul"
+  name = "술술낱말"
+  emoji = "🔤"
+  color = "#2E7D5B"
+  # 출시 전 — 처리방침 URL만 먼저 살려 둔다. Play 링크가 생기면 googleplay 를 넣고 hidden 을 지운다.
+  hidden = true
