@@ -6,7 +6,7 @@ layout: "single"
 
 **AudioJoin - Merge and Trim Audio Files**
 
-Last updated: September 5, 2026
+Last updated: September 29, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -65,7 +65,7 @@ AudioJoin does not display any advertisements. We do not use any advertising SDK
 
 AudioJoin offers one optional in-app purchase, **AudioJoin Plus**: a single payment, not a subscription, that unlocks joining three or more clips and exporting as MP3 or WAV. Trimming and saving as M4A are free and always will be.
 
-Purchases are handled entirely by Apple. We never see or store your payment details. The app only receives, and keeps on your device, whether the purchase is active.
+Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app only receives, and keeps on your device, whether the purchase is active.
 
 ## Data Security
 
