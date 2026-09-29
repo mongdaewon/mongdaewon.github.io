@@ -1,5 +1,35 @@
 # TODO
 
+## 20260929.1 커스텀 도메인 mongdaewon.com 전환 (2026-09-30 진행)
+
+목표: 사이트를 `https://mongdaewon.com/`으로 옮기되, 이미 출시된 앱들의 처리방침·웹사이트 링크가 끊기지 않게 한다.
+현황: 2026-09-29 Cloudflare Registrar에서 구입(만료 2027-09-29, NS bella/seamus.ns.cloudflare.com, zone `cdd71e4a4f1dedc02e23fa66d052382e`).
+사이트 쪽 변경은 `chore/custom-domain`(555030f: `baseURL`, `static/CNAME`)에 준비만 했고 **push 전**이다.
+배포 워크플로는 `steps.pages.outputs.base_url`을 `--baseURL`로 쓰므로 Pages에 도메인을 걸면 빌드도 따라간다.
+
+⚠️ **순서가 곧 안전장치다.** DNS가 살기 전에 Pages 커스텀 도메인을 걸면 `github.io`가 죽은 도메인으로
+301 되어 모든 앱의 처리방침 URL이 한꺼번에 끊긴다.
+
+- [ ] 1. 도메인 자동 갱신 켜졌는지 Cloudflare에서 확인(가능하면 여러 해 선결제). 만료 = 전 앱 처리방침 링크 사망
+- [ ] 2. DNS 레코드 — 전부 **DNS 전용(회색 구름)**, 주황이면 GitHub가 인증서를 못 받는다.
+      지금 `CLOUDFLARE_API_TOKEN`에는 이 zone의 DNS 편집 권한이 없다(10000 Authentication error) →
+      대시보드에서 직접 넣거나 토큰에 "Zone · DNS · 편집(mongdaewon.com)"을 더한다.
+      - A `@` → 185.199.108.153 / 185.199.109.153 / 185.199.110.153 / 185.199.111.153
+      - AAAA `@` → 2606:50c0:8000::153 / 2606:50c0:8001::153 / 2606:50c0:8002::153 / 2606:50c0:8003::153
+      - CNAME `www` → mongdaewon.github.io
+- [ ] 3. (권장) GitHub Settings → Pages → Verified domains에 mongdaewon.com 인증 — TXT 레코드 하나. 도메인 탈취 방지
+- [ ] 4. `dig mongdaewon.com` 전파 확인 → 레포 Settings → Pages 커스텀 도메인 `mongdaewon.com`
+      (`gh api repos/mongdaewon/mongdaewon.github.io/pages -X PUT -f cname=mongdaewon.com`) → `chore/custom-domain` 머지·push
+- [ ] 5. 인증서 발급 후 Enforce HTTPS. 확인: `https://mongdaewon.com/`, `www` → apex, 옛 `mongdaewon.github.io/apps/<slug>/privacy-policy/` 가 301로 열리는지 앱 전부
+- [ ] 6. Search Console: `https://mongdaewon.com/` 속성 추가·사이트맵 제출 → 옛 속성에서 주소 변경. GA4 웹 스트림 URL도 새 도메인으로
+- [ ] 7. **광고 앱 스토어 웹사이트 교체** — app-ads.txt 크롤러는 다른 도메인으로 가는 리디렉트를 따라가지 않는다(IAB 규격).
+      안 바꾸면 AdMob "app-ads.txt 확인 불가"로 수익이 깎인다. 대상: Android Deep Breath·Ivy To Do·Sulsul(Play 스토어 설정 → 웹사이트),
+      iOS Deep Breath·Headly·Ivy To Do·Nanali(ASC 마케팅/지원 URL). 바꾼 뒤 AdMob → 앱 → app-ads.txt 재확인
+- [ ] 8. 나머지 스토어의 처리방침·웹사이트 URL은 리디렉트로 동작하므로 급하지 않다 — 각 앱 다음 업데이트 때 새 도메인으로.
+      앱 코드에 박힌 URL(예: android-audiojoin `AppInfo.PRIVACY`)도 그때 같이
+- [ ] 9. (선택) Cloudflare Email Routing으로 `support@mongdaewon.com` → mongdaewon@naver.com, 스토어 연락처 교체
+
+---
 ## 20260915.1 Jumpbar 갤러리 확장 (66 → 111)
 
 목표: Jumpbar 출시에 맞춰 갤러리를 채운다. 근거는 네이버 월 검색량(사이트명 = 내비게이션 수요)
