@@ -13,7 +13,7 @@ This file provides guidance to 개발 에이전트 when working with code in thi
 
 Mongdaewon 개발사의 Hugo 기반 정적 웹사이트. 모바일·맥 앱 + 웹 도구(itool.co.kr) + 크롬 확장을 소개하는 회사 웹사이트.
 
-- **사이트 URL:** https://mongdaewon.github.io/
+- **사이트 URL:** https://mongdaewon.com/ (2026-10-01 전환. 옛 `mongdaewon.github.io` 는 같은 경로로 301 된다 — 레포 이름은 그대로다)
 - **Hugo 버전:** 0.163.2 (extended) — GitHub Actions 워크플로에 고정
 - **테마:** 없음. 직접 작성한 `layouts/`(순수 HTML) + **pico.css**(CDN)로 구성. Blowfish 테마는 제거됨.
 
@@ -98,7 +98,7 @@ content/
 | `Data Storage` · `Local Data` | 로컬·iCloud 저장 | ivy-todo · whereismycursor |
 
 ⚠️ **실태와 문구가 어긋나면 스토어 심사에서 걸린다.** Analytics만 쓰면서 crash·성능 수집 문구를 넣지 말 것.
-⚠️ **처리방침 URL은 스토어 제출 전에 확보한다.** 페이지 생성 → main push → `https://mongdaewon.github.io/apps/<slug>/privacy-policy/` 200 확인 순서.
+⚠️ **처리방침 URL은 스토어 제출 전에 확보한다.** 페이지 생성 → main push → `https://mongdaewon.com/apps/<slug>/privacy-policy/` 200 확인 순서.
 
 ### 블로그 — `content/blog/`
 

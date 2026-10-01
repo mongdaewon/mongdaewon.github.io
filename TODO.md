@@ -3,36 +3,38 @@
 - [ ] **영문 블로그 4주 성과 (2026-10-22 이후)** — 2026-09-24 첫 3편 발행. GA4 properties/554013286에서
       글별 페이지뷰와 `cta_click`(store_ios·store_android) 전환. 숫자가 안 붙는 글은 제목 키워드부터 다시 본다.
 
-## 20260929.1 커스텀 도메인 mongdaewon.com 전환 (2026-09-30 진행)
+## 20260929.1 커스텀 도메인 mongdaewon.com 전환 (2026-10-01 전환 완료)
 
 목표: 사이트를 `https://mongdaewon.com/`으로 옮기되, 이미 출시된 앱들의 처리방침·웹사이트 링크가 끊기지 않게 한다.
-현황: 2026-09-29 Cloudflare Registrar에서 구입(만료 2027-09-29, NS bella/seamus.ns.cloudflare.com, zone `cdd71e4a4f1dedc02e23fa66d052382e`).
-사이트 쪽 변경은 `chore/custom-domain`(555030f: `baseURL`, `static/CNAME`)에 준비만 했고 **push 전**이다.
-배포 워크플로는 `steps.pages.outputs.base_url`을 `--baseURL`로 쓰므로 Pages에 도메인을 걸면 빌드도 따라간다.
+현황: 2026-10-01 전환 완료. 도메인은 Cloudflare Registrar(만료 2027-09-29, 자동 갱신 ON, zone `cdd71e4a4f1dedc02e23fa66d052382e`).
+남은 것은 검색·분석 쪽 이전(6번)과 스토어 메타데이터 교체(8번)다.
 
-⚠️ **순서가 곧 안전장치다.** DNS가 살기 전에 Pages 커스텀 도메인을 걸면 `github.io`가 죽은 도메인으로
-301 되어 모든 앱의 처리방침 URL이 한꺼번에 끊긴다.
-
-- [ ] 1. 도메인 자동 갱신 켜졌는지 Cloudflare에서 확인(가능하면 여러 해 선결제). 만료 = 전 앱 처리방침 링크 사망
-- [ ] 2. DNS 레코드 — 전부 **DNS 전용(회색 구름)**, 주황이면 GitHub가 인증서를 못 받는다.
-      지금 `CLOUDFLARE_API_TOKEN`에는 이 zone의 DNS 편집 권한이 없다(10000 Authentication error) →
-      대시보드에서 직접 넣거나 토큰에 "Zone · DNS · 편집(mongdaewon.com)"을 더한다.
-      - A `@` → 185.199.108.153 / 185.199.109.153 / 185.199.110.153 / 185.199.111.153
-      - AAAA `@` → 2606:50c0:8000::153 / 2606:50c0:8001::153 / 2606:50c0:8002::153 / 2606:50c0:8003::153
-      - CNAME `www` → mongdaewon.github.io
-- [ ] 3. (권장) GitHub Settings → Pages → Verified domains에 mongdaewon.com 인증 — TXT 레코드 하나. 도메인 탈취 방지
-- [ ] 4. `dig mongdaewon.com` 전파 확인 → 레포 Settings → Pages 커스텀 도메인 `mongdaewon.com`
-      (`gh api repos/mongdaewon/mongdaewon.github.io/pages -X PUT -f cname=mongdaewon.com`) → `chore/custom-domain` 머지·push
-- [ ] 5. 인증서 발급 후 Enforce HTTPS. 확인: `https://mongdaewon.com/`, `www` → apex, 옛 `mongdaewon.github.io/apps/<slug>/privacy-policy/` 가 301로 열리는지 앱 전부
-- [ ] 6. Search Console: `https://mongdaewon.com/` 속성 추가·사이트맵 제출 → 옛 속성에서 주소 변경. GA4 웹 스트림 URL도 새 도메인으로
+- [x] 1. 자동 갱신 ON 확인(2026-10-01). 첫 시도는 만료 30일 전이고 **결제 실패로 안 될 수 있다** —
+      2027-08 말에 갱신됐는지 눈으로 확인한다. 만료 뒤에도 30일 Redemption Grace Period 가 있다.
+- [x] 2. DNS 레코드 9개 생성 (A 4 + AAAA 4 + CNAME www, 전부 DNS 전용). 권한은 **DNS 전용 토큰을 따로 만들어**
+      `CLOUDFLARE_DNS_TOKEN` 으로 뒀다 — 기존 `CLOUDFLARE_API_TOKEN`(Workers 용, 계정 전체 범위)에 DNS 를 얹으면
+      계정 단위 권한과 존 단위 권한이 한 정책에 섞여 저장 자체가 거부된다(`Failed common permission check`).
+      존 범위 토큰은 `/user/tokens/verify` 가 1000 Invalid 를 주는 게 정상이다 — 판정은 zone 엔드포인트로 한다.
+- [ ] 3. (권장) GitHub Settings → Pages → Verified domains 에 mongdaewon.com 인증 — TXT 하나. 도메인 탈취 방지
+- [x] 4. Pages 커스텀 도메인 설정 → `chore/custom-domain` 머지·push → 배포 성공
+- [x] 5. 인증서 승인·Enforce HTTPS ON. 실측 완료: `.com` 200, `www` → apex 301, `github.io` → `.com` 301,
+      앱 처리방침 9개(joincut·ivy-todo·deep-breath·widpass·whereismycursor·recnow·jumpbar·audiojoin·itool-mouser) 전부 최종 200
+- [ ] 6. 검색·분석 이전
+      - [x] Search Console **도메인 속성** `sc-domain:mongdaewon.com` 생성(DNS TXT 인증 완료)
+      - [ ] 그 속성에 서비스 계정 `examine@dround.iam.gserviceaccount.com` 추가 — 없으면 `/analytics` 가 403
+      - [ ] `tools/analytics/gsc-sites.json` 에 `mongdaewon.com` 매핑 추가 (지금은 `mongdaewon.github.io` 만 있다)
+      - [ ] 사이트맵 `https://mongdaewon.com/sitemap.xml` 제출 — **GSC 화면에서 직접.** `tools/analytics` 는
+            예약 조회가 쓰기 권한 없이 돌도록 읽기 전용으로 두는 곳이라 제출 API 를 넣지 않는다
+      - [ ] 옛 속성에서 주소 변경(Change of Address). 301 은 이미 걸려 있다
+      - [ ] GA4 웹 스트림 URL 을 새 도메인으로
 - [ ] 7. **광고 앱 app-ads.txt 확인** — 전환 직후 실측한다. 미리 7개를 뒤집지 않는다.
       2026-10-01 AdMob 문서 확인 결과 **리디렉트는 허용된다** — "Your web server may redirect the crawler to an
       app-ads.txt file hosted elsewhere" 이고 허용 예시에 다른 도메인(`https://www.cdn.files.example.com/app-ads.txt`)도 있다.
       즉 `github.io/app-ads.txt` → 301 → `.com/app-ads.txt` 한 홉은 정상 동작이어야 한다.
       (이전에 "크롤러가 off-domain 리디렉트를 안 따라간다"고 적어 뒀던 것은 근거가 과했다. IAB 원문 PDF 는 못 받았고,
       크롤링 주체가 AdMob 이라 AdMob 문서를 실효 기준으로 본다.)
-      - [ ] `curl -ILs https://mongdaewon.github.io/app-ads.txt` 가 한 홉에 `.com` 으로 가는지
-      - [ ] `curl -s https://mongdaewon.com/app-ads.txt` 에 내용이 나오는지 (static/app-ads.txt 라 자동이지만 확인)
+      - [x] 한 홉 확인(2026-10-01): `301 location: https://mongdaewon.com/app-ads.txt` → `200`
+      - [x] `.com/app-ads.txt` 내용 정상 출력 확인
       - [ ] 며칠 뒤 AdMob → 앱 → app-ads.txt 상태가 "확인됨"인지. **이게 최종 판정이다** — 문서가 아니라 크롤러가 정답이다
       - [ ] 깨졌을 때만 스토어 웹사이트 URL 교체: Android Deep Breath·Ivy To Do·Sulsul(Play 스토어 설정, 심사 없이 즉시),
             iOS Deep Breath·Headly·Ivy To Do·Nanali(ASC 마케팅/지원 URL, 다음 릴리즈에 묶인다)
