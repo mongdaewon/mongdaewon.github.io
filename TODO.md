@@ -21,12 +21,14 @@
       앱 처리방침 9개(joincut·ivy-todo·deep-breath·widpass·whereismycursor·recnow·jumpbar·audiojoin·itool-mouser) 전부 최종 200
 - [ ] 6. 검색·분석 이전
       - [x] Search Console **도메인 속성** `sc-domain:mongdaewon.com` 생성(DNS TXT 인증 완료)
-      - [ ] 그 속성에 서비스 계정 `examine@dround.iam.gserviceaccount.com` 추가 — 없으면 `/analytics` 가 403
-      - [ ] `tools/analytics/gsc-sites.json` 에 `mongdaewon.com` 매핑 추가 (지금은 `mongdaewon.github.io` 만 있다)
-      - [ ] 사이트맵 `https://mongdaewon.com/sitemap.xml` 제출 — **GSC 화면에서 직접.** `tools/analytics` 는
-            예약 조회가 쓰기 권한 없이 돌도록 읽기 전용으로 두는 곳이라 제출 API 를 넣지 않는다
-      - [ ] 옛 속성에서 주소 변경(Change of Address). 301 은 이미 걸려 있다
-      - [ ] GA4 웹 스트림 URL 을 새 도메인으로
+      - [x] 서비스 계정 `examine@dround.iam.gserviceaccount.com` 소유자로 추가 — 조회 통과 확인
+      - [x] `tools/analytics/gsc-sites.json` 에 `mongdaewon.com`·`www.mongdaewon.com` → `sc-domain:mongdaewon.com` 매핑
+      - [x] 사이트맵 `sitemap.xml` 제출(2026-10-02). 처음엔 "읽을 수 없음"이었는데 서버는 정상(200·application/xml·
+            Googlebot UA 200)이었고 URL 검사 실시간 테스트도 통과 — 인증서 발급 전 창에 긁힌 옛 기록이다.
+            **삭제·재제출하지 말 것.** 다음 크롤에 "성공"으로 바뀌는지만 본다
+      - [ ] 며칠 뒤 Sitemaps 상태가 "성공"·발견된 페이지 64(en 41 + ko 23)로 바뀌었는지 확인
+      - [x] 옛 속성에서 주소 변경 제출(2026-10-02, 유효성 검사 전부 통과). **180일간 신호 이전 — 옛 속성 삭제 금지**
+      - [ ] GA4 웹 스트림 URL 을 새 도메인으로 — 수집에는 영향 없는 표시용 설정이다. 관리 → 데이터 스트림에서 직접
 - [ ] 7. **광고 앱 app-ads.txt 확인** — 전환 직후 실측한다. 미리 7개를 뒤집지 않는다.
       2026-10-01 AdMob 문서 확인 결과 **리디렉트는 허용된다** — "Your web server may redirect the crawler to an
       app-ads.txt file hosted elsewhere" 이고 허용 예시에 다른 도메인(`https://www.cdn.files.example.com/app-ads.txt`)도 있다.
