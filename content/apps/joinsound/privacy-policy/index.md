@@ -1,0 +1,92 @@
+---
+title: "Privacy Policy - JoinSound"
+description: "Privacy Policy for JoinSound"
+layout: "single"
+---
+
+**JoinSound**
+
+Last updated: October 1, 2026
+
+*This Privacy Policy is provided in English only.*
+
+## Introduction
+
+This Privacy Policy describes how JoinSound ("we", "our", or "the app") handles your information when you use our mobile application.
+
+## Information We Collect
+
+### 1. Analytics Data
+
+The app uses Firebase Analytics to collect anonymous usage data to improve the app experience:
+
+- Which screens and features are used, and how often
+- Device type and operating system version
+
+This data is tied to a per-install identifier, never to an account. The app has no login. It cannot be used to identify you personally, and it never includes your audio, your file names, or anything you typed.
+
+### 2. Local Data
+
+The following stays on your device and is never transmitted anywhere:
+
+- The audio files you import, and the copies the app makes of them while you edit
+- Your file order and the parts you keep
+- The name you give a saved file, and the files you export
+
+Imported copies live in a temporary folder and are removed when you remove a file from the list, close the editor, or the system clears that folder.
+
+## File Access
+
+The app opens audio only when you choose it: through the file picker, by opening an audio file in JoinSound from the Files app, or by sharing it into JoinSound from another app such as Voice Memos. A file shared into JoinSound is placed in a private folder that only JoinSound and its share extension can read.
+
+**All audio processing happens entirely on your device.** Finding and shortening silences, matching loudness, and saving all run on your iPhone or iPad. Your recordings and their contents are never uploaded to our servers or to any third party.
+
+## Information We Do NOT Collect
+
+- Personal information (name, email address, phone number)
+- Location data
+- Contacts, photos, or any data outside the audio files you pick
+- The contents of your audio, or the names of your files
+- Advertising identifiers
+
+## Third-Party Services
+
+Our app uses the following third-party service:
+
+- **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
+
+The app includes the LAME MP3 encoder as an open source library so it can write MP3 files. It is a library, not a service: it runs on your device and sends nothing. See [Open Source](../open-source/) for its license and source code.
+
+## Advertising
+
+JoinSound does not display any advertisements. We do not use any advertising SDKs.
+
+## In-App Purchases
+
+JoinSound offers one optional in-app purchase, **JoinSound Plus**: a single payment, not a subscription, that unlocks joining three or more files, keeping more than two parts of a file, shortening silences, and saving as MP3 or WAV. Joining two files, trimming, matching loudness, and saving as M4A are free.
+
+Purchases are handled entirely by Apple through the App Store. We never see or store your payment details. The app only receives, and keeps on your device, whether the purchase is active.
+
+## Data Security
+
+Your audio never leaves your device: there is no transmission to secure and no copy of it on any server we run. Files are protected by your device's own storage protections. The anonymous usage events described above are sent over an encrypted connection to Firebase.
+
+## Children's Privacy
+
+Our app is not directed to children under 13. We do not knowingly collect personal information from children under 13.
+
+## Your Rights
+
+- **Your files stay yours:** removing a file from the list removes the app's copy of it, and deleting the app removes everything the app has stored. Your original files stay where they were.
+- **Delete local data:** uninstalling the app removes all locally stored data and stops all analytics collection
+- **Limit tracking:** you can manage app tracking and analytics permissions in your device's privacy settings
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. Changes will be posted on this page with a new "Last updated" date.
+
+## Contact Us
+
+If you have any questions about this Privacy Policy, please contact us at:
+
+Email: mongdaewon@naver.com
