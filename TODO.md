@@ -25,9 +25,18 @@
       (`gh api repos/mongdaewon/mongdaewon.github.io/pages -X PUT -f cname=mongdaewon.com`) → `chore/custom-domain` 머지·push
 - [ ] 5. 인증서 발급 후 Enforce HTTPS. 확인: `https://mongdaewon.com/`, `www` → apex, 옛 `mongdaewon.github.io/apps/<slug>/privacy-policy/` 가 301로 열리는지 앱 전부
 - [ ] 6. Search Console: `https://mongdaewon.com/` 속성 추가·사이트맵 제출 → 옛 속성에서 주소 변경. GA4 웹 스트림 URL도 새 도메인으로
-- [ ] 7. **광고 앱 스토어 웹사이트 교체** — app-ads.txt 크롤러는 다른 도메인으로 가는 리디렉트를 따라가지 않는다(IAB 규격).
-      안 바꾸면 AdMob "app-ads.txt 확인 불가"로 수익이 깎인다. 대상: Android Deep Breath·Ivy To Do·Sulsul(Play 스토어 설정 → 웹사이트),
-      iOS Deep Breath·Headly·Ivy To Do·Nanali(ASC 마케팅/지원 URL). 바꾼 뒤 AdMob → 앱 → app-ads.txt 재확인
+- [ ] 7. **광고 앱 app-ads.txt 확인** — 전환 직후 실측한다. 미리 7개를 뒤집지 않는다.
+      2026-10-01 AdMob 문서 확인 결과 **리디렉트는 허용된다** — "Your web server may redirect the crawler to an
+      app-ads.txt file hosted elsewhere" 이고 허용 예시에 다른 도메인(`https://www.cdn.files.example.com/app-ads.txt`)도 있다.
+      즉 `github.io/app-ads.txt` → 301 → `.com/app-ads.txt` 한 홉은 정상 동작이어야 한다.
+      (이전에 "크롤러가 off-domain 리디렉트를 안 따라간다"고 적어 뒀던 것은 근거가 과했다. IAB 원문 PDF 는 못 받았고,
+      크롤링 주체가 AdMob 이라 AdMob 문서를 실효 기준으로 본다.)
+      - [ ] `curl -ILs https://mongdaewon.github.io/app-ads.txt` 가 한 홉에 `.com` 으로 가는지
+      - [ ] `curl -s https://mongdaewon.com/app-ads.txt` 에 내용이 나오는지 (static/app-ads.txt 라 자동이지만 확인)
+      - [ ] 며칠 뒤 AdMob → 앱 → app-ads.txt 상태가 "확인됨"인지. **이게 최종 판정이다** — 문서가 아니라 크롤러가 정답이다
+      - [ ] 깨졌을 때만 스토어 웹사이트 URL 교체: Android Deep Breath·Ivy To Do·Sulsul(Play 스토어 설정, 심사 없이 즉시),
+            iOS Deep Breath·Headly·Ivy To Do·Nanali(ASC 마케팅/지원 URL, 다음 릴리즈에 묶인다)
+      실패해도 앱은 멀쩡하다 — 앱은 이 파일을 읽지 않는다. 증상은 입찰 감소에 따른 수익 하락뿐이고 되돌리면 복구된다.
 - [ ] 8. 나머지 스토어의 처리방침·웹사이트 URL은 리디렉트로 동작하므로 급하지 않다 — 각 앱 다음 업데이트 때 새 도메인으로.
       앱 코드에 박힌 URL(예: android-audiojoin `AppInfo.PRIVACY`)도 그때 같이
 - [ ] 9. (선택) Cloudflare Email Routing으로 `support@mongdaewon.com` → mongdaewon@naver.com, 스토어 연락처 교체
