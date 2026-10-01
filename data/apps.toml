@@ -50,6 +50,16 @@
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.audiojoin"
 
 [[app]]
+  slug = "joinsound"
+  name = "JoinSound"
+  emoji = "🎧"
+  color = "#5856D6"
+  # 출시 전 — 상세 페이지(ASC 지원 URL)만 먼저 살려 둔다. 출시되면 comingsoon·hidden 을 지우고
+  # appstore = "https://apps.apple.com/app/id6818166716" 을 넣는다.
+  comingsoon = true
+  hidden = true
+
+[[app]]
   slug = "recnow"
   name = "RecNow"
   emoji = "⏺"
