@@ -251,3 +251,15 @@ svg.ico-grid { fill: currentColor; stroke: none; }
 @media (max-width: 400px) {
   .app-dl, .tool-cta { padding-left: 0; }
 }
+
+/* blog post lists - one look wherever posts are listed (partials/postlist.html) */
+.posts { display: flex; flex-direction: column; }
+.post { display: block; padding-block: 1rem; text-decoration: none; color: inherit; }
+.post + .post { border-top: 1px solid var(--rule); }
+.post-meta { display: block; font-size: var(--fs-sm); color: var(--muted); }
+.post-t { display: block; margin-top: .25rem; font-size: var(--fs-lg); font-weight: 700; line-height: 1.4; }
+.post:hover .post-t { color: var(--accent); }
+.post-x { display: block; margin-top: .25rem; font-size: var(--fs-sm); color: var(--muted); }
+/* A section heading inside a page (not the page title): one step under h2's default. */
+.sec-h { font-size: var(--fs-lg); margin: 0; }
+.related { margin-top: 2.5rem; }
