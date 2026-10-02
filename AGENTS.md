@@ -111,7 +111,7 @@ content/
 - **`app:` 슬러그가 틀리면 빌드가 멈춘다**(`partials/app.html`의 `errorf`). 예전에는 배지만 조용히 사라졌다.
 - 글은 영어 검색 의도에서 출발한다. 제목·소제목은 구글 자동완성에 실제로 나오는 질문을 쓴다(`/naver-keyword`의 구글 자동완성).
 - ⚠️ **앱 기능을 적기 전에 앱 레포를 본다.** `content/apps/<slug>/how-to/`만 믿으면 안 된다 — 이 사이트는 앱 릴리즈보다 늦게 갱신되므로 how-to 가 낡아 있을 수 있다(2026-09-24 JoinCut MKV 가 그랬다). 앱 레포의 `app-listing.md`(출시 노트·기능 목록)와 `AGENTS.md`를 대조하고, 어느 쪽에도 없는 사양(코덱·해상도 조건 등)은 지어내지 않는다. 글을 쓰다 how-to 가 낡은 걸 발견하면 how-to 도 같이 고친다.
-- 글의 성과는 GA4 에서 본다. 페이지뷰는 `page_location`, 설치로 나가는 클릭은 `cta_click`(`store_ios`·`store_android` + `cta_app`)이라 "어느 글을 읽고 어느 스토어로 갔는지"가 둘의 교차로 나온다.
+- 글의 성과는 GA4 에서 본다. 페이지뷰는 `page_location`, 설치로 나가는 클릭은 `cta_click`(`store_ios`·`store_android` + `cta_app`)이라 "어느 글을 읽고 어느 스토어로 갔는지"가 둘의 교차로 나온다. 블로그로 들어가는 클릭은 헤더 탭 `nav_blog`와 홈의 최근 글·All posts `home_blog` 둘이다(2026-10-02 리디자인부터 — 그 전 `nav_blog` 수치와 비교할 때 둘을 더한다).
 - 헤더 Blog 탭은 `GetPage "/blog"`로 그린다. ko 사이트에는 블로그 페이지가 없어 탭이 안 뜬다(ko 탭은 앱·도구 둘).
 - RSS는 `disableKinds`로 꺼져 있다. 구독을 열려면 블로그 섹션에만 `outputs`를 주고 켠다(전역 해제는 홈·앱 섹션 피드까지 만든다).
 
@@ -203,7 +203,7 @@ layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = tru
 - **CSS는 `assets/css/site.css` 한 파일**이다. 맨 위에 토큰, 그다음 기본 스타일(pico 가 해 주던 리셋·링크·제목·목록·표·코드·포커스), 그 아래 구성 요소. 프레임워크를 다시 들이지 않는다 — pico 기본값이 자체 스케일과 싸워서 생긴 결함(제목 아래 margin collapse, 제목 크기 덮어쓰기, 넓은 화면에서 루트 글자가 21px 까지 커지는 것)이 리디자인의 이유였다.
 - **폰트: Pretendard Variable**(jsdelivr, dynamic-subset). `--font` 토큰.
 - **타이포는 5단계 토큰만 쓴다** — `--fs-sm`(14) `--fs-base`(16) `--fs-lg`(18) `--fs-xl`(20) `--fs-2xl`(24). 새 `font-size`에 임의값을 쓰지 말 것. 웨이트는 400·700 두 개만. 루트 글자는 **16px 고정**이다(화면 폭 따라 키우지 않는다). 예외는 인라인 `code`(둘러싼 줄의 .875em) 하나.
-- **간격은 4px 의 배수**, **radius 는 `--r`(8px) 하나.** 예외는 둘 — 앱 아이콘(크기의 약 22%, iOS 아이콘 관례)과 기기 화면 모양인 데모 GIF(20px).
+- **간격은 4px 의 배수**, **radius 는 `--r`(8px) 하나.** 예외는 셋 — 앱 아이콘(크기의 약 22%, iOS 아이콘 관례), 기기 화면 모양인 데모 GIF(20px), 갤러리의 원형 ＋ 버튼(999px).
 - **색은 토큰만**(`--bg` `--fg` `--muted` `--accent` `--rule` `--badge-line` …). 라이트·다크는 토큰 블록에서만 갈린다 — `data-theme` 가 이기고 없으면 OS 설정. 다크 블록이 두 번(미디어쿼리용·속성용) 적힌 것은 의도다: `light-dark()`는 iOS 17.5+ 라 미지원 브라우저에서 색이 통째로 사라진다.
 - **컨테이너 폭:** 헤더·본문·푸터 모두 70rem. 홈(과 `/apps/`)만 `main.wide`로 두 칸을 쓰고, 나머지 페이지는 그 안에서 46rem 을 **왼쪽 정렬**로 읽는다 — 홈↔상세를 오갈 때 브랜드가 옆으로 튀지 않게. 블로그 글 본문·제목·앱 카드는 42.5rem(18px 에서 한 줄 약 75자).
 - 리스트 행은 `--rule` 구분선으로 나눈다. 테마별로 정해 둬서 양쪽 다 ~1.6:1 로 보인다(예전 pico 구분선은 다크에서 ~1.3:1 로 사라졌다).
@@ -216,7 +216,7 @@ layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = tru
 
 - `hugo.toml` — baseURL, 다국어 기본, `enableRobotsTXT = true`, `disableKinds = ["taxonomy","term","RSS"]` (RSS·태그·JSON 미생성)
 - `languages.en.toml` / `languages.ko.toml` — 언어별 title·`description`(홈 h1)·`displayName`(언어 스위처) (`locale`/`label` 키 사용)
-- `params.toml` — `supportEmail` 하나. 연락 주소의 **유일한 출처**다(푸터·앱 상세 문의·갤러리). `support@mongdaewon.com` 전환은 Cloudflare Email Routing 을 켜고 테스트 메일 도착을 확인한 **뒤에** 이 한 줄로 한다
+- `params.toml` — `supportEmail` 하나. **템플릿이 쓰는** 연락 주소의 유일한 출처다(푸터·앱 상세 문의·갤러리). 처리방침·오픈소스 **본문**(`content/apps/*/privacy-policy`, `*/open-source`, 14곳)에는 주소가 글로 적혀 있어 따로다 — 주소를 바꿀 때 `rg -l '<옛 주소>' content/`로 같이 바꾼다. 스토어 심사가 보는 처리방침의 연락처가 사이트와 어긋나면 안 된다. `support@mongdaewon.com` 전환은 Cloudflare Email Routing 을 켜고 테스트 메일 도착을 확인한 **뒤에** 이 한 줄로 한다
 - `markup.toml` — goldmark(`unsafe = true`)
 - `static/` — 정적 파일, 빌드 시 사이트 루트로 복사: `app-ads.txt`, 파비콘(`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `site.webmanifest` — favicon.io 패키지, head 링크는 baseof.html), `img/badges/`(스토어 배지), `img/tools/`(도구 아이콘), `googled24a750a4d1fac6e.html`(구글 서치콘솔 소유확인 — 지우면 인증이 풀린다)
 - `data/apps.toml` / `data/tools.toml` — 앱·도구 메타 단일 출처(위 참조)

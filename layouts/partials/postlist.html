@@ -1,9 +1,10 @@
 {{- /* One way to list blog posts, used by the blog index, the home page, app pages and the end of a post.
-       Context: dict "pages" <pages> "desc" <bool: one-line description> "app" <bool: say which app>. */ -}}
-{{- $desc := .desc -}}{{- $showApp := .app -}}
+       Context: dict "pages" <pages> "desc" <bool: one-line description> "app" <bool: say which app>
+                     "ev" <optional data-ev value, for the GA4 cta_click handler in baseof>. */ -}}
+{{- $desc := .desc -}}{{- $showApp := .app -}}{{- $ev := .ev -}}
 <div class="posts">
   {{- range .pages }}
-    <a class="post" href="{{ .RelPermalink }}">
+    <a class="post" href="{{ .RelPermalink }}"{{ with $ev }} data-ev="{{ . }}"{{ end }}>
       <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }}{{ if and $showApp .Params.app }} · {{ (partialCached "app.html" .Params.app .Params.app).name }}{{ end }}</span>
       <span class="post-t">{{ .Title }}</span>
       {{- if $desc }}<span class="post-x">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}</span>{{ end }}

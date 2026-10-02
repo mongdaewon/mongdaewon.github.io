@@ -13,9 +13,11 @@
       <section>
         <div class="sec-row">
           <h2>Latest posts</h2>
-          {{ with site.GetPage "/blog" }}<a href="{{ .RelPermalink }}">All posts</a>{{ end }}
+          {{ with site.GetPage "/blog" }}<a data-ev="home_blog" href="{{ .RelPermalink }}">All posts</a>{{ end }}
         </div>
-        {{ partial "postlist.html" (dict "pages" . "desc" false "app" true) }}
+        {{/* home_blog: the home page became a second way into the blog. Without its own event,
+             nav_blog would look like blog visits dropped after the redesign. */}}
+        {{ partial "postlist.html" (dict "pages" . "desc" false "app" true "ev" "home_blog") }}
       </section>
     {{ end }}
     {{ partial "toolslist.html" . }}

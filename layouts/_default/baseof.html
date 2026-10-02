@@ -40,13 +40,11 @@
   {{/* Section tabs. Apps points at the home page, not /apps/: home IS the app list and /apps/ is a
        duplicate of it (canonicalHome). Tools is a section of the home page, so it's an anchor.
        Blog only exists in English - on the ko site GetPage "/blog" is nil and the tab doesn't render. */}}
-  {{/* Which tab is lit. Pages under content/apps/ belong to Apps only when that bundle is an app in
-       data/apps.toml - Chrome extensions keep their privacy policy there too, and those are Tools. */}}
-  {{ $appsOn := .IsHome }}{{ $toolsOn := false }}
-  {{ if eq .Section "apps" }}
-    {{ $parts := split (strings.Trim .Path "/") "/" }}
-    {{ if or (lt (len $parts) 2) (where hugo.Data.apps.app "slug" (index $parts 1)) }}{{ $appsOn = true }}{{ else }}{{ $toolsOn = true }}{{ end }}
-  {{ end }}
+  {{/* Which tab is lit. Every app bundle's _index has `type: app`, so a page whose section is an app
+       (detail, how-to, gallery, privacy policy) is Apps. Chrome extensions keep a privacy policy under
+       content/apps/ too, with no _index - their section is /apps/ itself, and those are Tools. */}}
+  {{ $appsOn := or .IsHome (eq .Path "/apps") (eq .CurrentSection.Type "app") }}
+  {{ $toolsOn := and (eq .Section "apps") (not $appsOn) }}
   {{ $blogOn := eq .Section "blog" }}
   {{/* aria-current: "page" only on the page the tab links to; "true" when we're somewhere inside its section. */}}
   <header class="site-header">

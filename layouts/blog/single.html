@@ -18,10 +18,10 @@
     {{ $slug := . }}
     {{ $a := partial "app.html" $slug }}
     {{ partial "appcard.html" $a }}
-    {{ with where (where (where site.RegularPages "Section" "blog") "Params.app" $slug) "Permalink" "ne" $.Permalink }}
+    {{ with where (partial "appposts.html" $slug) "Permalink" "ne" $.Permalink }}
       <section class="related">
         <h2 class="sec-h">More about {{ $a.name }}</h2>
-        {{ partial "postlist.html" (dict "pages" .ByDate.Reverse "desc" false "app" false) }}
+        {{ partial "postlist.html" (dict "pages" . "desc" false "app" false) }}
       </section>
     {{ end }}
   {{ end }}
