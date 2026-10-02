@@ -216,7 +216,7 @@ layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = tru
 
 - `hugo.toml` — baseURL, 다국어 기본, `enableRobotsTXT = true`, `disableKinds = ["taxonomy","term","RSS"]` (RSS·태그·JSON 미생성)
 - `languages.en.toml` / `languages.ko.toml` — 언어별 title·`description`(홈 h1)·`displayName`(언어 스위처) (`locale`/`label` 키 사용)
-- `params.toml` — `supportEmail` 하나. **템플릿이 쓰는** 연락 주소의 유일한 출처다(푸터·앱 상세 문의·갤러리). 처리방침·오픈소스 **본문**(`content/apps/*/privacy-policy`, `*/open-source`, 14곳)에는 주소가 글로 적혀 있어 따로다 — 주소를 바꿀 때 `rg -l '<옛 주소>' content/`로 같이 바꾼다. 스토어 심사가 보는 처리방침의 연락처가 사이트와 어긋나면 안 된다. `support@mongdaewon.com` 전환은 Cloudflare Email Routing 을 켜고 테스트 메일 도착을 확인한 **뒤에** 이 한 줄로 한다
+- `params.toml` — `supportEmail` 하나. **템플릿이 쓰는** 연락 주소의 유일한 출처다(푸터·앱 상세 문의·갤러리). 처리방침·오픈소스 **본문**(`content/apps/*/privacy-policy`, `*/open-source`, 14곳)에는 주소가 글로 적혀 있어 따로다 — 주소를 바꿀 때 `rg -l '<옛 주소>' content/`로 같이 바꾼다. 스토어 심사가 보는 처리방침의 연락처가 사이트와 어긋나면 안 된다. 지금 값은 `support@mongdaewon.com`이고, Cloudflare Email Routing 이 `mongdaewon@naver.com`으로 넘긴다(받기만 — 답장은 네이버 주소로 나간다). **Email Routing 을 끄거나 MX 레코드를 지우면 이 주소가 반송된다**
 - `markup.toml` — goldmark(`unsafe = true`)
 - `static/` — 정적 파일, 빌드 시 사이트 루트로 복사: `app-ads.txt`, 파비콘(`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `site.webmanifest` — favicon.io 패키지, head 링크는 baseof.html), `img/badges/`(스토어 배지), `img/tools/`(도구 아이콘), `googled24a750a4d1fac6e.html`(구글 서치콘솔 소유확인 — 지우면 인증이 풀린다)
 - `data/apps.toml` / `data/tools.toml` — 앱·도구 메타 단일 출처(위 참조)

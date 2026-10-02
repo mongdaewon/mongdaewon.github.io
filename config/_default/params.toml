@@ -1,6 +1,7 @@
 # Site-wide params (language-independent). Per-language description and displayName are in languages.*.toml.
 
-# The one contact address: footer, every app page's "Support & Feedback", the Jumpbar gallery.
-# Switch to support@mongdaewon.com only after Cloudflare Email Routing is on and a test mail has
-# reached the inbox - an address that bounces loses every inquiry sent in between.
-supportEmail = "mongdaewon@naver.com"
+# The contact address the templates use: footer, every app page's "Support & Feedback", the Jumpbar gallery.
+# Privacy policy / open-source bodies under content/ spell it out as text - change those together.
+# Inbound only: Cloudflare Email Routing forwards it to mongdaewon@naver.com, and replies go out from
+# that Naver address. Turning Email Routing off makes this address bounce.
+supportEmail = "support@mongdaewon.com"
