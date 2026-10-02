@@ -1,2 +1,6 @@
-# Theme params removed with Blowfish. Custom pico.css layouts live in /layouts.
-# Per-language params (description, author) are in languages.*.toml.
+# Site-wide params (language-independent). Per-language description and displayName are in languages.*.toml.
+
+# The one contact address: footer, every app page's "Support & Feedback", the Jumpbar gallery.
+# Switch to support@mongdaewon.com only after Cloudflare Email Routing is on and a test mail has
+# reached the inbox - an address that bounces loses every inquiry sent in between.
+supportEmail = "mongdaewon@naver.com"
