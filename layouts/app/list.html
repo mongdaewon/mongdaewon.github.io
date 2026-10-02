@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ $ko := eq .Site.Language.Lang "ko" }}
   {{ $slug := path.Base .Path }}
-  {{ $a := index (where hugo.Data.apps.app "slug" $slug) 0 }}
+  {{ $a := partial "app.html" $slug }}
 
   {{/* SoftwareApplication JSON-LD for SEO/AIO. OS + sameAs derived from data/apps.toml store links. */}}
   {{ $os := slice }}
@@ -61,16 +61,22 @@
          how-to 번들이 있는 앱에만 뜬다. */}}
     {{ with .GetPage "how-to" }}
       <a class="howto-card" data-ev="howto" data-app="{{ $a.name }}" href="{{ .RelPermalink }}">
-        <span class="hc-t">📖 {{ .Title }} →</span>
+        <span class="hc-t">{{ .Title }} →</span>
         <span class="hc-d">{{ .Description }}</span>
       </a>
     {{ end }}
 
+    {{/* 이 앱을 다룬 블로그 글. 블로그는 영어 전용이라 ko 에서는 site.RegularPages 에 글이 없어 저절로 빠진다.
+         검색으로 글에 들어온 사람은 글 끝에서 앱으로, 앱을 보러 온 사람은 여기서 글로 - 양쪽 길을 다 연다. */}}
+    {{ with partial "appposts.html" $slug }}
+      <section class="related">
+        <h2 class="sec-h">Posts about {{ $a.name }}</h2>
+        {{ partial "postlist.html" (dict "pages" . "desc" false "app" false) }}
+      </section>
+    {{ end }}
+
     {{/* 다 읽은 사람을 위해 본문 끝에 한 번 더. 위치·크기는 헤더와 같은 .dl-row 다. */}}
-    <div class="dl-foot">
-      <p class="dl-get">{{ if $ko }}{{ $a.name }} 받기{{ else }}Get {{ $a.name }}{{ end }}</p>
-      <span class="dl-row">{{ partial "storebadges.html" $a }}</span>
-    </div>
+    {{ partial "dlfoot.html" $a }}
 
     {{/* Privacy policy is English-only; on the ko site fall back to that URL. */}}
     {{ $purl := (printf "/apps/%s/privacy-policy/" $slug) | relURL }}
@@ -85,7 +91,7 @@
           {{ .Title }}
         </a>
       {{ end }}{{ end }}
-      <a class="tool-link" data-ev="support" data-app="{{ $a.name }}" href="{{ printf "mailto:mongdaewon@naver.com?%s" $subject | safeURL }}">
+      <a class="tool-link" data-ev="support" data-app="{{ $a.name }}" href="{{ printf "mailto:%s?%s" site.Params.supportEmail $subject | safeURL }}">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
         {{ if $ko }}문의·버그 신고{{ else }}Support &amp; Feedback{{ end }}
       </a>

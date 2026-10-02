@@ -15,7 +15,7 @@ Mongdaewon 개발사의 Hugo 기반 정적 웹사이트. 모바일·맥 앱 + �
 
 - **사이트 URL:** https://mongdaewon.com/ (2026-10-01 전환. 옛 `mongdaewon.github.io` 는 같은 경로로 301 된다 — 레포 이름은 그대로다)
 - **Hugo 버전:** 0.163.2 (extended) — GitHub Actions 워크플로에 고정
-- **테마:** 없음. 직접 작성한 `layouts/`(순수 HTML) + **pico.css**(CDN)로 구성. Blowfish 테마는 제거됨.
+- **테마:** 없음. 직접 작성한 `layouts/` + 자체 스타일시트 `assets/css/site.css` 하나(프레임워크 없음). Blowfish 에 이어 pico.css 도 2026-10-02 에 걷어냈다(아래 레이아웃 절).
 
 ## 주요 명령어
 
@@ -53,9 +53,9 @@ content/
             └── index.md               # 처리방침 (영어 단일)
 ```
 
-현재 등록 앱(7개): Deep Breath, Ivy To Do, WidPass, Where Is My Cursor, JoinCut, RecNow, Jumpbar.
+등록 앱 목록은 `data/apps.toml`이 정본이다(여기에 적으면 낡는다).
 
-**앱 상세 페이지 콘텐츠 구조:** 앱 이름 → 1줄 킬링멘트(`params.tagline`) → 3줄 혜택(본문) → 다운로드 배지(하단) → 처리방침 링크. 본문은 기능 나열이 아니라 "사용자가 얻는 혜택" 중심으로 작성.
+**앱 상세 페이지 콘텐츠 구조:** 아이콘·이름·1줄 킬링멘트(`params.tagline`)·배지 줄 → 3줄 혜택(본문) → 사용법 카드 → "Posts about X"(그 앱 글이 있을 때만, en) → 하단 받기 → 문의·처리방침. 본문은 기능 나열이 아니라 "사용자가 얻는 혜택" 중심으로 작성.
 
 **동작 데모(선택):** 번들에 `demo-<lang>.gif`(예: `demo-ko.gif`)를 두면 혜택 본문 옆(모바일은 위)에
 자동으로 붙는다. **언어가 맞는 파일이 없으면 아무것도 안 나온다** — 한국어 사파리 화면을 영어
@@ -105,13 +105,14 @@ content/
 앱 개발 문의를 푼 기록과 앱으로 끌어오는 글을 **영어로만** 발행한다(`.ko.md` 없음).
 
 - 글 하나는 leaf bundle: `content/blog/<slug>/index.md` → `/blog/<slug>/`. 스크린샷은 같은 번들에 둔다.
-- front matter는 `title`·`description`·`date` 셋 다 필수다. **`date`가 없으면** 목록 정렬이 무너지고 본문에 `Jan 1, 0001`이 찍힌다. `layout`은 지정하지 않는다(섹션 템플릿이 자동).
+- front matter는 `title`·`description`·`date` 셋 다 필수다. **`date`가 없으면 빌드가 멈춘다**(`blog/single.html`의 `errorf`) — 두면 목록 맨 끝으로 가고 `Jan 1, 0001`이 찍힌다. `layout`은 지정하지 않는다(섹션 템플릿이 자동).
 - 목록의 한 줄 설명은 `description`이고, 없으면 본문 앞부분(`.Summary`)이 대신 들어간다.
-- `app: <slug>`(선택)를 넣으면 how-to 와 같은 앱 줄(아이콘·이름·배지)이 글 위에, `.dl-foot`(받기 + 배지)이 글 끝에 붙는다. **글의 목적이 설치라면 넣는다.** 배지는 `storebadges.html` 파샬이므로 순서는 자동이다.
+- `app: <slug>`(선택)를 넣으면 글 **끝에** 앱 카드(아이콘·이름·한 줄·배지, `appcard.html`)와 "More about X"(같은 앱의 다른 글)가 붙는다. 검색으로 들어온 사람이 답을 다 읽은 자리다. **글의 목적이 설치라면 넣는다.** 글 위에는 앱 줄을 두지 않는다(2026-10-02 A3).
+- **`app:` 슬러그가 틀리면 빌드가 멈춘다**(`partials/app.html`의 `errorf`). 예전에는 배지만 조용히 사라졌다.
 - 글은 영어 검색 의도에서 출발한다. 제목·소제목은 구글 자동완성에 실제로 나오는 질문을 쓴다(`/naver-keyword`의 구글 자동완성).
 - ⚠️ **앱 기능을 적기 전에 앱 레포를 본다.** `content/apps/<slug>/how-to/`만 믿으면 안 된다 — 이 사이트는 앱 릴리즈보다 늦게 갱신되므로 how-to 가 낡아 있을 수 있다(2026-09-24 JoinCut MKV 가 그랬다). 앱 레포의 `app-listing.md`(출시 노트·기능 목록)와 `AGENTS.md`를 대조하고, 어느 쪽에도 없는 사양(코덱·해상도 조건 등)은 지어내지 않는다. 글을 쓰다 how-to 가 낡은 걸 발견하면 how-to 도 같이 고친다.
-- 글의 성과는 GA4 에서 본다. 페이지뷰는 `page_location`, 설치로 나가는 클릭은 `cta_click`(`store_ios`·`store_android` + `cta_app`)이라 "어느 글을 읽고 어느 스토어로 갔는지"가 둘의 교차로 나온다.
-- 헤더 `Blog` 링크는 `GetPage "/blog"`라 ko 사이트에는 뜨지 않는다.
+- 글의 성과는 GA4 에서 본다. 페이지뷰는 `page_location`, 설치로 나가는 클릭은 `cta_click`(`store_ios`·`store_android` + `cta_app`)이라 "어느 글을 읽고 어느 스토어로 갔는지"가 둘의 교차로 나온다. 블로그로 들어가는 클릭은 헤더 탭 `nav_blog`와 홈의 최근 글·All posts `home_blog` 둘이다(2026-10-02 리디자인부터 — 그 전 `nav_blog` 수치와 비교할 때 둘을 더한다).
+- 헤더 Blog 탭은 `GetPage "/blog"`로 그린다. ko 사이트에는 블로그 페이지가 없어 탭이 안 뜬다(ko 탭은 앱·도구 둘).
 - RSS는 `disableKinds`로 꺼져 있다. 구독을 열려면 블로그 섹션에만 `outputs`를 주고 켠다(전역 해제는 홈·앱 섹션 피드까지 만든다).
 
 ### 앱 메타데이터 단일 출처 — `data/apps.toml`
@@ -142,11 +143,11 @@ content/
 
 ### 웹 도구·크롬 확장 — `data/tools.toml` (홈 "Tools" 섹션)
 
-앱 외 자사 웹 도구·브라우저 확장은 `data/tools.toml`에서 관리하며, 홈/`apps` 페이지의 Apps 리스트 **아래 "Tools" 섹션**(`partials/toolslist.html`)에 노출.
+앱 외 자사 웹 도구·브라우저 확장은 `data/tools.toml`에서 관리하며, 홈의 "Tools" 섹션(`partials/toolslist.html`, 데스크톱은 오른쪽 칸·모바일은 아래)에 노출. 헤더의 Tools 탭은 홈의 `#tools`로 온다(도구 전용 페이지는 없다).
 
 - 필드: `slug`, `name`/`name_ko`, `desc`/`desc_ko`, `url`/`url_ko`, `kind`(`"web"` | `"chrome"`).
 - **base 필드는 영어, `_ko` 접미사가 한국어 override**(없으면 base로 fallback). `url_ko`도 동일 — 예: iTool은 en `https://itool.co.kr/en/`, ko `https://itool.co.kr`.
-- `kind = "web"` → "Visit/웹사이트" 텍스트 버튼. `kind = "chrome"` → **공식 Chrome Web Store 배지**(라이트/다크 두 변형을 CSS로 테마 스왑).
+- `kind`는 지금 사이트가 읽지 않는다. 도구 행은 앱 행과 같은 모양이고 행 전체가 새 탭 링크(↗)다. 크롬 웹스토어 배지는 2026-10-02 리디자인에서 뺐다.
 - 아이콘: `static/img/tools/<slug>.png`. (앱 아이콘과 동일하게 CSS 테두리로 크기 통일)
 - 현재: iTool(web) + 크롬 확장 4개(유튜브 자막 도우미·네이버 블로그 도구·Oh My Table·iTool Mouser).
 - **확장 문구는 확장 저장소의 `public/_locales/{en,ko}/messages.json`(`extDesc`)를 그대로 옮긴다.** 여기서 새로 쓰면 스토어 설명과 어긋난다. 아이콘도 확장의 `public/icons/icon128.png`를 복사(128px가 관례).
@@ -163,54 +164,61 @@ content/
 ### ⚠️ 스토어 다운로드 배지 — 순서·정렬 규칙
 
 - **버튼 순서는 홈·앱 목록·앱 상세 등 어디서든 항상 동일하게 애플(App Store) → 안드로이드(Google Play) 순으로 정렬한다.** (Mac App Store는 애플 계열이므로 App Store 다음.) 있는 것만 노출하고 없으면 생략.
-- **자리도 고정이다.** 배지는 어느 페이지에서든 **앱 아이콘이 있는 줄**에 붙는다 — 앱 목록은 행 우측,
-  앱 상세·how-to 는 헤더 우측(모바일은 아이콘 아래 왼쪽 정렬). 긴 페이지(앱 상세·how-to)만 본문 끝에서
-  `.dl-foot`(「받기」 라벨 + 배지)로 한 번 더 노출한다. 배지를 새로 두는 곳은 `.dl-row`를 쓴다 —
-  폭은 `--dl-col`(128px) 한 값이고, 페이지마다 크기를 따로 정하지 않는다.
+- **배지는 설치를 결정하는 자리에만 둔다.** 앱 상세·사용법은 아이콘 줄 우측(모바일은 아이콘 아래 왼쪽 정렬) +
+  본문 끝 `.dl-foot`(「받기」 + 배지, `partials/dlfoot.html`), 블로그 글은 끝의 앱 카드(`partials/appcard.html`).
+  **홈·앱 목록 행에는 배지를 두지 않는다** — 행마다 검은 배지 두 개면 앱 이름보다 배지가 먼저 보인다(2026-10-02 A3).
+  목록 행은 플랫폼을 글자로(iPhone · Mac · Android, 스토어 필드에서만 판단 — iPad 는 apps.toml 이 몰라서 안 쓴다)
+  적고 행 전체가 상세로 가는 링크다. 배지를 새로 두는 곳은 `.dl-row`를 쓰고 폭은 `--dl-col`(128px) 한 값이다.
 - 이 순서는 `layouts/partials/storebadges.html` **단일 파샬**이 강제한다(렌더 순서: `appstore` → `macappstore` → `googleplay`). 배지를 새로 렌더하는 곳이 생기면 반드시 이 파샬을 재사용할 것 — 순서를 손으로 나열하지 말 것.
 - 배지 이미지(`static/img/badges/app-store.png`, `google-play.png`)는 **버튼만 있는 불투명 검은 사각형**(테두리·여백 없음, 동일 크기). 라운드(`border-radius`)·테두리(`border`)·간격(`gap`)은 전부 CSS가 담당하며, 다크모드에서는 테두리를 밝게 처리해 경계를 확보한다.
-- 크롬 확장은 공식 **Chrome Web Store 배지**(`static/img/badges/chrome-web-store-light.png` = 흰배경용 투명, `-dark.png` = 컬러배경용 흰색 채움)를 `.chrome-badge.light`/`.chrome-badge.dark` 클래스로 테마 스왑한다.
 
 ### 레이아웃 (`layouts/`)
 
 ```
+assets/css/site.css             # 스타일 전부 (토큰 → 기본 → 구성 요소). baseof 가 minify+fingerprint 로 링크
 layouts/
-├── _default/baseof.html      # 뼈대(pico.css + 인라인 스타일 + 헤더/푸터 + 테마 토글)
+├── _default/baseof.html      # 뼈대(헤더 탭 + 언어/테마, main, 푸터, GA4, 테마 토글 스크립트)
 ├── _default/single.html      # 처리방침 등 단일 페이지
 ├── _default/gallery.html     # Jumpbar 키워드 갤러리 (layout: "gallery")
 ├── _default/howto.html       # 앱 사용법 (content/apps/<slug>/how-to/)
 ├── blog/list.html            # /blog/ 글 목록
-├── blog/single.html          # 블로그 글 (제목 + 날짜 + 본문, app: 있으면 앱 줄·배지)
-├── index.html                # 홈 (히어로 + 앱 리스트 + 도구 리스트)
-├── apps/list.html            # /apps/ (앱 리스트 + 도구 리스트)
-├── app/list.html             # 앱 상세 (type="app" 섹션, 데모 GIF 포함)
+├── blog/single.html          # 블로그 글 (제목+날짜 → 본문 → app: 있으면 앱 카드 + 같은 앱 다른 글)
+├── index.html                # 홈 = partials/hub.html
+├── apps/list.html            # /apps/ = partials/hub.html (홈의 중복, canonicalHome)
+├── app/list.html             # 앱 상세 (type="app" 섹션, 데모 GIF·사용법 카드·이 앱 이야기)
 └── partials/
-    ├── applist.html          # 앱 리스트 행 (홈·목록 공용)
-    ├── toolslist.html        # Tools 섹션 (data/tools.toml 기반)
+    ├── app.html              # 슬러그 → apps.toml 항목(+ .page). 틀린 슬러그는 errorf 로 빌드 실패
+    ├── hub.html              # 홈 본문: h1 한 줄 소개 · 앱 목록 | 최근 글(en) + 도구
+    ├── applist.html          # 앱 목록 행 (아이콘·이름·한 줄·플랫폼·›, 배지 없음)
+    ├── toolslist.html        # 도구 섹션 (#tools, data/tools.toml)
+    ├── postlist.html         # 글 목록 한 벌 (블로그 목록·홈·앱 상세·글 끝 공용)
+    ├── dlfoot.html           # 「Get X / X 받기」 + 배지 (앱 상세·사용법 끝)
+    ├── appcard.html          # 블로그 글 끝 앱 카드
     ├── storebadges.html      # 스토어 배지 (순서 강제, 위 규칙 참조)
     └── galleryicon.html      # 3x3 아이콘 (갤러리 제목 + 앱 상세 링크 공용)
 
 layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = true)
 ```
 
-- CSS는 `baseof.html` 내 인라인 `<style>`에 집중. pico.css는 CDN(`jsdelivr`)에서 로드.
-- **폰트: Pretendard Variable**(jsdelivr, dynamic-subset). `--pico-font-family`로 주입.
-- **타이포는 `:root`의 5단계 토큰만 쓴다** — `--fs-sm`(.875) `--fs-base`(1) `--fs-lg`(1.125) `--fs-xl`(1.25) `--fs-2xl`(1.5). 새 `font-size`에 임의값(`.86rem` 등)을 쓰지 말 것. 웨이트는 400·700 두 개만.
-  `h1`·`h2`·`h3`도 이 토큰에 묶여 있다(`baseof.html`) — pico 기본값(2rem/1.75rem/1.5rem)은 스케일 밖이라 제목 크기가 페이지마다 달라졌었다.
-- **radius는 `--pico-border-radius`(8px) 하나.** 앱 아이콘(14/19px)만 iOS 아이콘 관례상 예외.
-- 리스트 행은 구분선이 아니라 **간격**으로 나눈다(`.app-list { gap: 1.5rem }`). 다크에서 구분선이 ~1.3:1로 사라졌던 이력.
+- **CSS는 `assets/css/site.css` 한 파일**이다. 맨 위에 토큰, 그다음 기본 스타일(pico 가 해 주던 리셋·링크·제목·목록·표·코드·포커스), 그 아래 구성 요소. 프레임워크를 다시 들이지 않는다 — pico 기본값이 자체 스케일과 싸워서 생긴 결함(제목 아래 margin collapse, 제목 크기 덮어쓰기, 넓은 화면에서 루트 글자가 21px 까지 커지는 것)이 리디자인의 이유였다.
+- **폰트: Pretendard Variable**(jsdelivr, dynamic-subset). `--font` 토큰.
+- **타이포는 5단계 토큰만 쓴다** — `--fs-sm`(14) `--fs-base`(16) `--fs-lg`(18) `--fs-xl`(20) `--fs-2xl`(24). 새 `font-size`에 임의값을 쓰지 말 것. 웨이트는 400·700 두 개만. 루트 글자는 **16px 고정**이다(화면 폭 따라 키우지 않는다). 예외는 인라인 `code`(둘러싼 줄의 .875em) 하나.
+- **간격은 4px 의 배수**, **radius 는 `--r`(8px) 하나.** 예외는 셋 — 앱 아이콘(크기의 약 22%, iOS 아이콘 관례), 기기 화면 모양인 데모 GIF(20px), 갤러리의 원형 ＋ 버튼(999px).
+- **색은 토큰만**(`--bg` `--fg` `--muted` `--accent` `--rule` `--badge-line` …). 라이트·다크는 토큰 블록에서만 갈린다 — `data-theme` 가 이기고 없으면 OS 설정. 다크 블록이 두 번(미디어쿼리용·속성용) 적힌 것은 의도다: `light-dark()`는 iOS 17.5+ 라 미지원 브라우저에서 색이 통째로 사라진다.
+- **컨테이너 폭:** 헤더·본문·푸터 모두 70rem. 홈(과 `/apps/`)만 `main.wide`로 두 칸을 쓰고, 나머지 페이지는 그 안에서 46rem 을 **왼쪽 정렬**로 읽는다 — 홈↔상세를 오갈 때 브랜드가 옆으로 튀지 않게. 블로그 글 본문·제목·앱 카드는 42.5rem(18px 에서 한 줄 약 75자).
+- 리스트 행은 `--rule` 구분선으로 나눈다. 테마별로 정해 둬서 양쪽 다 ~1.6:1 로 보인다(예전 pico 구분선은 다크에서 ~1.3:1 로 사라졌다).
 - `<link rel=canonical>`은 baseof에서 생성. front matter `canonicalHome: true`인 페이지(`content/apps/_index.md*`)는 홈을 가리켜 홈/`/apps/` 중복을 정리한다.
 - 테마(라이트/다크) 토글은 헤더에 있으며 `data-theme` + `localStorage`로 유지. 미설정 시 `prefers-color-scheme` 따름.
-- 앱 아이콘은 `.app-ico`에 CSS 테두리(`--pico-muted-border-color`)로 박스 경계를 통일.
+- 앱 아이콘은 `.app-ico`에 CSS 테두리(`--rule`)로 박스 경계를 통일.
 - **⚠️ JSON-LD 함정:** `<script type="application/ld+json">` 안에서 `{{ $dict | jsonify }}`만 쓰면 Go html/template이 `<script>` 컨텍스트로 보고 JSON 문자열을 **JS 문자열로 한 번 더 인코딩**해(`>"{\"@context\"...` 이중 이스케이프 → 구글이 파싱 못 함). 반드시 **`jsonify | safeJS`**로 끝낼 것. 현재 `app/list.html`의 SoftwareApplication 스키마가 이 패턴. 새 스키마 추가 시 동일 적용. (수정 커밋 3e4e61e)
 
 ### 설정 (`config/_default/`)
 
 - `hugo.toml` — baseURL, 다국어 기본, `enableRobotsTXT = true`, `disableKinds = ["taxonomy","term","RSS"]` (RSS·태그·JSON 미생성)
-- `languages.en.toml` / `languages.ko.toml` — 언어별 title/description/author (`locale`/`label` 키 사용)
-- `params.toml` — 거의 비어 있음(테마 파라미터 없음)
+- `languages.en.toml` / `languages.ko.toml` — 언어별 title·`description`(홈 h1)·`displayName`(언어 스위처) (`locale`/`label` 키 사용)
+- `params.toml` — `supportEmail` 하나. **템플릿이 쓰는** 연락 주소의 유일한 출처다(푸터·앱 상세 문의·갤러리). 처리방침·오픈소스 **본문**(`content/apps/*/privacy-policy`, `*/open-source`, 14곳)에는 주소가 글로 적혀 있어 따로다 — 주소를 바꿀 때 `rg -l '<옛 주소>' content/`로 같이 바꾼다. 스토어 심사가 보는 처리방침의 연락처가 사이트와 어긋나면 안 된다. `support@mongdaewon.com` 전환은 Cloudflare Email Routing 을 켜고 테스트 메일 도착을 확인한 **뒤에** 이 한 줄로 한다
 - `markup.toml` — goldmark(`unsafe = true`)
-- `static/` — 정적 파일, 빌드 시 사이트 루트로 복사: `app-ads.txt`, 파비콘(`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `site.webmanifest` — favicon.io 패키지, head 링크는 baseof.html), `img/badges/`(스토어·크롬 배지), `img/tools/`(도구 아이콘), `googled24a750a4d1fac6e.html`(구글 서치콘솔 소유확인 — 지우면 인증이 풀린다)
+- `static/` — 정적 파일, 빌드 시 사이트 루트로 복사: `app-ads.txt`, 파비콘(`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `site.webmanifest` — favicon.io 패키지, head 링크는 baseof.html), `img/badges/`(스토어 배지), `img/tools/`(도구 아이콘), `googled24a750a4d1fac6e.html`(구글 서치콘솔 소유확인 — 지우면 인증이 풀린다)
 - `data/apps.toml` / `data/tools.toml` — 앱·도구 메타 단일 출처(위 참조)
 
 **경로(URL) 안정성:** 콘텐츠 슬러그/경로는 SEO·색인에 영향을 주므로 함부로 바꾸지 않는다.

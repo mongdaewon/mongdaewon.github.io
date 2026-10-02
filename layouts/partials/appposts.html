@@ -1,0 +1,4 @@
+{{- /* Blog posts about one app (front matter `app: <slug>`), newest first. One query for the app page's
+       "Posts about X" and a post's "More about X", so the two can't drift apart. The blog is English-only:
+       on the ko site this is empty. Usage: {{ partial "appposts.html" "joincut" }} */ -}}
+{{- return (where (where site.RegularPages "Section" "blog") "Params.app" .).ByDate.Reverse -}}

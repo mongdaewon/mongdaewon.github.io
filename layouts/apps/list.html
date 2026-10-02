@@ -1,5 +1,4 @@
 {{ define "main" }}
-  <h1>{{ if eq .Site.Language.Lang "ko" }}앱{{ else }}Apps{{ end }}</h1>
-  {{ partial "applist.html" . }}
-  {{ partial "toolslist.html" . }}
+  {{/* /apps/ is a duplicate of the home page (canonicalHome) - same layout, one source. */}}
+  {{ partial "hub.html" . }}
 {{ end }}

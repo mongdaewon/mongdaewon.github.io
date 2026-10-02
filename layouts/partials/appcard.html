@@ -1,0 +1,9 @@
+{{- /* Install card at the end of a blog post. Context: app entry from partials/app.html. */ -}}
+<div class="appcard">
+  {{ with .page.Resources.GetMatch "icon.png" }}<img class="app-ico" src="{{ .RelPermalink }}" alt="" width="56" height="56">{{ end }}
+  <div class="appcard-txt">
+    <a class="appcard-name" href="{{ .page.RelPermalink }}">{{ .name }}</a>
+    {{ with .page.Params.tagline }}<span class="appcard-tag">{{ . }}</span>{{ end }}
+  </div>
+  <span class="dl-row">{{ partial "storebadges.html" . }}</span>
+</div>

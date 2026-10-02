@@ -1,0 +1,25 @@
+{{- /* Home layout, shared by / and its /apps/ duplicate. The h1 is the one line of what we do;
+       apps sit beside the latest posts and the tools. The posts block only exists on the English
+       site (the blog is English-only), so the ko side column is just the tools. */ -}}
+{{ $ko := eq site.Language.Lang "ko" }}
+<h1 class="home-lede">{{ site.Params.description }}</h1>
+<div class="hub">
+  <section>
+    <h2>{{ if $ko }}앱{{ else }}Apps{{ end }}</h2>
+    {{ partial "applist.html" . }}
+  </section>
+  <div>
+    {{ with first 3 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+      <section>
+        <div class="sec-row">
+          <h2>Latest posts</h2>
+          {{ with site.GetPage "/blog" }}<a data-ev="home_blog" href="{{ .RelPermalink }}">All posts</a>{{ end }}
+        </div>
+        {{/* home_blog: the home page became a second way into the blog. Without its own event,
+             nav_blog would look like blog visits dropped after the redesign. */}}
+        {{ partial "postlist.html" (dict "pages" . "desc" false "app" true "ev" "home_blog") }}
+      </section>
+    {{ end }}
+    {{ partial "toolslist.html" . }}
+  </div>
+</div>

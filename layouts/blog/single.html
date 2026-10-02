@@ -1,32 +1,28 @@
 {{ define "main" }}
-  {{/* front matter `app: <slug>`(선택) — 있으면 how-to 와 같은 앱 줄(아이콘·이름·배지)을 위에,
-       `.dl-foot`(받기 + 배지)를 글 끝에 붙인다. 없으면 글만 나온다. */}}
-  {{ $a := "" }}{{ $app := "" }}
-  {{ with .Params.app }}
-    {{ $app = site.GetPage (printf "/apps/%s" .) }}
-    {{ $a = index (where hugo.Data.apps.app "slug" .) 0 }}
-  {{ end }}
+  {{/* A post without a date sorts last and prints "Jan 1, 0001" - stop the build instead. */}}
+  {{ if .Date.IsZero }}{{ errorf "%s: front matter `date` is required" .File.Path }}{{ end }}
 
   <p class="backlink"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
+  {{/* Title and date in one block with its own gap - as siblings, the h1's bottom margin swallowed
+       the date's and the date floated 16-20px off the title. */}}
+  <header class="post-head">
+    <h1>{{ .Title }}</h1>
+    <p class="post-date">{{ .Date.Format "Jan 2, 2006" }}</p>
+  </header>
+  <article class="prose">{{ .Content }}</article>
 
-  {{ with $a }}
-    <div class="howto-head">
-      {{ with $app.Resources.GetMatch "icon.png" }}
-        <img class="app-ico ico-sm" src="{{ .RelPermalink }}" alt="{{ $a.name }}" width="40" height="40">
-      {{ end }}
-      <a class="howto-app" href="{{ $app.RelPermalink }}">{{ .name }}</a>
-      <span class="dl-row">{{ partial "storebadges.html" . }}</span>
-    </div>
-  {{ end }}
-
-  <h1>{{ .Title }}</h1>
-  <p class="post-date">{{ .Date.Format "Jan 2, 2006" }}</p>
-  <div>{{ .Content }}</div>
-
-  {{ with $a }}
-    <div class="dl-foot">
-      <p class="dl-get">Get {{ .name }}</p>
-      <span class="dl-row">{{ partial "storebadges.html" . }}</span>
-    </div>
+  {{/* front matter `app: <slug>` (optional). The install card goes at the end, where a reader who came
+       from search has just finished the answer; the same app's other posts follow. A wrong slug stops
+       the build (partials/app.html). */}}
+  {{ with .Params.app }}
+    {{ $slug := . }}
+    {{ $a := partial "app.html" $slug }}
+    {{ partial "appcard.html" $a }}
+    {{ with where (partial "appposts.html" $slug) "Permalink" "ne" $.Permalink }}
+      <section class="related">
+        <h2 class="sec-h">More about {{ $a.name }}</h2>
+        {{ partial "postlist.html" (dict "pages" . "desc" false "app" false) }}
+      </section>
+    {{ end }}
   {{ end }}
 {{ end }}

@@ -1,0 +1,14 @@
+{{- /* Resolves an app slug to its data/apps.toml entry, with its content page under "page".
+       Fails the build on a bad slug: a typo in a blog post's `app:` used to just drop the
+       install badges without a word, and an entry with no content/apps page crashed on nil.
+       Usage: {{ $a := partial "app.html" "joincut" }} → $a.name, $a.appstore, $a.page.RelPermalink */ -}}
+{{- $slug := . -}}
+{{- $a := dict -}}
+{{- with where hugo.Data.apps.app "slug" $slug -}}
+  {{- $a = index . 0 -}}
+{{- else -}}
+  {{- errorf "app %q is not in data/apps.toml" $slug -}}
+{{- end -}}
+{{- $page := site.GetPage (printf "/apps/%s" $slug) -}}
+{{- if not $page -}}{{- errorf "app %q has no content/apps/%s page" $slug $slug -}}{{- end -}}
+{{- return merge $a (dict "page" $page) -}}

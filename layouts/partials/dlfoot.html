@@ -1,0 +1,7 @@
+{{- /* "Get <App>" + store badges at the end of a long page (app detail, how-to). The same badges
+       already sit on the app's icon row at the top; this is for the reader who got to the bottom.
+       Context: app entry from app.html. */ -}}
+<div class="dl-foot">
+  <p class="dl-get">{{ if eq site.Language.Lang "ko" }}{{ .name }} 받기{{ else }}Get {{ .name }}{{ end }}</p>
+  <span class="dl-row">{{ partial "storebadges.html" . }}</span>
+</div>
