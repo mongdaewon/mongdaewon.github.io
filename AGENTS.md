@@ -105,7 +105,7 @@ content/
 앱 개발 문의를 푼 기록과 앱으로 끌어오는 글을 **영어로만** 발행한다(`.ko.md` 없음).
 
 - 글 하나는 leaf bundle: `content/blog/<slug>/index.md` → `/blog/<slug>/`. 스크린샷은 같은 번들에 둔다.
-- front matter는 `title`·`description`·`date` 셋 다 필수다. **`date`가 없으면 빌드가 멈춘다**(`blog/single.html`의 `errorf`) — 두면 목록 맨 끝으로 가고 `Jan 1, 0001`이 찍힌다. `layout`은 지정하지 않는다(섹션 템플릿이 자동).
+- front matter는 `title`·`description`·`date` 셋 다 필수다. **`date`가 없으면 빌드가 멈춘다**(`blog/single.html`의 `errorf`) — 두면 목록 맨 끝으로 가고 `Jan 1, 0001`이 찍힌다. 날짜는 한국 시간으로 읽으니(`timeZone`) 오늘 날짜 글은 몇 시에 올려도 나간다. 미래 날짜 글은 그날이 될 때까지 빌드에서 빠진다. `layout`은 지정하지 않는다(섹션 템플릿이 자동).
 - 목록의 한 줄 설명은 `description`이고, 없으면 본문 앞부분(`.Summary`)이 대신 들어간다.
 - `app: <slug>`(선택)를 넣으면 글 **끝에** 앱 카드(아이콘·이름·한 줄·배지, `appcard.html`)와 "More about X"(같은 앱의 다른 글)가 붙는다. 검색으로 들어온 사람이 답을 다 읽은 자리다. **글의 목적이 설치라면 넣는다.** 글 위에는 앱 줄을 두지 않는다(2026-10-02 A3).
 - **`app:` 슬러그가 틀리면 빌드가 멈춘다**(`partials/app.html`의 `errorf`). 예전에는 배지만 조용히 사라졌다.
@@ -214,7 +214,7 @@ layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = tru
 
 ### 설정 (`config/_default/`)
 
-- `hugo.toml` — baseURL, 다국어 기본, `enableRobotsTXT = true`, `disableKinds = ["taxonomy","term","RSS"]` (RSS·태그·JSON 미생성)
+- `hugo.toml` — baseURL, `timeZone = "Asia/Seoul"`, 다국어 기본, `enableRobotsTXT = true`, `disableKinds = ["taxonomy","term","RSS"]` (RSS·태그·JSON 미생성)
 - `languages.en.toml` / `languages.ko.toml` — 언어별 title·`description`(홈 h1)·`displayName`(언어 스위처) (`locale`/`label` 키 사용)
 - `params.toml` — `supportEmail` 하나. **템플릿이 쓰는** 연락 주소의 유일한 출처다(푸터·앱 상세 문의·갤러리). 처리방침·오픈소스 **본문**(`content/apps/*/privacy-policy`, `*/open-source`, 14곳)에는 주소가 글로 적혀 있어 따로다 — 주소를 바꿀 때 `rg -l '<옛 주소>' content/`로 같이 바꾼다. 스토어 심사가 보는 처리방침의 연락처가 사이트와 어긋나면 안 된다. 지금 값은 `support@mongdaewon.com`이고, Cloudflare Email Routing 이 `mongdaewon@naver.com`으로 넘긴다(받기만 — 답장은 네이버 주소로 나간다). **Email Routing 을 끄거나 MX 레코드를 지우면 이 주소가 반송된다**
 - `markup.toml` — goldmark(`unsafe = true`)
