@@ -6,10 +6,9 @@ pico.css 를 걷어내고 자체 토큰 CSS 로, 상단 탭·앱↔블로그를 
 기존 URL 은 그대로다(사이트맵 en 41 · ko 23, 빌드 산출물 대조).
 
 남은 일:
-- [ ] Email Routing: `support@mongdaewon.com` → `mongdaewon@naver.com` (2026-10-02 결정. 답장은 네이버 주소로 나간다 —
-      Gmail "Send mail as" 는 2027-01 구글 밖 주소 지원 종료 보도가 있어 택하지 않았다). 대시보드에서 켜고 목적지 인증 →
-      테스트 메일 도착 확인 → `supportEmail` 교체
-      주소를 바꿀 때 처리방침·오픈소스 **본문** 14곳도 같이 바꾼다(`rg -l 'mongdaewon@naver.com' content/`).
+- [x] Email Routing: `support@mongdaewon.com` → `mongdaewon@naver.com` (2026-10-02). 사이트·처리방침 본문 14곳 주소 교체.
+      답장은 네이버 주소로 나간다 — Gmail "Send mail as" 는 2027-01 구글 밖 주소 지원 종료 보도가 있어 택하지 않았다.
+- [ ] 스토어 등록 정보의 지원 이메일을 `support@mongdaewon.com` 으로 — 각 앱 다음 업데이트 때(URL 교체와 같이)
 - [ ] 리뷰에서 범위 밖으로 둔 것: `timeZone` 미설정(오전 9시 전 push 한 당일 글이 미래 글로 빠진다), 코드 하이라이트(`noClasses`),
       baseURL 정본 이중화(워크플로 `--baseURL` 이 hugo.toml 을 덮는다), 배포 `fetch-depth: 0`·`curl -f`
 - [ ] 블로그 앱별 필터 — 글이 10편쯤 되면. 필터 맨 위에 그 앱의 사용법 링크를 고정한다(사용법은 블로그로 옮기지 않기로 했다:

@@ -124,4 +124,4 @@ We may update this Privacy Policy from time to time. Changes will be posted on t
 
 If you have any questions about this Privacy Policy, please contact us at:
 
-Email: mongdaewon@naver.com
+Email: support@mongdaewon.com

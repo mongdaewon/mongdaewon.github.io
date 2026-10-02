@@ -40,4 +40,4 @@ AudioJoin's own source code is not part of that repository and is not covered by
 
 If you want AudioJoin built against a newer or differently configured LAME, email us and we will ship an update with it.
 
-Email: mongdaewon@naver.com
+Email: support@mongdaewon.com
