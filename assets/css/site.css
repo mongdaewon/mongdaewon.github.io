@@ -212,8 +212,6 @@ svg.ico-grid { fill: currentColor; stroke: none; }
            margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
 .dl-get { margin: 0; font-weight: 700; }
 .backlink { font-size: var(--fs-sm); margin-bottom: 1rem; }
-/* 글 날짜. 제목 바로 아래라 제목과 붙여 두고 본문과는 떨어뜨린다. */
-.post-date { color: var(--muted); font-size: var(--fs-sm); margin: .25rem 0 1.5rem; }
 .backlink + h1 { margin-top: 0; }
 
 /* home - the h1 is the one line of what we do; apps sit beside the latest posts and the tools */
@@ -259,3 +257,26 @@ svg.ico-grid { fill: currentColor; stroke: none; }
 /* A section heading inside a page (not the page title): one step under h2's default. */
 .sec-h { font-size: var(--fs-lg); margin: 0; }
 .related { margin-top: 2.5rem; }
+
+/* page intro under an h1 (blog index) */
+.lede { margin: 0 0 .5rem; color: var(--muted); }
+
+/* blog post - title + date as one block, body a little larger with a shorter line */
+.post-head { display: flex; flex-direction: column; gap: .25rem; margin-bottom: 1.5rem; }
+.post-head h1 { margin: 0; }
+.post-date { margin: 0; font-size: var(--fs-sm); color: var(--muted); }
+.prose { font-size: var(--fs-lg); line-height: 1.7; }
+/* ~75 characters a line at 18px. Beats the 46rem column rule on specificity and order. */
+body > main > .prose { max-width: 42.5rem; }
+
+/* install card at the end of a post */
+.appcard { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; padding: 1rem;
+           border: 1px solid var(--rule); border-radius: var(--r); }
+.appcard .app-ico { width: 56px; height: 56px; border-radius: 13px; }
+.appcard-txt { flex: 1; min-width: 10rem; }
+.appcard-name { display: block; font-weight: 700; color: inherit; text-decoration: none; }
+.appcard-name:hover { color: var(--accent); }
+.appcard-tag { display: block; margin-top: .25rem; font-size: var(--fs-sm); color: var(--muted); }
+@media (max-width: 520px) {
+  .appcard .dl-row { flex-basis: 100%; }
+}
