@@ -112,7 +112,7 @@ body > main { padding-block: 1rem 2rem; }
 .app-info .name { display: block; font-weight: 700; }
 .app-row:hover .name { color: var(--accent); }
 /* One line, cut with an ellipsis - the full summary is on the app page one tap away. */
-.app-info .desc { display: block; color: var(--muted); font-size: var(--fs-sm); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-info .desc { display: block; margin-top: .25rem; color: var(--muted); font-size: var(--fs-sm); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 /* Tool rows leave the site - mark them so alike still means alike. */
 .app-info .ext { color: var(--muted); font-weight: 400; }
 .plat { flex: 0 0 auto; color: var(--muted); font-size: var(--fs-sm); white-space: nowrap; }

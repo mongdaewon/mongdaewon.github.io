@@ -1,7 +1,7 @@
 {{- /* Tools: same row shape as the apps, smaller, and they leave the site (↗, new tab).
        id="tools" is the target of the header's Tools tab. */ -}}
 {{ $ko := eq site.Language.Lang "ko" }}
-<section id="tools" class="tools">
+<section id="tools">
   <h2>{{ if $ko }}도구{{ else }}Tools{{ end }}</h2>
   <div class="app-list">
     {{ range $t := hugo.Data.tools.tool }}
