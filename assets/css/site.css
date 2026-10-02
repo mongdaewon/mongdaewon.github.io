@@ -69,7 +69,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
 /* Inline code is the one size that isn't a token: .875em of whatever line it sits in, because a
    monospace face reads larger than the text around it at the same size. */
 code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .875em;
-       background: var(--soft); padding: .125rem .25rem; border-radius: 4px; }
+       background: var(--soft); padding: 0 .25rem; border-radius: var(--r); }
 pre { overflow-x: auto; padding: 1rem; background: var(--soft); border-radius: var(--r); }
 pre code { padding: 0; background: none; }
 /* Tables stay display:table - display:block would let a wide one scroll, but Safari/VoiceOver then
@@ -79,7 +79,7 @@ table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
 th, td { text-align: left; padding: .5rem .75rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
 th { font-weight: 700; }
 button { font: inherit; color: inherit; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: var(--r); }
 
 /* ───────── layout + components ───────── */
 /* One container for header, main and footer on every page, so the brand never jumps sideways.
@@ -109,7 +109,7 @@ body > main { padding-block: 1rem 2rem; }
 .app-list { display: flex; flex-direction: column; }
 .app-row { display: flex; align-items: center; gap: .75rem; padding-block: .75rem; text-decoration: none; color: inherit; }
 .app-row + .app-row { border-top: 1px solid var(--rule); }
-.app-ico { flex: 0 0 auto; width: 48px; height: 48px; border-radius: 11px; display: grid; place-items: center; font-size: var(--fs-2xl); color: #fff; object-fit: cover; border: 1px solid var(--rule); }
+.app-ico { flex: 0 0 auto; width: 48px; height: 48px; border-radius: 11px; display: grid; place-items: center; font-size: var(--fs-2xl); object-fit: cover; border: 1px solid var(--rule); }
 .app-info { flex: 1; min-width: 0; }
 .app-info .name { display: block; font-weight: 700; }
 .app-row:hover .name { color: var(--accent); }
@@ -274,9 +274,11 @@ svg.ico-grid { fill: currentColor; stroke: none; }
    column rule - the first on order (same specificity), the second on specificity. */
 body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-width: 42.5rem; }
 
-/* install card at the end of a post */
-.appcard { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; padding: 1rem;
-           border: 1px solid var(--rule); border-radius: var(--r); }
+/* install block at the end of a post. A top rule, not a box: the same shape as the app page's .dl-foot,
+   and unlike .howto-card (a box that is one big link) only its name and badges are links - a box here
+   looked like the how-to card and then didn't behave like it. */
+.appcard { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; padding-top: 1.5rem;
+           border-top: 1px solid var(--rule); }
 .appcard .app-ico { width: 56px; height: 56px; border-radius: 13px; }
 .appcard-txt { flex: 1; min-width: 10rem; }
 .appcard-name { display: block; font-weight: 700; color: inherit; text-decoration: none; }
