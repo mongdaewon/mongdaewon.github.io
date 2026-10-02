@@ -36,23 +36,31 @@
   {{ end }}
 </head>
 <body>
+  {{ $ko := eq .Site.Language.Lang "ko" }}
+  {{/* Section tabs. Apps points at the home page, not /apps/: home IS the app list and /apps/ is a
+       duplicate of it (canonicalHome). Tools is a section of the home page, so it's an anchor.
+       Blog only exists in English - on the ko site GetPage "/blog" is nil and the tab doesn't render. */}}
+  {{ $appsOn := or .IsHome (eq .Section "apps") }}
   <header class="site-header">
     <a class="brand" href="{{ .Site.Home.RelPermalink }}">mongdaewon</a>
-    {{/* No "Apps" link: the home page IS the app list, and /apps/ is a duplicate of it
-         (GSC 2026-08: unknown to Google, 0 impressions). The brand link covers going home. */}}
-    <nav>
-      {{/* 블로그는 영어만 있다. ko 사이트에는 /blog/ 페이지가 없어 GetPage 가 nil 이므로 링크도 안 뜬다. */}}
-      {{ with .Site.GetPage "/blog" }}<a data-ev="nav_blog" href="{{ .RelPermalink }}">Blog</a>{{ end }}
+    <nav class="tabs" aria-label="{{ if $ko }}사이트{{ else }}Site{{ end }}">
+      <a href="{{ .Site.Home.RelPermalink }}"{{ if $appsOn }} class="on" aria-current="page"{{ end }}>{{ if $ko }}앱{{ else }}Apps{{ end }}</a>
+      {{ with .Site.GetPage "/blog" }}<a data-ev="nav_blog" href="{{ .RelPermalink }}"{{ if eq $.Section "blog" }} class="on" aria-current="page"{{ end }}>Blog</a>{{ end }}
+      <a href="{{ .Site.Home.RelPermalink }}#tools">{{ if $ko }}도구{{ else }}Tools{{ end }}</a>
+    </nav>
+    <span class="hd-util">
       <span class="langs">
         {{ range .AllTranslations }}
           <a data-ev="lang_{{ .Language.Lang }}" href="{{ .RelPermalink }}"{{ if eq .Language.Lang $.Site.Language.Lang }} class="active"{{ end }}>{{ .Language.Params.displayName }}</a>
         {{ end }}
       </span>
       <button class="theme-toggle" type="button" aria-label="Toggle theme">☾</button>
-    </nav>
+    </span>
   </header>
 
-  <main>
+  {{/* The home page (and its /apps/ duplicate) uses the full width for its two columns;
+       every other page reads in a 46rem column under the same left edge. */}}
+  <main{{ if or .IsHome .Params.canonicalHome }} class="wide"{{ end }}>
     {{ block "main" . }}{{ end }}
   </main>
 

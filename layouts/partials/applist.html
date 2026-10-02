@@ -1,22 +1,30 @@
+{{- /* App rows: the whole row is one link to the app page, where installing happens.
+       Platform text says where an app runs without two black badges per row - those made the badges,
+       not the app names, the loudest thing on the home page. Platforms come from the store fields only
+       (apps.toml can't tell iPhone-only from iPhone+iPad, so it doesn't claim iPad). */ -}}
+{{ $ko := eq site.Language.Lang "ko" }}
 <div class="app-list">
   {{ range $a := hugo.Data.apps.app }}
     {{ if $a.hidden }}{{ continue }}{{ end }}
     {{ with site.GetPage (printf "/apps/%s" $a.slug) }}
-      <div class="app-row">
-        <a class="app-main" href="{{ .RelPermalink }}">
-          {{ $icon := .Resources.GetMatch "icon.png" }}
-          {{ if $icon }}
-            <img class="app-ico" src="{{ $icon.RelPermalink }}" alt="{{ $a.name }}" width="60" height="60">
-          {{ else }}
-            <span class="app-ico" style="background:{{ $a.color }}">{{ $a.emoji }}</span>
-          {{ end }}
-          <span class="app-info">
-            <span class="name">{{ $a.name }}</span>
-            <span class="desc">{{ .Params.summary }}</span>
-          </span>
-        </a>
-        <span class="app-dl">{{ partial "storebadges.html" $a }}</span>
-      </div>
+      {{ $plat := slice }}
+      {{ with $a.appstore }}{{ $plat = $plat | append "iPhone" }}{{ end }}
+      {{ with $a.macappstore }}{{ $plat = $plat | append "Mac" }}{{ end }}
+      {{ with $a.googleplay }}{{ $plat = $plat | append "Android" }}{{ end }}
+      {{ if and (not $plat) $a.comingsoon }}{{ $plat = $plat | append (cond $ko "곧 출시" "Coming soon") }}{{ end }}
+      <a class="app-row" href="{{ .RelPermalink }}">
+        {{ with .Resources.GetMatch "icon.png" }}
+          <img class="app-ico" src="{{ .RelPermalink }}" alt="" width="48" height="48">
+        {{ else }}
+          <span class="app-ico" style="background:{{ $a.color }}" aria-hidden="true">{{ $a.emoji }}</span>
+        {{ end }}
+        <span class="app-info">
+          <span class="name">{{ $a.name }}</span>
+          <span class="desc">{{ .Params.summary }}</span>
+        </span>
+        <span class="plat">{{ delimit $plat " · " }}</span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
     {{ end }}
   {{ end }}
 </div>

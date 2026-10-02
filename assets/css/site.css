@@ -17,8 +17,7 @@
   --fs-2xl: 1.5rem;   /* 24 */
   /* One radius for every box. App icons are the documented exception (iOS icon convention). */
   --r: 8px;
-  /* Store badge column width + gutter. .tool-cta reuses these so the Tools CTAs
-     start exactly where the App Store badge starts. */
+  /* Store badge width + gap. One size everywhere a badge appears. */
   --dl-col: 128px;
   --dl-gap: .5rem;
 
@@ -32,22 +31,18 @@
   /* Divider between list rows, near 1.6:1 against the page in both themes. */
   --rule: rgba(0, 0, 0, .2);
   --badge-line: rgba(0, 0, 0, .2);
-  --show-light: block;
-  --show-dark: none;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
     --bg: #121417; --fg: #e6e8eb; --muted: #a3a9b1; --accent: #7ab0ff; --on-accent: #0b1220; --soft: #1b1f24;
     --rule: rgba(255, 255, 255, .16); --badge-line: rgba(255, 255, 255, .3);
-    --show-light: none; --show-dark: block;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #121417; --fg: #e6e8eb; --muted: #a3a9b1; --accent: #7ab0ff; --on-accent: #0b1220; --soft: #1b1f24;
   --rule: rgba(255, 255, 255, .16); --badge-line: rgba(255, 255, 255, .3);
-  --show-light: none; --show-dark: block;
 }
 
 /* ───────── base (what pico used to provide) ───────── */
@@ -85,43 +80,48 @@ button { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
 /* ───────── layout + components ───────── */
-body > header, body > main, body > footer { max-width: 46rem; margin-inline: auto; padding-inline: 1.25rem; }
+/* One container for header, main and footer on every page, so the brand never jumps sideways.
+   The home page uses the full width (main.wide); every other page reads in a 46rem column
+   left-aligned under the brand. */
+body > header, body > main, body > footer { max-width: 70rem; margin-inline: auto; padding-inline: 1.25rem; }
+body > main:not(.wide) > * { max-width: 46rem; }
 body > main { padding-block: 1rem 2rem; }
 
-/* header */
-.site-header { display: flex; align-items: center; gap: 1rem; padding-block: 1rem; }
-.brand { display: flex; align-items: center; font-weight: 700; font-size: var(--fs-xl); text-decoration: none; color: inherit; }
-.site-header nav { margin-left: auto; display: flex; align-items: center; gap: 1rem; font-size: var(--fs-sm); }
-.site-header nav a { text-decoration: none; }
+/* header - brand, section tabs, language + theme. On a phone the tabs drop to a row of their own. */
+.site-header { display: flex; align-items: center; flex-wrap: wrap; column-gap: 2rem; padding-block: .5rem; }
+.brand { font-weight: 700; font-size: var(--fs-lg); text-decoration: none; color: inherit; }
+.tabs { display: flex; gap: 1.5rem; }
+.tabs a { display: flex; align-items: center; min-height: 44px; color: var(--muted); text-decoration: none;
+          border-bottom: 2px solid transparent; }
+.tabs a:hover { color: var(--fg); }
+.tabs a.on { color: var(--fg); font-weight: 700; border-bottom-color: var(--fg); }
+.hd-util { margin-left: auto; display: flex; align-items: center; gap: 1rem; font-size: var(--fs-sm); }
 .langs { display: flex; gap: .5rem; }
 /* Muted color, not opacity: opacity .55 measured 2.34:1 (light) / 2.95:1 (dark), below the 4.5:1 text minimum. */
-.langs a { color: var(--muted); }
+.langs a { color: var(--muted); text-decoration: none; }
 .langs a.active { color: inherit; font-weight: 700; }
-.theme-toggle { background: transparent; border: none; padding: .25rem; margin: 0; width: auto; cursor: pointer; font-size: var(--fs-lg); line-height: 1; color: inherit; }
+.theme-toggle { background: transparent; border: none; padding: .25rem; margin: 0; cursor: pointer; font-size: var(--fs-lg); line-height: 1; color: inherit; }
 
-/* app list rows */
-/* A rule between rows, centred in 24px of padding. The old divider used --pico-muted-border-color,
-   which measured ~1.3:1 in dark and vanished; --rule is set per theme so both sides stay visible. */
-.app-list { margin-block: 1.5rem; }
-.app-row { display: flex; align-items: center; gap: 1rem; padding-block: .75rem; }
+/* app + tool rows - the whole row is one link. A rule between rows; --rule is set per theme so the
+   line stays visible in dark (the old pico divider measured ~1.3:1 there and vanished). */
+.app-list { display: flex; flex-direction: column; }
+.app-row { display: flex; align-items: center; gap: .75rem; padding-block: .75rem; text-decoration: none; color: inherit; }
 .app-row + .app-row { border-top: 1px solid var(--rule); }
-.app-ico { flex: 0 0 auto; width: 60px; height: 60px; border-radius: 14px; display: grid; place-items: center; font-size: 1.9rem; color: #fff; object-fit: cover; border: 1px solid var(--rule); }
-.app-main { display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 0; text-decoration: none; color: inherit; }
-.app-info { min-width: 0; }
-.app-info .name { display: block; font-size: var(--fs-base); font-weight: 700; }
-.app-main:hover .name { color: var(--accent); }
-.app-info .desc { color: var(--muted); font-size: var(--fs-sm); }
-/* Tool rows look like app rows but leave the site — mark them so alike still means alike. */
+.app-ico { flex: 0 0 auto; width: 48px; height: 48px; border-radius: 11px; display: grid; place-items: center; font-size: var(--fs-2xl); color: #fff; object-fit: cover; border: 1px solid var(--rule); }
+.app-info { flex: 1; min-width: 0; }
+.app-info .name { display: block; font-weight: 700; }
+.app-row:hover .name { color: var(--accent); }
+/* One line, cut with an ellipsis - the full summary is on the app page one tap away. */
+.app-info .desc { display: block; color: var(--muted); font-size: var(--fs-sm); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Tool rows leave the site - mark them so alike still means alike. */
 .app-info .ext { color: var(--muted); font-weight: 400; }
-/* Two fixed badge columns: Apple left, Android right. A single-store app leaves the other
-   column empty rather than sliding into it, so the columns line up down the whole list. */
-.app-dl { flex: 0 0 auto; display: grid; grid-template-columns: repeat(2, var(--dl-col)); gap: var(--dl-gap); align-items: center; }
-.app-dl .b-apple { grid-column: 1; }
-.app-dl .b-android { grid-column: 2; }
-.app-dl a { display: inline-flex; line-height: 0; }
+.plat { flex: 0 0 auto; color: var(--muted); font-size: var(--fs-sm); white-space: nowrap; }
+.chev { flex: 0 0 auto; color: var(--muted); }
+.tool-row .app-ico { width: 32px; height: 32px; border-radius: var(--r); }
+
+/* store badges (app detail, how-to, end of a post) */
 .store-badge { border-radius: var(--r); border: 1px solid var(--badge-line); }
-.app-dl img.store-badge { width: 100%; height: auto; display: block; }
-.app-dl .badge, .dl-row .badge { display: inline-block; font-size: var(--fs-sm); padding: .25rem .75rem; border-radius: var(--r); border: 1px solid var(--rule); color: var(--muted); }
+.dl-row .badge { display: inline-block; font-size: var(--fs-sm); padding: .25rem .75rem; border-radius: var(--r); border: 1px solid var(--rule); color: var(--muted); }
 
 /* keyword gallery - one 44px row per site, so a 20-item list is scannable on a phone.
    Order: keyword (what you type) - name - host (leaves the site) - add. */
@@ -154,11 +154,10 @@ body > main { padding-block: 1rem 2rem; }
 .gal-add:hover { background: var(--accent); color: var(--on-accent); }
 .gallery-note { margin-top: 2rem; font-size: var(--fs-sm); color: var(--muted); }
 
-/* tools section */
+/* gallery group headings ("Korea (24)") */
 .tools-title { margin: 2.5rem 0 .25rem; }
 /* The count is context, not a heading - at pico's inherited size it read as loud as the title. */
 .tools-title small { font-size: var(--fs-base); font-weight: 400; color: var(--muted); }
-.tool-cta { flex: 0 0 calc(var(--dl-col) * 2 + var(--dl-gap)); display: flex; justify-content: flex-start; align-items: center; }
 .tool-link { display: inline-flex; align-items: center; gap: .5rem; font-size: var(--fs-sm); padding: .5rem 1rem; border-radius: var(--r); border: 1px solid var(--accent); color: var(--accent); text-decoration: none; white-space: nowrap; }
 .tool-link svg { width: 16px; height: 16px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .tool-link:hover { background: var(--accent); color: var(--on-accent); }
@@ -169,11 +168,6 @@ svg.ico-grid { fill: currentColor; stroke: none; }
 .gal-title svg.ico-grid { width: .8em; height: .8em; flex: 0 0 auto; color: var(--accent); }
 /* Optically matched to the stroked icons beside it - a filled glyph reads heavier at the same box. */
 .tool-link svg.ico-grid { width: 14px; height: 14px; }
-.chrome-badge-link { display: inline-flex; line-height: 0; }
-.chrome-badge { width: 158px; height: auto; }
-/* Light/dark artwork swap rides on the theme tokens - one rule instead of five. */
-.chrome-badge.light { display: var(--show-light); }
-.chrome-badge.dark { display: var(--show-dark); }
 
 /* app detail */
 .app-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; border: 0; padding: 0; }
@@ -222,18 +216,25 @@ svg.ico-grid { fill: currentColor; stroke: none; }
 .post-date { color: var(--muted); font-size: var(--fs-sm); margin: .25rem 0 1.5rem; }
 .backlink + h1 { margin-top: 0; }
 
-/* home hero */
-.hero { margin: 1rem 0 .5rem; }
-.hero h1 { margin-bottom: .25rem; }
-.hero p { color: var(--muted); }
+/* home - the h1 is the one line of what we do; apps sit beside the latest posts and the tools */
+.home-lede { margin: 1rem 0 0; font-size: var(--fs-base); font-weight: 400; color: var(--muted); }
+.hub { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 3rem; align-items: start; }
+.hub h2 { margin: 2rem 0 .25rem; }
+.sec-row { display: flex; align-items: baseline; gap: 1rem; }
+.sec-row a { margin-left: auto; font-size: var(--fs-sm); }
 
 /* footer */
 .site-footer { color: var(--muted); font-size: var(--fs-sm); padding-block: 2rem; border-top: 1px solid var(--rule); margin-top: 2rem; }
 
+@media (max-width: 860px) {
+  .hub { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}
+
 @media (max-width: 520px) {
-  .app-row { flex-wrap: wrap; }
-  .app-dl { flex-basis: 100%; justify-content: start; padding-left: 76px; }
-  .tool-cta { flex-basis: 100%; padding-left: 76px; }
+  /* Tabs get their own row under the brand; the header's bottom line is the tabs' baseline. */
+  .site-header { padding-block: .5rem 0; border-bottom: 1px solid var(--rule); }
+  .tabs { order: 3; flex-basis: 100%; }
+  .plat { display: none; }
   /* 배지 두 개(128px*2 + gap)와 라벨이 한 줄에 못 들어간다 - 라벨을 윗줄로 보내 배지를 나란히 둔다.
      상단 줄도 앱 목록처럼 왼쪽 정렬로 떨어뜨린다(margin-left:auto 는 넓은 화면 전용). */
   .dl-get { flex-basis: 100%; }
@@ -246,11 +247,6 @@ svg.ico-grid { fill: currentColor; stroke: none; }
   .app-demo { width: 100%; max-width: 260px; }
 }
 
-/* Below ~400px the 76px indent squeezed paired badges to 98–118px while lone badges stayed 128px.
-   Dropping the indent keeps every badge at its full 128px. */
-@media (max-width: 400px) {
-  .app-dl, .tool-cta { padding-left: 0; }
-}
 
 /* blog post lists - one look wherever posts are listed (partials/postlist.html) */
 .posts { display: flex; flex-direction: column; }
