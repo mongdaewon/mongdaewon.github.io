@@ -4,7 +4,7 @@
 <div class="posts">
   {{- range .pages }}
     <a class="post" href="{{ .RelPermalink }}">
-      <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }}{{ if and $showApp .Params.app }} · {{ (partial "app.html" .Params.app).name }}{{ end }}</span>
+      <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }}{{ if and $showApp .Params.app }} · {{ (partialCached "app.html" .Params.app .Params.app).name }}{{ end }}</span>
       <span class="post-t">{{ .Title }}</span>
       {{- if $desc }}<span class="post-x">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }}</span>{{ end }}
     </a>

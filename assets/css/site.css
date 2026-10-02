@@ -72,8 +72,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
        background: var(--soft); padding: .125rem .25rem; border-radius: 4px; }
 pre { overflow-x: auto; padding: 1rem; background: var(--soft); border-radius: var(--r); }
 pre code { padding: 0; background: none; }
-/* Wide tables scroll sideways on a phone instead of pushing the whole page wider. */
-table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; font-size: var(--fs-sm); }
+/* Tables stay display:table - display:block would let a wide one scroll, but Safari/VoiceOver then
+   stops reading it as a table. Today's tables are two columns and wrap fine on a phone; if a wide one
+   ever appears, wrap it in a scrolling div with a table render hook instead. */
+table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
 th, td { text-align: left; padding: .5rem .75rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
 th { font-weight: 700; }
 button { font: inherit; color: inherit; }
@@ -111,13 +113,15 @@ body > main { padding-block: 1rem 2rem; }
 .app-info { flex: 1; min-width: 0; }
 .app-info .name { display: block; font-weight: 700; }
 .app-row:hover .name { color: var(--accent); }
-/* One line, cut with an ellipsis - the full summary is on the app page one tap away. */
+/* App rows: one line, cut with an ellipsis - the full summary is on the app page one tap away.
+   Tool rows wrap instead (below): they leave the site, so there is no page holding the rest. */
 .app-info .desc { display: block; margin-top: .25rem; color: var(--muted); font-size: var(--fs-sm); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 /* Tool rows leave the site - mark them so alike still means alike. */
 .app-info .ext { color: var(--muted); font-weight: 400; }
 .plat { flex: 0 0 auto; color: var(--muted); font-size: var(--fs-sm); white-space: nowrap; }
 .chev { flex: 0 0 auto; color: var(--muted); }
 .tool-row .app-ico { width: 32px; height: 32px; border-radius: var(--r); }
+.tool-row .desc { white-space: normal; }
 
 /* store badges (app detail, how-to, end of a post) */
 .store-badge { border-radius: var(--r); border: 1px solid var(--badge-line); }
@@ -170,8 +174,8 @@ svg.ico-grid { fill: currentColor; stroke: none; }
 .tool-link svg.ico-grid { width: 14px; height: 14px; }
 
 /* app detail */
-.app-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; border: 0; padding: 0; }
-.app-head .app-ico { width: 84px; height: 84px; border-radius: 19px; font-size: 2.6rem; }
+.app-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.app-head .app-ico { width: 84px; height: 84px; border-radius: 19px; }
 .app-head h1 { margin: 0; }
 .app-head .app-head-txt { min-width: 0; }
 .app-head .tagline { margin: .25rem 0 0; color: var(--muted); font-size: var(--fs-lg); }
@@ -179,6 +183,8 @@ svg.ico-grid { fill: currentColor; stroke: none; }
    are three short lines, so a phone-shaped demo beside them costs no extra height. */
 .app-showcase { display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 2rem; }
 .app-benefits { font-size: var(--fs-lg); line-height: 1.7; min-width: 0; }
+/* The demo is a phone screen recording, so it gets phone-screen corners - the one radius besides
+   app icons that isn't --r (AGENTS). */
 .app-demo { flex: 0 0 auto; width: 240px; height: auto; display: block;
             border-radius: 20px; border: 1px solid var(--rule); }
 /* Support gets the button, the privacy policy stays quiet: only one of the two is
@@ -187,8 +193,6 @@ svg.ico-grid { fill: currentColor; stroke: none; }
 /* Underline stays at currentColor: the text is muted, not link-blue, so the underline
    is the only "this is a link" signal and must not fade out. */
 .app-links .quiet { color: var(--muted); font-size: var(--fs-sm); text-decoration: underline; text-underline-offset: 2px; }
-/* Same distance to whatever follows on every page. Left alone, pico's heading margin made
-   this 48px before an h1 and 16px before a plain div. */
 /* how-to 진입 카드. 혜택과 배지 사이에 끼는 자리라 배지보다 조용해야 한다 -
    테두리만 있는 블록이고 채운 버튼은 스토어 배지 몫으로 남긴다. */
 .howto-card { display: block; margin: 0 0 1.5rem; padding: 1rem; border: 1px solid var(--rule);
@@ -212,7 +216,6 @@ svg.ico-grid { fill: currentColor; stroke: none; }
            margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
 .dl-get { margin: 0; font-weight: 700; }
 .backlink { font-size: var(--fs-sm); margin-bottom: 1rem; }
-.backlink + h1 { margin-top: 0; }
 
 /* home - the h1 is the one line of what we do; apps sit beside the latest posts and the tools */
 .home-lede { margin: 1rem 0 0; font-size: var(--fs-base); font-weight: 400; color: var(--muted); }

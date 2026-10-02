@@ -28,9 +28,9 @@ Tailwind 는 쓰지 않는다 — 템플릿 13개 규모에서 의존성 0 인 H
       - [ ] Email Routing: `support@mongdaewon.com` → `mongdaewon@naver.com` (2026-10-02 결정. 답장은 네이버 주소로 나간다 —
             Gmail "Send mail as" 는 2027-01 구글 밖 주소 지원 종료 보도가 있어 택하지 않았다). 대시보드에서 켜고 목적지 인증 →
             테스트 메일 도착 확인 → `supportEmail` 교체
-- [ ] 10. 검증: 빌드 + 전 페이지 유형 × 모바일·데스크톱 × 라이트·다크 실측(형제 간격 4px 미만·대비·가로 넘침·굵기),
+- [x] 10. 검증: 빌드 + 전 페이지 유형 × 모바일·데스크톱 × 라이트·다크 실측(형제 간격 4px 미만·대비·가로 넘침·굵기),
        GA4 `data-ev` 가 전부 살아 있는지
-- [ ] 11. 독립 리뷰(`/code-review`) → 지적 수정 → finish-work
+- [x] 11. 독립 리뷰(`/code-review`) → 지적 수정 → finish-work
 
 이번 범위 밖(별도 작업): `timeZone` 미설정, 코드 하이라이트(`noClasses`), baseURL 정본 이중화, gallery `site.Data`, 배포 `fetch-depth`·`curl -f`
 
