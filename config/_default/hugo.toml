@@ -1,4 +1,7 @@
 baseURL = "https://mongdaewon.com/"
+# Front matter dates without a time ("date: 2026-10-02") are read in this zone. Without it they are
+# UTC midnight, so a post dated today and deployed before 09:00 KST counted as a future post and was dropped.
+timeZone = "Asia/Seoul"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
