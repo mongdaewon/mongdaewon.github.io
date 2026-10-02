@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ $ko := eq .Site.Language.Lang "ko" }}
-  {{ $sites := index site.Data "jumpbar-gallery" "site" }}
+  {{ $sites := index hugo.Data "jumpbar-gallery" "site" }}
 
   <p class="backlink"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
   <h1 class="gal-title">{{ partial "galleryicon.html" . }}{{ .Title }}</h1>

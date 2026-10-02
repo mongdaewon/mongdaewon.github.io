@@ -266,8 +266,10 @@ svg.ico-grid { fill: currentColor; stroke: none; }
 .post-head h1 { margin: 0; }
 .post-date { margin: 0; font-size: var(--fs-sm); color: var(--muted); }
 .prose { font-size: var(--fs-lg); line-height: 1.7; }
-/* ~75 characters a line at 18px. Beats the 46rem column rule on specificity and order. */
-body > main > .prose { max-width: 42.5rem; }
+/* ~75 characters a line at 18px. The title, the install card and the related posts share that
+   right edge, so the end of a post doesn't jut out past its text. Both selectors beat the 46rem
+   column rule - the first on order (same specificity), the second on specificity. */
+body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-width: 42.5rem; }
 
 /* install card at the end of a post */
 .appcard { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; padding: 1rem;
