@@ -218,6 +218,7 @@ layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = tru
 - `languages.en.toml` / `languages.ko.toml` — 언어별 title·`description`(홈 h1)·`displayName`(언어 스위처) (`locale`/`label` 키 사용)
 - `params.toml` — `supportEmail` 하나. **템플릿이 쓰는** 연락 주소의 유일한 출처다(푸터·앱 상세 문의·갤러리). 처리방침·오픈소스 **본문**(`content/apps/*/privacy-policy`, `*/open-source`, 14곳)에는 주소가 글로 적혀 있어 따로다 — 주소를 바꿀 때 `rg -l '<옛 주소>' content/`로 같이 바꾼다. 스토어 심사가 보는 처리방침의 연락처가 사이트와 어긋나면 안 된다. 지금 값은 `support@mongdaewon.com`이고, Cloudflare Email Routing 이 `mongdaewon@naver.com`으로 넘긴다(받기만 — 답장은 네이버 주소로 나간다). **Email Routing 을 끄거나 MX 레코드를 지우면 이 주소가 반송된다**
 - `markup.toml` — goldmark(`unsafe = true`)
+- **도메인·DNS·메일은 Cloudflare**(zone `cdd71e4a4f1dedc02e23fa66d052382e`). DNS 는 zone 범위 토큰 `CLOUDFLARE_DNS_TOKEN`(DNS Edit + Zone Read)으로 API 를 쓸 수 있다 — 이 토큰은 `/user/tokens/verify` 가 `1000 Invalid` 를 주는 게 정상이니 zone 엔드포인트로 확인한다. Email Routing·Registrar(갱신)는 이 토큰 권한 밖이라 대시보드에서 한다. 사이트용 A·AAAA·`www` CNAME 은 **DNS 전용(회색 구름)** 이어야 GitHub Pages 인증서가 갱신된다. Search Console 은 도메인 속성 `sc-domain:mongdaewon.com`(서비스 계정 소유자).
 - `static/` — 정적 파일, 빌드 시 사이트 루트로 복사: `app-ads.txt`, 파비콘(`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `site.webmanifest` — favicon.io 패키지, head 링크는 baseof.html), `img/badges/`(스토어 배지), `img/tools/`(도구 아이콘), `googled24a750a4d1fac6e.html`(구글 서치콘솔 소유확인 — 지우면 인증이 풀린다)
 - `data/apps.toml` / `data/tools.toml` — 앱·도구 메타 단일 출처(위 참조)
 
