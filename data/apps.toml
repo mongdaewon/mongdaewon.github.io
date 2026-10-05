@@ -88,3 +88,13 @@
   color = "#2E7D5B"
   appstore = "https://apps.apple.com/app/id6818434178"
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.sulsul"
+
+[[app]]
+  slug = "chukchuk"
+  name = "척척장기"
+  emoji = "楚"
+  color = "#1E7A45"
+  # 출시 전 — 처리방침(Play 제출용)과 상세 페이지만 먼저 살려 둔다. 출시되면 comingsoon·hidden 을 지우고
+  # googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.chukchuk" 을 넣는다.
+  comingsoon = true
+  hidden = true
