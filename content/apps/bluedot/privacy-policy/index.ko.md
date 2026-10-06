@@ -1,10 +1,10 @@
 ---
 title: "개인정보처리방침 - 푸른 점 디펜스"
-description: "푸른 점 디펜스 - 지구를 지켜라 (Blue Dot Defense - Save the Earth) 개인정보처리방침"
+description: "푸른 점 디펜스 - 지구를 지켜라 개인정보처리방침"
 layout: "single"
 ---
 
-**푸른 점 디펜스 - 지구를 지켜라 (Blue Dot Defense - Save the Earth)**
+**푸른 점 디펜스 - 지구를 지켜라**
 
 최종 수정일: 2026년 10월 6일
 

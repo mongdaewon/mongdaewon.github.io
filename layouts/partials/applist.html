@@ -19,7 +19,7 @@
           <span class="app-ico" style="background:{{ $a.color }}" aria-hidden="true">{{ $a.emoji }}</span>
         {{ end }}
         <span class="app-info">
-          <span class="name">{{ $a.name }}</span>
+          <span class="name">{{ cond $ko ($a.name_ko | default $a.name) $a.name }}</span>
           <span class="desc">{{ .Params.summary }}</span>
         </span>
         <span class="plat">{{ delimit $plat " · " }}</span>

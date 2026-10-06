@@ -220,7 +220,7 @@ layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = tru
 - `markup.toml` — goldmark(`unsafe = true`)
 - **도메인·DNS·메일은 Cloudflare**(zone `cdd71e4a4f1dedc02e23fa66d052382e`). DNS 는 zone 범위 토큰 `CLOUDFLARE_DNS_TOKEN`(DNS Edit + Zone Read)으로 API 를 쓸 수 있다 — 이 토큰은 `/user/tokens/verify` 가 `1000 Invalid` 를 주는 게 정상이니 zone 엔드포인트로 확인한다. Email Routing·Registrar(갱신)는 이 토큰 권한 밖이라 대시보드에서 한다. 사이트용 A·AAAA·`www` CNAME 은 **DNS 전용(회색 구름)** 이어야 GitHub Pages 인증서가 갱신된다. Search Console 은 도메인 속성 `sc-domain:mongdaewon.com`(서비스 계정 소유자).
 - `static/` — 정적 파일, 빌드 시 사이트 루트로 복사: `app-ads.txt`, 파비콘(`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `site.webmanifest` — favicon.io 패키지, head 링크는 baseof.html), `img/badges/`(스토어 배지), `img/tools/`(도구 아이콘), `googled24a750a4d1fac6e.html`(구글 서치콘솔 소유확인 — 지우면 인증이 풀린다)
-- `data/apps.toml` / `data/tools.toml` — 앱·도구 메타 단일 출처(위 참조)
+- `data/apps.toml` / `data/tools.toml` — 앱·도구 메타 단일 출처(위 참조). 앱 `name`은 영어, 한국어 이름이 따로면 `name_ko`(ko 사이트에서 `partials/app.html`·`applist.html`이 바꿔 씀)
 
 **경로(URL) 안정성:** 콘텐츠 슬러그/경로는 SEO·색인에 영향을 주므로 함부로 바꾸지 않는다.
 
