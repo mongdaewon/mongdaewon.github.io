@@ -1,10 +1,10 @@
 ---
 title: "Privacy Policy - Blue Dot Defense"
-description: "Privacy Policy for Blue Dot Defense - Save the Earth (푸른 점 디펜스 - 지구를 지켜라)"
+description: "Privacy Policy for Blue Dot Defense - Save the Earth"
 layout: "single"
 ---
 
-**Blue Dot Defense - Save the Earth (푸른 점 디펜스 - 지구를 지켜라)**
+**Blue Dot Defense - Save the Earth**
 
 Last updated: October 6, 2026
 

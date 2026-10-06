@@ -99,7 +99,8 @@
 
 [[app]]
   slug = "bluedot"
-  name = "푸른 점 디펜스"
+  name = "Blue Dot Defense"
+  name_ko = "푸른 점 디펜스"
   emoji = "🌍"
   color = "#1E4FA8"
   # 출시 전 - 처리방침(Play 제출용)과 상세 페이지만 먼저 살려 둔다. 출시되면 comingsoon·hidden 을 지우고

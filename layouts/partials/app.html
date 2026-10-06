@@ -11,4 +11,6 @@
 {{- end -}}
 {{- $page := site.GetPage (printf "/apps/%s" $slug) -}}
 {{- if not $page -}}{{- errorf "app %q has no content/apps/%s page" $slug $slug -}}{{- end -}}
+{{- /* name is English (base); name_ko overrides it on the ko site, like tools.toml. */ -}}
+{{- if and (eq site.Language.Lang "ko") $a.name_ko -}}{{- $a = merge $a (dict "name" $a.name_ko) -}}{{- end -}}
 {{- return merge $a (dict "page" $page) -}}
