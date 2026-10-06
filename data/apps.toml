@@ -103,7 +103,5 @@
   name_ko = "푸른 점 디펜스"
   emoji = "🌍"
   color = "#1E4FA8"
-  # 출시 전 - 처리방침(Play 제출용)과 상세 페이지만 먼저 살려 둔다. 출시되면 comingsoon·hidden 을 지우고
-  # googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.bluedot" 을 넣는다.
-  comingsoon = true
-  hidden = true
+  googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.bluedot"
+  # iOS 출시되면 appstore = "https://apps.apple.com/app/id..." 을 넣는다.
