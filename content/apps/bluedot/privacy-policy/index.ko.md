@@ -6,17 +6,17 @@ layout: "single"
 
 **푸른 점 디펜스 - 지구를 지켜라**
 
-최종 수정일: 2026년 10월 6일
+최종 수정일: 2026년 10월 7일
 
 ## 소개
 
-이 개인정보처리방침은 Mongdaewon이 만든 푸른 점 디펜스(이하 "앱")가 Android(Google Play)에서 어떤 정보를 수집하고, 어떻게 사용하고 보호하는지 설명합니다. 앱은 인터넷 없이 하는 게임입니다. 계정과 로그인이 없고, 사용자의 데이터를 받는 자체 서버도 없습니다.
+이 개인정보처리방침은 Mongdaewon이 만든 푸른 점 디펜스(이하 "앱")가 Android(Google Play)와 iOS(App Store)에서 어떤 정보를 수집하고, 어떻게 사용하고 보호하는지 설명합니다. 앱은 인터넷 없이 하는 게임입니다. 계정과 로그인이 없고, 사용자의 데이터를 받는 자체 서버도 없습니다.
 
 ## 수집하는 정보
 
 ### 1. 사용 데이터(분석)
 
-앱은 게임을 개선하기 위해 Firebase Analytics(Google)로 익명의 사용 데이터를 수집합니다.
+Android 앱은 게임을 개선하기 위해 Firebase Analytics(Google)로 익명의 사용 데이터를 수집합니다. iOS 앱에는 분석 기능이 없습니다.
 
 - 판 시작·종료, 난이도, 도달한 웨이브, 보상형 광고 시청 같은 게임 이벤트
 - Firebase가 만든 앱 인스턴스 ID(앱을 삭제하면 사라집니다)
@@ -28,7 +28,7 @@ layout: "single"
 
 앱은 사용자가 보상을 받으려고 직접 고를 때만 Google AdMob 보상형 광고를 보여줍니다. AdMob은 다음 정보를 수집할 수 있습니다.
 
-- 광고 ID(기기 설정에서 재설정하거나 삭제할 수 있습니다)
+- Android의 광고 ID(기기 설정에서 재설정하거나 삭제할 수 있습니다). iOS에서는 앱이 추적 허용을 묻지 않으므로 광고 식별자(IDFA)를 쓰지 않습니다
 - 기기 정보(모델, 운영체제 버전 등)
 - IP 주소(대략적인 위치를 추정하는 데 쓰일 수 있습니다)
 - 광고를 전달하고 측정하기 위한 광고 상호작용(노출, 탭 등)과 진단 데이터
@@ -48,7 +48,7 @@ layout: "single"
 
 ## 인앱 결제
 
-앱은 Google Play 결제로 1회성 "광고 제거" 상품을 판매합니다. 결제는 전부 Google이 처리하며, 저희는 결제 정보를 받지 않습니다.
+앱은 Android에서는 Google Play 결제, iOS에서는 App Store로 1회성 "광고 제거" 상품을 판매합니다. 결제는 전부 Google 또는 Apple이 처리하며, 저희는 결제 정보를 받지 않습니다.
 
 ## 수집하지 않는 정보
 
@@ -59,10 +59,10 @@ layout: "single"
 
 ## 제3자 서비스
 
-- **Firebase Analytics** ([개인정보처리방침](https://firebase.google.com/support/privacy?hl=ko))
+- **Firebase Analytics** (Android만, [개인정보처리방침](https://firebase.google.com/support/privacy?hl=ko))
 - **Google AdMob** ([개인정보처리방침](https://policies.google.com/privacy?hl=ko), [Google이 파트너 앱의 정보를 사용하는 방법](https://policies.google.com/technologies/partner-sites?hl=ko))
 - **Google User Messaging Platform** - 동의가 필요한 지역의 광고 동의
-- **Google Play 결제** - 1회성 "광고 제거" 결제
+- **Google Play 결제**(Android)·**Apple App Store**(iOS) - 1회성 "광고 제거" 결제
 
 ## 데이터 보안
 
