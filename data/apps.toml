@@ -55,7 +55,7 @@
   emoji = "🎧"
   color = "#5856D6"
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.joinsound"
-  # iOS 출시되면 appstore = "https://apps.apple.com/app/id6818166716" 을 넣는다.
+  appstore = "https://apps.apple.com/app/id6818166716"
 
 [[app]]
   slug = "recnow"
