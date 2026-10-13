@@ -16,7 +16,7 @@
       스토어의 처리방침·웹사이트 URL 을 `.com` 으로, 지원 이메일을 `support@mongdaewon.com` 으로,
       앱 코드에 박힌 URL(예: android-audiojoin `AppInfo.PRIVACY`)도 같이. 옛 것도 리디렉트·전달로 동작하니 급하지 않다.
 - [ ] 옛 github.io GSC 속성 정리
-      2027-04 이후(주소 변경 180일). **그 전엔 지우지 않는다.** 해를 넘겨 `@M/D`를 붙이지 않았다.
+      2027-04 이후(주소 변경 180일). **그 전엔 지우지 않는다.**
 - [ ] 👤 mongdaewon.com 자동 갱신 확인
       2027-08 말. 만료 2027-09-29, 결제 실패면 갱신이 안 된다. Registrar 결제는 대시보드에서 본다.
 
@@ -49,7 +49,7 @@
 
 - [x] 1. 갤러리 45개 추가 — 한국 24 · 글로벌 21 (`data/jumpbar-gallery.toml`) → 111개
 - [x] 2. 앱 기본 키워드 `ch` 를 `yh` 로 옮긴다 (`ios-jumpbar`: `Shared/Presets.swift`, `Tests/PresetsTests.swift`)
-      — `chore/move-chiebukuro-keyword` d66bd02, 테스트 71개 통과. **아직 배포 전이다.**
+      — `chore/move-chiebukuro-keyword` d66bd02, 테스트 71개 통과. 20260917 출시로 배포됐다.
       — `ch` 를 ChatGPT(월 1,557만)에 내주기 위한 교환. 출시 당일이라 일본어 사용자가 사실상 없어 지금이 최저 비용.
       `disabled` 가 키워드 문자열로 저장되므로(`Shared/Keywords.swift:97`) 知恵袋를 꺼둔 사용자는 다시 켜진다.
 - [x] 3. 앱 버전 올려 심사 제출 → 배포 확인(20260917·20260929 출시)
