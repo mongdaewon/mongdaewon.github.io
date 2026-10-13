@@ -93,7 +93,7 @@
   emoji = "楚"
   color = "#1E7A45"
   appstore = "https://apps.apple.com/app/id6819539122"
-  # Play 출시되면 googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.chukchuk" 을 넣는다.
+  googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.chukchuk"
 
 [[app]]
   slug = "bluedot"
