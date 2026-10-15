@@ -25,16 +25,7 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 
 This data is collected automatically and cannot be used to identify you personally.
 
-### 2. Advertising Data (Android only)
-
-The iOS app has no ads. On Android, Google AdMob displays advertisements. AdMob may collect:
-
-- Advertising ID (can be reset in device settings)
-- Device information for ad targeting
-
-You can opt out of personalized ads through your device's privacy settings.
-
-### 3. Local Data
+### 2. Local Data
 
 The following data is stored only on your device and is never transmitted to our servers:
 
@@ -42,7 +33,9 @@ The following data is stored only on your device and is never transmitted to our
 - App settings and preferences
 - Reminder settings
 
-On iOS, if you used the app before Deep Breath Plus was introduced, a flag saying so is kept in your own iCloud (key-value storage) so the Plus features stay free for you on a new device. We cannot read your iCloud.
+On iOS, if you used the app before Deep Breath Plus was introduced, a flag saying so is kept in your own iCloud (key-value storage) so the Plus features stay free for you on a new device. We cannot read your iCloud. On Android, the same flag is kept in the app's local settings and moves to a new device only through Android's own device backup.
+
+The app has no ads and does not use the Advertising ID.
 
 ## Information We Do NOT Collect
 
@@ -57,12 +50,11 @@ On iOS, if you used the app before Deep Breath Plus was introduced, a flag sayin
 Our app uses the following third-party services:
 
 - **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
-- **Google AdMob** (Android only) ([Privacy Policy](https://policies.google.com/privacy))
 - **Apple StoreKit** (iOS) / **Google Play Billing** (Android) - For in-app purchases, handled entirely by Apple or Google
 
 ## Data Security
 
-Your local data is stored securely on your device. We do not have access to this data. Analytics and advertising data are handled by Google according to their security standards.
+Your local data is stored securely on your device. We do not have access to this data. Analytics data is handled by Google according to their security standards.
 
 ## Children's Privacy
 
@@ -70,8 +62,6 @@ Our app is not directed to children under 13. We do not knowingly collect person
 
 ## Your Rights
 
-- **Reset Advertising ID (Android):** You can reset your advertising ID in your device settings
-- **Opt out of personalized ads (Android):** Available in your device's privacy settings
 - **Delete local data:** Uninstalling the app removes all locally stored data
 
 ## Changes to This Policy
