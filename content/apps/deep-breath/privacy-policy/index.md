@@ -6,7 +6,7 @@ layout: "single"
 
 **Deep Breath - Breathing Exercise**
 
-Last updated: August 7, 2026
+Last updated: October 15, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -25,9 +25,9 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 
 This data is collected automatically and cannot be used to identify you personally.
 
-### 2. Advertising Data
+### 2. Advertising Data (Android only)
 
-Google AdMob displays advertisements. AdMob may collect:
+The iOS app has no ads. On Android, Google AdMob displays advertisements. AdMob may collect:
 
 - Advertising ID (can be reset in device settings)
 - Device information for ad targeting
@@ -42,6 +42,8 @@ The following data is stored only on your device and is never transmitted to our
 - App settings and preferences
 - Reminder settings
 
+On iOS, if you used the app before Deep Breath Plus was introduced, a flag saying so is kept in your own iCloud (key-value storage) so the Plus features stay free for you on a new device. We cannot read your iCloud.
+
 ## Information We Do NOT Collect
 
 - Personal information (name, email, phone number)
@@ -55,7 +57,7 @@ The following data is stored only on your device and is never transmitted to our
 Our app uses the following third-party services:
 
 - **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
-- **Google AdMob** ([Privacy Policy](https://policies.google.com/privacy))
+- **Google AdMob** (Android only) ([Privacy Policy](https://policies.google.com/privacy))
 - **Apple StoreKit** (iOS) / **Google Play Billing** (Android) - For in-app purchases, handled entirely by Apple or Google
 
 ## Data Security
@@ -68,8 +70,8 @@ Our app is not directed to children under 13. We do not knowingly collect person
 
 ## Your Rights
 
-- **Reset Advertising ID:** You can reset your advertising ID in your device settings
-- **Opt out of personalized ads:** Available in your device's privacy settings
+- **Reset Advertising ID (Android):** You can reset your advertising ID in your device settings
+- **Opt out of personalized ads (Android):** Available in your device's privacy settings
 - **Delete local data:** Uninstalling the app removes all locally stored data
 
 ## Changes to This Policy
