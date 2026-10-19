@@ -6,7 +6,7 @@ layout: "single"
 
 **RecNow - Screen Recorder**
 
-Last updated: August 7, 2026
+Last updated: October 20, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -23,10 +23,11 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 - When a recording starts and ends
 - Recording settings used (video resolution, audio source, countdown length)
 - Recording length and the reason a recording ended
-- Whether premium features are active
+- Whether RecNow Plus is active
+- In-app actions such as playing, pausing, sharing, and deleting recordings, and viewing the Plus purchase screen
 - Device type and operating system version
 
-This data is collected automatically and cannot be used to identify you personally. **The contents of your recordings are never included in analytics data.**
+Firebase links this data to an app instance ID that it generates. This is not the advertising ID, and it is removed when you uninstall the app. This data is collected automatically and cannot be used to identify you personally. **The contents of your recordings are never included in analytics data.**
 
 ### 2. Local Data
 
@@ -65,7 +66,7 @@ RecNow does not display any advertisements. We do not use any advertising SDKs.
 
 ## In-App Purchases
 
-RecNow offers an in-app purchase that unlocks premium features. Purchases are processed entirely by Google Play. We never receive or store your payment details - we only receive confirmation of whether a purchase is active.
+RecNow offers a one-time in-app purchase (RecNow Plus) that removes the 10-minute recording limit. Purchases are processed entirely by Google Play. We never receive or store your payment details - we only receive confirmation of whether a purchase is active.
 
 ## Data Security
 
@@ -79,7 +80,7 @@ Our app is not directed to children under 13. We do not knowingly collect person
 
 - **Delete recordings:** Remove any recording from within the app or from your device's gallery
 - **Delete local data:** Uninstalling the app removes its settings. Recordings saved to `Movies/RecNow` remain in your device's storage until you delete them
-- **Analytics data cannot identify you:** The usage data we collect is anonymous and aggregated. It contains no name, email, account, or device identifier that could be traced back to you, and it never includes the contents of your recordings. There is nothing personally identifiable for us to look up, export, or delete on request.
+- **Analytics data cannot identify you:** The usage data we collect is anonymous and aggregated. It contains no name, email, account, or advertising ID, only the app instance ID described above, and it never includes the contents of your recordings. There is nothing personally identifiable for us to look up, export, or delete on request.
 
 ## Changes to This Policy
 
