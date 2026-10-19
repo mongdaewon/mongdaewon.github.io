@@ -36,7 +36,7 @@
 ## 사용법(how-to) 보강
 - [ ] AudioJoin how-to 스토어 기준으로
       앱 레포 `app-listing.md` 가 정본. 스토어에서 직접 받을 땐
-      iOS `itunes.apple.com/lookup?id=<id>&country=<kr|us>`(연속 호출하면 막히니 앱마다 따로). LazyWindow 는 미출시
+      iOS `itunes.apple.com/lookup?id=<id>&country=<kr|us>`(연속 호출하면 막히니 앱마다 따로)
 - [ ] RecNow 권한·Deep Breath 4-7-8 문단
       RecNow 권한 안내(화면 녹화·마이크·알림) 섹션, Deep Breath "4-7-8 호흡이 뭔가" 문단 — 검색어가 붙는 자리라 검토
 
