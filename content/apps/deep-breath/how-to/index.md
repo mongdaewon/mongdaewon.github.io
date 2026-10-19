@@ -14,11 +14,11 @@ Open the app and match your breathing to the petal animation. Inhale, hold, exha
 
 ## Pick a breathing pattern
 
-Six presets are built in, including 4-7-8 breathing and box breathing. If none of them fit, set your own pattern with custom timings.
+Five presets are built in, including 4-7-8 breathing and box breathing. If none of them fit, set your own pattern with custom timings (Plus).
 
 ## Choose how long to sit
 
-A session runs from one minute to as long as you want. Add one of 19 ambient sounds (nature, water, melody, or space) if silence isn't what you need.
+A session runs from one minute to as long as you want. Add one of 17 ambient sounds (nature, water, melody, or space) if silence isn't what you need. One sound in each group is free; Plus unlocks them all.
 
 ## Build the habit
 
@@ -26,6 +26,8 @@ Session history and a heatmap calendar show the days you showed up, and streak t
 
 ## Good to know
 
-- On iPhone, sessions are recorded to Apple Health as Mindful Minutes, the Dynamic Island shows your progress, and home and lock screen widgets are available.
-- Every breathing technique, ambient sound, and statistic is free.
+- On iPhone, sessions are recorded to Apple Health as Mindful Minutes and the Dynamic Island shows your progress.
+- The app has no ads. The five presets, every session length, history, and reminders are free.
+- Deep Breath Plus is a one-time purchase, not a subscription. It adds guidance that keeps going with the screen off, every ambient sound, your own breathing pattern, widgets, and the Apple Watch app.
+- If you used Deep Breath before Plus arrived, you keep the Plus features for free.
 - Dark mode is supported.
