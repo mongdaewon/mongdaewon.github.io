@@ -101,5 +101,5 @@
   name_ko = "푸른 점 디펜스"
   emoji = "🌍"
   color = "#1E4FA8"
+  appstore = "https://apps.apple.com/app/id6819933330"
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.bluedot"
-  # iOS 출시되면 appstore = "https://apps.apple.com/app/id..." 을 넣는다.

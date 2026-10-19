@@ -1,10 +1,10 @@
 ---
 title: "Privacy Policy - Chukchuk Janggi"
-description: "Privacy Policy for Chukchuk Janggi - Korean Chess (척척장기 - 한국 장기 게임)"
+description: "Privacy Policy for Chukchuk Janggi - Korean Chess (척척장기 - 컴퓨터와 두는 장기 게임)"
 layout: "single"
 ---
 
-**Chukchuk Janggi - Korean Chess (척척장기 - 한국 장기 게임)**
+**Chukchuk Janggi - Korean Chess (척척장기 - 컴퓨터와 두는 장기 게임)**
 
 Last updated: October 6, 2026
 

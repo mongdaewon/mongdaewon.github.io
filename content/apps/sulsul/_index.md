@@ -1,6 +1,6 @@
 ---
 type: app
-title: "Sulsul Nanmal - Korean Crossword"
+title: "Sulsul: Korean Crossword"
 description: "A Korean crossword puzzle with large tiles and large text. Clues can be read aloud."
 summary: "A Korean crossword puzzle with large tiles and large text."
 params:
