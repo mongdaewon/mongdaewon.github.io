@@ -4,7 +4,7 @@ description: "Ready-made keyword shortcuts for Jumpbar. Tap ＋ to send one to t
 layout: "gallery"
 ---
 
-On an iPhone with Jumpbar installed, tap **＋** and the add-site screen opens with the fields filled in.  
+On an iPhone or iPad with Jumpbar installed, tap **＋** and the add-site screen opens with the fields filled in.  
 You can change the keyword before saving.
 
 The free version holds **one** site you add yourself.  
