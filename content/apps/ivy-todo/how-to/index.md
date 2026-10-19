@@ -1,16 +1,16 @@
 ---
 title: "How to Use Ivy To Do"
-description: "Six tasks a day, dragged into priority order, with unfinished ones carried over automatically. Widgets, calendar, reminders and Siri included."
+description: "Start with six tasks, drag them into priority order, with unfinished ones carried over automatically. Widgets, calendar, reminders and Siri included."
 layout: "howto"
 ---
 
 **Ivy To Do - Task Checklist**
 
-Up to six tasks a day, in priority order. That is the whole method.
+The most important tasks first, in priority order. That is the whole method.
 
-## Write down up to six tasks
+## Start with six tasks
 
-Six is the limit on purpose. It forces you to choose what actually matters instead of keeping an endless list.
+Following the Ivy Lee Method, the app suggests starting with your six most important tasks. Choosing six makes you decide what actually matters instead of keeping an endless list. It is a suggestion, not a limit: you can add more when you need to.
 
 ## Drag them into priority order
 
@@ -30,16 +30,16 @@ The calendar view shows your record day by day, and search finds a task you wrot
 
 ## Keep it in front of you
 
-Three Home Screen widget sizes show today's tasks, and you can check tasks off right on the widget. The app icon badge shows how many are left.
+Home Screen widgets show today's tasks, and you can check tasks off right on the widget. On iPhone, iPad and Mac they come in sizes from small to extra large; on Android there are small, medium and large. On iOS, the app icon badge shows how many are left.
 
-## As many reminders as you like
+## Up to six reminders
 
-Add reminders with their own names and times. Each one tells you how many tasks are left today, or what comes first tomorrow.
+Add up to six reminders, each with its own name and time. Each one tells you how many tasks are left today, or what comes first tomorrow.
 
-## Faster with Siri and a keyboard
+## Faster with Siri and a keyboard (iOS)
 
 Say "Add a task in Ivy To Do" to Siri, or use Shortcuts. On iPad and Mac, press ⌘N to add a task and ⌘→ to open the Tomorrow tab.
 
-## Ivy To Do Plus
+## Ivy To Do Plus (iOS)
 
-Six tasks a day, reminders, history and Home Screen widgets are always free. Plus is a one-time purchase that unlocks Lock Screen widgets and iCloud sync across iPhone, iPad and Mac. There are no ads.
+Tasks, reminders, history and Home Screen widgets are always free. On iPhone, iPad and Mac, Plus is a one-time purchase that unlocks Lock Screen widgets and iCloud sync across iPhone, iPad and Mac. On Android, everything in the app is free. There are no ads on either platform.

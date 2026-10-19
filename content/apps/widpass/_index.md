@@ -1,6 +1,6 @@
 ---
 type: app
-title: "WidPass - QR & Barcode Wallet"
+title: "WidPass - QR & Barcode Widget"
 description: "Keep all your QR codes and barcodes in one place, and use them right from the widget."
 summary: "Keep all your QR codes and barcodes in one place, and use them right from the widget."
 params:

@@ -1,12 +1,12 @@
 ---
 title: "Privacy Policy - WidPass"
-description: "Privacy Policy for WidPass - QR & Barcode Wallet"
+description: "Privacy Policy for WidPass - QR & Barcode Widget"
 layout: "single"
 ---
 
-**WidPass - QR & Barcode Wallet**
+**WidPass - QR & Barcode Widget**
 
-Last updated: August 7, 2026
+Last updated: October 20, 2026
 
 *This Privacy Policy is provided in English only.*
 
