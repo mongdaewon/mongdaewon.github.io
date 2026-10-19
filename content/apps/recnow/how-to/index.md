@@ -30,11 +30,11 @@ Pause mid-recording and resume when you're ready, instead of stopping and starti
 
 Play, share, and delete from the recordings list in the app.
 
-## Free and Premium
+## Free and Plus
 
 Every feature is free. Resolution and audio are never locked. Each recording can run up to 10 minutes, with no limit on how many you make.
 
-For recordings longer than 10 minutes, Premium is a one-time purchase, not a subscription.
+For recordings longer than 10 minutes, RecNow Plus is a one-time purchase, not a subscription.
 
 ## Good to know
 

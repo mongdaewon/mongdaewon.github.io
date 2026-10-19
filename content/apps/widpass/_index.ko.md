@@ -1,6 +1,6 @@
 ---
 type: app
-title: "WidPass - QR·바코드 지갑"
+title: "WidPass - QR 바코드 홈 위젯"
 description: "QR코드와 바코드를 한 곳에 모으고, 위젯으로 바로 쓰세요."
 summary: "QR코드와 바코드를 한 곳에 모으고, 위젯으로 바로 쓰세요."
 params:

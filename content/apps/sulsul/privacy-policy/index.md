@@ -1,18 +1,18 @@
 ---
-title: "Privacy Policy - Sulsul Nanmal"
-description: "Privacy Policy for Sulsul Nanmal - Korean Crossword (술술낱말 - 가로세로 낱말퀴즈)"
+title: "Privacy Policy - Sulsul"
+description: "Privacy Policy for Sulsul: Korean Crossword (술술낱말 - 가로세로 낱말퀴즈)"
 layout: "single"
 ---
 
-**Sulsul Nanmal - Korean Crossword (술술낱말 - 가로세로 낱말퀴즈)**
+**Sulsul: Korean Crossword (술술낱말 - 가로세로 낱말퀴즈)**
 
-Last updated: October 2, 2026
+Last updated: October 20, 2026
 
 *This Privacy Policy is provided in English only.*
 
 ## Introduction
 
-This Privacy Policy describes how Sulsul Nanmal ("we", "our", or "the app") collects, uses, and protects your information when you use our mobile application on iOS (App Store) or Android (Google Play). The app has no accounts and no sign-in.
+This Privacy Policy describes how Sulsul ("we", "our", or "the app") collects, uses, and protects your information when you use our mobile application on iOS (App Store) or Android (Google Play). The app has no accounts and no sign-in.
 
 ## Information We Collect
 
@@ -37,7 +37,7 @@ Google AdMob shows an ad after finishing some levels, and an ad you choose to wa
 
 Where required by law (for example in the EEA and the UK), the app asks for your consent before requesting ads, using Google's consent tool. You can change your choice at any time in the app's Settings.
 
-**App Tracking Transparency (iOS):** after you finish 10 levels, the app asks once whether it may track you. If you allow it, AdMob can use your advertising identifier (IDFA) to show personalized ads. If you don't, you see non-personalized ads. The number of ads is the same either way. You can change this at any time in iOS Settings › Privacy & Security › Tracking.
+**App Tracking Transparency (iOS):** when you first open the app, it asks once whether it may track you. If you allow it, AdMob can use your advertising identifier (IDFA) to show personalized ads. If you don't, you see non-personalized ads. The number of ads is the same either way. You can change this at any time in iOS Settings › Privacy & Security › Tracking.
 
 ### 3. Local Data
 

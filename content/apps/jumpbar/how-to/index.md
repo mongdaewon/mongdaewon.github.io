@@ -20,11 +20,13 @@ Type the keyword, a space, then your search words. `yt cats` lands on YouTube re
 
 Paste or type the site's search address and mark where the search words go.
 
-Don't know the address? Open the short guide right under the field: search that site once for a given word, come back, and Jumpbar works the rest out from what you paste.
+Don't know the address? Tap **?** and open **Finding a site's address**: search that site once for a given word, come back, and Jumpbar works the rest out from what you paste.
 
 ## Give one site several keywords
 
 A site can hold more than one keyword, so you never switch keyboards mid-search. Put Namuwiki on both `ㄴ` and `nm` and you type whichever your hands are already on. Hangul initials work, and so does any other script.
+
+Built-in sites take extra keywords too - type `y` instead of `yt` if that suits your fingers. The first extra keyword on a built-in site is free. More than that, or several keywords on a site you added yourself, needs Plus.
 
 ## Start from the gallery
 
@@ -42,12 +44,14 @@ Korean devices also get Naver, Namuwiki, and Coupang. Japanese ones get Rakuten 
 
 ## Free and Plus
 
-Built-in keywords and one site of your own are free, forever.
+The built-in keywords, one site of your own, and one keyword of your own on a built-in site are free, forever.
 
 Jumpbar Plus is a one-time purchase, not a subscription. It removes the limit on how many sites and keywords you can add, and turns on iCloud sync. Your keyword list lives on your own Apple Account, so your sites show up on every device. Sync is off until you turn it on, and turning it off removes the copy. Your search words are never part of it.
+
+Plus works with Family Sharing: one purchase covers up to six people.
 
 ## Good to know
 
 - The extension only does anything on search engine result pages. On every other page it checks the hostname and stops.
-- Your search words are compared inside the browser and never leave your iPhone.
+- Your search words are compared inside the browser and never leave your iPhone or iPad.
 - No account, no analytics, no ads.

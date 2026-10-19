@@ -6,7 +6,7 @@ layout: "single"
 
 **JoinCut - Lossless Video Merge**
 
-Last updated: August 21, 2026
+Last updated: October 20, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -38,6 +38,8 @@ The following data is stored only on your device and is never transmitted to our
 ## Photo Library Access
 
 The app requests access to your photo library only to let you pick videos to edit and to save the results back to Photos. Selected videos are read and processed entirely on your device, and are never uploaded anywhere.
+
+On Android, videos are picked with the system Photo Picker, so no storage or media permission is needed, and finished videos are saved to your gallery. The app can show a progress notification while saving, but it never asks for notification permission - you only see it if you turn notifications on in system settings.
 
 ## File Access on Mac
 

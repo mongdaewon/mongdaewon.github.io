@@ -11,4 +11,5 @@ Pick several recordings and join them in the order you choose.
 Trim the start and end of each one to a tenth of a second, with the waveform in front of you.  
 Save as M4A, MP3, or WAV. MP3 is encoded on your device, so the file opens anywhere.  
 Send voice memos, interviews, and lectures straight in from the share sheet.  
-Everything happens on your iPhone, iPad, or Android phone, and nothing is uploaded.
+Everything happens on your iPhone, iPad, or Android phone, and nothing is uploaded.  
+Free: trim and join up to two clips and save as M4A. Three or more clips, shorter silences, and MP3 or WAV come with AudioJoin Plus, a one-time purchase.

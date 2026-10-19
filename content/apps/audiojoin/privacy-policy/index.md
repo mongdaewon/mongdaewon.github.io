@@ -6,7 +6,7 @@ layout: "single"
 
 **AudioJoin - Merge and Trim Audio Files**
 
-Last updated: September 29, 2026
+Last updated: October 20, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -37,7 +37,7 @@ Imported copies live in a temporary folder and are removed when you remove the c
 
 ## File Access
 
-The app opens audio only when you choose it, either through the file picker or by sharing a file into AudioJoin from another app such as Voice Memos. A file shared into AudioJoin is placed in a private folder that only AudioJoin and its share extension can read.
+The app opens audio only when you choose it, either through the file picker or by sharing a file into AudioJoin from another app such as Voice Memos. On iOS, a file shared into AudioJoin is placed in a private folder that only AudioJoin and its share extension can read. On Android, the app receives shared audio through the system share sheet and uses the system file picker, so it asks for no storage permission.
 
 **All audio processing happens entirely on your device.** Your recordings and their contents are never uploaded to our servers or to any third party.
 

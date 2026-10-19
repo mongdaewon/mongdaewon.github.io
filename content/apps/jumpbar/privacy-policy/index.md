@@ -6,7 +6,7 @@ layout: "single"
 
 **Jumpbar**
 
-Last updated: September 15, 2026
+Last updated: October 20, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -24,12 +24,14 @@ One thing does leave your device, and only if you switch it on: **iCloud sync** 
 
 ### Local Settings
 
-The following is stored on your device only, in a shared app group container that the app and its extension both read. It never leaves your device:
+The following is stored on your device only. Your keyword list sits in a shared app group container that the app and its extension both read. None of it leaves your device, except the keyword list when you turn on iCloud sync (below):
 
 - The sites you added, each with its keywords, site name, and search address
-- Which built-in keywords you turned off
-- Whether you own Jumpbar Plus (a yes/no flag, mirrored from the App Store)
+- Which built-in keywords you turned off, and any keywords of your own you added to built-in sites
+- Whether you own Jumpbar Plus (a yes/no flag, mirrored from the App Store) and the date you first had it
 - Whether iCloud sync is switched on
+- A jump counter: a single number that goes up each time the extension sends you to one of your sites. It records no keyword, site, or search words. The app uses it only to decide when to ask for an App Store rating, and remembers which app version it last asked in
+- The time the extension last checked in with the app, so the app can show whether the extension has been seen working
 
 Deleting the app removes this data from the device.
 
@@ -37,7 +39,7 @@ Deleting the app removes this data from the device.
 
 Jumpbar Plus can keep your keyword list on your **own Apple Account**, so the sites you added show up on your other devices. It is **off until you turn it on** in the app.
 
-What is synced: the sites you added - their keywords, site names, and search addresses - and which built-in keywords you turned off.
+What is synced: the sites you added - their keywords, site names, and search addresses - which built-in keywords you turned off, and any keywords of your own you added to built-in sites.
 
 What is **not** synced: your search words. Those are compared against your keyword list inside the browser and are never written anywhere, with or without sync.
 
@@ -60,7 +62,7 @@ It does not read, store, or transmit page content, form input, cookies, or brows
 
 When the first word of your search matches one of your keywords, the extension redirects that tab to the matching site's search address, with the rest of your search as the query.
 
-Your search text stays on your device during this. It is compared against your keyword list locally, inside the browser. It is not sent to us, not sent to the app's native code, and not included in iCloud sync.
+Your search text stays on your device during this. It is compared against your keyword list locally, inside the browser. It is not sent to us, not sent to the app's native code, and not included in iCloud sync. After a redirect the extension only tells the app that a jump happened, so the jump counter above goes up by one - without the keyword or the search words.
 
 The redirect then loads the site you chose, so that site receives your search words - exactly as it would if you had typed the search on that site yourself. Those sites are third parties and their own privacy policies apply. If the first word is not one of your keywords, nothing happens and your original search results load normally.
 
@@ -94,11 +96,11 @@ The app does not display any advertisements.
 
 ## In-App Purchases
 
-The app offers one optional purchase, **Jumpbar Plus**. It is a one-time purchase, not a subscription, and it removes the limit on how many sites and keywords you can add yourself.
+The app offers one optional purchase, **Jumpbar Plus**. It is a one-time purchase, not a subscription. It removes the limit on how many sites and keywords you can add yourself and turns on iCloud sync. Through Family Sharing, one purchase covers up to six people.
 
-Apple processes the payment. We never see or receive your payment details, and no purchase information is sent to us - the app asks the App Store directly whether this Apple Account owns Plus, and stores only a yes/no answer on your device. Apple's handling of the transaction is covered by [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
+Apple processes the payment. We never see or receive your payment details, and no purchase information is sent to us - the app asks the App Store directly whether this Apple Account owns Plus, and stores only a yes/no answer and the date you first had Plus on your device. Apple's handling of the transaction is covered by [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
 
-The app works without Plus. Built-in keywords and one site of your own stay free.
+The app works without Plus. The built-in keywords, one site of your own, and one keyword of your own on a built-in site stay free.
 
 ## Data Security
 

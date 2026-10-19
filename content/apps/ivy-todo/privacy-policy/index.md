@@ -6,7 +6,7 @@ layout: "single"
 
 **Ivy To Do - Task Checklist**
 
-Last updated: October 7, 2026
+Last updated: October 20, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -38,6 +38,8 @@ The following data is stored only on your device and is never transmitted to our
 
 If you turn on iCloud Sync in Settings, your tasks and memos are stored in your own private iCloud database (Apple CloudKit) so that they can be shared between your devices signed in to the same Apple Account. This data is encrypted by Apple and we have no access to it. iCloud Sync is off by default. Turning it off keeps your data on the device; you can delete the data stored in iCloud from iOS Settings › iCloud.
 
+Separately from iCloud Sync, if you were already using the app before Plus was introduced, the app records the date your free access to Plus features was granted in your iCloud key-value storage, so it carries over to your other devices on the same Apple Account. No other data is stored there.
+
 ### 4. No Advertising
 
 Ivy To Do does not display any advertisements on iOS or Android. We do not use any advertising SDKs and do not collect your advertising ID.
@@ -55,7 +57,7 @@ Ivy To Do does not display any advertisements on iOS or Android. We do not use a
 Our app uses the following third-party services:
 
 - **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
-- **Apple iCloud / CloudKit** (iOS, only when you turn on iCloud Sync) ([Privacy Policy](https://www.apple.com/legal/privacy/))
+- **Apple iCloud / CloudKit** (iOS, for iCloud Sync when you turn it on, and the key-value record described above) ([Privacy Policy](https://www.apple.com/legal/privacy/))
 - **Apple StoreKit** (iOS) - For in-app purchases, handled entirely by Apple
 
 ## Data Storage

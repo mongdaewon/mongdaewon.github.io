@@ -6,7 +6,7 @@ layout: "single"
 
 **JoinSound**
 
-Last updated: October 1, 2026
+Last updated: October 20, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -37,9 +37,9 @@ Imported copies live in a temporary folder and are removed when you remove a fil
 
 ## File Access
 
-The app opens audio only when you choose it: through the file picker, by opening an audio file in JoinSound from the Files app, or by sharing it into JoinSound from another app such as Voice Memos. A file shared into JoinSound is placed in a private folder that only JoinSound and its share extension can read.
+The app opens audio only when you choose it: through the file picker, or by sharing it into JoinSound from another app. On iOS you can also open an audio file in JoinSound from the Files app, and a file shared into JoinSound is placed in a private folder that only JoinSound and its share extension can read. On Android, the app receives shared audio through the system share sheet and uses the system file picker, so it asks for no storage permission.
 
-**All audio processing happens entirely on your device.** Finding and shortening silences, matching loudness, and saving all run on your iPhone or iPad. Your recordings and their contents are never uploaded to our servers or to any third party.
+**All audio processing happens entirely on your device.** Finding and shortening silences, matching loudness, and saving all run on your device. Your recordings and their contents are never uploaded to our servers or to any third party.
 
 ## Information We Do NOT Collect
 
@@ -65,7 +65,7 @@ JoinSound does not display any advertisements. We do not use any advertising SDK
 
 JoinSound offers one optional in-app purchase, **JoinSound Plus**: a single payment, not a subscription, that unlocks joining three or more files, keeping more than two parts of a file, shortening silences, and saving as MP3 or WAV. Joining two files, trimming, matching loudness, and saving as M4A are free.
 
-Purchases are handled entirely by Apple through the App Store. We never see or store your payment details. The app only receives, and keeps on your device, whether the purchase is active.
+Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app only receives, and keeps on your device, whether the purchase is active.
 
 ## Data Security
 
