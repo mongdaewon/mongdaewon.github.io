@@ -72,14 +72,6 @@
   appstore = "https://apps.apple.com/app/id6804220240"
 
 [[app]]
-  slug = "lazywindow"
-  name = "LazyWindow"
-  emoji = "🪟"
-  color = "#2b2b2b"
-  comingsoon = true
-  hidden = true
-
-[[app]]
   slug = "sulsul"
   name = "술술낱말"
   emoji = "🔤"
