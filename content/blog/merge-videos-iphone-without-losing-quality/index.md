@@ -23,6 +23,14 @@ Three signs give it away.
 - Saving takes minutes rather than seconds.
 - The saved file is much larger or much smaller than the originals added together.
 
+| | Re-encoded join | Lossless join |
+|---|---|---|
+| The frames | Decoded and drawn again | Copied as they are |
+| Quality | A copy of a copy | Same as the original |
+| Time to save | Minutes for a few minutes of 4K | Seconds |
+| Asks for a quality or resolution | Yes | Nothing to choose |
+| Works when | Always | The clips share a format |
+
 ## When does lossless merging work?
 
 When the clips match. Video files carry a format, and two files can only be stitched together untouched if they agree on it.
