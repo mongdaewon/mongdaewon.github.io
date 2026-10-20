@@ -28,7 +28,7 @@
       RecNow 권한 안내(화면 녹화·마이크·알림) 섹션, Deep Breath "4-7-8 호흡이 뭔가" 문단 — 검색어가 붙는 자리라 검토
 
 ## Jumpbar 갤러리
-- [ ] 봇 차단 후보 ego로 재확인 (2026-09-15 확장 때 남은 것)
+- [ ] (보류, 2026-10-20) 봇 차단 후보 ego로 재확인 (2026-09-15 확장 때 남은 것)
       Etsy · Indeed · Tripadvisor · Booking.com ·
       Yelp · Britannica · Discogs · BoardGameGeek · Swift Package Index · CoinGecko · Investopedia ·
       Mayo Clinic · Pixabay · Flaticon · Dribbble · Stack Exchange · Internet Archive · Maven Central
