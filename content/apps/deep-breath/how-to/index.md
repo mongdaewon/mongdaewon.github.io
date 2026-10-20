@@ -16,6 +16,10 @@ Open the app and match your breathing to the petal animation. Inhale, hold, exha
 
 Five presets are built in, including 4-7-8 breathing and box breathing. If none of them fit, set your own pattern with custom timings (Plus).
 
+## What is 4-7-8 breathing?
+
+Breathe in for 4 seconds, hold for 7, and breathe out slowly for 8. The pattern was popularized by Dr. Andrew Weil. Each breath takes 19 seconds, so you breathe far less often than usual, and the long exhale helps you slow down. Many people use it to wind down before sleep or to settle when they feel anxious. Pick the 4-7-8 preset and the petals keep the count for you.
+
 ## Choose how long to sit
 
 A session runs from one minute to as long as you want. Add one of 17 ambient sounds (nature, water, melody, or space) if silence isn't what you need. One sound in each group is free; Plus unlocks them all.
