@@ -40,10 +40,6 @@ If you turn on iCloud Sync in Settings, your tasks and memos are stored in your 
 
 Separately from iCloud Sync, if you were already using the app before Plus was introduced, the app records the date your free access to Plus features was granted in your iCloud key-value storage, so it carries over to your other devices on the same Apple Account. No other data is stored there.
 
-### 4. No Advertising
-
-Ivy To Do does not display any advertisements on iOS or Android. We do not use any advertising SDKs and do not collect your advertising ID.
-
 ## Information We Do NOT Collect
 
 - Personal information (name, email, phone number)
@@ -59,6 +55,16 @@ Our app uses the following third-party services:
 - **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
 - **Apple iCloud / CloudKit** (iOS, for iCloud Sync when you turn it on, and the key-value record described above) ([Privacy Policy](https://www.apple.com/legal/privacy/))
 - **Apple StoreKit** (iOS) - For in-app purchases, handled entirely by Apple
+
+## Advertising
+
+Ivy To Do does not display any advertisements on iOS or Android. We do not use any advertising SDKs and do not collect your advertising ID.
+
+## In-App Purchases
+
+On iOS, Ivy To Do offers one optional in-app purchase, **Ivy To Do Plus**: a single payment, not a subscription, that unlocks Lock Screen widgets and iCloud sync across iPhone, iPad and Mac. Tasks, reminders, history and Home Screen widgets are free. On Android, the app has no in-app purchases and everything is free.
+
+Purchases are handled entirely by Apple through the App Store. We never see or store your payment details. The app only receives, and keeps on your device, whether the purchase is active.
 
 ## Data Storage
 

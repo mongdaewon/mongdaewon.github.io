@@ -80,7 +80,7 @@ Our app is not directed to children under 13. We do not knowingly collect person
 
 - **Delete recordings:** Remove any recording from within the app or from your device's gallery
 - **Delete local data:** Uninstalling the app removes its settings. Recordings saved to `Movies/RecNow` remain in your device's storage until you delete them
-- **Analytics data cannot identify you:** The usage data we collect is anonymous and aggregated. It contains no name, email, account, or advertising ID, only the app instance ID described above, and it never includes the contents of your recordings. There is nothing personally identifiable for us to look up, export, or delete on request.
+- **Analytics data does not name you:** The usage data we collect contains no name, email, account, or advertising ID, only the app instance ID described above, and it never includes the contents of your recordings. We only look at it in aggregate. Uninstalling the app resets the app instance ID. To ask us to delete the analytics data linked to your app instance ID, contact us at the address below.
 
 ## Changes to This Policy
 

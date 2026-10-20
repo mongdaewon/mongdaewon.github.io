@@ -47,7 +47,7 @@ Paper works. Ivy Lee had nothing else. The friction is that you rewrite the list
 
 An app should do only the parts paper is bad at: carry the leftovers over for you, keep the list where you already look, and remember what you did months ago.
 
-That is what [Ivy To Do](/apps/ivy-todo/) is. Six tasks a day, dragged into order, and anything you did not check off is carried into tomorrow on its own, with a badge showing how many days it has waited. You plan tomorrow on its own tab in the evening, which is when the method says to do it.
+That is what [Ivy To Do](/apps/ivy-todo/) is. Start with your six most important tasks (six is a suggestion, not a cap), drag them into order, and anything you did not check off is carried into tomorrow on its own, with a badge showing how many days it has waited. You plan tomorrow on its own tab in the evening, which is when the method says to do it.
 
 The list sits in a Home Screen widget, so it is in front of you without opening anything, and on iPhone you can check tasks off on the widget itself. An evening reminder brings you back to plan tomorrow. The calendar keeps every day you have done, with a monthly line: tasks done, perfect days and your current streak.
 

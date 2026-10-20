@@ -26,7 +26,7 @@ Session history and a heatmap calendar show the days you showed up, and streak t
 
 ## Good to know
 
-- On iPhone, sessions are recorded to Apple Health as Mindful Minutes and the Dynamic Island shows your progress.
+- On iPhone, the Dynamic Island shows your progress, and if you turn on Apple Health in Settings, each session is recorded as Mindful Minutes.
 - The app has no ads. The five presets, every session length, history, and reminders are free.
 - Deep Breath Plus is a one-time purchase, not a subscription. It adds guidance that keeps going with the screen off, every ambient sound, your own breathing pattern, widgets, and the Apple Watch app.
 - If you used Deep Breath before Plus arrived, you keep the Plus features for free.

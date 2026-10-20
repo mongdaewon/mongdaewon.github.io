@@ -26,7 +26,7 @@ layout: "howto"
 
 ## 알아두면 좋은 것
 
-- iPhone에서는 세션이 Apple Health의 마음 챙기기 시간에 자동 기록되고, Dynamic Island에 진행 상황이 표시됩니다.
+- iPhone에서는 Dynamic Island에 진행 상황이 표시되고, 설정에서 Apple Health를 켜면 세션이 마음 챙기기 시간에 기록됩니다.
 - 광고가 없습니다. 호흡 프리셋 5가지, 모든 세션 시간, 기록, 리마인더는 무료입니다.
 - Deep Breath Plus는 구독이 아닌 한 번 구매입니다. 화면을 꺼도 이어지는 호흡 안내, 배경음악 전체, 나만의 호흡, 위젯, Apple Watch 앱이 열립니다.
 - Plus가 나오기 전부터 쓰셨다면 Plus 기능을 그대로 무료로 쓰실 수 있습니다.
