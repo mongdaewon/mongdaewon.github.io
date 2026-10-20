@@ -289,3 +289,9 @@ body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-wi
 @media (max-width: 520px) {
   .appcard .dl-row { flex-basis: 100%; }
 }
+
+/* 블로그 스크린샷 두 장 나란히 */
+.shots { display: flex; gap: 1rem; margin: 1.5rem 0; }
+.shots figure { flex: 1; min-width: 0; margin: 0; }
+.shots img { border: 1px solid var(--rule); border-radius: 12px; }
+.shots figcaption { margin-top: .5rem; font-size: var(--fs-sm); color: var(--muted); text-align: center; }
