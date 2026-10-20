@@ -271,6 +271,10 @@ svg.ico-grid { fill: currentColor; stroke: none; }
 .post-head h1 { margin: 0; }
 .post-date { margin: 0; font-size: var(--fs-sm); color: var(--muted); }
 .prose { font-size: var(--fs-lg); line-height: 1.7; }
+/* Blog headings: a clear step above 18px body text, with a section break of air above. */
+.prose h2 { font-size: 1.625rem; margin: 3rem 0 .75rem; }
+.prose h3 { font-size: 1.25rem; margin: 2.25rem 0 .5rem; }
+.prose > :first-child { margin-top: 0; }
 /* ~75 characters a line at 18px. The title, the install card and the related posts share that
    right edge, so the end of a post doesn't jut out past its text. Both selectors beat the 46rem
    column rule - the first on order (same specificity), the second on specificity. */
@@ -295,3 +299,4 @@ body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-wi
 .shots figure { flex: 1; min-width: 0; margin: 0; }
 .shots img { border: 1px solid var(--rule); border-radius: 12px; }
 .shots figcaption { margin-top: .5rem; font-size: var(--fs-sm); color: var(--muted); text-align: center; }
+.shots.one figure { flex: 0 0 calc(50% - .5rem); }
