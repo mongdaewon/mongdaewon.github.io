@@ -33,6 +33,11 @@ So the file opens at original quality, and from there it behaves like any other 
 
 The video has to be H.264 or HEVC, and the audio has to be AAC, AC-3 or MP3.
 
+| Track | Opens | Does not open |
+|---|---|---|
+| Video | H.264, HEVC | VP9 and others |
+| Audio | AAC, AC-3, MP3 | DTS and others |
+
 If either side falls outside that, JoinCut does not open the file at all. That is deliberate. Importing the video and throwing the audio away would be the easy path, and it would hand you a silent video without saying so. Lossless is the whole point of the app, so a half lossless import is not on the menu.
 
 The usual blockers are DTS audio and VP9 video.
@@ -59,5 +64,10 @@ The line JoinCut draws is not "what can we display" but "what can we keep at ori
 The Android version got MKV in the same release, by the same codec rule.
 
 The difference is at the other end. On Android, AC-3 or MP3 audio is re-encoded when you save, because the Android muxer cannot carry those tracks over. On iPhone they pass through untouched.
+
+| Audio in the MKV | iPhone | Android |
+|---|---|---|
+| AAC | Copied as is | Copied as is |
+| AC-3, MP3 | Copied as is | Re-encoded when you save |
 
 If you have a folder of MKV clips you have been unable to touch on your phone, pick them in the Files app and see if they open. From there you can merge several MKV files into one, and if a file does not open, the app tells you exactly which piece to change.
