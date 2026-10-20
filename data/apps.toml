@@ -96,3 +96,11 @@
   color = "#1E4FA8"
   appstore = "https://apps.apple.com/app/id6819933330"
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.bluedot"
+
+[[app]]
+  slug = "cantquit"
+  name = "Can't Quit"
+  emoji = "🥬"
+  color = "#5DAE4A"
+  hidden = true   # 출시 전: 처리방침 URL만 먼저 산다. 스토어 URL이 생기면 appstore를 넣고 hidden을 지운다.
+
