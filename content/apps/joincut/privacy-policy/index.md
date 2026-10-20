@@ -65,7 +65,7 @@ JoinCut does not display any advertisements. We do not use any advertising SDKs.
 
 ## In-App Purchases
 
-JoinCut offers a one-time in-app purchase (JoinCut Plus) that unlocks premium features. Purchases are processed entirely by Apple or Google. We never receive or store your payment details - we only receive confirmation of whether a purchase is active.
+JoinCut offers a one-time in-app purchase (JoinCut Plus). Free covers up to 2 segments per video and 2 videos per merge; Plus removes both limits, removes the GIF watermark, and saves selected segments as separate files. Purchases are processed entirely by Apple or Google. We never receive or store your payment details - we only receive confirmation of whether a purchase is active.
 
 ## Data Security
 

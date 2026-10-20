@@ -63,6 +63,14 @@ The read-aloud feature uses your device's built-in text-to-speech engine. Clue t
 - **Google AdMob** ([Privacy Policy](https://policies.google.com/privacy), [How Google uses information from apps that use its services](https://policies.google.com/technologies/partner-sites))
 - **Apple App Store** (iOS) / **Google Play Billing** (Android) - for the one-time "remove ads" purchase, handled entirely by Apple or Google. We never see your payment information.
 
+## Advertising
+
+The app shows two kinds of Google AdMob ads: a full-screen ad after some finished levels (none during your first 10 levels), and a rewarded ad that you choose to watch in exchange for hints. There are no banner ads. See Advertising Data above for what AdMob may collect.
+
+## In-App Purchases
+
+The app offers one optional in-app purchase: a one-time "remove ads" purchase, not a subscription. Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app only receives, and keeps on your device, whether the purchase is active.
+
 ## Dictionary Content
 
 Word meanings are based on the Basic Korean Dictionary (한국어기초사전) by the National Institute of Korean Language, used under the CC BY-SA 2.0 KR license. This content is bundled in the app and involves no data collection.
