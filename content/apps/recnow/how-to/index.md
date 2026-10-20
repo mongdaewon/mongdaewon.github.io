@@ -30,6 +30,12 @@ Pause mid-recording and resume when you're ready, instead of stopping and starti
 
 Play, share, and delete from the recordings list in the app.
 
+## Permissions it asks for
+
+- **Screen capture:** Android asks every time you start a recording. It can't be granted once and remembered; that's how Android protects your screen.
+- **Microphone:** asked only when you choose to record sound. Android needs it even for system audio. Say no and you get video without sound.
+- **Notifications** (Android 13 and later): asked on first launch. While recording, the notification lets you pause, resume, and stop without opening the app. Say no and recording still works; you stop it from the app instead.
+
 ## Free and Plus
 
 Every feature is free. Resolution and audio are never locked. Each recording can run up to 10 minutes, with no limit on how many you make.
