@@ -5,16 +5,8 @@
       소재는 문의로 들어온 요청과 개선 릴리즈. 근거 규칙은 AGENTS 블로그 절.
 
 ## 도메인 전환 후속 (mongdaewon.com, 2026-10-01)
-- [ ] 며칠 뒤: AdMob → 앱 → app-ads.txt 가 "확인됨"인지(옛 주소 → 301 → `.com/app-ads.txt` 한 홉은 확인됨).
-      깨졌을 때만 광고 앱의 스토어 웹사이트 URL 을 바꾼다 — Android Deep Breath·Ivy To Do·Sulsul(Play 스토어 설정, 즉시),
-      iOS Deep Breath·Headly·Ivy To Do·Nanali(ASC 마케팅/지원 URL, 다음 릴리즈). 깨져도 앱은 멀쩡하고 입찰 감소로 수익만 준다.
-- [ ] GA4 웹 스트림 URL 새 도메인으로
-      표시용, 수집 영향 없음 — 관리 → 데이터 스트림
 - [ ] (권장) GitHub Pages 도메인 인증
       Settings → Pages → Verified domains 에 mongdaewon.com 인증(TXT 하나) — 도메인 탈취 방지
-- [ ] 앱 업데이트 때 URL·이메일 .com으로
-      스토어의 처리방침·웹사이트 URL 을 `.com` 으로, 지원 이메일을 `support@mongdaewon.com` 으로,
-      앱 코드에 박힌 URL(예: android-audiojoin `AppInfo.PRIVACY`)도 같이. 옛 것도 리디렉트·전달로 동작하니 급하지 않다.
 - [ ] 옛 github.io GSC 속성 정리
       2027-04 이후(주소 변경 180일). **그 전엔 지우지 않는다.**
 - [ ] 👤 mongdaewon.com 자동 갱신 확인
