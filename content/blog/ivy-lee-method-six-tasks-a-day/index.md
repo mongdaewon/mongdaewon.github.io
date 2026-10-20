@@ -49,6 +49,11 @@ An app should do only the parts paper is bad at: carry the leftovers over for yo
 
 That is what [Ivy To Do](/apps/ivy-todo/) is. Start with your six most important tasks (six is a suggestion, not a cap), drag them into order, and anything you did not check off is carried into tomorrow on its own, with a badge showing how many days it has waited. You plan tomorrow on its own tab in the evening, which is when the method says to do it.
 
+<div class="shots">
+<figure><img src="ivy-today.jpg" alt="Ivy To Do Today tab: three tasks checked off, three unfinished tasks with red +1d, +2d and +4d badges for the days they have waited" width="460" height="1000" loading="lazy"><figcaption>Today: what you did not finish shows how long it has waited</figcaption></figure>
+<figure><img src="ivy-tomorrow.jpg" alt="Ivy To Do Tomorrow tab: the three unfinished tasks already carried into Wednesday, in the same order" width="460" height="1000" loading="lazy"><figcaption>Tomorrow: the leftovers are already there, in order</figcaption></figure>
+</div>
+
 The list sits in a Home Screen widget, so it is in front of you without opening anything, and on iPhone you can check tasks off on the widget itself. An evening reminder brings you back to plan tomorrow. The calendar keeps every day you have done, with a monthly line: tasks done, perfect days and your current streak.
 
 All of that is free, with no ads and no account.

@@ -43,6 +43,11 @@ Rather than a generic failure, JoinCut tells you why that specific file was refu
 
 And if it is only the audio that is wrong, you do not have to touch the picture. Set the video to copy and convert only the audio to AAC. The video stays exactly as it was, and the file opens.
 
+<div class="shots">
+<figure><img src="joincut-mkv-opened.jpg" alt="JoinCut list with Trip.mkv as the first clip next to a MOV, both 1920x1080 H.264, marked No re-encoding, original quality" width="460" height="1000" loading="lazy"><figcaption>An H.264 MKV opens and joins with a MOV at original quality</figcaption></figure>
+<figure><img src="joincut-mkv-refused.jpg" alt="JoinCut sheet Files that could not be loaded: Concert.mkv with H.264 video marked OK and DTS audio marked with a cross, and a note to save it with AAC audio" width="460" height="1000" loading="lazy"><figcaption>DTS audio: the app shows which track is the problem</figcaption></figure>
+</div>
+
 ## What about AVI?
 
 AVI is not opened, on purpose, even in cases where the device could read it.

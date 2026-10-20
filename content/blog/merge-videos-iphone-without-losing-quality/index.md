@@ -39,8 +39,17 @@ Formats that match are joined losslessly, and saving is instant. Merging your cl
 
 If one clip does not match the rest, JoinCut points out which video is forcing the re-encode. You can drop that one with a tap and keep the rest lossless, or let it re-encode if you need that clip in the video.
 
+<div class="shots">
+<figure><img src="joincut-lossless.jpg" alt="JoinCut list of three 1920x1080 H.264 clips with the green line No re-encoding, original quality above Merge into one" width="460" height="1000" loading="lazy"><figcaption>Clips that match: no re-encoding, original quality</figcaption></figure>
+<figure><img src="joincut-mismatch.jpg" alt="JoinCut list where the third clip is 1280x720 and marked with a warning, with a note offering to remove video 3 so the other two join at original quality" width="460" height="1000" loading="lazy"><figcaption>One clip that does not: JoinCut names it and offers to drop it</figcaption></figure>
+</div>
+
 ## Keeping only part of a video
 
 The same applies when you do not want the whole clip. Split a video into sections, keep the ones worth keeping, and they are joined back into one video without re-encoding. The trimmer zooms in up to 8x, so a cut lands exactly where you meant it to.
+
+<div class="shots one">
+<figure><img src="joincut-parts.jpg" alt="JoinCut trimmer with one video split into three parts, zoom options 1x to 8x above the strip and a card for each part below" width="460" height="1000" loading="lazy"><figcaption>One video split into three parts, joined back without re-encoding</figcaption></figure>
+</div>
 
 That is the whole idea: leave the original frames alone, and only stitch.
