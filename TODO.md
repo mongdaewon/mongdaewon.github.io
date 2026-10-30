@@ -5,6 +5,12 @@
       2026-10-22 확인: /apps/·홈 카드와 /apps/chukchuk/ 제목·alt·JSON-LD name 이 한글. `data/apps.toml`에 name_ko 를 따로 두고 영어 페이지는 영어 이름(game-bluedot TODO에서 옮김)
 - [ ] 블로그 다음 글
       소재는 문의로 들어온 요청과 개선 릴리즈. 근거 규칙은 AGENTS 블로그 절.
+- [ ] 블로그: 아이폰 음성 메모 합치기(JoinSound)
+      제목 후보 "How to Merge Voice Memos on iPhone (Into One Recording)". 구글 자동완성(2026-10-30):
+      merge voice memos on iphone · into one · together · without app · for free, combine voice memos iphone.
+      기존 글(combine-audio-files…, 이어 붙이기 vs 겹치기 비교)과 겹치지 않게 '음성 메모 → 한 파일' 하나만 푼다. `app: joinsound`.
+      쓰기 전 확인: 음성 메모 앱 자체에 합치기가 없는지(iOS 26), 공유 → JoinSound 흐름, 무료 2개·M4A 한도(앱 AGENTS 58행).
+      화면: shoot.sh 데모 장면 2장 + 홍보 영상(cdn promo) 재사용.
 
 ## 도메인 전환 후속 (mongdaewon.com, 2026-10-01)
 - [ ] 옛 github.io GSC 속성 정리

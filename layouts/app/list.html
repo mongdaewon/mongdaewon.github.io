@@ -55,6 +55,7 @@
       </div>
       {{ with $a.promo }}
         <video class="app-promo" src="{{ . }}" width="1080" height="1920"
+               data-ev="promo_sound" data-app="{{ $a.name }}"
                aria-label="{{ $a.name }} {{ if $ko }}홍보 영상{{ else }}promo video{{ end }}"
                autoplay muted loop playsinline controls></video>
       {{ else }}{{ with $demo }}

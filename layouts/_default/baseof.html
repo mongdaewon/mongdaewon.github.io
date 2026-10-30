@@ -16,6 +16,12 @@
       var a = e.target.closest && e.target.closest('a[data-ev]');
       if (a) gtag('event', 'cta_click', { cta: a.dataset.ev, cta_app: a.dataset.app });
     });
+    /* 홍보 영상은 자동재생이라 '봤다'는 페이지뷰와 같다. 관심 신호는 소리를 켠 것 - 페이지당 한 번만.
+       volumechange 는 버블링이 없어 capture 로 받는다. */
+    document.addEventListener('volumechange', function (e) {
+      var v = e.target;
+      if (v.dataset && v.dataset.ev && !v.muted && !v.sent) { v.sent = true; gtag('event', 'cta_click', { cta: v.dataset.ev, cta_app: v.dataset.app }); }
+    }, true);
   </script>
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1">

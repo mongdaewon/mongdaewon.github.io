@@ -75,6 +75,7 @@ git 히스토리에 영원히 남고 GitHub Pages 한도를 먹는다. 루트 �
   (HyperFrames 렌더 20초 17.9MB → 1.9MB, SSIM 0.998)
 - 올리기(sandbox 밖, `/tmp` 에서): `npx wrangler r2 object put mongdaewon-cdn/promo/<파일> --file <파일> --content-type video/mp4 --cache-control 'public, max-age=86400' --remote`
   같은 이름으로 덮어쓰면 하루까지 옛 영상이 보인다.
+- 측정: 소리를 켜면 `cta_click`(`cta=promo_sound` + `cta_app`)이 페이지당 한 번 나간다(`baseof.html`, `<video data-ev>`). 자동재생이라 R2 요청 수·페이지뷰로는 시청을 못 가른다.
 
 **새 앱 추가 시:** 가장 빠른 길은 기존 번들을 통째로 복사하는 것이다 — 모바일 앱은 `content/apps/joincut/`, 맥 단독은 `content/apps/whereismycursor/`.
 
