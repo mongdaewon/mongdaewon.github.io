@@ -28,6 +28,14 @@
   <p class="backlink"><a href="{{ .Site.Home.RelPermalink }}">← {{ if $ko }}앱 목록{{ else }}All apps{{ end }}</a></p>
 
   <div class="app-detail">
+    {{/* 홍보 영상(apps.toml promo)이 있으면 히어로: 영상이 왼쪽 큰 칸, 이름·배지·혜택이 오른쪽.
+         언어 공용 영상이라 GIF 데모보다 먼저다. 소리는 controls 로 켠다.
+         ponytail: 9:16 세로 영상으로 가정(R2 파일 크기를 빌드에서 못 읽는다). 가로 영상이 생기면 apps.toml 에 비율을 둔다. */}}
+    <div{{ with $a.promo }} class="app-hero"{{ end }}>
+    {{ with $a.promo }}
+      <video class="app-promo" src="{{ . }}" width="1080" height="1920"
+             autoplay muted loop playsinline controls></video>
+    {{ end }}
     <header class="app-head">
       {{ $icon := .Resources.GetMatch "icon.png" }}
       {{ if $icon }}
@@ -50,16 +58,12 @@
       <div class="app-benefits">
         {{ .Content }}
       </div>
-      {{/* promo(apps.toml)는 언어 공용 영상이라 GIF 보다 먼저. 소리는 controls 로 켠다.
-           ponytail: 9:16 세로 영상으로 가정(R2 파일 크기를 빌드에서 못 읽는다). 가로 영상이 생기면 apps.toml 에 비율을 둔다. */}}
-      {{ with $a.promo }}
-        <video class="app-demo" src="{{ . }}" width="1080" height="1920"
-               autoplay muted loop playsinline controls></video>
-      {{ else }}{{ with $demo }}
+      {{ if not $a.promo }}{{ with $demo }}
         <img class="app-demo" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
              loading="lazy" decoding="async"
              alt="{{ if $ko }}사파리 주소창에 'yt coffee' 를 치면 유튜브 검색 결과로 바로 넘어가는 화면{{ else }}Typing 'yt coffee' in the Safari address bar and landing straight on YouTube search results{{ end }}">
       {{ end }}{{ end }}
+    </div>
     </div>
 
     {{/* 혜택 바로 다음, 배지보다 위. 아직 설치를 망설이는 사람이 사용법을 먼저 보게 한다.
