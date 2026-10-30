@@ -187,10 +187,12 @@ svg.ico-grid { fill: currentColor; stroke: none; }
 .app-benefits { font-size: var(--fs-lg); line-height: 1.7; min-width: 0; }
 /* The demo is a phone screen recording, so it gets phone-screen corners - the one radius besides
    app icons that isn't --r (AGENTS). */
-.app-demo, .app-promo { flex: 0 0 auto; width: 240px; height: auto; display: block;
+.app-demo, .app-promo { flex: 0 0 auto; height: auto; display: block;
             border-radius: 20px; border: 1px solid var(--rule); }
-/* A promo video sits left of the benefits and starts level with them, so it's seen before the text. */
+/* A promo video comes after the text in the DOM but shows left of it, level with it, so it's seen first. */
+.app-demo { width: 240px; }
 .app-promo { width: min(280px, 40%); }
+.app-showcase.has-promo { flex-direction: row-reverse; justify-content: flex-end; }
 /* Support gets the button, the privacy policy stays quiet: only one of the two is
    something a user goes looking for, and a second box would rival the store badges. */
 .app-links { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.25rem; }
@@ -250,8 +252,7 @@ svg.ico-grid { fill: currentColor; stroke: none; }
      The DOM keeps text first for readers and search engines. */
   .app-showcase { flex-direction: column-reverse; align-items: flex-start; gap: 1.25rem; }
   .app-demo { width: 100%; max-width: 260px; }
-  /* The promo is already first in the DOM, so it stacks top-down, not reversed like the GIF. */
-  .app-showcase.has-promo { flex-direction: column; }
+  .app-showcase.has-promo { flex-direction: column-reverse; }
   .app-promo { width: 100%; max-width: 360px; }
 }
 
