@@ -68,7 +68,7 @@ content/
 **홍보 영상(선택, GIF 보다 우선):** 앱마다 한 개를 R2 `mongdaewon-cdn/promo/<slug>-<언어>.mp4`
 (`https://cdn.mongdaewon.com/promo/...`)에 두고 `data/apps.toml` 의 `promo` 에 전체 URL 을 적는다.
 **언어 공용**이라 en·ko 페이지에 같은 영상이 뜬다(자동재생·무음·반복, 소리는 controls).
-영상이 있으면 상세 상단이 **히어로**로 바뀐다 — 영상이 왼쪽 큰 칸, 이름·배지·혜택이 오른쪽(모바일은 이름·배지 → 영상 → 혜택, `.app-hero`). 레포에 넣지 않는다 —
+영상은 이름·배지 줄 아래, **혜택 글 왼쪽**에서 글과 같은 높이로 시작한다(280px, 모바일은 이름·배지 → 영상 → 혜택). 영상이 이름 줄까지 걸치는 히어로는 데스크톱에서 어중간해 되돌렸다(2026-10-30). 레포에 넣지 않는다 —
 git 히스토리에 영원히 남고 GitHub Pages 한도를 먹는다. 루트 경로(`mongdaewon.com/promo/`)도 안 된다 — Worker 를
 얹으려면 루트 DNS 를 프록시로 바꿔야 하고 그러면 Pages 인증서 갱신이 깨진다. 레이아웃은 9:16 세로를 가정한다.
 - 인코딩: `ffmpeg -i in.mp4 -c:v libx264 -preset slow -crf 26 -pix_fmt yuv420p -c:a aac -b:a 96k -movflags +faststart out.mp4`
