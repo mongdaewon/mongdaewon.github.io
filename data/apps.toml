@@ -57,6 +57,7 @@
   color = "#5856D6"
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.joinsound"
   appstore = "https://apps.apple.com/app/id6818166716"
+  promo = "https://cdn.mongdaewon.com/promo/joinsound-en.mp4"
 
 [[app]]
   slug = "recnow"

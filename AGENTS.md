@@ -65,6 +65,16 @@ content/
   ⚠️ **끝에 스크롤이 들어가면 용량이 두 배가 된다** — GIF 은 움직인 픽셀만큼 커진다.
   화면이 멎는 지점에서 끊는다(영문 첫 인코딩이 1.6MB 였던 이유).
 
+**홍보 영상(선택, GIF 보다 우선):** 앱마다 한 개를 R2 `mongdaewon-cdn/promo/<slug>-<언어>.mp4`
+(`https://cdn.mongdaewon.com/promo/...`)에 두고 `data/apps.toml` 의 `promo` 에 전체 URL 을 적는다.
+**언어 공용**이라 en·ko 페이지에 같은 영상이 뜬다(자동재생·무음·반복, 소리는 controls). 레포에 넣지 않는다 —
+git 히스토리에 영원히 남고 GitHub Pages 한도를 먹는다. 루트 경로(`mongdaewon.com/promo/`)도 안 된다 — Worker 를
+얹으려면 루트 DNS 를 프록시로 바꿔야 하고 그러면 Pages 인증서 갱신이 깨진다. 레이아웃은 9:16 세로를 가정한다.
+- 인코딩: `ffmpeg -i in.mp4 -c:v libx264 -preset slow -crf 26 -pix_fmt yuv420p -c:a aac -b:a 96k -movflags +faststart out.mp4`
+  (HyperFrames 렌더 20초 17.9MB → 1.9MB, SSIM 0.998)
+- 올리기(sandbox 밖, `/tmp` 에서): `npx wrangler r2 object put mongdaewon-cdn/promo/<파일> --file <파일> --content-type video/mp4 --cache-control 'public, max-age=86400' --remote`
+  같은 이름으로 덮어쓰면 하루까지 옛 영상이 보인다.
+
 **새 앱 추가 시:** 가장 빠른 길은 기존 번들을 통째로 복사하는 것이다 — 모바일 앱은 `content/apps/joincut/`, 맥 단독은 `content/apps/whereismycursor/`.
 
 1. `content/apps/<slug>/_index.md`(+`.ko.md`). front matter는 **YAML**이며 `params.tagline`은 중첩이다:
@@ -121,7 +131,7 @@ content/
 언어 무관 앱 메타(표시 순서, 이름, 스토어 링크, 이모지/색 fallback)는 `data/apps.toml`에서 한 곳으로 관리. 레이아웃이 slug로 매칭해 콘텐츠(제목/요약/본문, 언어별)와 결합.
 
 - 스토어 링크는 **글로벌 형태**로: 애플은 `https://apps.apple.com/app/id{ID}` (country 코드·`mt=` 제거 → Apple이 접속자 지역으로 자동 리다이렉트). Google Play는 지역 파라미터 없이 `?id=...`.
-- 필드: `appstore`, `macappstore`, `googleplay`, (선택) `comingsoon`.
+- 필드: `appstore`, `macappstore`, `googleplay`, (선택) `comingsoon`, (선택) `promo`(홍보 영상 URL, 위 참조).
 
 ### Jumpbar 키워드 갤러리 — `data/jumpbar-gallery.toml`
 
