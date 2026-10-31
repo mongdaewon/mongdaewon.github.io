@@ -9,4 +9,5 @@ params:
 
 Cards come back right before you would forget them, so a few minutes a day is enough.  
 Ready-made English decks cover the words you meet on apps and websites, with real screens circled.  
-Open your Anki decks as they are, and keep studying where you left off.
+Open your Anki decks as they are, and keep studying where you left off.  
+The app is in Korean, made for Korean speakers learning English.

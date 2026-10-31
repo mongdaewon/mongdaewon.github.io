@@ -9,4 +9,5 @@ params:
 
 Real-looking pieces and large text that are easy on the eyes.  
 Ten levels, from 10급 to 1급; the computer gets stronger each time you win.  
-Review any finished game and see where it turned.
+Review any finished game and see where it turned.  
+The app is in Korean.
