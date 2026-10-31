@@ -221,6 +221,8 @@ layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = tru
 - **컨테이너 폭:** 헤더·본문·푸터 모두 70rem. 홈(과 `/apps/`)만 `main.wide`로 두 칸을 쓰고, 나머지 페이지는 그 안에서 46rem 을 **왼쪽 정렬**로 읽는다 — 홈↔상세를 오갈 때 브랜드가 옆으로 튀지 않게. 블로그 글 본문·제목·앱 카드는 42.5rem(18px 에서 한 줄 약 75자).
 - 리스트 행은 `--rule` 구분선으로 나눈다. 테마별로 정해 둬서 양쪽 다 ~1.6:1 로 보인다(예전 pico 구분선은 다크에서 ~1.3:1 로 사라졌다).
 - `<link rel=canonical>`은 baseof에서 생성. front matter `canonicalHome: true`인 페이지(`content/apps/_index.md*`)는 홈을 가리켜 홈/`/apps/` 중복을 정리한다.
+- en·ko 짝이 있는 페이지는 baseof 가 `hreflang`(en·ko·x-default=en)을 건다(canonicalHome 페이지는 빼고). 짝이 없는 페이지(블로그·처리방침)의 언어 스위처는 다른 언어의 **홈**으로 간다.
+- **한국어로만 된 앱**도 `name` 은 영어, 한글은 `name_ko` 다. 영어 본문 끝에 "The app is in Korean." 한 줄을 둔다(술술낱말·척척장기·포기하면 안돼).
 - 테마(라이트/다크) 토글은 헤더에 있으며 `data-theme` + `localStorage`로 유지. 미설정 시 `prefers-color-scheme` 따름.
 - 앱 아이콘은 `.app-ico`에 CSS 테두리(`--rule`)로 박스 경계를 통일.
 - **⚠️ JSON-LD 함정:** `<script type="application/ld+json">` 안에서 `{{ $dict | jsonify }}`만 쓰면 Go html/template이 `<script>` 컨텍스트로 보고 JSON 문자열을 **JS 문자열로 한 번 더 인코딩**해(`>"{\"@context\"...` 이중 이스케이프 → 구글이 파싱 못 함). 반드시 **`jsonify | safeJS`**로 끝낼 것. 현재 `app/list.html`의 SoftwareApplication 스키마가 이 패턴. 새 스키마 추가 시 동일 적용. (수정 커밋 3e4e61e)
