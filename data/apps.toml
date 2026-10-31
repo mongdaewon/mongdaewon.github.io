@@ -101,7 +101,8 @@
 [[app]]
   slug = "cantquit"
   name = "Can't Quit"
+  name_ko = "포기하면 안돼"
   emoji = "🥬"
   color = "#5DAE4A"
-  hidden = true   # 출시 전: 처리방침 URL만 먼저 산다. 스토어 URL이 생기면 appstore를 넣고 hidden을 지운다.
+  appstore = "https://apps.apple.com/app/id6825195851"
 
