@@ -75,7 +75,8 @@
 
 [[app]]
   slug = "sulsul"
-  name = "술술낱말"
+  name = "Sulsul"
+  name_ko = "술술낱말"
   emoji = "🔤"
   color = "#2E7D5B"
   appstore = "https://apps.apple.com/app/id6818434178"
@@ -83,7 +84,8 @@
 
 [[app]]
   slug = "chukchuk"
-  name = "척척장기"
+  name = "Chukchuk Janggi"
+  name_ko = "척척장기"
   emoji = "楚"
   color = "#1E7A45"
   appstore = "https://apps.apple.com/app/id6819539122"

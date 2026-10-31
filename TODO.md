@@ -1,8 +1,6 @@
 # TODO
 
 ## 다음에 할 일
-- [ ] 영어 페이지에 한글 앱 이름(술술낱말·척척장기)
-      2026-10-22 확인: /apps/·홈 카드와 /apps/chukchuk/ 제목·alt·JSON-LD name 이 한글. `data/apps.toml`에 name_ko 를 따로 두고 영어 페이지는 영어 이름(game-bluedot TODO에서 옮김)
 - [ ] 블로그 다음 글
       소재는 문의로 들어온 요청과 개선 릴리즈. 근거 규칙은 AGENTS 블로그 절.
 

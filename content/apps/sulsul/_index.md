@@ -10,4 +10,5 @@ params:
 Large tiles and large text that are easy on the eyes.  
 Open any clue in a bigger view, or have it read aloud.  
 A wrong answer only clears the wrong letters, so you never start over.  
-Every word you solve is kept with its meaning so you can look back.
+Every word you solve is kept with its meaning so you can look back.  
+The app is in Korean.
