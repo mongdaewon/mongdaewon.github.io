@@ -343,14 +343,14 @@ body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-wi
 .dk-cover { position: relative; display: block; height: 100px; container-type: inline-size; overflow: hidden; background: color-mix(in srgb, var(--c, #8e8e93) 15%, transparent); }
 .dk-cover.paid { background: var(--c, #8e8e93); }
 .dk-cover > img:only-child { width: 100%; height: 100%; object-fit: cover; }
-/* 앱의 minimumScaleFactor(0.6)처럼 좁은 표지에서는 글자가 준다: 20px 상한, 표지 폭의 10%. */
-.dk-kp { position: absolute; inset: .625rem 3.75rem 0 .625rem; font-size: min(var(--fs-xl), 10cqi); white-space: nowrap; font-weight: 700; line-height: 1.2; color: var(--c, #8e8e93); }
+/* 앱의 minimumScaleFactor(0.6)처럼 좁은 표지에서는 글자가 준다: 20px 상한, 표지 폭의 8.5%(가장 긴 hypothesis 가 배추 앞에서 끝나게). */
+.dk-kp { position: absolute; inset: .625rem 3.75rem 0 .625rem; font-size: min(var(--fs-xl), 8.5cqi); font-weight: 800; white-space: nowrap; font-weight: 700; line-height: 1.2; color: var(--c, #8e8e93); }
 .dk-cover.paid .dk-kp { color: #fff; }
-.dk-kp { font-weight: 800; }
 .dk-pose { position: absolute; right: 2px; bottom: -6px; height: 78px; width: auto; }
 .dk-body { display: flex; flex-direction: column; gap: .375rem; flex: 1; padding: .625rem; }
 .dk-top { display: flex; align-items: center; justify-content: space-between; }
-.dk-cat { padding: 0 .5rem; border-radius: 999px; background: var(--c, #8e8e93); color: #fff; font-size: var(--fs-sm); }
+/* 흰 글자 14px 가 4.5:1 넘게 분류 색을 35% 어둡게(앱 원색은 주황·초록이 2.2:1). 표지는 장식이라 앱 색 그대로. */
+.dk-cat { padding: 0 .5rem; border-radius: 999px; background: color-mix(in srgb, var(--c, #8e8e93) 65%, #000); color: #fff; font-size: var(--fs-sm); }
 .dk-lang { font-size: var(--fs-sm); color: var(--muted); }
 .dk-t { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .dk-h { font-size: var(--fs-sm); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: 4.5em; }
@@ -389,7 +389,7 @@ body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-wi
 .pv-dots { display: flex; justify-content: center; gap: 8px; margin: 8px auto 0; padding: 6px 10px; width: max-content; border-radius: 999px; background: var(--soft); }
 .pv-dots span { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); opacity: .4; }
 .pv-dots span.on { opacity: 1; }
-.deck-get { margin-top: 1.25rem; display: flex; flex-direction: column; gap: 12px; }
+.deck-get { margin: 1.25rem 0 1.5rem; display: flex; flex-direction: column; gap: 12px; }
 .deck-get hr { margin: 0; }
 .plus-note { display: flex; align-items: center; gap: 10px; padding: 12px; border-radius: 12px; background: var(--soft); }
 .plus-note p { margin: 0; }

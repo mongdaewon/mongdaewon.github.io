@@ -15,7 +15,7 @@
        웹에만 있는 것: hook(검색으로 들어온 사람에게 받을 이유), 받기 전 → 외운 뒤 줄. */}}
   {{ $lang := .Params.language }}
   {{ $langLabel := cond (eq $lang "ko") "한국어" (cond (eq $lang "ja") "日本語" (cond (hasPrefix $lang "en") "English" $lang)) }}
-  {{ $size := "" }}{{ with .Params.size }}{{ $size = cond (lt . 1000000) (printf "%.0fKB" (div (float .) 1000)) (printf "%.1fMB" (div (float .) 1000000)) }}{{ end }}
+  {{ $size := partial "decksize.html" .Params.size }}
   <h1>{{ .Title }}</h1>
   <p class="deck-hook">{{ .Params.hook }}</p>
   <div class="deck-sum">{{ .Content }}</div>
@@ -35,7 +35,7 @@
     {{ if gt (len .) 1 }}<div class="pv-dots" aria-hidden="true">{{ range $i, $_ := . }}<span{{ if eq $i 0 }} class="on"{{ end }}></span>{{ end }}</div>{{ end }}
     <script>
     (function(){var t=document.querySelector('.pv-track'),d=document.querySelectorAll('.pv-dots span');if(!t||!d.length)return;
-      t.addEventListener('scroll',function(){var i=Math.round(t.scrollLeft/t.clientWidth);d.forEach(function(s,k){s.classList.toggle('on',k===i)})},{passive:true});})();
+      t.addEventListener('scroll',function(){var c=t.firstElementChild,i=Math.round(t.scrollLeft/(c.offsetWidth+8));d.forEach(function(s,k){s.classList.toggle('on',k===i)})},{passive:true});})();
     </script>
   {{ end }}
 
