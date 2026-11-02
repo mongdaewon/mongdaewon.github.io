@@ -1,0 +1,4 @@
+{{- /* catalog size(바이트) → "94KB"·"7.3MB". 앱 ByteCountFormatter(.file, 1000 단위)처럼. 카드·상세 공용. */ -}}
+{{- $s := "" -}}
+{{- with . -}}{{- $s = cond (lt . 999500) (printf "%.0fKB" (div (float .) 1000)) (printf "%.1fMB" (div (float .) 1000000)) -}}{{- end -}}
+{{- return $s -}}

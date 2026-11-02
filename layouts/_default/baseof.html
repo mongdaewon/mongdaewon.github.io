@@ -35,6 +35,7 @@
   <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
   {{/* 덱 페이지: 아이폰 사파리 위 배너 [열기]가 앱의 그 덱으로 간다. 같은 도메인 안에서 누른 링크는
        유니버설 링크가 앱을 열지 않아서 이 배너가 그 길이다. app-argument 는 앱이 받는 유니버설 링크 주소 그대로. */}}
+  {{/* ponytail: 덱 마켓이 있는 앱이 포기하면 안돼 하나라 앱을 박아 뒀다. 두 번째 앱이 생기면 front matter 에 앱 slug 를 둔다. */}}
   {{ if .Params.smartBanner }}{{ with (partial "app.html" "cantquit").appstore }}<meta name="apple-itunes-app" content="app-id={{ path.Base . | strings.TrimPrefix "id" }}, app-argument={{ $.Permalink }}">{{ end }}{{ end }}
   {{/* Canonical. Pages with canonicalHome point at the home page (see /apps/, a duplicate of it). */}}
   <link rel="canonical" href="{{ if .Params.canonicalHome }}{{ .Site.Home.Permalink }}{{ else }}{{ .Permalink }}{{ end }}">
