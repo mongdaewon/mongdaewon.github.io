@@ -8,6 +8,26 @@
       Ivy 워치 위젯 영어 버그(독일어로 뜸) 수정 버전이 출시된 뒤에 쓴다. 출시되면 영어 위젯 화면부터 찍는다.
       키워드 "to do list apple watch complication". 경쟁 글은 Reddit 질문·각 앱 도움말뿐이고 튜토리얼 글은 없다(2026-10-31).
 
+## 포기하면 안돼 덱 마켓 웹 페이지 (2026-11-02 시안 2 결정)
+목표: 앱 페이지에서 덱을 둘러보고, 누르면 앱의 그 덱 상세가 열린다(앱이 없으면 App Store).
+앱은 준비됨(ios-cantquit fb73b9b): `https://mongdaewon.com/(ko/)apps/cantquit/decks/<id>/`를 유니버설 링크로 받아 마켓 덱 상세를 연다.
+데이터: `https://cdn.mongdaewon.com/cantquit/catalog.json`(id·title·category·cardCount·cost·hook·description·keyphrase·cover·preview·next).
+- [ ] `static/.well-known/apple-app-site-association` (확장자 없음, JSON)
+      `{"applinks":{"details":[{"appIDs":["8NFA84AA3R.com.mongdaewon.cantquit","8NFA84AA3R.com.mongdaewon.cantquit.dev"],"components":[{"/":"/apps/cantquit/decks/?*"},{"/":"/ko/apps/cantquit/decks/?*"}]}]}}`
+      GitHub Pages가 `.well-known`을 내보내는지·200인지 확인. `/decks/` 목록은 웹에 남고 덱 상세만 앱으로 간다
+- [ ] 빌드 때 catalog를 받아 덱 페이지 만들기 (Hugo `resources.GetRemote` 등)
+- [ ] 앱 페이지: 덱 마켓 링크 카드(howto-card 모양) + 인기 덱 6개 그리드
+- [ ] `/apps/cantquit/decks/`: 분류 칩 + 덱 그리드(표지: cover 그림 또는 keyphrase 글자, 무료/Plus 꼬리표)
+- [ ] `/apps/cantquit/decks/<id>/`: 표지·hook·설명·장수/분류/무료·Plus·미리보기 3장·[포기하면 안돼에서 받기]·데스크톱 QR·다음 권
+      버튼 href는 App Store. 같은 도메인 안에서 누른 링크는 유니버설 링크가 앱을 열지 않는다(밖에서 온 QR·검색 클릭만 앱이 연다)
+      그래서 덱 페이지에 `<meta name="apple-itunes-app" content="app-id=6825195851, app-argument=<이 페이지 주소>">` — 사파리 위 배너 [열기]가 앱의 그 덱으로 간다
+- [ ] 덱 페이지 글: 덱 내용 소개가 아니라 "이 덱을 받으면 내 영어가 이렇게 는다"가 읽히게(2026-11-02 사용자)
+      앱 마켓 문구와 같은 결: catalog `hook`(공부하면 얻는 것·모르면 잃는 것)을 제목 아래 크게, `description`은 그 아래.
+      규칙 원본은 ios-cantquit `decks/README.md` §마켓 그리드 문구. 덱마다 "받기 전 → 외운 뒤" 한 줄을 더한다
+      (예: 오즈의 마법사 1~4장 "한 쪽에 모르는 단어 20개 → 5개, 사전 없이 1~4장")
+      덱 이름은 catalog `title` 그대로(오즈는 2026-11-02 "1권"에서 장 범위로 바꿨다 — 원서 시리즈 권수와 헷갈려서). 쓰기 전에 /naver-keyword로 덱 주제 검색어 확인
+- [ ] 👤 앱 다음 판 출시 뒤 아이폰에서 덱 페이지 → 앱 열림 확인
+
 ## 도메인 전환 후속 (mongdaewon.com, 2026-10-01)
 - [ ] 옛 github.io GSC 속성 정리
       2027-04 이후(주소 변경 180일). **그 전엔 지우지 않는다.**
