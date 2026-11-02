@@ -163,7 +163,7 @@ git 히스토리에 영원히 남고 GitHub Pages 한도를 먹는다. 루트 �
 - 덱 카드·표지·칩은 앱 마켓 그리드(ios-cantquit `GalleryView.swift`), 덱 상세는 앱 덱 상세 시트(`CardSetDetailSheet.swift`, 미리보기 카드는 `CardFaceView`·`BackSection`의 칸 색·글자 크기)를 따라 한다. 이 두 화면만 사이트 토큰 규칙(radius 8·웨이트 400/700·5단계 글자)의 예외다 - 웹에서 본 것을 앱에서 다시 익히지 않게(2026-11-02 사용자). 앱 강조색 #3b82f5 는 흰 글자 대비가 모자라 `--cq` #2a6bd8 을 쓴다 - 웹에서 본 표지를 앱에서 알아보게(2026-11-02 사용자). 분류 색·배추 포즈 고르는 식·칩 순서가 앱과 같아야 하니, 앱에서 바꾸면 `site.css` 색과 `_content.ko.gotmpl` 포즈 식도 고친다. 배추 SVG 는 `static/img/cantquit/`(앱 Assets 복사).
 - 덱 상세의 "받기 전 → 외운 뒤" 줄만 웹 전용으로 `data/cantquit-decks.toml`(키 = 덱 id)에 둔다. 근거 있는 덱만 적고 숫자를 지어내지 않는다. 검색 설명(meta description)은 catalog `description`이다.
 - catalog 가 한국어뿐이라 ko 에만 있다. 덱을 고치려면 ios-cantquit 의 catalog 를 고쳐 CDN 에 올리고 이 사이트를 다시 배포한다(push 또는 workflow_dispatch).
-- 덱 상세 주소는 앱이 유니버설 링크로 받는다(`static/.well-known/apple-app-site-association`). **경로를 바꾸면 앱 링크가 깨진다.** 같은 도메인 안 링크는 앱을 열지 않으므로 덱 상세에 스마트 배너(`apple-itunes-app`, front matter `smartBanner`)를 단다.
+- 덱 상세 주소는 앱이 유니버설 링크로 받는다(`static/.well-known/apple-app-site-association`). **경로를 바꾸면 앱 링크가 깨진다.** 같은 도메인 안 링크는 앱을 열지 않으므로 덱 상세에 스마트 배너(`apple-itunes-app`, front matter `smartBanner`)를 단다. AASA 는 GitHub Pages 가 `application/octet-stream` 으로 내보내도 Apple CDN 이 받아 간다(2026-11-02 `app-site-association.cdn-apple.com/a/v1/mongdaewon.com` 확인).
 
 ### 웹 도구·크롬 확장 — `data/tools.toml` (홈 "Tools" 섹션)
 
