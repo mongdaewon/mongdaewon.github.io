@@ -14,7 +14,7 @@
     "type" "deck"
     "path" $d.id
     "title" $d.title
-    "description" $d.hook
+    "description" $d.description
     "weight" (add $i 1)
     "content" (dict "mediaType" "text/markdown" "value" $d.description)
     "params" (dict
@@ -27,6 +27,7 @@
       "keyphrase" $d.keyphrase
       "preview" (first 3 ($d.preview | default slice))
       "next" $d.next
+      "gain" (index hugo.Data "cantquit-decks" $d.id)
       "smartBanner" true)
   ) }}
 {{ end }}

@@ -74,6 +74,28 @@
       </a>
     {{ end }}
 
+    {{/* 덱 마켓이 있는 앱(지금은 포기하면 안돼, ko 만): 마켓으로 가는 카드 + 분류마다 첫 덱 하나씩.
+         ponytail: "인기"가 아니라 분류별 첫 덱이다 - 덱별 공부 수가 GA4 에 아직 거의 없다(2026-11-02). 쌓이면 인기순으로. */}}
+    {{ with .GetPage "decks" }}
+      <a class="howto-card" data-ev="decks" data-app="{{ $a.name }}" href="{{ .RelPermalink }}">
+        <span class="hc-t">{{ .Title }} →</span>
+        <span class="hc-d">{{ .Description }}</span>
+      </a>
+      {{ $seen := slice }}{{ $picks := slice }}
+      {{ range .Pages }}{{ if not (in $seen .Params.category) }}
+        {{ $seen = $seen | append .Params.category }}{{ $picks = $picks | append . }}
+      {{ end }}{{ end }}
+      <ul class="deck-grid deck-picks">
+        {{ range first 6 $picks }}
+          <li><a class="deck-card" href="{{ .RelPermalink }}">
+            <span class="dk-t">{{ .Title }}</span>
+            <span class="dk-h">{{ .Params.hook }}</span>
+            <span class="dk-m">{{ partial "deckmeta.html" . }}</span>
+          </a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
     {{/* 이 앱을 다룬 블로그 글. 블로그는 영어 전용이라 ko 에서는 site.RegularPages 에 글이 없어 저절로 빠진다.
          검색으로 글에 들어온 사람은 글 끝에서 앱으로, 앱을 보러 온 사람은 여기서 글로 - 양쪽 길을 다 연다. */}}
     {{ with partial "appposts.html" $slug }}
