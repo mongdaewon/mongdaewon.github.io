@@ -13,6 +13,8 @@
 
   <h1>{{ .Title }}</h1>
   <p class="deck-hook">{{ .Params.hook }}</p>
+  {{/* 받기 전 → 외운 뒤. data/cantquit-decks.toml 에 있는 덱만. */}}
+  {{ with .Params.gain }}<p class="deck-gain">{{ .before }} → <strong>{{ .after }}</strong></p>{{ end }}
   <p class="dk-m">{{ partial "deckmeta.html" . }}</p>
   {{ .Content }}
 

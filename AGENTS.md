@@ -160,6 +160,7 @@ git 히스토리에 영원히 남고 GitHub Pages 한도를 먹는다. 루트 �
 `https://cdn.mongdaewon.com/cantquit/catalog.json`(앱 마켓과 같은 파일)을 받아 덱마다 한 쪽씩 만든다(`type: deck` → `layouts/deck/`).
 
 - **빌드에 네트워크가 필요하다.** catalog 를 못 받으면 빌드가 멈춘다(덱 페이지가 조용히 사라지는 것보다 낫다). 에이전트 sandbox 안에서는 Hugo 가 DNS 를 못 찾으니 sandbox 밖에서 빌드한다.
+- 덱 상세의 "받기 전 → 외운 뒤" 줄만 웹 전용으로 `data/cantquit-decks.toml`(키 = 덱 id)에 둔다. 근거 있는 덱만 적고 숫자를 지어내지 않는다. 검색 설명(meta description)은 catalog `description`이다.
 - catalog 가 한국어뿐이라 ko 에만 있다. 덱을 고치려면 ios-cantquit 의 catalog 를 고쳐 CDN 에 올리고 이 사이트를 다시 배포한다(push 또는 workflow_dispatch).
 - 덱 상세 주소는 앱이 유니버설 링크로 받는다(`static/.well-known/apple-app-site-association`). **경로를 바꾸면 앱 링크가 깨진다.** 같은 도메인 안 링크는 앱을 열지 않으므로 덱 상세에 스마트 배너(`apple-itunes-app`, front matter `smartBanner`)를 단다.
 
