@@ -18,7 +18,8 @@
 - [x] 배포 뒤 AASA 200 확인 (2026-11-02, content-type 은 octet-stream 이지만 Apple CDN `app-site-association.cdn-apple.com/a/v1/mongdaewon.com` 이 받아 감)
 - [x] 빌드 때 catalog를 받아 덱 페이지 만들기
       `content/apps/cantquit/decks/_content.ko.gotmpl`(content adapter). catalog가 한국어뿐이라 ko에만 만든다
-- [ ] 앱 페이지: 덱 마켓 링크 카드(howto-card 모양) + 인기 덱 6개 그리드
+- [x] 앱 페이지: 덱 마켓 링크 카드 + 덱 6개 그리드
+      인기가 아니라 분류별 첫 덱이다(GA4 덱별 공부가 히라가나 3명뿐, 2026-11-02). 모바일은 4개. 쌓이면 인기순으로
 - [ ] `/apps/cantquit/decks/`: 분류 칩 + 덱 그리드
       기본판 있음(catalog 순 카드 그리드·무료/Plus). 남은 것: 분류 칩·표지(표지: cover 그림 또는 keyphrase 글자, 무료/Plus 꼬리표)
 - [ ] `/apps/cantquit/decks/<id>/`: 표지·hook·설명·장수/분류/무료·Plus·미리보기 3장·[포기하면 안돼에서 받기]·데스크톱 QR·다음 권

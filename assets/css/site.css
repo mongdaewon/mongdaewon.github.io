@@ -341,3 +341,5 @@ p.dk-m { margin-bottom: 1rem; }
 .deck-preview span { color: var(--muted); }
 .deck-preview li { align-items: center; }
 .deck-preview img { width: 4rem; height: 3rem; object-fit: contain; border-radius: var(--r); }
+.deck-picks { margin-top: -.75rem; }
+@media (max-width: 40rem) { .deck-picks li:nth-child(n+5) { display: none; } }
