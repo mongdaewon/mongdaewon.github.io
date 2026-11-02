@@ -34,7 +34,8 @@
       "pose" (index $poses (mod $sum 4))
       "language" $d.language
       "size" $d.size
-      "preview" (first 3 ($d.preview | default slice))
+      "preview" ($d.preview | default slice)
+      "images" $d.images
       "next" $d.next
       "gain" (index hugo.Data "cantquit-decks" $d.id)
       "smartBanner" true)

@@ -325,23 +325,28 @@ body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-wi
 
 /* 포기하면 안돼 덱 마켓 (/ko/apps/cantquit/decks/) - 카드·표지·칩은 앱 마켓 그리드(ios-cantquit GalleryView.swift)를 따라 한다.
    웹에서 본 표지를 앱 마켓에서 그대로 알아보게. 분류 색은 앱의 iOS 시스템 색(라이트) 값이다 - 앱에서 바꾸면 여기도. */
+/* 앱 강조색 #3b82f5 는 흰 글자 대비 3.7:1 이라 눈으로 같은 #2a6bd8(5.0:1)을 쓴다. 다크는 글자용으로 밝게. */
+:root { --cq: #2a6bd8; --cq-text: #2a6bd8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --cq-text: #5b9bff; } }
+:root[data-theme="dark"] { --cq-text: #5b9bff; }
 [data-cat="단어"] { --c: #0088ff; } [data-cat="표현"] { --c: #ff8d28; } [data-cat="일본어"] { --c: #ff2d55; }
 [data-cat="역사"] { --c: #ac7f5e; } [data-cat="교양"] { --c: #cb30e0; } [data-cat="원서"] { --c: #34c759; }
 .deck-chips { display: flex; gap: .5rem; overflow-x: auto; scrollbar-width: none; margin: 0 0 1rem; }
 .deck-chips button { flex: none; min-height: 36px; padding: 0 1rem; border: 0; border-radius: 999px; background: var(--soft); cursor: pointer; }
-.deck-chips button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); font-weight: 700; }
+.deck-chips button[aria-pressed="true"] { background: var(--cq); color: #fff; font-weight: 700; }
 .deck-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: .75rem; }
 .deck-grid li { margin: 0; }
 .deck-grid li[hidden] { display: none; }
-.deck-card { display: flex; flex-direction: column; height: 100%; overflow: hidden; border-radius: var(--r); background: var(--soft);
+.deck-card { display: flex; flex-direction: column; height: 100%; overflow: hidden; border-radius: 14px; background: var(--soft);
              text-decoration: none; color: inherit; }
-.deck-card:hover .dk-t { color: var(--accent); }
+.deck-card:hover .dk-t { color: var(--cq-text); }
 .dk-cover { position: relative; display: block; height: 100px; container-type: inline-size; overflow: hidden; background: color-mix(in srgb, var(--c, #8e8e93) 15%, transparent); }
 .dk-cover.paid { background: var(--c, #8e8e93); }
 .dk-cover > img:only-child { width: 100%; height: 100%; object-fit: cover; }
 /* 앱의 minimumScaleFactor(0.6)처럼 좁은 표지에서는 글자가 준다: 20px 상한, 표지 폭의 10%. */
 .dk-kp { position: absolute; inset: .625rem 3.75rem 0 .625rem; font-size: min(var(--fs-xl), 10cqi); white-space: nowrap; font-weight: 700; line-height: 1.2; color: var(--c, #8e8e93); }
 .dk-cover.paid .dk-kp { color: #fff; }
+.dk-kp { font-weight: 800; }
 .dk-pose { position: absolute; right: 2px; bottom: -6px; height: 78px; width: auto; }
 .dk-body { display: flex; flex-direction: column; gap: .375rem; flex: 1; padding: .625rem; }
 .dk-top { display: flex; align-items: center; justify-content: space-between; }
@@ -350,19 +355,46 @@ body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-wi
 .dk-t { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .dk-h { font-size: var(--fs-sm); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: 4.5em; }
 .dk-m { display: flex; align-items: center; gap: .5rem; margin-top: auto; font-size: var(--fs-sm); color: var(--muted); }
-.plus-tag, .free-tag { margin-left: auto; font-weight: 700; color: var(--accent); }
-.plus-tag { padding: 0 .375rem; border: 1px solid var(--accent); border-radius: var(--r); }
+.plus-tag, .free-tag { margin-left: auto; font-weight: 700; color: var(--cq-text); }
+.plus-tag { padding: 0 .375rem; border: 1.2px solid var(--cq-text); border-radius: 5px; }
 .deck-picks { margin-top: -.75rem; }
 @media (max-width: 40rem) { .deck-picks li:nth-child(n+5) { display: none; } }
-/* 덱 상세: 표지를 제목 위에, hook 을 제목 아래 크게 */
-.deck-hero .dk-cover { height: 160px; border-radius: var(--r); margin-bottom: 1rem; }
-.deck-hero .dk-kp { font-size: min(var(--fs-2xl), 8cqi); inset: 1rem 8rem 0 1rem; }
-.deck-hero .dk-pose { height: 130px; right: 1rem; bottom: -10px; }
-.deck-hook { font-size: var(--fs-xl); font-weight: 700; margin-bottom: .25rem; }
-p.dk-m { display: block; margin-bottom: 1rem; }
-.deck-sec { margin-top: 2rem; margin-bottom: .5rem; }
-.deck-preview { list-style: none; padding: 0; }
-.deck-preview li { display: flex; align-items: center; gap: 1rem; padding: .5rem 0; border-bottom: 1px solid var(--rule); margin: 0; }
-.deck-preview span { color: var(--muted); }
-.deck-preview img { width: 4rem; height: 3rem; object-fit: contain; border-radius: var(--r); }
-.deck-gain { margin: .25rem 0 .5rem; padding: .5rem .75rem; background: var(--soft); border-radius: var(--r); }
+/* 덱 상세 - 앱 마켓 덱 상세 시트(CardSetDetailSheet.swift)와 같은 순서·모양 */
+.deck-hook { font-size: var(--fs-lg); font-weight: 700; margin-bottom: .5rem; }
+.deck-sum p { font-size: .9375rem; }
+.deck-gain { margin: 0 0 1rem; padding: .5rem .75rem; background: var(--soft); border-radius: var(--r); font-size: .9375rem; }
+.deck-info { display: flex; gap: 1.25rem; margin: 0 0 1.25rem; }
+.deck-info div { display: flex; flex-direction: column-reverse; gap: 2px; }
+.deck-info dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; }
+.deck-info dt { font-size: .75rem; color: var(--muted); }
+.deck-sec { font-size: var(--fs-lg); margin: 0 0 .5rem; }
+/* 미리보기: 앱 TabView(.page)처럼 한 장씩 옆으로 넘기고 아래 점 */
+.pv-track { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+.pv-card { flex: 0 0 100%; scroll-snap-align: start; height: 440px; overflow-y: auto; padding: 18px; border-radius: 18px; background: var(--soft);
+           display: flex; flex-direction: column; gap: 14px; }
+.pv-img { max-height: 200px; width: auto; max-width: 100%; align-self: center; object-fit: contain; }
+.pv-front { margin: 0; text-align: center; font-weight: 700; line-height: 1.15; }
+.pv-front.w { font-size: 48px; } .pv-front.p { font-size: 30px; } .pv-front.s { font-size: 22px; }
+.pv-front p, .pv-back p p { display: inline; margin: 0; }
+.pv-front small { margin-left: .5rem; font-size: .9375rem; font-weight: 400; color: var(--muted); }
+.pv-card hr { margin: 0; width: 100%; }
+.pv-sec { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.pv-sec + .pv-sec { border-top: 1px solid var(--rule); padding-top: 10px; margin-top: 10px; }
+.pv-pill { padding: 1px 8px; border-radius: 999px; color: #fff; font-size: .75rem; font-weight: 700; }
+.pv-back p { margin: 0; }
+.pv-mean { font-size: var(--fs-xl); font-weight: 700; }
+.pv-l1 { font-size: 1.0625rem; }
+.pv-l2 { font-size: .9375rem; color: var(--muted); }
+.pv-nt { font-size: .9375rem; font-weight: 700; margin-top: 6px !important; }
+.pv-dots { display: flex; justify-content: center; gap: 8px; margin: 8px auto 0; padding: 6px 10px; width: max-content; border-radius: 999px; background: var(--soft); }
+.pv-dots span { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); opacity: .4; }
+.pv-dots span.on { opacity: 1; }
+.deck-get { margin-top: 1.25rem; display: flex; flex-direction: column; gap: 12px; }
+.deck-get hr { margin: 0; }
+.plus-note { display: flex; align-items: center; gap: 10px; padding: 12px; border-radius: 12px; background: var(--soft); }
+.plus-note p { margin: 0; }
+.plus-note .plus-tag { margin: 0; font-size: .75rem; }
+.pn-d { font-size: .8125rem; color: var(--muted); }
+.get-btn { display: block; padding: 14px; border-radius: 12px; background: var(--cq); color: #fff; text-align: center; font-size: var(--fs-lg); font-weight: 700; text-decoration: none; }
+.get-btn:hover { filter: brightness(1.08); }
+.get-note { margin: 0; text-align: center; font-size: .75rem; color: var(--muted); }

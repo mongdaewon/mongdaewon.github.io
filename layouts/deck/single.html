@@ -11,30 +11,47 @@
     <span class="dl-row">{{ partial "storebadges.html" $a }}</span>
   </div>
 
-  <div class="deck-hero">{{ partial "deckcover.html" . }}</div>
+  {{/* 아래는 앱 마켓 덱 상세 시트(CardSetDetailSheet.swift)와 같은 순서: 제목 · 설명 · 숫자 칸 · 미리보기 카드(옆으로 넘김) · 선 · 받기 버튼.
+       웹에만 있는 것: hook(검색으로 들어온 사람에게 받을 이유), 받기 전 → 외운 뒤 줄. */}}
+  {{ $lang := .Params.language }}
+  {{ $langLabel := cond (eq $lang "ko") "한국어" (cond (eq $lang "ja") "日本語" (cond (hasPrefix $lang "en") "English" $lang)) }}
+  {{ $size := "" }}{{ with .Params.size }}{{ $size = cond (lt . 1000000) (printf "%.0fKB" (div (float .) 1000)) (printf "%.1fMB" (div (float .) 1000000)) }}{{ end }}
   <h1>{{ .Title }}</h1>
   <p class="deck-hook">{{ .Params.hook }}</p>
-  {{/* 받기 전 → 외운 뒤. data/cantquit-decks.toml 에 있는 덱만. */}}
+  <div class="deck-sum">{{ .Content }}</div>
   {{ with .Params.gain }}<p class="deck-gain">{{ .before }} → <strong>{{ .after }}</strong></p>{{ end }}
-  <p class="dk-m">{{ partial "deckmeta.html" . }}</p>
-  {{ .Content }}
+  <dl class="deck-info">
+    <div><dt>카드</dt><dd>{{ lang.FormatNumber 0 .Params.cardCount }}장</dd></div>
+    {{ with .Params.images }}<div><dt>사진</dt><dd>{{ . }}장</dd></div>{{ end }}
+    {{ with $size }}<div><dt>받는 크기</dt><dd>{{ . }}</dd></div>{{ end }}
+    <div><dt>언어</dt><dd>{{ $langLabel }}</dd></div>
+  </dl>
 
-  {{/* 미리보기 카드: 앞면 첫 줄(그림 덱은 그림) + 뒷면 첫 절("## 뜻"·"## 읽기"·"## 나라" 등)의 첫 줄. */}}
   {{ with .Params.preview }}
-    <h2 class="sec-h deck-sec">미리 보기</h2>
-    <ul class="deck-preview">
-      {{ range . }}
-        {{ $front := index (split .front "\n") 0 }}
-        {{ $ans := "" }}
-        {{ with findRESubmatch `(?m)^## [^\n]*\n(.+)$` .back 1 }}{{ $ans = index (index . 0) 1 }}{{ end }}
-        <li>
-          {{ with .image }}<img src="https://cdn.mongdaewon.com/cantquit/{{ . }}" alt="{{ $ans }}" loading="lazy" decoding="async">{{ end }}
-          {{ with $front }}<strong>{{ . }}</strong>{{ end }}
-          {{ with $ans }}<span>{{ . | markdownify }}</span>{{ end }}
-        </li>
-      {{ end }}
-    </ul>
+    <h2 class="deck-sec">미리보기</h2>
+    <div class="pv-track" tabindex="0" aria-label="미리보기 카드, 옆으로 넘겨 보기">
+      {{ range . }}{{ partial "deckpreviewcard.html" . }}{{ end }}
+    </div>
+    {{ if gt (len .) 1 }}<div class="pv-dots" aria-hidden="true">{{ range $i, $_ := . }}<span{{ if eq $i 0 }} class="on"{{ end }}></span>{{ end }}</div>{{ end }}
+    <script>
+    (function(){var t=document.querySelector('.pv-track'),d=document.querySelectorAll('.pv-dots span');if(!t||!d.length)return;
+      t.addEventListener('scroll',function(){var i=Math.round(t.scrollLeft/t.clientWidth);d.forEach(function(s,k){s.classList.toggle('on',k===i)})},{passive:true});})();
+    </script>
   {{ end }}
+
+  <div class="deck-get">
+    <hr>
+    {{ if .Params.plus }}
+      <div class="plus-note">
+        <img src="{{ "/img/cantquit/pogi-cheer.svg" | relURL }}" alt="" width="56" height="56">
+        <div><p><span class="plus-tag">Plus</span> <strong>덱이에요</strong></p>
+        <p class="pn-d">Plus면 이 덱과 다른 Plus 덱을 모두 받아요. 새로 나오는 덱도요.</p></div>
+      </div>
+    {{ end }}
+    {{/* 같은 도메인 링크라 앱이 열리지 않는다 - App Store 로 간다. 앱이 있는 아이폰은 위 스마트 배너가 앱의 이 덱을 연다. */}}
+    <a class="get-btn" data-ev="store_ios" data-app="{{ $a.name }}" href="{{ $a.appstore }}" target="_blank" rel="noopener">{{ $a.name_ko | default $a.name }}에서 {{ if .Params.plus }}Plus로 {{ end }}받기</a>
+    <p class="get-note">받은 뒤에는 인터넷 없이 공부해요</p>
+  </div>
 
   {{ with .Params.next }}{{ with $.Parent.GetPage . }}
     <a class="howto-card" href="{{ .RelPermalink }}">
@@ -43,5 +60,4 @@
     </a>
   {{ end }}{{ end }}
 
-  {{ partial "dlfoot.html" $a }}
 {{ end }}

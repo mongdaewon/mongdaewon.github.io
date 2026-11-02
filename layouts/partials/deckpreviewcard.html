@@ -1,0 +1,44 @@
+{{- /* 미리보기 카드 한 장 - 앱 MarketDeckPreviewCard·CardFaceView 와 같게: (그림) · 앞면(짧을수록 크게, 품사 꼬리표 작게) · 선 · 뒷면 칸.
+       뒷면은 앱의 작은 마크다운(CardMarkdown): `## 칸 이름 (색)` 마다 색 알약 + 줄. 칸 이름으로 역할을 정한다(BackSection.Role).
+       뜻 첫 줄 굵고 크게, 둘째 줄부터 흐리고 작게, 뉘앙스는 "**제목** 설명" 을 두 줄로. */ -}}
+{{ $pill := dict "빨강" "#cc3338" "주황" "#cc5c0d" "노랑" "#9e7a00" "초록" "#29853d" "파랑" "#006bd9" "남색" "#3d4ab3" "보라" "#8547b8" "검정" "#333333" "회색" "#8e8e93" }}
+{{ $defaults := dict "곁가지" "보라" "반대말" "빨강" "대화" "주황" "자주 쓰는 덩어리" "남색" }}
+{{ $front := .front | default "" }}
+{{ $fl := split $front "\n" }}
+{{ $tag := "" }}{{ $word := $front }}
+{{ if and (eq (len $fl) 2) (index $fl 0) (le (strings.RuneCount (index $fl 1)) 10) (gt (strings.RuneCount (index $fl 1)) 0) }}{{ $tag = index $fl 1 }}{{ $word = index $fl 0 }}{{ end }}
+{{ $word = strings.TrimPrefix "# " $word }}
+{{ $n := strings.RuneCount $word }}
+<div class="pv-card">
+  {{ with .image }}<img class="pv-img" src="https://cdn.mongdaewon.com/cantquit/{{ . }}" alt="" loading="lazy" decoding="async">{{ end }}
+  {{ with $word }}<p class="pv-front {{ if le $n 12 }}w{{ else if le $n 40 }}p{{ else }}s{{ end }}">{{ . | markdownify }}{{ with $tag }}<small>{{ . }}</small>{{ end }}</p>{{ end }}
+  <hr>
+  <div class="pv-back">
+    {{ $open := false }}{{ $role := "" }}{{ $i := 0 }}
+    {{ range split .back "\n" }}
+      {{ $line := strings.TrimSpace . }}
+      {{ if hasPrefix $line "## " }}
+        {{ if $open }}</div>{{ end }}
+        {{ $t := strings.TrimSpace (strings.TrimPrefix "## " $line) }}{{ $c := "" }}
+        {{ with findRESubmatch `^(.*) \((빨강|주황|노랑|초록|파랑|남색|보라|검정|회색)\)$` $t 1 }}{{ $t = index (index . 0) 1 }}{{ $c = index (index . 0) 2 }}{{ end }}
+        {{ $lt := lower $t }}
+        {{ $role = "other" }}
+        {{ if findRE `뜻|의미|meaning|definition` $lt }}{{ $role = "meaning" }}{{ else if findRE `예문|해석|문장|example|sentence|translation` $lt }}{{ $role = "sentence" }}{{ else if findRE `뉘앙스|nuance|usage|용법` $lt }}{{ $role = "nuance" }}{{ end }}
+        {{ if not $c }}{{ with index $defaults $t }}{{ $c = . }}{{ end }}{{ end }}
+        {{ $col := index (dict "meaning" "#0088ff" "sentence" "#34c759" "nuance" "#9d3c38" "other" "#8e8e93") $role }}
+        {{ with $c }}{{ $col = index $pill . }}{{ end }}
+        <div class="pv-sec"><span class="pv-pill" style="background:{{ $col | safeCSS }}">{{ $t }}</span>
+        {{ $open = true }}{{ $i = 0 }}
+      {{ else if $line }}
+        {{ if not $open }}<div class="pv-sec">{{ $open = true }}{{ $role = "other" }}{{ end }}
+        {{ if eq $role "nuance" }}
+          {{ with findRESubmatch `^\*\*(.+?)\*\*\s*(.*)$` $line 1 }}<p class="pv-nt">{{ index (index . 0) 1 }}</p><p class="pv-l2">{{ index (index . 0) 2 | markdownify }}</p>{{ else }}<p class="pv-l2">{{ $line | markdownify }}</p>{{ end }}
+        {{ else }}
+          <p class="{{ if gt $i 0 }}pv-l2{{ else if eq $role "meaning" }}pv-mean{{ else }}pv-l1{{ end }}">{{ $line | markdownify }}</p>
+        {{ end }}
+        {{ $i = add $i 1 }}
+      {{ end }}
+    {{ end }}
+    {{ if $open }}</div>{{ end }}
+  </div>
+</div>
