@@ -32,6 +32,11 @@
       (예: 오즈의 마법사 1~4장 "한 쪽에 모르는 단어 20개 → 5개, 사전 없이 1~4장")
       덱 이름은 catalog `title` 그대로(오즈는 2026-11-02 "1권"에서 장 범위로 바꿨다 — 원서 시리즈 권수와 헷갈려서). 쓰기 전에 /naver-keyword로 덱 주제 검색어 확인
       2026-11-02: 받기 전 → 외운 뒤 줄은 `data/cantquit-decks.toml`, 근거 있는 5개 덱만(오즈 3·히라가나·가타카나). 검색 설명은 hook 대신 catalog `description`(검색어가 들어 있다)
+- [ ] 덱 페이지 색인 요청 나머지 17개 @11/3
+      11/2에 목록·앱 페이지·검색량 큰 덱 10개를 넣었다(하루 한도 12). 남은 것:
+      en-web-app en-spoken en-common en-toeic en-conversation en-work en-idioms en-academic en-oz-1 en-oz-2 en-oz-3
+      ja-hiragana ja-katakana ja-kanji sci-elements art-western art-eastern
+      `/index-request` 로 `https://mongdaewon.com/ko/apps/cantquit/decks/<id>/`
 - [ ] 👤 앱 다음 판 출시 뒤 아이폰에서 덱 페이지 → 앱 열림 확인
 
 ## 도메인 전환 후속 (mongdaewon.com, 2026-10-01)
