@@ -19,7 +19,8 @@
 - [ ] 앱 페이지: 덱 마켓 링크 카드(howto-card 모양) + 인기 덱 6개 그리드
 - [ ] `/apps/cantquit/decks/`: 분류 칩 + 덱 그리드(표지: cover 그림 또는 keyphrase 글자, 무료/Plus 꼬리표)
 - [ ] `/apps/cantquit/decks/<id>/`: 표지·hook·설명·장수/분류/무료·Plus·미리보기 3장·[포기하면 안돼에서 받기]·데스크톱 QR·다음 권
-      버튼 href는 같은 덱 페이지 주소가 아니라 App Store(앱이 있으면 유니버설 링크가 먼저 앱을 연다)
+      버튼 href는 App Store. 같은 도메인 안에서 누른 링크는 유니버설 링크가 앱을 열지 않는다(밖에서 온 QR·검색 클릭만 앱이 연다)
+      그래서 덱 페이지에 `<meta name="apple-itunes-app" content="app-id=6825195851, app-argument=<이 페이지 주소>">` — 사파리 위 배너 [열기]가 앱의 그 덱으로 간다
 - [ ] 👤 앱 다음 판 출시 뒤 아이폰에서 덱 페이지 → 앱 열림 확인
 
 ## 도메인 전환 후속 (mongdaewon.com, 2026-10-01)
