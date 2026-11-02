@@ -4,15 +4,21 @@
   <p class="backlink"><a href="{{ $app.RelPermalink }}">← {{ $a.name_ko | default $a.name }}</a></p>
   <h1>{{ .Title }}</h1>
   <p class="lede">{{ .Description }}</p>
-  {{/* ponytail: catalog 순서 그대로(weight). 분류 칩·인기순은 TODO 4. */}}
-  <ul class="deck-grid">
-    {{ range .Pages }}
-      <li><a class="deck-card" href="{{ .RelPermalink }}">
-        <span class="dk-t">{{ .Title }}</span>
-        <span class="dk-h">{{ .Params.hook }}</span>
-        <span class="dk-m">{{ partial "deckmeta.html" . }}</span>
-      </a></li>
-    {{ end }}
+  {{/* 칩 순서는 앱과 같다: 전체 · 무료 · 분류(catalog 처음 나온 순). 거르기는 아래 작은 스크립트 - 없으면 전부 보인다. */}}
+  {{ $cats := slice }}{{ range .Pages }}{{ if not (in $cats .Params.category) }}{{ $cats = $cats | append .Params.category }}{{ end }}{{ end }}
+  <div class="deck-chips" role="group" aria-label="분류">
+    <button type="button" aria-pressed="true" data-f="">전체</button>
+    <button type="button" aria-pressed="false" data-f="free">무료</button>
+    {{ range $cats }}<button type="button" aria-pressed="false" data-f="{{ . }}">{{ . }}</button>{{ end }}
+  </div>
+  <ul class="deck-grid" id="decks">
+    {{ range .Pages }}{{ partial "deckcard.html" . }}{{ end }}
   </ul>
+  <script>
+  (function(){var bs=document.querySelectorAll('.deck-chips button'),ls=document.querySelectorAll('#decks > li');
+    bs.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;
+      bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+      ls.forEach(function(l){l.hidden=!(f===''||(f==='free'?l.hasAttribute('data-free'):l.dataset.cat===f))});});});})();
+  </script>
   {{ partial "dlfoot.html" $a }}
 {{ end }}

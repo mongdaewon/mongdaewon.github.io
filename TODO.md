@@ -20,10 +20,10 @@
       `content/apps/cantquit/decks/_content.ko.gotmpl`(content adapter). catalog가 한국어뿐이라 ko에만 만든다
 - [x] 앱 페이지: 덱 마켓 링크 카드 + 덱 6개 그리드
       인기가 아니라 분류별 첫 덱이다(GA4 덱별 공부가 히라가나 3명뿐, 2026-11-02). 모바일은 4개. 쌓이면 인기순으로
-- [ ] `/apps/cantquit/decks/`: 분류 칩 + 덱 그리드
-      기본판 있음(catalog 순 카드 그리드·무료/Plus). 남은 것: 분류 칩·표지(표지: cover 그림 또는 keyphrase 글자, 무료/Plus 꼬리표)
+- [x] `/apps/cantquit/decks/`: 분류 칩 + 덱 그리드
+      앱 마켓 그리드와 같은 카드·표지·칩(2026-11-02, `partials/deckcard.html`·`deckcover.html`)(표지: cover 그림 또는 keyphrase 글자, 무료/Plus 꼬리표)
 - [ ] `/apps/cantquit/decks/<id>/`: 표지·hook·설명·장수/분류/무료·Plus·미리보기 3장·[포기하면 안돼에서 받기]·데스크톱 QR·다음 권
-      기본판 있음(hook·설명·미리보기 3장·다음 덱·스마트 배너). 남은 것: 표지·데스크톱 QR
+      표지까지 됨. 남은 것: 데스크톱 QR
       버튼 href는 App Store. 같은 도메인 안에서 누른 링크는 유니버설 링크가 앱을 열지 않는다(밖에서 온 QR·검색 클릭만 앱이 연다)
       그래서 덱 페이지에 `<meta name="apple-itunes-app" content="app-id=6825195851, app-argument=<이 페이지 주소>">` — 사파리 위 배너 [열기]가 앱의 그 덱으로 간다
 - [x] 덱 페이지 글: 덱 내용 소개가 아니라 "이 덱을 받으면 내 영어가 이렇게 는다"가 읽히게(2026-11-02 사용자)

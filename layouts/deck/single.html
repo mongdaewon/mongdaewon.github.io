@@ -11,6 +11,7 @@
     <span class="dl-row">{{ partial "storebadges.html" $a }}</span>
   </div>
 
+  <div class="deck-hero">{{ partial "deckcover.html" . }}</div>
   <h1>{{ .Title }}</h1>
   <p class="deck-hook">{{ .Params.hook }}</p>
   {{/* 받기 전 → 외운 뒤. data/cantquit-decks.toml 에 있는 덱만. */}}
