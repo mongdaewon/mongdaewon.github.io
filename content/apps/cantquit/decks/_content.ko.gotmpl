@@ -8,7 +8,13 @@
   {{ else with .Value }}{{ $data = . | transform.Unmarshal }}
   {{ else }}{{ errorf "catalog %s: empty" $url }}{{ end }}
 {{ end }}
+{{/* 표지 배추 포즈는 앱과 같게 고른다: 덱 id 글자 코드 합 % 4 (GalleryView.swift MarketCover.pose).
+     Hugo 에 글자 코드 함수가 없어 id 에 쓰는 글자만 표로 둔다. 표에 없는 글자가 오면 빌드를 멈춘다. */}}
+{{ $ord := `{"a":97,"b":98,"c":99,"d":100,"e":101,"f":102,"g":103,"h":104,"i":105,"j":106,"k":107,"l":108,"m":109,"n":110,"o":111,"p":112,"q":113,"r":114,"s":115,"t":116,"u":117,"v":118,"w":119,"x":120,"y":121,"z":122,"0":48,"1":49,"2":50,"3":51,"4":52,"5":53,"6":54,"7":55,"8":56,"9":57,"-":45,"_":95}` | transform.Unmarshal }}
+{{ $poses := slice "card" "think" "cheer" "wow" }}
 {{ range $i, $d := $data.decks }}
+  {{ $sum := 0 }}
+  {{ range split $d.id "" }}{{ $c := index $ord . }}{{ if not $c }}{{ errorf "deck id %s: 글자 %q 가 표에 없다" $d.id . }}{{ end }}{{ $sum = add $sum (int $c) }}{{ end }}
   {{ $.AddPage (dict
     "kind" "page"
     "type" "deck"
@@ -25,7 +31,11 @@
       "plus" (gt ($d.cost | default 0) 0)
       "cover" (cond (ne $d.cover nil) (printf "https://cdn.mongdaewon.com/cantquit/%s" $d.cover) "")
       "keyphrase" $d.keyphrase
-      "preview" (first 3 ($d.preview | default slice))
+      "pose" (index $poses (mod $sum 4))
+      "language" $d.language
+      "size" $d.size
+      "preview" ($d.preview | default slice)
+      "images" $d.images
       "next" $d.next
       "gain" (index hugo.Data "cantquit-decks" $d.id)
       "smartBanner" true)

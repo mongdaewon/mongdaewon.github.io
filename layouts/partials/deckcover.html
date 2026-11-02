@@ -1,0 +1,6 @@
+{{- /* 덱 표지 - 앱 마켓 그리드(ios-cantquit GalleryView.swift MarketCover)와 같은 모양.
+       그림 덱은 cover 그림, 그 밖은 분류 색 띠(무료 연한 색·Plus 진한 색) + 핵심 문구 2줄 + 배추 포즈. 장식이라 스크린리더에서 숨긴다. */ -}}
+<span class="dk-cover{{ if .Params.plus }} paid{{ end }}" data-cat="{{ .Params.category }}" aria-hidden="true">
+  {{- with .Params.cover }}<img src="{{ . }}" alt="" loading="lazy" decoding="async">
+  {{- else }}<span class="dk-kp">{{ replace .Params.keyphrase "\n" "<br>" | safeHTML }}</span><img class="dk-pose" src="{{ printf "/img/cantquit/pogi-%s.svg" .Params.pose | relURL }}" alt="" loading="lazy">{{ end -}}
+</span>

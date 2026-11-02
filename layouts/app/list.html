@@ -86,13 +86,7 @@
         {{ $seen = $seen | append .Params.category }}{{ $picks = $picks | append . }}
       {{ end }}{{ end }}
       <ul class="deck-grid deck-picks">
-        {{ range first 6 $picks }}
-          <li><a class="deck-card" href="{{ .RelPermalink }}">
-            <span class="dk-t">{{ .Title }}</span>
-            <span class="dk-h">{{ .Params.hook }}</span>
-            <span class="dk-m">{{ partial "deckmeta.html" . }}</span>
-          </a></li>
-        {{ end }}
+        {{ range first 6 $picks }}{{ partial "deckcard.html" . }}{{ end }}
       </ul>
     {{ end }}
 
