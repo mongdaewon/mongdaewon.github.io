@@ -1,0 +1,18 @@
+{{ define "main" }}
+  {{ $app := .Parent }}
+  {{ $a := partial "app.html" "cantquit" }}
+  <p class="backlink"><a href="{{ $app.RelPermalink }}">← {{ $a.name_ko | default $a.name }}</a></p>
+  <h1>{{ .Title }}</h1>
+  <p class="lede">{{ .Description }}</p>
+  {{/* ponytail: catalog 순서 그대로(weight). 분류 칩·인기순은 TODO 4. */}}
+  <ul class="deck-grid">
+    {{ range .Pages }}
+      <li><a class="deck-card" href="{{ .RelPermalink }}">
+        <span class="dk-t">{{ .Title }}</span>
+        <span class="dk-h">{{ .Params.hook }}</span>
+        <span class="dk-m">{{ partial "deckmeta.html" . }}</span>
+      </a></li>
+    {{ end }}
+  </ul>
+  {{ partial "dlfoot.html" $a }}
+{{ end }}

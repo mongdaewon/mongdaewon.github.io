@@ -322,3 +322,22 @@ body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-wi
 .blk.gap { background: none; }
 .lane-x { margin: .5rem 0 0; font-size: var(--fs-sm); color: var(--muted); line-height: 1.5; }
 @media (max-width: 34rem) { .lanes { grid-template-columns: 1fr; } }
+
+/* 포기하면 안돼 덱 마켓 (/ko/apps/cantquit/decks/) - 목록은 카드 그리드, 상세는 hook 을 제목 아래 크게. */
+.deck-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: .75rem; }
+.deck-grid li { margin: 0; }
+.deck-card { display: flex; flex-direction: column; gap: .25rem; height: 100%; padding: 1rem; border: 1px solid var(--rule);
+             border-radius: var(--r); text-decoration: none; color: inherit; }
+.deck-card:hover { border-color: var(--accent); }
+.deck-card:hover .dk-t { color: var(--accent); }
+.dk-t { font-weight: 700; }
+.dk-h { font-size: var(--fs-sm); }
+.dk-m { margin-top: auto; font-size: var(--fs-sm); color: var(--muted); }
+.deck-hook { font-size: var(--fs-xl); font-weight: 700; margin-bottom: .25rem; }
+p.dk-m { margin-bottom: 1rem; }
+.deck-sec { margin-top: 2rem; margin-bottom: .5rem; }
+.deck-preview { list-style: none; padding: 0; }
+.deck-preview li { display: flex; gap: 1rem; padding: .5rem 0; border-bottom: 1px solid var(--rule); margin: 0; }
+.deck-preview span { color: var(--muted); }
+.deck-preview li { align-items: center; }
+.deck-preview img { width: 4rem; height: 3rem; object-fit: contain; border-radius: var(--r); }
