@@ -33,6 +33,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+  {{/* 덱 페이지: 아이폰 사파리 위 배너 [열기]가 앱의 그 덱으로 간다. 같은 도메인 안에서 누른 링크는
+       유니버설 링크가 앱을 열지 않아서 이 배너가 그 길이다. app-argument 는 앱이 받는 유니버설 링크 주소 그대로. */}}
+  {{ if .Params.smartBanner }}{{ with (partial "app.html" "cantquit").appstore }}<meta name="apple-itunes-app" content="app-id={{ path.Base . | strings.TrimPrefix "id" }}, app-argument={{ $.Permalink }}">{{ end }}{{ end }}
   {{/* Canonical. Pages with canonicalHome point at the home page (see /apps/, a duplicate of it). */}}
   <link rel="canonical" href="{{ if .Params.canonicalHome }}{{ .Site.Home.Permalink }}{{ else }}{{ .Permalink }}{{ end }}">
   {{/* en·ko 짝을 구글에 알린다 - 없으면 한국어 검색에 영어 페이지가 뜰 수 있다. 짝이 없는 페이지(블로그·처리방침)는 건너뛴다.
@@ -54,8 +57,9 @@
        Blog only exists in English - on the ko site GetPage "/blog" is nil and the tab doesn't render. */}}
   {{/* Which tab is lit. Every app bundle's _index has `type: app`, so a page whose section is an app
        (detail, how-to, gallery, privacy policy) is Apps. Chrome extensions keep a privacy policy under
-       content/apps/ too, with no _index - their section is /apps/ itself, and those are Tools. */}}
-  {{ $appsOn := or .IsHome (eq .Path "/apps") (eq .CurrentSection.Type "app") }}
+       content/apps/ too, with no _index - their section is /apps/ itself, and those are Tools.
+       Deck pages (type: deck, under an app bundle) are Apps too. */}}
+  {{ $appsOn := or .IsHome (eq .Path "/apps") (eq .CurrentSection.Type "app") (eq .Type "deck") }}
   {{ $toolsOn := and (eq .Section "apps") (not $appsOn) }}
   {{ $blogOn := eq .Section "blog" }}
   {{/* aria-current: "page" only on the page the tab links to; "true" when we're somewhere inside its section. */}}

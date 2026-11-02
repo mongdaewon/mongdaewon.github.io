@@ -12,13 +12,18 @@
 목표: 앱 페이지에서 덱을 둘러보고, 누르면 앱의 그 덱 상세가 열린다(앱이 없으면 App Store).
 앱은 준비됨(ios-cantquit fb73b9b): `https://mongdaewon.com/(ko/)apps/cantquit/decks/<id>/`를 유니버설 링크로 받아 마켓 덱 상세를 연다.
 데이터: `https://cdn.mongdaewon.com/cantquit/catalog.json`(id·title·category·cardCount·cost·hook·description·keyphrase·cover·preview·next).
-- [ ] `static/.well-known/apple-app-site-association` (확장자 없음, JSON)
+- [x] `static/.well-known/apple-app-site-association` (확장자 없음, JSON)
       `{"applinks":{"details":[{"appIDs":["8NFA84AA3R.com.mongdaewon.cantquit","8NFA84AA3R.com.mongdaewon.cantquit.dev"],"components":[{"/":"/apps/cantquit/decks/?*"},{"/":"/ko/apps/cantquit/decks/?*"}]}]}}`
-      GitHub Pages가 `.well-known`을 내보내는지·200인지 확인. `/decks/` 목록은 웹에 남고 덱 상세만 앱으로 간다
-- [ ] 빌드 때 catalog를 받아 덱 페이지 만들기 (Hugo `resources.GetRemote` 등)
+      `/decks/` 목록은 웹에 남고 덱 상세만 앱으로 간다. 배포 액션(upload-pages-artifact v3)은 숨김 폴더를 싣는다(.git·.github만 뺀다)
+- [ ] 배포 뒤 AASA 200 확인
+      `curl -sI https://mongdaewon.com/.well-known/apple-app-site-association`
+- [x] 빌드 때 catalog를 받아 덱 페이지 만들기
+      `content/apps/cantquit/decks/_content.ko.gotmpl`(content adapter). catalog가 한국어뿐이라 ko에만 만든다
 - [ ] 앱 페이지: 덱 마켓 링크 카드(howto-card 모양) + 인기 덱 6개 그리드
-- [ ] `/apps/cantquit/decks/`: 분류 칩 + 덱 그리드(표지: cover 그림 또는 keyphrase 글자, 무료/Plus 꼬리표)
+- [ ] `/apps/cantquit/decks/`: 분류 칩 + 덱 그리드
+      기본판 있음(catalog 순 카드 그리드·무료/Plus). 남은 것: 분류 칩·표지(표지: cover 그림 또는 keyphrase 글자, 무료/Plus 꼬리표)
 - [ ] `/apps/cantquit/decks/<id>/`: 표지·hook·설명·장수/분류/무료·Plus·미리보기 3장·[포기하면 안돼에서 받기]·데스크톱 QR·다음 권
+      기본판 있음(hook·설명·미리보기 3장·다음 덱·스마트 배너). 남은 것: 표지·데스크톱 QR
       버튼 href는 App Store. 같은 도메인 안에서 누른 링크는 유니버설 링크가 앱을 열지 않는다(밖에서 온 QR·검색 클릭만 앱이 연다)
       그래서 덱 페이지에 `<meta name="apple-itunes-app" content="app-id=6825195851, app-argument=<이 페이지 주소>">` — 사파리 위 배너 [열기]가 앱의 그 덱으로 간다
 - [ ] 덱 페이지 글: 덱 내용 소개가 아니라 "이 덱을 받으면 내 영어가 이렇게 는다"가 읽히게(2026-11-02 사용자)

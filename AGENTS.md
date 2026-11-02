@@ -154,6 +154,15 @@ git 히스토리에 영원히 남고 GitHub Pages 한도를 먹는다. 루트 �
   브라우저를 띄워 결과 페이지를 보거나, 그 사이트의 검색 폼 `action` 을 읽어 맞춘다.
 - `#` 뒤(fragment)에 검색어가 붙는 사이트는 넣지 않는다 — 확장이 넘기지 못한다.
 
+### 포기하면 안돼 덱 마켓 — `/ko/apps/cantquit/decks/`
+
+덱 페이지는 레포에 없다. `content/apps/cantquit/decks/_content.ko.gotmpl`(content adapter)이 빌드 때
+`https://cdn.mongdaewon.com/cantquit/catalog.json`(앱 마켓과 같은 파일)을 받아 덱마다 한 쪽씩 만든다(`type: deck` → `layouts/deck/`).
+
+- **빌드에 네트워크가 필요하다.** catalog 를 못 받으면 빌드가 멈춘다(덱 페이지가 조용히 사라지는 것보다 낫다). 에이전트 sandbox 안에서는 Hugo 가 DNS 를 못 찾으니 sandbox 밖에서 빌드한다.
+- catalog 가 한국어뿐이라 ko 에만 있다. 덱을 고치려면 ios-cantquit 의 catalog 를 고쳐 CDN 에 올리고 이 사이트를 다시 배포한다(push 또는 workflow_dispatch).
+- 덱 상세 주소는 앱이 유니버설 링크로 받는다(`static/.well-known/apple-app-site-association`). **경로를 바꾸면 앱 링크가 깨진다.** 같은 도메인 안 링크는 앱을 열지 않으므로 덱 상세에 스마트 배너(`apple-itunes-app`, front matter `smartBanner`)를 단다.
+
 ### 웹 도구·크롬 확장 — `data/tools.toml` (홈 "Tools" 섹션)
 
 앱 외 자사 웹 도구·브라우저 확장은 `data/tools.toml`에서 관리하며, 홈의 "Tools" 섹션(`partials/toolslist.html`, 데스크톱은 오른쪽 칸·모바일은 아래)에 노출. 헤더의 Tools 탭은 홈의 `#tools`로 온다(도구 전용 페이지는 없다).

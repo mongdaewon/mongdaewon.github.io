@@ -1,0 +1,44 @@
+{{ define "main" }}
+  {{ $app := .Parent.Parent }}
+  {{ $a := partial "app.html" "cantquit" }}
+  <p class="backlink"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
+
+  <div class="howto-head">
+    {{ with $app.Resources.GetMatch "icon.png" }}
+      <img class="app-ico ico-sm" src="{{ .RelPermalink }}" alt="{{ $a.name }}" width="40" height="40">
+    {{ end }}
+    <a class="howto-app" href="{{ $app.RelPermalink }}">{{ $a.name_ko | default $a.name }}</a>
+    <span class="dl-row">{{ partial "storebadges.html" $a }}</span>
+  </div>
+
+  <h1>{{ .Title }}</h1>
+  <p class="deck-hook">{{ .Params.hook }}</p>
+  <p class="dk-m">{{ partial "deckmeta.html" . }}</p>
+  {{ .Content }}
+
+  {{/* 미리보기 카드: 앞면 첫 줄(그림 덱은 그림) + 뒷면 첫 절("## 뜻"·"## 읽기"·"## 나라" 등)의 첫 줄. */}}
+  {{ with .Params.preview }}
+    <h2 class="sec-h deck-sec">미리 보기</h2>
+    <ul class="deck-preview">
+      {{ range . }}
+        {{ $front := index (split .front "\n") 0 }}
+        {{ $ans := "" }}
+        {{ with findRESubmatch `(?m)^## [^\n]*\n(.+)$` .back 1 }}{{ $ans = index (index . 0) 1 }}{{ end }}
+        <li>
+          {{ with .image }}<img src="https://cdn.mongdaewon.com/cantquit/{{ . }}" alt="{{ $ans }}" loading="lazy" decoding="async">{{ end }}
+          {{ with $front }}<strong>{{ . }}</strong>{{ end }}
+          {{ with $ans }}<span>{{ . | markdownify }}</span>{{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+  {{ with .Params.next }}{{ with $.Parent.GetPage . }}
+    <a class="howto-card" href="{{ .RelPermalink }}">
+      <span class="hc-t">다음 덱: {{ .Title }} →</span>
+      <span class="hc-d">{{ .Params.hook }}</span>
+    </a>
+  {{ end }}{{ end }}
+
+  {{ partial "dlfoot.html" $a }}
+{{ end }}

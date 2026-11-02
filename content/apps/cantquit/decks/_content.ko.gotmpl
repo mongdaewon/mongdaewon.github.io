@@ -1,0 +1,32 @@
+{{/* 덱 페이지는 앱 마켓 catalog 에서 빌드 때 만든다(정본은 CDN 의 catalog.json, 레포에 복사하지 않는다).
+     catalog 가 한국어뿐이라 ko 에만 만든다. 주소 /ko/apps/cantquit/decks/<id>/ 는 앱이 유니버설 링크로 받는다.
+     catalog 를 못 받으면 빌드를 멈춘다 - 덱 페이지가 조용히 사라지는 것보다 낫다. */}}
+{{ $url := "https://cdn.mongdaewon.com/cantquit/catalog.json" }}
+{{ $data := dict }}
+{{ with try (resources.GetRemote $url) }}
+  {{ with .Err }}{{ errorf "catalog %s: %s" $url . }}
+  {{ else with .Value }}{{ $data = . | transform.Unmarshal }}
+  {{ else }}{{ errorf "catalog %s: empty" $url }}{{ end }}
+{{ end }}
+{{ range $i, $d := $data.decks }}
+  {{ $.AddPage (dict
+    "kind" "page"
+    "type" "deck"
+    "path" $d.id
+    "title" $d.title
+    "description" $d.hook
+    "weight" (add $i 1)
+    "content" (dict "mediaType" "text/markdown" "value" $d.description)
+    "params" (dict
+      "deckId" $d.id
+      "hook" $d.hook
+      "category" $d.category
+      "cardCount" $d.cardCount
+      "plus" (gt ($d.cost | default 0) 0)
+      "cover" (cond (ne $d.cover nil) (printf "https://cdn.mongdaewon.com/cantquit/%s" $d.cover) "")
+      "keyphrase" $d.keyphrase
+      "preview" (first 3 ($d.preview | default slice))
+      "next" $d.next
+      "smartBanner" true)
+  ) }}
+{{ end }}
