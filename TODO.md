@@ -15,8 +15,7 @@
 - [x] `static/.well-known/apple-app-site-association` (확장자 없음, JSON)
       `{"applinks":{"details":[{"appIDs":["8NFA84AA3R.com.mongdaewon.cantquit","8NFA84AA3R.com.mongdaewon.cantquit.dev"],"components":[{"/":"/apps/cantquit/decks/?*"},{"/":"/ko/apps/cantquit/decks/?*"}]}]}}`
       `/decks/` 목록은 웹에 남고 덱 상세만 앱으로 간다. 배포 액션(upload-pages-artifact v3)은 숨김 폴더를 싣는다(.git·.github만 뺀다)
-- [ ] 배포 뒤 AASA 200 확인
-      `curl -sI https://mongdaewon.com/.well-known/apple-app-site-association`
+- [x] 배포 뒤 AASA 200 확인 (2026-11-02, content-type 은 octet-stream 이지만 Apple CDN `app-site-association.cdn-apple.com/a/v1/mongdaewon.com` 이 받아 감)
 - [x] 빌드 때 catalog를 받아 덱 페이지 만들기
       `content/apps/cantquit/decks/_content.ko.gotmpl`(content adapter). catalog가 한국어뿐이라 ko에만 만든다
 - [ ] 앱 페이지: 덱 마켓 링크 카드(howto-card 모양) + 인기 덱 6개 그리드
