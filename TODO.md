@@ -10,6 +10,9 @@
 
 ## 포기하면 안돼 덱 마켓 웹 페이지
 구조·규칙은 AGENTS §포기하면 안돼 덱 마켓.
+- [ ] 덱 원본 경로가 바뀜: ios-cantquit → `mobile/cantquit-decks`(11/3)
+      AGENTS §포기하면 안돼 덱 마켓 "ios-cantquit 의 catalog"와 `data/cantquit-decks.toml` 머리 주석(`decks/oz/guide.md` → 덱 레포 `decks/book/guide-261103.1.md`)을 고친다. 덱 페이지 화면 규칙이 가리키는 `GalleryView.swift` 등은 iOS 그대로
+- [ ] 새 덱 「거인의 정원」·홈즈 "받기 전 → 외운 뒤" 줄 넣을지(근거: 93%·91% → 98%, 덱 레포 catalog description)
 - [ ] 덱 페이지 색인 요청 나머지 17개 @11/3
       11/2에 목록·앱 페이지·검색량 큰 덱 10개를 넣었다(하루 한도 12). 남은 것:
       en-web-app en-spoken en-common en-toeic en-conversation en-work en-idioms en-academic en-oz-1 en-oz-2 en-oz-3
