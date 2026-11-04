@@ -12,6 +12,8 @@
 구조·규칙은 AGENTS §포기하면 안돼 덱 마켓.
 - [ ] 덱 원본 경로가 바뀜: ios-cantquit → `mobile/cantquit-decks`(11/3)
       AGENTS §포기하면 안돼 덱 마켓 "ios-cantquit 의 catalog"와 `data/cantquit-decks.toml` 머리 주석(`decks/oz/guide.md` → 덱 레포 `decks/book/guide-261103.1.md`)을 고친다. 덱 페이지 화면 규칙이 가리키는 `GalleryView.swift` 등은 iOS 그대로
+- [ ] 덱 페이지 [받기] 버튼 문구를 "App Store에서 받기"로
+      지금 "포기하면 안돼에서 받기"는 앱이 있는 사람도 App Store로 보낸다(주소 고정, 웹은 설치 여부를 모른다). 앱 열기는 다른 앱의 링크·Safari 배너가 맡는다(11/4 사용자 결정, 메모에서 눌러 덱 상세 열림 확인).
 - [ ] 새 덱 「거인의 정원」·홈즈 "받기 전 → 외운 뒤" 줄 넣을지(근거: 93%·91% → 98%, 덱 레포 catalog description)
 - [ ] 덱 페이지 색인 요청 나머지 17개 @11/3
       11/2에 목록·앱 페이지·검색량 큰 덱 10개를 넣었다(하루 한도 12). 남은 것:
