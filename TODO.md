@@ -1,6 +1,9 @@
 # TODO
 
 ## 다음에 할 일
+- [ ] AudioJoin 처리방침·사용법의 "구독 아님" 문구 고치기
+      `content/apps/audiojoin/privacy-policy/index.md:66` "a single payment, not a subscription", `how-to/index.md:30` "a one-time purchase".
+      20261104.1.0 부터 Plus 는 1년 구독 또는 평생권이고, 승인되면 자동 출시된다(2026-11-04 심사 제출). 그 전에 고치고 Last updated 도 바꾼다.
 - [ ] 블로그 다음 글
       소재 근거: GSC 검색어 · 구글 영어 자동완성 · 스토어 리뷰 · 개선 릴리즈 · 지난 글 GA4 성과.
       문의 메일은 뺀다(Gmail 로 안 들어와 볼 수 없고 건수도 적다, 2026-10-31). 근거 규칙은 AGENTS 블로그 절.
