@@ -6,13 +6,13 @@ layout: "single"
 
 **Can't Quit - Flashcards**
 
-Last updated: October 20, 2026
+Last updated: November 4, 2026
 
 *This Privacy Policy is provided in English only.*
 
 ## Introduction
 
-This Privacy Policy describes how Can't Quit ("we", "our", or "the app") collects, uses, and protects your information when you use our mobile application.
+This Privacy Policy describes how Can't Quit ("we", "our", or "the app") collects, uses, and protects your information when you use our mobile application on iOS, iPadOS or Android.
 
 ## Information We Collect
 
@@ -21,9 +21,10 @@ This Privacy Policy describes how Can't Quit ("we", "our", or "the app") collect
 The app uses Firebase Analytics to collect anonymous usage data to improve the app experience:
 
 - App usage patterns and feature interactions (for example, starting a study session or downloading a deck)
-- Device type and operating system version
+- Subscription events (for example, opening the subscription screen or completing a purchase), without payment details
+- Device type, operating system version and an app instance identifier
 
-This data is collected automatically and cannot be used to identify you personally.
+This data is collected automatically and is not linked to your name or contact details. It is used only for analytics.
 
 ### 2. Local Data
 
@@ -33,10 +34,6 @@ The following data is stored only on your device and is never transmitted to our
 - Study history and review schedule
 - Practice results
 - App settings and preferences
-
-### 3. iCloud Key-Value Storage
-
-Your coin balance is kept as a list of entries (gift, purchase, deck stake, refund) in your own iCloud key-value storage, so it is restored when you reinstall the app or change devices. We cannot read your iCloud.
 
 ## Information We Do NOT Collect
 
@@ -59,8 +56,8 @@ Our app uses the following third-party services:
 
 - **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
 - **Cloudflare** - Delivers deck files ([Privacy Policy](https://www.cloudflare.com/privacypolicy/))
-- **Apple StoreKit** - For in-app purchases, handled entirely by Apple
-- **Apple iCloud** - Stores your coin balance in your own iCloud account
+- **Apple App Store** (iOS) - Handles subscriptions and payments
+- **Google Play Billing** (Android) - Handles subscriptions and payments ([Privacy Policy](https://policies.google.com/privacy))
 
 ## Advertising
 
@@ -68,9 +65,9 @@ Can't Quit does not display any advertisements. We do not use any advertising SD
 
 ## In-App Purchases
 
-Can't Quit offers coins as consumable in-app purchases. Coins are used to open paid decks and new decks. When you finish memorizing a deck, some coins are returned. Free decks do not use coins.
+Can't Quit offers Plus, an auto-renewing subscription (monthly or yearly). Plus unlocks paid decks in the deck market. Free decks, decks you create and imported files do not need a subscription.
 
-Purchases are handled entirely by Apple (App Store). We never see or store your payment details. The app only receives the purchase transaction and adds the coins to your balance.
+Payments and subscriptions are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app only asks the store whether a subscription is active. You can cancel at any time in your App Store or Google Play account settings.
 
 ## Data Security
 
@@ -83,7 +80,7 @@ Our app is not directed to children under 13. We do not knowingly collect person
 ## Your Rights
 
 - **Delete local data:** Deleting a deck removes its cards. Uninstalling the app removes all locally stored data.
-- **iCloud data:** You can remove the app's iCloud data in your device's iCloud settings.
+- **Analytics data:** You can stop further collection by uninstalling the app.
 
 ## Changes to This Policy
 
