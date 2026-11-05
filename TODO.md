@@ -4,6 +4,9 @@
 - [ ] 블로그 다음 글
       소재 근거: GSC 검색어 · 구글 영어 자동완성 · 스토어 리뷰 · 개선 릴리즈 · 지난 글 GA4 성과.
       문의 메일은 뺀다(Gmail 로 안 들어와 볼 수 없고 건수도 적다, 2026-10-31). 근거 규칙은 AGENTS 블로그 절.
+- [ ] 영상 소리 추출 글 발행(JoinSound 수정판 뒤)
+      `content/blog/extract-audio-from-video-iphone/`, `draft: true`. ios-joinsound TODO "영상 소리 추출 빈틈"이 출시된 뒤 draft 를 빼고 date 를 그날로, 색인 요청.
+      👤 그 전에 실기기: 사진 앱 영상 고르기 → Save 까지(시스템 피커·저장은 시뮬레이터 자동화로 못 봤다).
 - [ ] Ivy 워치 할 일 컴플리케이션 글
       Ivy 워치 위젯 영어 버그(독일어로 뜸) 수정 버전이 출시된 뒤에 쓴다. 출시되면 영어 위젯 화면부터 찍는다.
       키워드 "to do list apple watch complication". 경쟁 글은 Reddit 질문·각 앱 도움말뿐이고 튜토리얼 글은 없다(2026-10-31).
