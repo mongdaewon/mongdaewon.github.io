@@ -27,4 +27,4 @@ Voice memos, interviews, and lectures can come straight in from the share sheet,
 ## Good to know
 
 - Everything happens on your iPhone, iPad, or Android phone. Nothing is uploaded.
-- Trimming and joining up to two clips, saved as M4A, are free. AudioJoin Plus, a one-time purchase, unlocks three or more clips, more tracks to layer audio on, shorter silences, and MP3 or WAV.
+- Trimming and joining up to two clips, saved as M4A, are free. AudioJoin Plus unlocks three or more clips, more tracks to layer audio on, shorter silences, and MP3 or WAV. On iPhone and iPad it is a 1-year plan or a lifetime purchase; on Android it is a one-time purchase.
