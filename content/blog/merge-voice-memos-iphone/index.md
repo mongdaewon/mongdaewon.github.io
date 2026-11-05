@@ -53,12 +53,14 @@ Two switches change that, because they have to rewrite the sound:
 
 Merging two voice memos is free, with no ads and no sign-in.
 
-| | Free | JoinSound Plus (one-time purchase) |
+| | Free | JoinSound Plus |
 |---|---|---|
 | Recordings in one file | 2 | 3 or more |
 | Trim | ✓ | ✓ |
 | Shorten long silences | | ✓ |
 | Save as | M4A | M4A, MP3, WAV |
+
+On iPhone, Plus is a 1-year plan or a one-time lifetime purchase.
 
 ## Are my recordings uploaded?
 

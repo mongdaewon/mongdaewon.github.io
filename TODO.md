@@ -1,9 +1,6 @@
 # TODO
 
 ## 다음에 할 일
-- [ ] AudioJoin 처리방침·사용법의 "구독 아님" 문구 고치기
-      `content/apps/audiojoin/privacy-policy/index.md:66` "a single payment, not a subscription", `how-to/index.md:30` "a one-time purchase".
-      20261104.1.0 부터 Plus 는 1년 구독 또는 평생권이고, 승인되면 자동 출시된다(2026-11-04 심사 제출). 그 전에 고치고 Last updated 도 바꾼다.
 - [ ] 블로그 다음 글
       소재 근거: GSC 검색어 · 구글 영어 자동완성 · 스토어 리뷰 · 개선 릴리즈 · 지난 글 GA4 성과.
       문의 메일은 뺀다(Gmail 로 안 들어와 볼 수 없고 건수도 적다, 2026-10-31). 근거 규칙은 AGENTS 블로그 절.
@@ -13,16 +10,6 @@
 
 ## 포기하면 안돼 덱 마켓 웹 페이지
 구조·규칙은 AGENTS §포기하면 안돼 덱 마켓.
-- [ ] 덱 원본 경로가 바뀜: ios-cantquit → `mobile/cantquit-decks`(11/3)
-      AGENTS §포기하면 안돼 덱 마켓 "ios-cantquit 의 catalog"와 `data/cantquit-decks.toml` 머리 주석(`decks/oz/guide.md` → 덱 레포 `decks/book/guide-261103.1.md`)을 고친다. 덱 페이지 화면 규칙이 가리키는 `GalleryView.swift` 등은 iOS 그대로
-- [ ] 덱 페이지 [받기] 버튼 문구를 "App Store에서 받기"로
-      지금 "포기하면 안돼에서 받기"는 앱이 있는 사람도 App Store로 보낸다(주소 고정, 웹은 설치 여부를 모른다). 앱 열기는 다른 앱의 링크·Safari 배너가 맡는다(11/4 사용자 결정, 메모에서 눌러 덱 상세 열림 확인).
-- [ ] 새 덱 「거인의 정원」·홈즈 "받기 전 → 외운 뒤" 줄 넣을지(근거: 93%·91% → 98%, 덱 레포 catalog description)
-- [ ] 덱 페이지 색인 요청 나머지 17개 @11/3
-      11/2에 목록·앱 페이지·검색량 큰 덱 10개를 넣었다(하루 한도 12). 남은 것:
-      en-web-app en-spoken en-common en-toeic en-conversation en-work en-idioms en-academic en-oz-1 en-oz-2 en-oz-3
-      ja-hiragana ja-katakana ja-kanji sci-elements art-western art-eastern
-      `/index-request` 로 `https://mongdaewon.com/ko/apps/cantquit/decks/<id>/`
 - [ ] 덱 상세에 데스크톱 QR
       컴퓨터로 본 사람이 폰으로 넘어가는 길. QR 은 이 페이지 주소 - 폰 카메라로 열면 유니버설 링크가 앱의 그 덱을 연다
 - [ ] 앱 페이지 덱 6개를 인기순으로
