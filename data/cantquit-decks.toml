@@ -1,7 +1,7 @@
 # 포기하면 안돼 덱 상세의 "받기 전 → 외운 뒤" 한 줄(웹 전용). 키는 catalog 덱 id.
 # 근거가 있거나 hook 과 다른 장면이 있는 덱만 둔다 - 없는 덱은 줄이 안 나온다. 숫자를 지어내지 않는다.
-# 오즈: ios-cantquit decks/oz/guide.md - 아는 단어 98% = 한 쪽(약 250단어)에 모르는 단어 5개쯤(Hu & Nation 2000).
-#       catalog description 의 92·94·96% 를 같은 비율로 옮겼다(8%=20, 6%=15, 4%=10).
+# 원서 덱: cantquit-decks decks/book/guide-261103.1.md - 아는 단어 98% = 한 쪽(약 250단어)에 모르는 단어 5개쯤(Hu & Nation 2000).
+#       catalog description 의 % 를 같은 비율로 옮겼다(오즈 8%=20, 6%=15, 4%=10 · 거인의 정원 7%=17, book.py 값 · 홈즈 9%=22).
 
 [en-oz-1]
 before = "한 쪽에 모르는 단어 20개쯤"
@@ -14,6 +14,14 @@ after = "5개쯤, 사전 없이 5~12장"
 [en-oz-3]
 before = "한 쪽에 모르는 단어 10개쯤"
 after = "5개쯤, 사전 없이 13~24장"
+
+[en-selfish-giant]
+before = "한 쪽에 모르는 단어 17개쯤"
+after = "5개쯤, 사전 없이 끝까지"
+
+[en-holmes-identity]
+before = "한 쪽에 모르는 단어 22개쯤"
+after = "5개쯤, 사전 없이 끝까지"
 
 [ja-hiragana]
 before = "히라가나 표를 옆에 펴 놓고 한 글자씩"
