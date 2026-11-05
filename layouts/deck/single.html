@@ -51,6 +51,13 @@
     {{/* 같은 도메인 링크라 앱이 열리지 않는다 - App Store 로 간다. 앱이 있는 아이폰은 위 스마트 배너가 앱의 이 덱을 연다. */}}
     <a class="get-btn" data-ev="store_ios" data-app="{{ $a.name }}" href="{{ $a.appstore }}" target="_blank" rel="noopener">App Store에서 받기</a>
     <p class="get-note">받은 뒤에는 인터넷 없이 공부해요</p>
+    {{/* 컴퓨터로 본 사람이 폰으로 넘어가는 길. 이 페이지 주소라 앱이 있으면 유니버설 링크가 그 덱을 연다. */}}
+    {{ with images.QR .Permalink (dict "scale" 3 "targetDir" "img/qr") }}
+      <div class="deck-qr">
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="이 덱 페이지로 가는 QR 코드" loading="lazy">
+        <p>폰 카메라로 찍으면<br>이 덱을 폰에서 볼 수 있어요</p>
+      </div>
+    {{ end }}
   </div>
 
   {{ with .Params.next }}{{ with $.Parent.GetPage . }}
