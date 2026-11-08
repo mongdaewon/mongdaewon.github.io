@@ -1,6 +1,8 @@
 # TODO
 
 ## 다음에 할 일
+- [ ] JoinPDF 앱 소개 페이지 `/apps/joinpdf/` (지금 404)
+      ASC 지원·마케팅 URL 로 넣어 두었다. 첫 심사 제출 전에 있어야 한다(다른 앱 페이지와 같은 꼴, 문의 메일 포함).
 - [ ] JoinPDF 처리방침: 비밀번호 잠금은 이제 무료
       `content/apps/joinpdf/privacy-policy/` 의 "JoinPDF Plus can lock a saved PDF…" 를 "JoinPDF can lock…"으로(한국어판도).
       ios-joinpdf 2026-11-07 결정. Plus 는 쪽 수 제한 해제·용량 줄이기, 연 구독 $9.99 + 평생 $24.99(2026-11-08). JoinPDF 첫 제출 전에.
