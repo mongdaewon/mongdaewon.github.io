@@ -60,6 +60,13 @@
   promo = "https://cdn.mongdaewon.com/promo/joinsound-en.mp4"
 
 [[app]]
+  slug = "joinpdf"
+  name = "JoinPDF"
+  emoji = "📄"
+  color = "#BF2F28"
+  comingsoon = true   # 출시되면 appstore = "https://apps.apple.com/app/id6832261500" 로 바꾼다
+
+[[app]]
   slug = "recnow"
   name = "RecNow"
   emoji = "⏺"
