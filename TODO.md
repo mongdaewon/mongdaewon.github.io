@@ -5,6 +5,8 @@
       ASC 지원·마케팅 URL 로 넣어 두었다. 첫 심사 제출 전에 있어야 한다(다른 앱 페이지와 같은 꼴, 문의 메일 포함).
 - [ ] JoinPDF 처리방침: 비밀번호 잠금은 이제 무료
       `content/apps/joinpdf/privacy-policy/` 의 "JoinPDF Plus can lock a saved PDF…" 를 "JoinPDF can lock…"으로(한국어판도).
+      같은 페이지 두 곳도: "unlocks the smaller file size option and PDF passwords" 에서 passwords 빼기,
+      "Password-protected PDFs are not accepted" → 비밀번호를 물어 풀린 사본으로 넣는다(비밀번호는 저장 안 함).
       ios-joinpdf 2026-11-07 결정. Plus 는 쪽 수 제한 해제·용량 줄이기, 연 구독 $9.99 + 평생 $24.99(2026-11-08). JoinPDF 첫 제출 전에.
 - [ ] 블로그 다음 글
       소재 근거: GSC 검색어 · 구글 영어 자동완성 · 스토어 리뷰 · 개선 릴리즈 · 지난 글 GA4 성과.
