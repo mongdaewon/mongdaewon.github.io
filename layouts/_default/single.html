@@ -1,5 +1,6 @@
 {{ define "main" }}
-  <p class="backlink"><a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a></p>
+  {{/* 부모에 _index 파일이 없으면(/help/ 처럼) 그 목록 페이지는 렌더되지 않는다 - 404 로 가는 링크를 두지 않는다 */}}
+  {{ with .Parent }}{{ if .File }}<p class="backlink"><a href="{{ .RelPermalink }}">← {{ .Title }}</a></p>{{ end }}{{ end }}
   <h1>{{ .Title }}</h1>
   <div>
     {{ .Content }}
