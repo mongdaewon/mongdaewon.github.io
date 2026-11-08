@@ -6,7 +6,7 @@ layout: "single"
 
 **JoinPDF**
 
-Last updated: November 7, 2026
+Last updated: November 9, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -23,6 +23,7 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 - Which screens and features are used, and how often
 - Counts and settings, such as the number of pages saved and the paper size or file size option chosen
 - Error codes when importing, saving, or purchasing fails
+- Plus purchases: which plan was bought and its price, never your payment details
 - Device type and operating system version
 
 This data is tied to a per-install identifier, never to an account. The app has no login. It cannot be used to identify you personally, and it never includes your documents, your file names, or your passwords.
@@ -50,11 +51,11 @@ The app uses the camera only when you choose to scan a paper document. Scanned p
 
 ## File Access
 
-The app opens PDFs and images only when you choose them in the system file picker. Password-protected PDFs are not accepted and need to be unlocked first.
+The app opens PDFs and images only when you choose them in the system file picker. If a PDF is password-protected, the app asks for its password and adds an unlocked copy. The password is used once on your device and is not saved or sent anywhere.
 
 ## PDF Passwords
 
-JoinPDF Plus can lock a saved PDF with a password you choose. The password is used on your device to lock the file. The app does not save it to storage or send it anywhere, and we cannot recover it if you forget it.
+JoinPDF can lock a saved PDF with a password you choose. The password is used on your device to lock the file. The app does not save it to storage or send it anywhere, and we cannot recover it if you forget it.
 
 ## Information We Do NOT Collect
 
@@ -77,7 +78,7 @@ JoinPDF does not display any advertisements. We do not use any advertising SDKs.
 
 ## In-App Purchases
 
-JoinPDF offers one optional upgrade, **JoinPDF Plus**, that unlocks the smaller file size option and PDF passwords. Combining, editing, and saving are free.
+JoinPDF offers one optional upgrade, **JoinPDF Plus**, that lets you save any number of pages in one PDF and unlocks the smaller file size option. Combining, editing, password locking, and saving up to 3 pages per PDF are free.
 
 Plus is an auto-renewing subscription or a one-time lifetime purchase. You can cancel a subscription at any time in your App Store account settings.
 
