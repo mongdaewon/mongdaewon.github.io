@@ -1,6 +1,10 @@
 # TODO
 
 ## 다음에 할 일
+- [ ] 구독 해지·환불 안내 페이지 `/help/subscription/`
+      몽대원 앱 공용(JoinSound 부터 도움말 › 구독 해지 · 환불 › 자세히 보기가 이 주소를 연다, ios-joinsound `AppInfo.cancelHelpURL`). **JoinSound 다음 판 제출 전에 200 이어야 한다.**
+      순서: 맨 위 "그 전에, 불편한 점이 있으셨나요?"(의견 메일 support@mongdaewon.com, 하나하나 읽고 고친다) → iPhone·iPad / Android 탭 → 구독 해지(설정 › 내 이름 › 구독) → 환불(reportaproblem.apple.com · Google Play) → 평생권은 해지할 것 없음.
+      결제는 스토어가 받아 개발자가 직접 환불 못 한다는 것을 먼저. 영·한(`/ko/help/subscription/` 도), 쓰기 전 `/naver-keyword`. 시안: 2026-11-08 ios-joinsound 세션 1-B.
 - [ ] 블로그 다음 글
       소재 근거: GSC 검색어 · 구글 영어 자동완성 · 스토어 리뷰 · 개선 릴리즈 · 지난 글 GA4 성과.
       문의 메일은 뺀다(Gmail 로 안 들어와 볼 수 없고 건수도 적다, 2026-10-31). 근거 규칙은 AGENTS 블로그 절.
