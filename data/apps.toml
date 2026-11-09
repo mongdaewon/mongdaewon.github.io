@@ -64,7 +64,8 @@
   name = "JoinPDF"
   emoji = "📄"
   color = "#BF2F28"
-  comingsoon = true   # 출시되면 appstore = "https://apps.apple.com/app/id6832261500" 로 바꾼다
+  googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.joinpdf"
+  # iOS 출시되면 appstore = "https://apps.apple.com/app/id6832261500"
 
 [[app]]
   slug = "recnow"
@@ -114,4 +115,5 @@
   emoji = "🥬"
   color = "#5DAE4A"
   appstore = "https://apps.apple.com/app/id6825195851"
+  googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.cantquit"
 

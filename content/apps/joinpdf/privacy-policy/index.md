@@ -43,11 +43,15 @@ Copies of what you add are kept in the app's private storage and excluded from d
 
 ## Photo Library Access
 
-The app uses the system photo picker, so it only sees the photos you choose. It asks for permission only to add pages to Photos, and only when you choose to save them there. It cannot read the rest of your library.
+The app uses the system photo picker, so it only sees the photos you choose. It cannot read the rest of your library.
+
+On iPhone and iPad, the app asks for permission only to add pages to Photos, and only when you choose to save them there. On Android, pages you save as images go to the `Pictures/JoinPDF` folder of your gallery, which needs no permission.
 
 ## Camera Access
 
-The app uses the camera only when you choose to scan a paper document. Scanned pages go into your current project. They are not uploaded, and the app does not add them to Photos unless you save them there.
+The camera is used only when you choose to scan a paper document. Scanned pages go into your current project. They are not uploaded, and the app does not add them to your photos unless you save them there.
+
+On Android, scanning uses the document scanner built into Google Play services. It opens the camera itself, so JoinPDF has no camera permission and receives only the finished page images.
 
 ## File Access
 
@@ -68,9 +72,11 @@ JoinPDF can lock a saved PDF with a password you choose. The password is used on
 
 ## Third-Party Services
 
-Our app uses the following third-party service:
+Our app uses the following third-party services:
 
 - **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
+- **Google Play services document scanner (ML Kit)** (Android) - Scans paper documents ([Privacy Policy](https://policies.google.com/privacy))
+- **Google Play Billing** (Android) - Handles subscriptions and payments ([Privacy Policy](https://policies.google.com/privacy))
 
 ## Advertising
 
@@ -80,13 +86,13 @@ JoinPDF does not display any advertisements. We do not use any advertising SDKs.
 
 JoinPDF offers one optional upgrade, **JoinPDF Plus**, that lets you save any number of pages in one PDF and unlocks the smaller file size option. Combining, editing, password locking, and saving up to 3 pages per PDF are free.
 
-Plus is an auto-renewing subscription or a one-time lifetime purchase. You can cancel a subscription at any time in your App Store account settings.
+Plus is an auto-renewing subscription or a one-time lifetime purchase. You can cancel a subscription at any time in your App Store or Google Play account settings.
 
-Purchases are handled entirely by Apple. We never see or store your payment details. The app only receives, and keeps on your device, whether your purchase or subscription is active.
+Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app only receives, and keeps on your device, whether your purchase or subscription is active.
 
 ## Feedback by Email
 
-The app's feedback link opens your own email app with a new message to us. The message includes the app version, iOS version, and device model, and you can read or change it before sending. We receive it only if you send it, and we use it only to reply and fix problems.
+The app's feedback link opens your own email app with a new message to us. The message includes the app version, the iOS or Android version, and the device model, and you can read or change it before sending. We receive it only if you send it, and we use it only to reply and fix problems.
 
 ## Data Security
 

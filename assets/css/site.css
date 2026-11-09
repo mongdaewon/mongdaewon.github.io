@@ -397,6 +397,7 @@ body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-wi
 .pn-d { font-size: .8125rem; color: var(--muted); }
 .get-btn { display: block; padding: 14px; border-radius: 12px; background: var(--cq); color: #fff; text-align: center; font-size: var(--fs-lg); font-weight: 700; text-decoration: none; }
 .get-btn:hover { filter: brightness(1.08); }
+.get-btn + .get-btn { margin-top: 8px; }
 .get-note { margin: 0; text-align: center; font-size: .75rem; color: var(--muted); }
 .deck-qr { display: none; }
 @media (hover: hover) and (pointer: fine) {
