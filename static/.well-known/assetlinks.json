@@ -1,0 +1,24 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.mongdaewon.cantquit",
+      "sha256_cert_fingerprints": [
+        "83:AE:41:70:85:82:BE:08:8B:31:B6:60:8E:81:D8:DE:CB:9C:DE:2C:6C:64:78:70:BB:35:98:5D:3E:7E:62:C6",
+        "DB:65:7C:80:93:E0:44:54:73:65:D0:0C:A8:53:0C:79:37:4A:A5:FC:AA:2C:20:DE:49:E9:D3:FB:BF:E7:0F:68",
+        "EB:CF:52:EF:AA:03:DD:AB:EB:DF:02:47:B7:83:C0:5E:98:34:8F:33:75:5E:FD:90:DA:EC:D4:72:2A:CE:A7:91"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.mongdaewon.cantquit.debug",
+      "sha256_cert_fingerprints": [
+        "CE:CC:34:F6:89:2E:6B:35:E1:E9:86:A3:1F:1F:4C:A9:B4:F7:01:75:A6:C5:43:C5:39:46:2D:08:28:6E:38:CD"
+      ]
+    }
+  }
+]
