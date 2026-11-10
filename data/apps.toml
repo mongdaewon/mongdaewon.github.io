@@ -64,8 +64,8 @@
   name = "JoinPDF"
   emoji = "📄"
   color = "#BF2F28"
+  appstore = "https://apps.apple.com/app/id6832261500"
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.joinpdf"
-  # iOS 출시되면 appstore = "https://apps.apple.com/app/id6832261500"
 
 [[app]]
   slug = "recnow"
