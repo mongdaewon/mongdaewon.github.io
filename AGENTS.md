@@ -164,7 +164,7 @@ git 히스토리에 영원히 남고 GitHub Pages 한도를 먹는다. 루트 �
 - 덱 상세 끝의 QR(데스크톱에서만 보임)은 Hugo `images.QR` 이 빌드 때 페이지 주소로 만든다(`public/img/qr/`). 폰으로 넘어가는 길이다.
 - 덱 상세의 "받기 전 → 외운 뒤" 줄만 웹 전용으로 `data/cantquit-decks.toml`(키 = 덱 id)에 둔다. 근거 있는 덱만 적고 숫자를 지어내지 않는다. 검색 설명(meta description)은 catalog `description`이다.
 - catalog 가 한국어뿐이라 ko 에만 있다. 덱을 고치려면 `mobile/cantquit-decks` 의 catalog 를 고쳐 CDN 에 올리고 이 사이트를 다시 배포한다(push 또는 workflow_dispatch).
-- 덱 상세 주소는 앱이 유니버설 링크로 받는다(`static/.well-known/apple-app-site-association`). **경로를 바꾸면 앱 링크가 깨진다.** 같은 도메인 안 링크는 앱을 열지 않으므로 덱 상세에 스마트 배너(`apple-itunes-app`, front matter `smartBanner`)를 단다. AASA 는 GitHub Pages 가 `application/octet-stream` 으로 내보내도 Apple CDN 이 받아 간다(2026-11-02 `app-site-association.cdn-apple.com/a/v1/mongdaewon.com` 확인).
+- 덱 상세 주소는 앱이 받는다 - iOS 는 유니버설 링크(`static/.well-known/apple-app-site-association`), Android 는 App Links(`assetlinks.json`, Play 앱 서명 키 SHA-256). **경로를 바꾸면 앱 링크가 깨진다.** 같은 도메인 안 링크는 앱을 열지 않으므로 덱 상세에 스마트 배너(`apple-itunes-app`, front matter `smartBanner`)를 단다. AASA 는 GitHub Pages 가 `application/octet-stream` 으로 내보내도 Apple CDN 이 받아 간다(2026-11-02 `app-site-association.cdn-apple.com/a/v1/mongdaewon.com` 확인).
 
 ### 웹 도구·크롬 확장 — `data/tools.toml` (홈 "Tools" 섹션)
 
