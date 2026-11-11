@@ -249,6 +249,8 @@ layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = tru
 - `static/` — 정적 파일, 빌드 시 사이트 루트로 복사: `app-ads.txt`, 파비콘(`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `site.webmanifest` — favicon.io 패키지, head 링크는 baseof.html), `img/badges/`(스토어 배지), `img/tools/`(도구 아이콘), `googled24a750a4d1fac6e.html`(구글 서치콘솔 소유확인 — 지우면 인증이 풀린다)
 - `data/apps.toml` / `data/tools.toml` — 앱·도구 메타 단일 출처(위 참조). 앱 `name`은 영어, 한국어 이름이 따로면 `name_ko`(ko 사이트에서 `partials/app.html`·`applist.html`이 바꿔 씀)
 
+**목록 없는 폴더:** `content/help/`처럼 하위 페이지만 있고 목록 페이지가 없는 폴더에는 `_index.md`·`_index.ko.md`에 `build: {render: never, list: never}`를 둔다. 없으면 Hugo가 빈 섹션을 만들고 `found no layout file for "html" for kind "section"` 경고를 낸다. 하위 페이지와 sitemap에는 영향이 없다. 경고 확인은 `--quiet` 없이 한다(`--quiet`는 WARN도 숨긴다).
+
 **경로(URL) 안정성:** 콘텐츠 슬러그/경로는 SEO·색인에 영향을 주므로 함부로 바꾸지 않는다.
 
 ## 규칙
