@@ -66,4 +66,4 @@ JoinPDF Plus saves any number of pages. It is a 1-year plan or a one-time lifeti
 
 No. Online PDF mergers upload your documents to their server. JoinPDF reads and joins them on your iPhone, and the PDF goes only where you save or share it. That matters for contracts, IDs and anything with your address on it.
 
-JoinPDF also runs on iPad and Android.
+JoinPDF also runs on iPad and Android. Android has no built-in merge: see [how to combine PDF files on Android](/blog/combine-pdf-files-android/).
