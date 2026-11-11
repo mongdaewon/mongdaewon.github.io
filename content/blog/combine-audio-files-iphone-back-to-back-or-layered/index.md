@@ -1,6 +1,6 @@
 ---
 title: "How to Combine Audio Files on iPhone: Back to Back or Layered?"
-description: "Joining recordings one after another and layering sounds on top of each other are two different jobs. Here is how to tell which one you need, and which app fits it."
+description: "How to combine audio files on iPhone depends on the job: one recording after another, or one sound layered over another, like a voice over music. Here is how to tell which you need, and which app does it."
 date: 2026-10-20
 ---
 
