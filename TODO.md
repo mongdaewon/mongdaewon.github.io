@@ -1,9 +1,6 @@
 # TODO
 
 ## 다음에 할 일
-- [ ] 영상 소리 추출 글 발행
-      `content/blog/extract-audio-from-video-iphone/`, `draft: true`. 수정판은 JoinSound 20261108 로 출시됐다.
-      👤 실기기: 사진 앱 영상 고르기 → Save 까지(시스템 피커·저장은 시뮬레이터 자동화로 못 봤다). 되면 draft 를 빼고 date 를 그날로, 색인 요청.
 - [ ] Ivy 워치 할 일 컴플리케이션 글
       위젯 영어 버그 수정판(20261031)이 출시됐다. 영어 위젯 화면부터 찍는다.
       키워드 "to do list apple watch complication". 경쟁 글은 Reddit 질문·각 앱 도움말뿐이고 튜토리얼 글은 없다(2026-10-31).

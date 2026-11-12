@@ -1,8 +1,7 @@
 ---
 title: "How to Extract Audio from a Video on iPhone"
 description: "Three ways to pull the sound out of a video on iPhone: a Shortcut you build yourself, an online converter, or an app. What each one costs, what gets uploaded, and what to do when the shortcut stops working."
-date: 2026-11-05
-draft: true
+date: 2026-11-12
 app: joinsound
 ---
 
