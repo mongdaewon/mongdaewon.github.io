@@ -1,6 +1,9 @@
 # TODO
 
 ## 다음에 할 일
+- [ ] Deep Breath 처리방침 분석 항목에 "구매" 추가
+      iOS `Track` 이 `Analytics.logTransaction` 으로 구매(상품·가격, 결제 정보 제외)를 GA4 로 보낸다(2026-11-12 ios-deep-breath).
+      `content/apps/deep-breath/privacy-policy/index.md` §1 Analytics Data 목록에 한 줄 + Last updated.
 - [ ] Ivy 워치 할 일 컴플리케이션 글
       위젯 영어 버그 수정판(20261031)이 출시됐다. 영어 위젯 화면부터 찍는다.
       키워드 "to do list apple watch complication". 경쟁 글은 Reddit 질문·각 앱 도움말뿐이고 튜토리얼 글은 없다(2026-10-31).
