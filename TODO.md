@@ -1,10 +1,11 @@
 # TODO
 
 ## 다음에 할 일
-- [ ] Deep Breath·JoinCut·술술낱말 처리방침 분석 항목에 "구매" 추가
+- [ ] Deep Breath·JoinCut·술술낱말·JoinSound 처리방침에 "구매" 추가
       iOS `Track` 이 `Analytics.logTransaction` 으로 구매(상품·가격, 결제 정보 제외)를 GA4 로 보낸다(2026-11-12 ios-deep-breath·ios-joincut).
       `content/apps/{deep-breath,joincut,sulsul}/privacy-policy/index.md` §1 Analytics Data 목록에 한 줄 + Last updated.
       sulsul 은 §In-App Purchases 의 "only receives … whether the purchase is active" 도 고친다(ios-sulsul 2026-11-13).
+      joinsound 는 §In-App Purchases 의 "1-year … or lifetime" 에 1주 구독($2.99, 20261115.1.0)을 더하고 "only receives … whether … active" 도 고친다(ios-joinsound 2026-11-16).
 - [ ] JoinCut 처리방침 §In-App Purchases 를 구독판으로 — 다음 iOS 판부터 주 $1.99·연 $9.99 구독·평생권 $24.99
       지금 "a one-time in-app purchase (JoinCut Plus)" 다. JoinSound 처리방침(구독 전환 판)과 같은 꼴로, 앱 출시 전에(2026-11-15 ios-joincut)
 - [ ] Ivy 워치 할 일 컴플리케이션 글
