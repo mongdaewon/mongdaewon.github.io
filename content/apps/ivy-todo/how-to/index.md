@@ -42,4 +42,4 @@ Say "Add a task in Ivy To Do" to Siri, or use Shortcuts. On iPad and Mac, press 
 
 ## Ivy To Do Plus (iOS)
 
-Tasks, reminders, history and Home Screen widgets are always free. On iPhone, iPad and Mac, Plus is a one-time purchase that unlocks Lock Screen widgets and iCloud sync across iPhone, iPad and Mac. On Android, everything in the app is free. There are no ads on either platform.
+Tasks, reminders, history and Home Screen widgets are always free. On iPhone, iPad and Mac, Plus is a one-time purchase that unlocks Lock Screen widgets, iCloud sync across iPhone, iPad and Mac, and the Apple Watch app with watch face complications ([how to add one](/blog/to-do-list-apple-watch-complication/)). On Android, everything in the app is free. There are no ads on either platform.
