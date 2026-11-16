@@ -9,10 +9,6 @@
 6-11-16).
 - [ ] JoinCut 처리방침 §In-App Purchases 를 구독판으로 — 다음 iOS 판부터 주 $1.99·연 $9.99 구독·평생권 $24.99
       지금 "a one-time in-app purchase (JoinCut Plus)" 다. JoinSound 처리방침(구독 전환 판)과 같은 꼴로, 앱 출시 전에(2026-11-15 ios-joincut)
-- [ ] Ivy 워치 할 일 컴플리케이션 글
-      위젯 영어 버그 수정판(20261031)이 출시됐다. 영어 위젯 화면부터 찍는다.
-      키워드 "to do list apple watch complication". 경쟁 글은 Reddit 질문·각 앱 도움말뿐이고 튜토리얼 글은 없다(2026-10-31).
-
 ## 포기하면 안돼 덱 마켓 웹 페이지
 구조·규칙은 AGENTS §포기하면 안돼 덱 마켓.
 - [ ] 👤 아이폰 카메라로 덱 QR 찍어 앱 덱 상세 열림 확인
