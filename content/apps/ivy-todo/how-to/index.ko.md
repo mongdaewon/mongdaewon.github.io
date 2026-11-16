@@ -42,4 +42,4 @@ layout: "howto"
 
 ## Ivy To Do Plus (iOS)
 
-할 일, 알림, 기록, 홈 화면 위젯은 언제나 무료입니다. iPhone·iPad·Mac에서 Plus는 한 번만 결제하면 잠금화면 위젯과 iCloud 동기화(iPhone, iPad, Mac)가 열립니다. Android에서는 앱의 모든 기능이 무료입니다. 두 플랫폼 모두 광고는 없습니다.
+할 일, 알림, 기록, 홈 화면 위젯은 언제나 무료입니다. iPhone·iPad·Mac에서 Plus는 한 번만 결제하면 잠금화면 위젯, iCloud 동기화(iPhone, iPad, Mac), 워치 페이스 컴플리케이션이 있는 Apple Watch 앱이 열립니다. Android에서는 앱의 모든 기능이 무료입니다. 두 플랫폼 모두 광고는 없습니다.
