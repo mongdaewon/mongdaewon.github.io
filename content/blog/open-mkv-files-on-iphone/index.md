@@ -53,6 +53,10 @@ And if it is only the audio that is wrong, you do not have to touch the picture.
 <figure><img src="joincut-mkv-refused.jpg" alt="JoinCut sheet Files that could not be loaded: Concert.mkv with H.264 video marked OK and DTS audio marked with a cross, and a note to save it with AAC audio" width="460" height="1000" loading="lazy"><figcaption>DTS audio: the app shows which track is the problem</figcaption></figure>
 </div>
 
+## Can you convert MKV to MP4 on iPhone?
+
+You don't need to. JoinCut saves the MKV to Photos as a MOV file, the same format your iPhone camera records in, with the video and audio copied over untouched. MP4 and MOV hold the same H.264 or HEVC video, so it plays anywhere an iPhone video plays. Converter apps that turn MKV into MP4 usually re-encode the whole video to get there.
+
 ## What about AVI?
 
 AVI is not opened, on purpose, even in cases where the device could read it.

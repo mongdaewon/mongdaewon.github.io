@@ -5,7 +5,7 @@ date: 2026-11-17
 app: joincut
 ---
 
-Most videos have something to drop: a slow start, a shaky end, or a few seconds in the middle where someone walked in front of the camera. The iPhone handles the first two on its own. The middle needs one more step.
+To trim a video on iPhone, open it in Photos, tap **Edit** and drag the ends of the frame strip. That cuts a slow start or a shaky end. Cutting out a few seconds in the middle needs one more step.
 
 ## How to trim a video on iPhone with the Photos app
 

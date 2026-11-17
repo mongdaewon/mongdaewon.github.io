@@ -5,7 +5,7 @@ date: 2026-11-12
 app: joinsound
 ---
 
-You have a video on your iPhone and you only want its sound: a talk, a lesson, a song someone played at a party. The iPhone has no button for this, but there are three ways to do it. The Shortcuts app is free and built in. An app takes fewer steps. Here is how each one works.
+The iPhone has no button that turns a video into audio, but there are three ways to do it: a Shortcut you build once in the Shortcuts app, an online converter, or an app like JoinSound. The Shortcut is free and built in. An app takes fewer steps. Here is how each one works.
 
 <div class="shots">
 <figure><img src="joinsound-start.jpg" alt="JoinSound start screen with two buttons: Choose Audio Files and Get Sound from Videos" width="460" height="1000" loading="lazy"><figcaption>Get Sound from Videos opens your Photos library</figcaption></figure>

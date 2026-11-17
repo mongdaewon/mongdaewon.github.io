@@ -5,7 +5,7 @@ date: 2026-11-16
 app: ivy-todo
 ---
 
-You check the time dozens of times a day. If today's tasks sit next to the time, you see them just as often, without opening an app. That is what a to-do list complication does.
+To put a to-do list on your Apple Watch face, add a to-do app's complication to a face with a large slot, like Modular. Today's tasks then sit next to the time, and you see them every time you raise your wrist, without opening an app.
 
 <div class="shots">
 <figure><img src="ivy-watch-face.jpg" alt="Apple Watch face showing MON 16 and 18:53, a progress ring reading 1/3 at the top left, and below the time a list of two tasks left: Call Mom and Buy milk" width="396" height="484" loading="lazy"><figcaption>On the watch face: a progress ring and what's left</figcaption></figure>
@@ -42,7 +42,7 @@ Turn the Digital Crown on the watch face, and the Smart Stack slides up with the
 
 Open Ivy To Do on the watch and tap a task to check it off. The ring and the list on your watch face update with it. Swipe left to see tomorrow's tasks. You add and reorder tasks on your iPhone.
 
-Anything you don't finish moves to tomorrow on its own, with a badge like **+2d** that shows how long it has waited.
+Anything you don't finish moves to tomorrow on its own, with a badge like **+2d** that shows how long it has waited. That carry-over comes from [the Ivy Lee Method](/blog/ivy-lee-method-six-tasks-a-day/), a hundred-year-old way to plan six tasks a day.
 
 ## Is it free?
 

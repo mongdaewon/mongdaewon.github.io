@@ -64,6 +64,8 @@ Three switches cover what usually goes wrong when recordings are joined:
 
 When your files share the same format and nothing needs changing, M4A is saved without re-encoding, so the audio keeps its original quality.
 
+Joining recordings from the Voice Memos app? See [how to combine voice memos on iPhone](/blog/merge-voice-memos-iphone/). If the sound you want is inside a video, JoinSound can [take it out of the video](/blog/extract-audio-from-video-iphone/) first.
+
 ## How to layer audio on iPhone
 
 Layering needs a timeline, because you have to say *when* each sound starts. That is what AudioJoin is for.

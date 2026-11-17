@@ -5,7 +5,7 @@ date: 2026-11-11
 app: joinpdf
 ---
 
-A form asks for a PDF, and what you have is photos: a receipt, both sides of an ID, a few pages of a document you shot on the table. Here is how to turn them into one PDF on iPhone, free first.
+To make a PDF from photos on iPhone, select them in Photos, tap **Share**, then **Print**, and share the preview as a PDF. It is free and built in. Here are the steps, and what to use when the pages need the same size or a different order.
 
 ## How to make a PDF from photos without an app
 

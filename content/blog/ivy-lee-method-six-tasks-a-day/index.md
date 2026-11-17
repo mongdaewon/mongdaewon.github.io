@@ -29,6 +29,19 @@ The first is the limit. A list of thirty things is not a plan, it is an inventor
 
 The second is the order. Once the list is ranked, you never have to ask "what should I do now?" again. You already answered that yesterday, when you were calm. The answer is: the top one.
 
+## An Ivy Lee Method example
+
+A list written the evening before might look like this:
+
+1. Finish the client proposal
+2. Reply to the contractor about the quote
+3. Review Sam's pull request
+4. Book the dentist
+5. Clear the expense reports
+6. Read the chapter for Thursday's meeting
+
+The proposal is first because everything after it can wait a day and it cannot. If the day only gets through three, the dentist, the expenses and the chapter go to the top of tomorrow's ranking, against whatever new arrives.
+
 ## Why six?
 
 Six is small enough that you have to leave things out, and large enough to hold a real day. There is nothing magic about the number. The magic is in being unable to add a seventh.
@@ -61,7 +74,7 @@ That is what [Ivy To Do](/apps/ivy-todo/) is. Start with your six most important
 <figure><img src="ivy-tomorrow.jpg" alt="Ivy To Do Tomorrow tab: the three unfinished tasks already carried into Wednesday, in the same order" width="460" height="1000" loading="lazy"><figcaption>Tomorrow: the leftovers are already there, in order</figcaption></figure>
 </div>
 
-The list sits in a Home Screen widget, so it is in front of you without opening anything, and on iPhone you can check tasks off on the widget itself. An evening reminder brings you back to plan tomorrow. The calendar keeps every day you have done, with a monthly line: tasks done, perfect days and your current streak.
+The list sits in a Home Screen widget, so it is in front of you without opening anything, and on iPhone you can check tasks off on the widget itself. With Ivy To Do Plus, the same list can sit [on your Apple Watch face](/blog/to-do-list-apple-watch-complication/). An evening reminder brings you back to plan tomorrow. The calendar keeps every day you have done, with a monthly line: tasks done, perfect days and your current streak.
 
 All of that is free, with no ads and no account.
 
