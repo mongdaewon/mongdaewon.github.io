@@ -1,6 +1,6 @@
 ---
-title: "Open MKV Files on iPhone, and Merge Them Without Re-encoding"
-description: "The iPhone does not open MKV out of the box. JoinCut now reads MKV files and joins them with nothing re-encoded, when the codecs allow it. Here is the rule."
+title: "How to Play MKV Files on iPhone (and Merge Them Without Re-encoding)"
+description: "Why MKV files won't play on iPhone, and how to play them without re-encoding: JoinCut reads the MKV and saves it to Photos at original quality, and can merge several into one. Here is which files work."
 date: 2026-09-24
 app: "joincut"
 ---
@@ -15,7 +15,7 @@ A user wrote in with a simple request: let the app read video files from Files t
 
 It was a good request, so it went into this release. One of the two formats made it. The other did not, and the reason is worth explaining.
 
-## Why can't an iPhone open MKV files?
+## Why won't MKV files play on iPhone?
 
 MKV is a container. It is a box that holds a video track and an audio track, the same way MP4 is a box. The picture inside is very often the exact same H.264 or HEVC video an MP4 would hold.
 
@@ -27,7 +27,7 @@ That is also why "converting" an MKV usually means re-encoding the whole video, 
 
 It reads the box itself, takes the compressed video and audio out, and puts them into a container iOS does understand. The frames are never decoded and never drawn again. They are copied over as they are.
 
-So the file opens at original quality, and from there it behaves like any other video in the app: trim it, pick the parts you want, and join it with other clips. Saving stays lossless as long as the clips share a format, which is [the rule from the earlier post](/blog/merge-videos-iphone-without-losing-quality/).
+So the file opens at original quality. To watch it, save it to Photos, and it plays there like any other video. In the app it behaves like any other clip: trim it, pick the parts you want, and join it with other clips. Saving stays lossless as long as the clips share a format, which is [the rule from the earlier post](/blog/merge-videos-iphone-without-losing-quality/).
 
 ## Which MKV files will open
 

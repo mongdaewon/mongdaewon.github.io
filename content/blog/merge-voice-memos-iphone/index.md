@@ -1,6 +1,6 @@
 ---
-title: "How to Merge Voice Memos on iPhone Into One Recording"
-description: "Voice Memos can trim a recording and record over part of it, but it cannot join two recordings. Here is how to merge voice memos into one file on iPhone, for free and without uploading them."
+title: "How to Combine Voice Memos on iPhone Into One Recording"
+description: "Voice Memos can trim a recording and record over part of it, but it cannot join two recordings. Here is how to combine voice memos into one file on iPhone, for free and without uploading them."
 date: 2026-10-30
 app: joinsound
 ---
@@ -12,7 +12,7 @@ You recorded a lecture, a meeting or a song idea in two or three parts, and now 
 <figure><img src="joinsound-preview.jpg" alt="JoinSound Preview: one waveform made of both recordings, with a yellow line where the second one starts" width="460" height="1000" loading="lazy"><figcaption>Preview: hear the joined file before you save it</figcaption></figure>
 </div>
 
-## Can you merge voice memos on iPhone without an app?
+## Can you combine voice memos on iPhone without an app?
 
 No. Voice Memos lets you [trim a recording or replace part of it](https://support.apple.com/guide/iphone/edit-or-delete-a-recording-iphc9bdaee83/ios), but there is no button that joins two separate recordings into one.
 
@@ -27,7 +27,7 @@ Your choices are:
 
 GarageBand is free and works, but it is a music studio. You place each recording on a timeline yourself. If all you want is "this, then this", that is more than you need.
 
-## How to merge voice memos on iPhone
+## How to combine voice memos on iPhone
 
 1. In Voice Memos, open a recording and tap the **Share** button. Pick **Add to JoinSound**. If you don't see it, tap **More** at the end of the app row.
 2. Do the same for the next recording. Each one is added to the end of the list in JoinSound.

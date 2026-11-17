@@ -1,6 +1,6 @@
 ---
-title: "How to Merge Videos on iPhone Without Losing Quality"
-description: "Most apps re-encode your clips when they join them, which costs quality and time. Here is how to tell, and how to merge videos on iPhone losslessly."
+title: "How to Combine Videos on iPhone Without Losing Quality"
+description: "How to combine videos on iPhone into one without losing quality. Photos can't join clips, and most apps re-encode them, which costs quality and time. Here is how to tell, and how to merge them losslessly."
 date: 2026-09-24
 app: "joincut"
 ---
@@ -8,6 +8,10 @@ app: "joincut"
 You can join videos on an iPhone without losing any quality. It works when the clips share the same format, and it finishes in seconds instead of minutes, because none of the frames are drawn again.
 
 Here is what goes wrong in most apps, and how to avoid it.
+
+## Can you combine videos on iPhone without an app?
+
+Not in Photos. It can trim a video, but it has no button that joins two clips into one. The usual answer is iMovie, Apple's free editor: start a movie, add the clips, and export. iMovie re-encodes everything when it exports, though, so the result is a new copy of your video, not the original frames.
 
 ## Why do merged videos lose quality?
 
@@ -37,7 +41,7 @@ When the clips match. Video files carry a format, and two files can only be stit
 
 Clips shot on the same iPhone with the same camera setting almost always match. A screen recording next to a camera clip, a video downloaded from the web, or a 4K clip next to a 1080p one usually does not. When the formats differ, something has to be re-encoded.
 
-## How to merge videos on iPhone without losing quality
+## How to combine videos on iPhone without losing quality
 
 1. Open [JoinCut](/apps/joincut/) and pick the videos you want to join. They are joined back to back in the order you picked them.
 2. Check the order, and drag to change it if you tapped one out of turn.

@@ -1,6 +1,6 @@
 ---
 title: "How to Make a PDF on iPhone From Photos (One or Many Pictures)"
-description: "Turn one photo or a stack of pictures into a single PDF on iPhone. The free way hides in the Print menu. Here are the steps, and what to use when the pages need to be the same size or in a different order."
+description: "How to make a PDF on iPhone from photos: convert one picture or a stack of JPGs into a single PDF. The free way hides in the Print menu. Here are the steps, and what to use when the pages need to be the same size or in a different order."
 date: 2026-11-11
 app: joinpdf
 ---
