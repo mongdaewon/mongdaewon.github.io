@@ -68,7 +68,7 @@ JoinCut does not display any advertisements. We do not use any advertising SDKs.
 
 JoinCut offers JoinCut Plus. Free covers up to 2 segments per video and 2 videos per merge; Plus removes both limits, removes the GIF watermark, and saves selected segments as separate files.
 
-On iPhone and iPad, Plus is a 1-week or 1-year auto-renewing subscription or a one-time lifetime purchase. On Android, it is a one-time purchase. If you already bought Plus, you keep it. You can cancel a subscription at any time in your App Store account settings.
+On iPhone, iPad and Android, Plus is a 1-week or 1-year auto-renewing subscription or a one-time lifetime purchase. If you already bought Plus, you keep it. You can cancel a subscription at any time in your App Store or Google Play account settings.
 
 Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app only receives, and keeps on your device, whether your purchase or subscription is active.
 
