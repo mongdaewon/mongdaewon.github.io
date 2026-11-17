@@ -5,7 +5,7 @@ date: 2026-11-11
 app: joinpdf
 ---
 
-You have a few PDFs, maybe some photos of a receipt or an ID, and a form that takes one file. Here is how to put them together on an Android phone without sending them anywhere.
+Android has no built-in way to join PDFs, so you need an app or a website. A website uploads your files; an app like JoinPDF puts PDFs and photos into one file on your phone, offline. Here is how.
 
 ## Can you merge PDFs on Android without an app?
 

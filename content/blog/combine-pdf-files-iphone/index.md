@@ -5,7 +5,7 @@ date: 2026-11-11
 app: joinpdf
 ---
 
-You have two or three PDFs, maybe a few photos of a receipt or an ID, and you need to send one file. The iPhone can do part of this on its own. Here is the free way first, and where it stops.
+Yes, the Files app can combine PDFs on iPhone for free: select them, tap **⋯** and **Create PDF**. It joins them in name order, though, and you can't move single pages. Here is the free way first, and where it stops.
 
 ## Can you combine PDFs on iPhone without an app?
 
@@ -17,7 +17,7 @@ Yes. The Files app has a **Create PDF** action that joins the files you select i
 
 The new PDF appears in the same folder. Your original files stay where they were.
 
-It works for photos too, if they are saved in Files. Photos in the Photos app have to be saved to Files first.
+It works for photos too, if they are saved in Files. Photos in the Photos app have to be saved to Files first, or you can [make a PDF straight from Photos](/blog/make-pdf-from-photos-iphone/) with the Print menu.
 
 ## The catch: you don't choose the order
 

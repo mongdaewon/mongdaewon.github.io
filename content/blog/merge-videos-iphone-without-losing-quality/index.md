@@ -39,7 +39,7 @@ Three signs give it away.
 
 When the clips match. Video files carry a format, and two files can only be stitched together untouched if they agree on it.
 
-Clips shot on the same iPhone with the same camera setting almost always match. A screen recording next to a camera clip, a video downloaded from the web, or a 4K clip next to a 1080p one usually does not. When the formats differ, something has to be re-encoded.
+Clips shot on the same iPhone with the same camera setting almost always match. A screen recording next to a camera clip, a video downloaded from the web, or a 4K clip next to a 1080p one usually does not. When the formats differ, something has to be re-encoded. MKV files from a computer can join too, if their tracks are H.264 or HEVC: see [how to play MKV files on iPhone](/blog/open-mkv-files-on-iphone/).
 
 ## How to combine videos on iPhone without losing quality
 
@@ -58,7 +58,7 @@ If one clip does not match the rest, JoinCut points out which video is forcing t
 
 ## Keeping only part of a video
 
-The same applies when you do not want the whole clip. Split a video into sections, keep the ones worth keeping, and they are joined back into one video without re-encoding. The trimmer zooms in up to 8x, so a cut lands exactly where you meant it to.
+The same applies when you do not want the whole clip. Split a video into sections, keep the ones worth keeping, and they are joined back into one video without re-encoding. The trimmer zooms in up to 8x, so a cut lands exactly where you meant it to. For a quick cut at the start or end only, Photos is enough: see [how to trim a video on iPhone](/blog/trim-video-iphone/).
 
 <div class="shots one">
 <figure><img src="joincut-parts.jpg" alt="JoinCut trimmer with one video split into three parts, zoom options 1x to 8x above the strip and a card for each part below" width="460" height="1000" loading="lazy"><figcaption>One video split into three parts, joined back without re-encoding</figcaption></figure>

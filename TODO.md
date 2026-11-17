@@ -21,6 +21,9 @@
       remove silence from audio 170 · 12. Shorten silences 는 Plus.
 - [ ] 아이폰 영상 GIF 만들기 글 (JoinCut) @11/23
       video to gif iphone 320 · 46(어려움). 무료는 워터마크.
+- [ ] 경쟁 앱 비교 글 후보 고르기 @11/24
+      앱마다 스토어 상위 경쟁 앱을 받아 보고, 우리가 확연히 나은 점(무손실·무료 범위·업로드 없음·광고 없음 등)이 앱 레포로 확인되는 것만 남긴다.
+      `<경쟁앱> alternative`·`<경쟁앱> vs`·`best <분류> app` 을 /google-keyword 로 재고 의도가 기존 글과 겹치면 기존 글 표에 넣는다.
 
 ## 포기하면 안돼 덱 마켓 웹 페이지
 구조·규칙은 AGENTS §포기하면 안돼 덱 마켓.

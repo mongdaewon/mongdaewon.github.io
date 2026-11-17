@@ -5,7 +5,7 @@ date: 2026-10-30
 app: joinsound
 ---
 
-You recorded a lecture, a meeting or a song idea in two or three parts, and now you want one file. Voice Memos can't do that on its own. You need a second app. Here is the shortest way, and what each option costs.
+Voice Memos can't join two recordings on its own, so to combine a lecture, a meeting or a song idea recorded in parts, you need a second app. Here is the shortest way, and what each option costs.
 
 <div class="shots">
 <figure><img src="joinsound-list.jpg" alt="JoinSound with two voice memos, New Recording and New Recording 2, in a numbered list above the Merge into one button. M4A is selected and marked No re-encoding, original quality" width="460" height="1000" loading="lazy"><figcaption>Two voice memos, top to bottom. The red marks on the second are Shorten silences, a Plus option.</figcaption></figure>
