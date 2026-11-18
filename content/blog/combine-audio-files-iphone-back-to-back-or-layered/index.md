@@ -1,10 +1,10 @@
 ---
-title: "How to Combine Audio Files on iPhone: Back to Back or Layered?"
-description: "How to combine audio files on iPhone depends on the job: one recording after another, or one sound layered over another, like a voice over music. Here is how to tell which you need, and which app does it."
+title: "How to Merge Audio Files Into One: Back to Back or Layered?"
+description: "To merge audio files into one, first pick the job: one recording after another, or one sound layered over another, like a voice over music. How to do both on iPhone, iPad or Android, MP3 files included, without uploading anything."
 date: 2026-10-20
 ---
 
-There are two ways to combine audio files on an iPhone, and they are not the same job.
+To merge audio files into one on your phone, first decide which kind of merge you need. There are two, and they are not the same job.
 
 <div class="lanes">
 <div class="lane-box">
@@ -45,9 +45,9 @@ We make an app for each: [JoinSound](/apps/joinsound/) for back to back, and [Au
 
 JoinSound does fewer things, on purpose. Everything on its screen is about getting one clean file out of several.
 
-## How to combine audio files on iPhone, one after another
+## How to merge audio files one after another
 
-There is nothing to place on a timeline: the order of the list is the order of the file.
+There is nothing to place on a timeline: the order of the list is the order of the file. It works the same for MP3 files, recordings and songs, on iPhone, iPad or Android.
 
 1. Open JoinSound and pick your recordings, or share them in from another app.
 2. Drag the rows into order. Tap the scissors on a row to trim it on the waveform.
@@ -66,7 +66,7 @@ When your files share the same format and nothing needs changing, M4A is saved w
 
 Joining recordings from the Voice Memos app? See [how to combine voice memos on iPhone](/blog/merge-voice-memos-iphone/). If the sound you want is inside a video, JoinSound can [take it out of the video](/blog/extract-audio-from-video-iphone/) first.
 
-## How to layer audio on iPhone
+## How to layer audio files
 
 Layering needs a timeline, because you have to say *when* each sound starts. That is what AudioJoin is for.
 
