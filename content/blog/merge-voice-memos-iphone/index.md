@@ -60,7 +60,7 @@ Merging two voice memos is free, with no ads and no sign-in.
 | Shorten long silences | | ✓ |
 | Save as | M4A | M4A, MP3, WAV |
 
-On iPhone, Plus is a 1-year plan or a one-time lifetime purchase.
+On iPhone, Plus is a 1-year plan or a one-time lifetime purchase. If all you need is one memo as an MP3, see [how to convert a voice memo to MP3](/blog/convert-voice-memo-to-mp3-iphone/).
 
 ## Are my recordings uploaded?
 
