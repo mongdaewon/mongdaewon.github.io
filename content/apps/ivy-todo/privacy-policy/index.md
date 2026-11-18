@@ -6,7 +6,7 @@ layout: "single"
 
 **Ivy To Do - Task Checklist**
 
-Last updated: October 20, 2026
+Last updated: November 18, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -22,6 +22,7 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 
 - App usage patterns and feature interactions
 - Device type and operating system version
+- Plus purchases (iOS): which item was bought and its price, never your payment details
 
 This data is collected automatically and cannot be used to identify you personally.
 
@@ -62,9 +63,9 @@ Ivy To Do does not display any advertisements on iOS or Android. We do not use a
 
 ## In-App Purchases
 
-On iOS, Ivy To Do offers one optional in-app purchase, **Ivy To Do Plus**: a single payment, not a subscription, that unlocks Lock Screen widgets and iCloud sync across iPhone, iPad and Mac. Tasks, reminders, history and Home Screen widgets are free. On Android, the app has no in-app purchases and everything is free.
+On iOS, Ivy To Do offers one optional in-app purchase, **Ivy To Do Plus**: a single payment, not a subscription, that unlocks Lock Screen widgets, iCloud sync across iPhone, iPad and Mac, and the Apple Watch app. Tasks, reminders, history and Home Screen widgets are free. On Android, the app has no in-app purchases and everything is free.
 
-Purchases are handled entirely by Apple through the App Store. We never see or store your payment details. The app only receives, and keeps on your device, whether the purchase is active.
+Purchases are handled entirely by Apple through the App Store. We never see or store your payment details. The app receives, and keeps on your device, whether the purchase is active. When you buy Plus, the app also sends the item and its price to Firebase Analytics, as described under Analytics Data, so we can see how the app is doing.
 
 ## Data Storage
 
