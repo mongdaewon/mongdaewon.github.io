@@ -111,6 +111,6 @@ A simple test: if you could describe the result as "this, then this, then this",
 | Save as | M4A | M4A, MP3, WAV |
 | Ads | None | None |
 
-The table is the same for both apps. Plus is bought separately in each. On iPhone and iPad it is a 1-year plan or a lifetime purchase; on Android it is a one-time purchase.
+The table is the same for both apps. Plus is bought separately in each. On iPhone and iPad it is a yearly plan or a lifetime purchase, and JoinSound also has a weekly plan; on Android it is a one-time purchase.
 
 Both run on iPhone, iPad and Android, and neither uploads your audio. Everything is processed on your device.

@@ -65,7 +65,7 @@ Yes, with JoinSound Plus. Saving as M4A is free, and it is what iPhone's own Voi
 | Files in one result | 2 | 3 or more |
 | Save as | M4A | M4A, MP3, WAV |
 
-On iPhone, Plus is a 1-year plan or a one-time lifetime purchase.
+On iPhone, Plus is a weekly or yearly plan, or a one-time lifetime purchase. On Android it is a one-time purchase.
 
 ## Is my video uploaded?
 
