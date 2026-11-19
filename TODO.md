@@ -1,10 +1,6 @@
 # TODO
 
 ## 다음에 할 일
-- [ ] JoinEdit 처리방침 페이지 만들기(Android 출시 막힘)
-      `content/apps/joinedit/privacy-policy/index.md` 가 없어 `mongdaewon.com/apps/joinedit/privacy-policy/` 404(2026-11-19, android-joinedit `check-privacy.sh`).
-      joincut 처리방침 꼴로: 광고 없음 · Firebase Analytics(화면·작업·저장·결제 이벤트, 광고 ID 안 씀 — Firebase `joinedit-mdw`) · Plus 구매(상품·가격, 결제 정보 제외) ·
-      사진·영상은 사진 선택기로 고른 것만 기기 안에서 읽고 올리지 않음 · 마이크(녹음 도구, 기기 안 저장) · 계정 없음 · 문의 support@mongdaewon.com.
 - [ ] Deep Breath·술술낱말·JoinSound·JoinPhoto 처리방침에 "구매" 추가
       iOS `Track` 이 `Analytics.logTransaction` 으로 구매(상품·가격, 결제 정보 제외)를 GA4 로 보낸다(2026-11-12 ios-deep-breath·ios-joincut).
       `content/apps/{deep-breath,sulsul}/privacy-policy/index.md`(joincut 은 2026-11-17 함) §1 Analytics Data 목록에 한 줄 + Last updated.
