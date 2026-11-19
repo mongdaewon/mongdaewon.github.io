@@ -33,7 +33,7 @@ The Print trick is fine for one or two pictures. With more, a few things get in 
 | Margin | Print margin | None, thin or wide |
 | Make the file smaller | ✗ | ✓ |
 | Lock with a password | ✗ | ✓ |
-| Free | ✓ | ✓ up to 3 pages per PDF |
+| Free | ✓ | ✓ up to 5 pages per PDF |
 | Photos leave your iPhone | No | No |
 
 Photos straight from the camera are large. Ten of them can make a PDF too big for an email or an upload form.
@@ -57,7 +57,7 @@ Need a PDF you already have in the same file, like a form plus photos of your re
 
 ## Is it free?
 
-A PDF of up to 3 pages is free, with no ads and no sign-in. Locking it with a password is free too. JoinPDF Plus saves any number of pages, as a 1-year plan or a one-time lifetime purchase.
+A PDF of up to 5 pages is free, with no ads and no sign-in. Locking it with a password is free too. JoinPDF Plus saves any number of pages, as a 1-year plan or a one-time lifetime purchase.
 
 ## Are my photos uploaded?
 
