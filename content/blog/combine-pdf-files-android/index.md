@@ -21,7 +21,7 @@ That leaves two ways:
 | Photos in the same PDF | Some sites | ✓ straight from your gallery |
 | Choose the order | Usually by file | By page |
 | Move, rotate or remove single pages | Some sites | ✓ |
-| Free | Often with a daily limit | ✓ up to 3 pages per PDF |
+| Free | Often with a daily limit | ✓ up to 5 pages per PDF |
 
 An online merger is fine for a menu or a public flyer. For a contract, a bank statement or a scan of your ID, you probably don't want a copy on someone else's server.
 
@@ -52,8 +52,8 @@ Yes. When you add a locked PDF, JoinPDF asks for its password, then its pages jo
 
 ## Is it free?
 
-Saving a PDF of up to 3 pages is free, with no ads and no sign-in. Opening and locking PDFs with a password is free too.
+Saving a PDF of up to 5 pages is free, with no ads and no sign-in. Making the file smaller and locking it with a password are free too.
 
-JoinPDF Plus saves any number of pages and adds the smallest file size. It is a 1-year plan or a one-time lifetime purchase.
+JoinPDF Plus saves any number of pages. It is a 1-year plan or a one-time lifetime purchase.
 
 JoinPDF also runs on iPhone and iPad. On iPhone the Files app can do a simple merge on its own: see [how to combine PDF files on iPhone](/blog/combine-pdf-files-iphone/).

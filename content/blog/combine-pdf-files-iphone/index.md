@@ -34,7 +34,7 @@ There is also no page view before you create the PDF. You can't drop one page fr
 | See every page before you save | ✗ | ✓ |
 | Fit every page to A4 or Letter | ✗ | ✓ |
 | Lock the result with a password | ✗ | ✓ |
-| Free | ✓ | ✓ up to 3 pages per PDF |
+| Free | ✓ | ✓ up to 5 pages per PDF |
 | Files leave your iPhone | No | No |
 
 If the files are already named in the right order and you need every page as it is, Files is enough.
@@ -58,7 +58,7 @@ Photos of different sizes can look messy next to document pages. Under **Paper**
 
 ## Is it free?
 
-Saving a PDF of up to 3 pages is free, with no ads and no sign-in. Opening a password-protected PDF and locking the one you save are free too.
+Saving a PDF of up to 5 pages is free, with no ads and no sign-in. Opening a password-protected PDF and locking the one you save are free too.
 
 JoinPDF Plus saves any number of pages. It is a 1-year plan or a one-time lifetime purchase.
 
