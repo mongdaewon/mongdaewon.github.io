@@ -62,6 +62,8 @@ Three switches cover what usually goes wrong when recordings are joined:
 | A click where files meet | Smooth joins | Adds a short fade at each join |
 | Long pauses | Shorten silences | Takes out long gaps. *Natural* leaves short pauses alone, *Tight* cuts closer |
 
+Shorten silences is set per file. Here is [how it decides what to remove](/blog/remove-silence-from-audio/).
+
 When your files share the same format and nothing needs changing, M4A is saved without re-encoding, so the audio keeps its original quality.
 
 Joining recordings from the Voice Memos app? See [how to combine voice memos on iPhone](/blog/merge-voice-memos-iphone/). If the sound you want is inside a video, JoinSound can [take it out of the video](/blog/extract-audio-from-video-iphone/) first.

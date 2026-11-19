@@ -9,8 +9,6 @@
 6-11-16).
 ## 블로그 새 글 (하루 1개, 2026-11-17 우버서제스트 미국 검색량)
 글 하나 = 그날 키워드로 `/google-keyword` 재확인 → 앱 레포 기능·스크린샷 대조 → 발행·색인·월간 리뷰 기준선.
-- [ ] 오디오 무음 구간 지우기 글 (JoinSound) @11/19
-      remove silence from audio 170 · 12. Shorten silences 는 Plus.
 - [ ] 오디오 볼륨 고르게 맞추기 글 (JoinSound) @11/20
       normalize audio volume 140 · 27, make audio louder iphone 30 · 30. 볼륨 맞추기는 무료(AudioJoin 엔 없음).
 - [ ] 아이폰 음성 메모 자르기 글 (AudioJoin) @11/21
