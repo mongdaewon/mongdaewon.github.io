@@ -128,6 +128,7 @@ git 히스토리에 영원히 남고 GitHub Pages 한도를 먹는다. 루트 �
 - **같은 앱·옆 질문 글끼리 본문 흐름 안에서 링크한다**(글 끝 "More about X"와 별개). 새 글을 내면 그 글에서 2개 안팎, 옆 글에서 그 글로 1개 이상 건다 — 트래픽 있는 글이 새 글을 끌어 준다.
 - FAQ 절은 자동완성에 실제로 나오고 앱 레포로 사실을 확인한 옆 질문만 둔다. 없으면 두지 않는다.
 - ⚠️ **앱 기능을 적기 전에 앱 레포를 본다.** `content/apps/<slug>/how-to/`만 믿으면 안 된다 — 이 사이트는 앱 릴리즈보다 늦게 갱신되므로 how-to 가 낡아 있을 수 있다(2026-09-24 JoinCut MKV 가 그랬다). 앱 레포의 `app-listing.md`(출시 노트·기능 목록)와 `AGENTS.md`를 대조하고, 어느 쪽에도 없는 사양(코덱·해상도 조건 등)은 지어내지 않는다. 글을 쓰다 how-to 가 낡은 걸 발견하면 how-to 도 같이 고친다.
+- **가격·무료 범위는 글마다 적혀 있어 앱이 바꾸면 한꺼번에 낡는다.** 새 글을 쓸 때 그 앱의 Plus 상품·무료 한도를 앱 코드(`PurchaseManager` 의 한도 상수)로 보고, `rg -n -i 'plus|free|lifetime' content/blog content/apps/<slug>` 로 같은 앱의 다른 글·앱 페이지도 맞춘다(2026-11-19 JoinSound 1주 구독·JoinPDF 무료 3→5쪽·Android 무료 압축이 글 6곳에서 낡아 있었다).
 - 글의 성과는 GA4 에서 본다. 페이지뷰는 `page_location`, 설치로 나가는 클릭은 `cta_click`(`store_ios`·`store_android` + `cta_app`)이라 "어느 글을 읽고 어느 스토어로 갔는지"가 둘의 교차로 나온다. 블로그로 들어가는 클릭은 헤더 탭 `nav_blog`와 홈의 최근 글·All posts `home_blog` 둘이다(2026-10-02 리디자인부터 — 그 전 `nav_blog` 수치와 비교할 때 둘을 더한다).
 - 헤더 Blog 탭은 `GetPage "/blog"`로 그린다. ko 사이트에는 블로그 페이지가 없어 탭이 안 뜬다(ko 탭은 앱·도구 둘).
 - RSS는 `disableKinds`로 꺼져 있다. 구독을 열려면 블로그 섹션에만 `outputs`를 주고 켠다(전역 해제는 홈·앱 섹션 피드까지 만든다).
