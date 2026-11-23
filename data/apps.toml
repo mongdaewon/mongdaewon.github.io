@@ -43,6 +43,13 @@
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.joincut"
 
 [[app]]
+  slug = "joinedit"
+  name = "JoinEdit"
+  emoji = "🎬"
+  color = "#F4505A"
+  googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.joinedit"
+
+[[app]]
   slug = "audiojoin"
   name = "AudioJoin"
   emoji = "🎵"
