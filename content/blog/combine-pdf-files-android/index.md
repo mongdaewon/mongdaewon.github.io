@@ -56,4 +56,4 @@ Saving a PDF of up to 5 pages is free, with no ads and no sign-in. Making the fi
 
 JoinPDF Plus saves any number of pages. It is a 1-year plan or a one-time lifetime purchase.
 
-JoinPDF also runs on iPhone and iPad. On iPhone the Files app can do a simple merge on its own: see [how to combine PDF files on iPhone](/blog/combine-pdf-files-iphone/).
+JoinPDF also runs on iPhone and iPad, where you can also [make a PDF from photos without an app](/blog/make-pdf-from-photos-iphone/). On iPhone the Files app can do a simple merge on its own: see [how to combine PDF files on iPhone](/blog/combine-pdf-files-iphone/).

@@ -43,7 +43,7 @@ You are not alone. Since iOS 26, people on Apple's forums have reported that thi
 
 1. Open JoinSound and tap **Get Sound from Videos**. Your Photos library opens, showing only videos.
 2. Pick a video. JoinSound takes the sound and drops the picture, so a new row appears with a waveform.
-3. Tap the scissors on the row if you want only part of it.
+3. Tap the scissors on the row if you want only part of it. Long pauses can be [shortened there too](/blog/remove-silence-from-audio/).
 4. Tap **Preview Result** to listen, then tap **Save**.
 
 A video saved in Files works too. Tap **Choose Audio Files** and pick it there, or share it to JoinSound from Files.
@@ -56,7 +56,7 @@ Usually not. iPhone videos normally store their sound as AAC, the same format an
 
 ## Can you save it as MP3?
 
-Yes, with JoinSound Plus. Saving as M4A is free, and it is what iPhone's own Voice Memos use. MP3 and WAV come with Plus, for the times something asks for those formats specifically.
+Yes, with JoinSound Plus. Saving as M4A is free, and it is what iPhone's own Voice Memos use. MP3 and WAV come with Plus, for the times something asks for those formats specifically. If what you have is a voice memo, not a video, see [how to convert a voice memo to MP3](/blog/convert-voice-memo-to-mp3-iphone/).
 
 | | Free | JoinSound Plus |
 |---|---|---|
@@ -69,6 +69,6 @@ On iPhone, Plus is a weekly or yearly plan, or a one-time lifetime purchase. On 
 
 ## Is my video uploaded?
 
-Not with JoinSound. There is no account, and the sound is taken out on your iPhone. The video in your Photos library stays as it was.
+Not with JoinSound. There is no account, and the sound is taken out on your iPhone. The video in your Photos library stays as it was. To shorten the video itself, see [how to trim a video on iPhone](/blog/trim-video-iphone/).
 
 Have several clips? Add them all and JoinSound joins their sound into one file, the same way it [merges voice memos](/blog/merge-voice-memos-iphone/).

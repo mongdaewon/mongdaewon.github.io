@@ -64,4 +64,6 @@ The same applies when you do not want the whole clip. Split a video into section
 <figure><img src="joincut-parts.jpg" alt="JoinCut trimmer with one video split into three parts, zoom options 1x to 8x above the strip and a card for each part below" width="460" height="1000" loading="lazy"><figcaption>One video split into three parts, joined back without re-encoding</figcaption></figure>
 </div>
 
+If you only need the sound, you can [extract the audio from a video](/blog/extract-audio-from-video-iphone/) instead.
+
 That is the whole idea: leave the original frames alone, and only stitch.

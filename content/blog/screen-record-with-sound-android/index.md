@@ -76,4 +76,4 @@ Recording sound from other apps came with Android 10. RecNow needs Android 10 or
 
 Plus is a one-time purchase, not a subscription. Recordings stay on your phone and are never uploaded.
 
-To cut off the start and end of a recording afterwards, use [JoinCut](/apps/joincut/) on Android. Our guide to [trimming a video](/blog/trim-video-iphone/) shows the iPhone version.
+To cut off the start and end of a recording afterwards, use [JoinCut](/apps/joincut/) on Android. Our guide to [trimming a video](/blog/trim-video-iphone/) shows the iPhone version. If you only need the sound, JoinSound can [take it out of the video](/blog/extract-audio-from-video-iphone/); it runs on Android too.
