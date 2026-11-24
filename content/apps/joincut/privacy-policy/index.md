@@ -6,7 +6,7 @@ layout: "single"
 
 **JoinCut - Lossless Video Merge**
 
-Last updated: November 17, 2026
+Last updated: November 24, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -22,7 +22,7 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 
 - App usage patterns and feature interactions
 - Device type and operating system version
-- Plus purchases: which plan was bought and its price, never your payment details
+- Plus purchases: which plan was bought and its price (on Android, also the Google Play order ID), never your payment details
 
 This data is collected automatically and cannot be used to identify you personally.
 
@@ -70,7 +70,7 @@ JoinCut offers JoinCut Plus. Free covers up to 2 segments per video and 2 videos
 
 On iPhone, iPad and Android, Plus is a 1-week or 1-year auto-renewing subscription or a one-time lifetime purchase. If you already bought Plus, you keep it. You can cancel a subscription at any time in your App Store or Google Play account settings.
 
-Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app only receives, and keeps on your device, whether your purchase or subscription is active.
+Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app keeps on your device whether your purchase or subscription is active. Which plan was bought and its price are sent to Firebase Analytics, as described in Analytics Data above.
 
 ## Data Security
 
