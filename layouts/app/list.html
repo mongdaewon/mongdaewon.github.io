@@ -90,11 +90,11 @@
       </ul>
     {{ end }}
 
-    {{/* 이 앱을 다룬 블로그 글. 블로그는 영어 전용이라 ko 에서는 site.RegularPages 에 글이 없어 저절로 빠진다.
+    {{/* 이 앱을 다룬 블로그 글. 그 언어의 글이 없으면 저절로 빠진다(ko 글은 일부만 있다).
          검색으로 글에 들어온 사람은 글 끝에서 앱으로, 앱을 보러 온 사람은 여기서 글로 - 양쪽 길을 다 연다. */}}
     {{ with partial "appposts.html" $slug }}
       <section class="related">
-        <h2 class="sec-h">Posts about {{ $a.name }}</h2>
+        <h2 class="sec-h">{{ if $ko }}{{ $a.name }} 글{{ else }}Posts about {{ $a.name }}{{ end }}</h2>
         {{ partial "postlist.html" (dict "pages" . "desc" false "app" false) }}
       </section>
     {{ end }}

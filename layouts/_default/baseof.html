@@ -39,7 +39,7 @@
   {{ if .Params.smartBanner }}{{ with (partial "app.html" "cantquit").appstore }}<meta name="apple-itunes-app" content="app-id={{ path.Base . | strings.TrimPrefix "id" }}, app-argument={{ $.Permalink }}">{{ end }}{{ end }}
   {{/* Canonical. Pages with canonicalHome point at the home page (see /apps/, a duplicate of it). */}}
   <link rel="canonical" href="{{ if .Params.canonicalHome }}{{ .Site.Home.Permalink }}{{ else }}{{ .Permalink }}{{ end }}">
-  {{/* en·ko 짝을 구글에 알린다 - 없으면 한국어 검색에 영어 페이지가 뜰 수 있다. 짝이 없는 페이지(블로그·처리방침)는 건너뛴다.
+  {{/* en·ko 짝을 구글에 알린다 - 없으면 한국어 검색에 영어 페이지가 뜰 수 있다. 짝이 없는 페이지(번역 없는 블로그 글·처리방침)는 건너뛴다.
        canonicalHome 페이지는 canonical 이 홈이라 짝을 걸지 않는다(서로 어긋난 신호가 된다). */}}
   {{ if and .IsTranslated (not .Params.canonicalHome) }}
     {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
@@ -55,7 +55,7 @@
   {{ $ko := eq .Site.Language.Lang "ko" }}
   {{/* Section tabs. Apps points at the home page, not /apps/: home IS the app list and /apps/ is a
        duplicate of it (canonicalHome). Tools is a section of the home page, so it's an anchor.
-       Blog only exists in English - on the ko site GetPage "/blog" is nil and the tab doesn't render. */}}
+       Posts are written in English first; only some have a Korean version (index.ko.md). */}}
   {{/* Which tab is lit. Every app bundle's _index has `type: app`, so a page whose section is an app
        (detail, how-to, gallery, privacy policy) is Apps. Chrome extensions keep a privacy policy under
        content/apps/ too, with no _index - their section is /apps/ itself, and those are Tools.
@@ -68,12 +68,12 @@
     <a class="brand" href="{{ .Site.Home.RelPermalink }}">mongdaewon</a>
     <nav class="tabs" aria-label="{{ if $ko }}사이트{{ else }}Site{{ end }}">
       <a href="{{ .Site.Home.RelPermalink }}"{{ if $appsOn }} class="on" aria-current="{{ cond .IsHome "page" "true" }}"{{ end }}>{{ if $ko }}앱{{ else }}Apps{{ end }}</a>
-      {{ with .Site.GetPage "/blog" }}<a data-ev="nav_blog" href="{{ .RelPermalink }}"{{ if $blogOn }} class="on" aria-current="{{ cond (eq $.RelPermalink .RelPermalink) "page" "true" }}"{{ end }}>Blog</a>{{ end }}
+      {{ with .Site.GetPage "/blog" }}<a data-ev="nav_blog" href="{{ .RelPermalink }}"{{ if $blogOn }} class="on" aria-current="{{ cond (eq $.RelPermalink .RelPermalink) "page" "true" }}"{{ end }}>{{ if $ko }}블로그{{ else }}Blog{{ end }}</a>{{ end }}
       <a href="{{ .Site.Home.RelPermalink }}#tools"{{ if $toolsOn }} class="on" aria-current="true"{{ end }}>{{ if $ko }}도구{{ else }}Tools{{ end }}</a>
     </nav>
     <span class="hd-util">
       <span class="langs">
-        {{/* 짝이 없는 페이지(영어 전용 블로그·처리방침)도 다른 언어 홈으로 돌아갈 길을 남긴다. */}}
+        {{/* 짝이 없는 페이지(번역 없는 블로그 글·처리방침)도 다른 언어 홈으로 돌아갈 길을 남긴다. */}}
         {{ if .IsTranslated }}
           {{ range .AllTranslations }}
             <a data-ev="lang_{{ .Language.Lang }}" href="{{ .RelPermalink }}"{{ if eq .Language.Lang $.Site.Language.Lang }} class="active"{{ end }}>{{ .Language.Params.displayName }}</a>
