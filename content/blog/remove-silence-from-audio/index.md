@@ -33,7 +33,7 @@ What counts as silence is measured for each recording, so a quiet room and a noi
 3. Look at the orange marks and the count under the waveform. That is every long silence in the file.
 4. Under **Shorten silences**, tap **Natural** or **Tight**. The change happens right away, and the time saved shows in red.
 5. Play it back. If it sounds too tight, tap **Natural**. If you change your mind, tap **Off**.
-6. Tap **Done**, then save as M4A, MP3 or WAV.
+6. Tap **Done**, then save as M4A, MP3 or WAV. If MP3 is all you need, there are [free ways to convert a voice memo](/blog/convert-voice-memo-to-mp3-iphone/).
 
 Have several recordings? Each file gets its own setting, so a music intro can stay as it is while the interview after it is tightened. JoinSound then joins them into one file, the same way it [combines voice memos](/blog/merge-voice-memos-iphone/).
 
@@ -53,7 +53,7 @@ On the free version you can still cut a gap by hand: the orange marks show where
 ## Other ways to remove silence from audio
 
 - **Audacity on a computer.** Its Truncate Silence effect does the same job for free. It needs a computer, and you set the threshold and length yourself.
-- **Video editors such as CapCut or Premiere Pro.** Worth it if the audio is part of a video you are already editing.
+- **Video editors such as CapCut or Premiere Pro.** Worth it if the audio is part of a video you are already editing. If you only need the sound, [take it out of the video](/blog/extract-audio-from-video-iphone/) first.
 - **Online tools.** Nothing to install, but the recording is uploaded to someone else's server. Skip them for private calls or interviews.
 
 ## Does it change my original recording?

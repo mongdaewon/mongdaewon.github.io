@@ -63,4 +63,4 @@ A PDF of up to 5 pages is free, with no ads and no sign-in. Locking it with a pa
 
 No. JoinPDF makes the PDF on your iPhone, and it goes only where you save or share it. The Print menu works the same way. Online "JPG to PDF" sites are the ones that upload your pictures.
 
-JoinPDF also runs on iPad and Android, where the steps are the same.
+JoinPDF also runs on iPad and Android, where the steps are the same. For joining PDFs there, see [how to combine PDF files on Android](/blog/combine-pdf-files-android/).

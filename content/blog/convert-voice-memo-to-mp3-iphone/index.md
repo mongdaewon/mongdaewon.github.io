@@ -75,4 +75,4 @@ On iPhone and iPad, Plus is a 1-year plan or a one-time lifetime purchase. There
 
 ## Can I turn several voice memos into one MP3?
 
-Yes. Share each memo to AudioJoin, put them in order, and save once as MP3. Joining three or more needs Plus, the same as MP3. For other ways to join them, see [how to combine voice memos into one recording](/blog/merge-voice-memos-iphone/). If the sound you need is inside a video instead, see [how to extract audio from a video on iPhone](/blog/extract-audio-from-video-iphone/).
+Yes. Share each memo to AudioJoin, put them in order, and save once as MP3. Joining three or more needs Plus, the same as MP3. For other ways to join them, see [how to combine voice memos into one recording](/blog/merge-voice-memos-iphone/). If it is full of long pauses, [remove the silence](/blog/remove-silence-from-audio/) first. If the sound you need is inside a video instead, see [how to extract audio from a video on iPhone](/blog/extract-audio-from-video-iphone/).

@@ -27,7 +27,7 @@ That is also why "converting" an MKV usually means re-encoding the whole video, 
 
 It reads the box itself, takes the compressed video and audio out, and puts them into a container iOS does understand. The frames are never decoded and never drawn again. They are copied over as they are.
 
-So the file opens at original quality. To watch it, save it to Photos, and it plays there like any other video. In the app it behaves like any other clip: trim it, pick the parts you want, and join it with other clips. Saving stays lossless as long as the clips share a format, which is [the rule from the earlier post](/blog/merge-videos-iphone-without-losing-quality/).
+So the file opens at original quality. To watch it, save it to Photos, and it plays there like any other video. In the app it behaves like any other clip: [trim it](/blog/trim-video-iphone/), pick the parts you want, and join it with other clips. Saving stays lossless as long as the clips share a format, which is [the rule from the earlier post](/blog/merge-videos-iphone-without-losing-quality/).
 
 ## Which MKV files will open
 

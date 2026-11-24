@@ -68,6 +68,8 @@ When your files share the same format and nothing needs changing, M4A is saved w
 
 Joining recordings from the Voice Memos app? See [how to combine voice memos on iPhone](/blog/merge-voice-memos-iphone/). If the sound you want is inside a video, JoinSound can [take it out of the video](/blog/extract-audio-from-video-iphone/) first.
 
+Only one recording, and you need it as MP3? Joining is not needed: see [how to convert a voice memo to MP3](/blog/convert-voice-memo-to-mp3-iphone/).
+
 ## How to layer audio files
 
 Layering needs a timeline, because you have to say *when* each sound starts. That is what AudioJoin is for.
