@@ -6,7 +6,7 @@ layout: "single"
 
 **Deep Breath - Breathing Exercise**
 
-Last updated: October 20, 2026
+Last updated: November 24, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -22,6 +22,7 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 
 - App usage patterns and feature interactions
 - Device type and operating system version
+- Deep Breath Plus purchases: what was bought and its price (on Android, also the Google Play order ID), never your payment details
 
 This data is collected automatically and cannot be used to identify you personally.
 
@@ -62,7 +63,7 @@ Deep Breath does not display any advertisements. We do not use any advertising S
 
 Deep Breath offers one optional in-app purchase, **Deep Breath Plus**: a single payment, not a subscription, that unlocks guidance that keeps going with the screen off, every ambient sound, your own breathing pattern, widgets, and the Apple Watch app. Five breathing presets, every session length, history, and reminders are free.
 
-Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app only receives, and keeps on your device, whether the purchase is active.
+Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app keeps on your device whether the purchase is active. What was bought and its price are sent to Firebase Analytics, as described in Analytics Data above.
 
 ## Data Security
 
