@@ -1,12 +1,12 @@
 # TODO
 
 ## 다음에 할 일
-- [ ] Deep Breath·술술낱말·JoinSound·JoinPhoto 처리방침에 "구매" 추가
+- [ ] Deep Breath·술술낱말·JoinSound 처리방침에 "구매" 추가
       iOS `Track` 이 `Analytics.logTransaction` 으로 구매(상품·가격, 결제 정보 제외)를 GA4 로 보낸다(2026-11-12 ios-deep-breath·ios-joincut).
       `content/apps/{deep-breath,sulsul}/privacy-policy/index.md`(joincut 은 2026-11-17 함) §1 Analytics Data 목록에 한 줄 + Last updated.
       sulsul 은 §In-App Purchases 의 "only receives … whether the purchase is active" 도 고친다(ios-sulsul 2026-11-13).
-      joinsound 는 §In-App Purchases 의 "1-year … or lifetime" 에 1주 구독($2.99, 20261115.1.0)을 더하고 "only receives … whether … active" 도 고친다(ios-joinsound 202      joinphoto 도 §1 Analytics Data 에 "Plus purchases: which plan was bought and its price, never your payment details"(joinpdf 와 같은 줄). App Privacy 의 구입 내역은 2026-11-16 게시함(ios-joinphoto).
-6-11-16).
+      joinsound 는 §In-App Purchases 의 "1-year … or lifetime" 에 1주 구독($2.99, 20261115.1.0)을 더하고 "only receives … whether … active" 도 고친다(ios-joinsound 2026-11-16).
+
 ## 블로그 새 글 (하루 1개, 2026-11-17 우버서제스트 미국 검색량)
 글 하나 = 그날 키워드로 `/google-keyword` 재확인 → 앱 레포 기능·스크린샷 대조 → 발행·색인·월간 리뷰 기준선.
 - [ ] 오디오 볼륨 고르게 맞추기 글 (JoinSound) @11/20

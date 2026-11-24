@@ -6,7 +6,7 @@ layout: "single"
 
 **JoinPhoto**
 
-Last updated: October 27, 2026
+Last updated: November 24, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -22,6 +22,7 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 
 - App usage patterns and feature interactions
 - Device type and operating system version
+- Plus purchases: which plan was bought and its price, never your payment details
 
 This data is collected automatically and cannot be used to identify you personally.
 
@@ -59,7 +60,7 @@ JoinPhoto does not display any advertisements. We do not use any advertising SDK
 
 ## In-App Purchases
 
-JoinPhoto offers a one-time in-app purchase (JoinPhoto Plus). Free combines up to 3 photos per image; Plus removes that limit. Purchases are processed entirely by Apple. We never receive or store your payment details - we only receive confirmation of whether a purchase is active.
+JoinPhoto offers a one-time in-app purchase (JoinPhoto Plus). Free combines up to 3 photos per image; Plus removes that limit. Purchases are processed entirely by Apple. We never receive or store your payment details.
 
 ## Data Security
 
