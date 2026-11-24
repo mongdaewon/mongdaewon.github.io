@@ -1,6 +1,6 @@
 ---
 title: "How to Convert a Voice Memo to MP3 on iPhone"
-description: "Voice Memos saves M4A files and the iPhone has no built-in way to make an MP3. Here are three ways to convert a voice memo to MP3: an app on your iPhone, an online converter, or the Music app on a Mac."
+description: "Voice Memos saves M4A files and the iPhone has no built-in way to make an MP3. Here are three ways to convert a voice memo to MP3: a free converter in your browser, an app on your iPhone, or the Music app on a Mac."
 date: 2026-11-18
 app: audiojoin
 ---
@@ -18,16 +18,25 @@ Often not. An M4A voice memo plays on iPhone, Android, Mac and Windows, and most
 
 ## Can you convert a voice memo to MP3 on iPhone for free?
 
-Not on the iPhone alone. These are your options:
+Yes, in the browser. The iPhone itself has no MP3 option, but a converter page in Safari can do it. These are your options:
 
-| | Shortcuts | Online converter | Music app on Mac | AudioJoin |
-|---|---|---|---|---|
-| Makes an MP3 | ✗ (M4A or AIFF only) | ✓ | ✓ | ✓ |
-| Works on iPhone alone | ✓ | ✓ | ✗ | ✓ |
-| Free | ✓ | Usually, with limits | ✓ | Saving as MP3 needs Plus |
-| Recording is uploaded | No | Yes | No | No |
+| Way | Where | Free | Trim or join |
+|---|---|---|---|
+| iTool (browser) | iPhone, computer | ✓ | ✗ |
+| AudioJoin | iPhone, Android | MP3 needs Plus | ✓ |
+| Music app | Mac | ✓ | ✗ |
 
-If the memo is private, like a meeting, a lecture or a doctor's appointment, think twice before uploading it to a converter site.
+None of these uploads your recording. Many other converter sites send your file to a server. If the memo is private, like a meeting, a lecture or a doctor's appointment, check that before you use one.
+
+## How to convert a voice memo to MP3 in the browser
+
+Our [iTool MP3 converter](https://itool.co.kr/en/util/mp4-to-mp3/) was made for videos, but it takes M4A files too. The conversion runs inside your browser.
+
+1. In Voice Memos, open the recording, tap the **Share** button, and choose **Save to Files**.
+2. Open the converter and choose the M4A file. It turns into an MP3 right away.
+3. Play it to check, then download the MP3.
+
+Each file can be up to 200 MB. For a recording longer than about an hour, use a computer, because a phone can run out of memory.
 
 ## How to convert a voice memo to MP3 with AudioJoin
 
