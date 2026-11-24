@@ -20,8 +20,6 @@
 
 ## 한국어 블로그 시험 3편 (2026-11-24 시작)
 규칙은 AGENTS §블로그. 우버서제스트 한국 검색량·난이도, 기준선 0.
-- [ ] 아이폰 MKV 재생 한국어판 (JoinCut) @11/25
-      아이폰 mkv 재생 90 · 20, 아이폰 mkv 70 · 20. `open-mkv-files-on-iphone/index.ko.md`
 - [ ] m4a mp3 변환 한국어판 (AudioJoin) @11/26
       m4a mp3 변환 1,600 · 18. PC·웹 변환기 의도가 섞여 폰으로 범위를 좁힌다. `convert-voice-memo-to-mp3-iphone/index.ko.md`
 - [ ] 한국어 3편 4주 결과 보고 계속할지 정하기 @12/24
