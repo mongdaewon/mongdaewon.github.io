@@ -40,6 +40,8 @@ The following data is stored only on your device and is never transmitted to our
 
 The app uses the system photo picker, so it only sees the photos you choose. It asks for permission only to add the finished image to Photos. Selected photos are read and combined entirely on your device, and are never uploaded anywhere.
 
+If you choose images from the Files app instead, the app copies only those images into its own folder. It does not scan or browse your files.
+
 ## Information We Do NOT Collect
 
 - Personal information (name, email, phone number)
