@@ -28,7 +28,11 @@ JoinCut also points out which video is the one forcing a re-encode, so you can d
 
 ## Bring videos in and save them out
 
-Drag videos in from Finder on a Mac, or from Files on an iPad. Save straight to Photos, or pick a folder when you're on a Mac. On Android, videos go straight to your gallery. You can also export as a GIF.
+Choose videos from Photos or from Files, or drag them in from Finder on a Mac or from Files on an iPad.
+
+You can also start from another app. On iPhone and iPad, share a video from the Files app and choose JoinCut. It takes one video at a time. On Android, share one or several videos to JoinCut.
+
+The first time you save, JoinCut asks where: Photos (the gallery on Android) or Files. Files lets you pick a folder each time. JoinCut remembers your choice, and you can change it in the **...** menu next to the save button. On a Mac, you always pick the folder. You can also export as a GIF.
 
 ## Open MKV files too
 
@@ -48,7 +52,7 @@ Merging your chosen parts and saving losslessly, the core of the app, is free fo
 
 Free covers up to 2 segments per video and 2 videos per merge.
 
-JoinCut Plus is a one-time purchase that removes both limits, removes the GIF watermark, and saves selected segments as separate files.
+JoinCut Plus removes both limits, removes the GIF watermark, and saves selected segments as separate files. It is a weekly or yearly subscription, or a one-time lifetime purchase. You can cancel a subscription at any time in your App Store or Google Play account settings.
 
 ## Good to know
 
