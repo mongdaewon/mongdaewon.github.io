@@ -49,3 +49,5 @@ The middle is gone, and the cut is clean: JoinCut copies the frames you kept ins
 Yes for this. Keeping two parts of a video and saving them is free, with no ads and no watermark. JoinCut Plus adds three or more parts per video, joins three or more videos at once, and saves parts as separate files. It is a weekly or yearly plan, or a one-time lifetime purchase.
 
 To join whole clips instead of cutting one, see [how to combine videos on iPhone without losing quality](/blog/merge-videos-iphone-without-losing-quality/).
+
+JoinCut also runs on Android. If the clip you want to trim is a screen recording that came out silent, see [how to screen record with sound on Android](/blog/screen-record-with-sound-android/).
