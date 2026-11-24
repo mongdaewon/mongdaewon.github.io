@@ -73,8 +73,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .
 pre { overflow-x: auto; padding: 1rem; background: var(--soft); border-radius: var(--r); }
 pre code { padding: 0; background: none; }
 /* Tables stay display:table - display:block would let a wide one scroll, but Safari/VoiceOver then
-   stops reading it as a table. Today's tables are two columns and wrap fine on a phone; if a wide one
-   ever appears, wrap it in a scrolling div with a table render hook instead. */
+   stops reading it as a table. Blog tables get tighter cells on a phone so four columns fit 375px (below);
+   if a wider one ever appears, wrap it in a scrolling div with a table render hook instead. */
 table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
 th, td { text-align: left; padding: .5rem .75rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
 th { font-weight: 700; }
@@ -311,6 +311,10 @@ body > main > :is(.post-head, .prose), .prose ~ :is(.appcard, .related) { max-wi
 .prose table { font-size: var(--fs-base); margin: 1.5rem 0; }
 .prose th { background: var(--soft); }
 .prose td:first-child { font-weight: 600; }
+@media (max-width: 480px) {
+  .prose table { font-size: var(--fs-sm); }
+  .prose :is(th, td) { padding-inline: .375rem; }
+}
 
 /* Blog diagram: audio parts as blocks on a line (back to back) or stacked lines (layered). */
 .lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
