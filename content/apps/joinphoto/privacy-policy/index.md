@@ -22,7 +22,7 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 
 - App usage patterns and feature interactions
 - Device type and operating system version
-- Plus purchases: which plan was bought and its price, never your payment details
+- Plus purchases: which plan was bought and its price (on Android, also the Google Play order ID), never your payment details
 
 This data is collected automatically and cannot be used to identify you personally.
 
@@ -38,9 +38,11 @@ The following data is stored only on your device and is never transmitted to our
 
 ## Photo Library Access
 
-The app uses the system photo picker, so it only sees the photos you choose. It asks for permission only to add the finished image to Photos. Selected photos are read and combined entirely on your device, and are never uploaded anywhere.
+The app uses the system photo picker, so it only sees the photos you choose. On iPhone and iPad, it asks for permission only to add the finished image to Photos. Selected photos are read and combined entirely on your device, and are never uploaded anywhere.
 
-If you choose images from the Files app instead, the app copies only those images into its own folder. It does not scan or browse your files.
+On Android, finished images are saved to your gallery, and no storage or media permission is needed.
+
+If you choose images from the Files app (iPhone and iPad) or the system file picker (Android) instead, the app copies only those images into its own folder. It does not scan or browse your files.
 
 ## Information We Do NOT Collect
 
@@ -54,7 +56,7 @@ If you choose images from the Files app instead, the app copies only those image
 Our app uses the following third-party services:
 
 - **Firebase Analytics** ([Privacy Policy](https://firebase.google.com/support/privacy))
-- **Apple StoreKit** - For in-app purchases, handled entirely by Apple
+- **Apple StoreKit** (iOS) / **Google Play Billing** (Android) - For in-app purchases, handled entirely by Apple or Google
 
 ## Advertising
 
@@ -62,7 +64,7 @@ JoinPhoto does not display any advertisements. We do not use any advertising SDK
 
 ## In-App Purchases
 
-JoinPhoto offers a one-time in-app purchase (JoinPhoto Plus). Free combines up to 3 photos per image; Plus removes that limit. Purchases are processed entirely by Apple. We never receive or store your payment details.
+JoinPhoto offers a one-time in-app purchase (JoinPhoto Plus). Free combines up to 3 photos per image; Plus removes that limit. Purchases are processed entirely by Apple (App Store) or Google (Google Play). We never receive or store your payment details.
 
 ## Data Security
 
