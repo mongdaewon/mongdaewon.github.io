@@ -42,6 +42,11 @@ If either side falls outside that, JoinCut does not open the file at all. That i
 
 The usual blockers are DTS audio and VP9 video.
 
+Two things stay behind when you save:
+
+- **Subtitles.** JoinCut does not carry them over. To watch a movie with its subtitles, use a player that opens MKV directly, such as VLC.
+- **Extra audio tracks.** If the file holds several languages, only one track is kept: the default one on iPhone, the first one on Android.
+
 ## If a file does not open, the app says what to change
 
 Rather than a generic failure, JoinCut tells you why that specific file was refused and what to do about it: save it with H.264 or HEVC video and AAC audio and it will load losslessly.
