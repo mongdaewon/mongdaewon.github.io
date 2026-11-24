@@ -6,7 +6,7 @@ layout: "single"
 
 **JoinSound**
 
-Last updated: November 5, 2026
+Last updated: November 24, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -22,6 +22,7 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 
 - Which screens and features are used, and how often
 - Device type and operating system version
+- Plus purchases: which plan was bought and its price (on Android, also the Google Play order ID), never your payment details
 
 This data is tied to a per-install identifier, never to an account. The app has no login. It cannot be used to identify you personally, and it never includes your audio, your file names, or anything you typed.
 
@@ -65,9 +66,9 @@ JoinSound does not display any advertisements. We do not use any advertising SDK
 
 JoinSound offers one optional upgrade, **JoinSound Plus**, that unlocks joining three or more files, keeping more than two parts of a file, shortening silences, and saving as MP3 or WAV. Joining two files, trimming, matching loudness, and saving as M4A are free.
 
-On iPhone and iPad, Plus is a 1-year auto-renewing subscription or a one-time lifetime purchase. On Android, it is a one-time purchase. If you already bought Plus, you keep it. You can cancel a subscription at any time in your App Store account settings.
+On iPhone and iPad, Plus is a 1-week or 1-year auto-renewing subscription or a one-time lifetime purchase. On Android, it is a one-time purchase. If you already bought Plus, you keep it. You can cancel a subscription at any time in your App Store account settings.
 
-Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app only receives, and keeps on your device, whether your purchase or subscription is active.
+Purchases are handled entirely by Apple (App Store) or Google (Google Play). We never see or store your payment details. The app keeps on your device whether your purchase or subscription is active. Which plan was bought and its price are sent to Firebase Analytics, as described in Analytics Data above.
 
 ## Data Security
 
