@@ -55,7 +55,7 @@ content/
 
 등록 앱 목록은 `data/apps.toml`이 정본이다(여기에 적으면 낡는다).
 
-**앱 상세 페이지 콘텐츠 구조:** 아이콘·이름·1줄 킬링멘트(`params.tagline`)·배지 줄 → 3줄 혜택(본문) → 사용법 카드 → "Posts about X"(그 앱 글이 있을 때만, en) → 하단 받기 → 문의·처리방침. 본문은 기능 나열이 아니라 "사용자가 얻는 혜택" 중심으로 작성.
+**앱 상세 페이지 콘텐츠 구조:** 아이콘·이름·1줄 킬링멘트(`params.tagline`)·배지 줄 → 3줄 혜택(본문) → 사용법 카드 → "Posts about X"(그 언어에 그 앱 글이 있을 때만) → 하단 받기 → 문의·처리방침. 본문은 기능 나열이 아니라 "사용자가 얻는 혜택" 중심으로 작성.
 
 **동작 데모(선택):** 번들에 `demo-<lang>.gif`(예: `demo-ko.gif`)를 두면 혜택 본문 옆(모바일은 위)에
 자동으로 붙는다. **언어가 맞는 파일이 없으면 아무것도 안 나온다** — 한국어 사파리 화면을 영어
@@ -114,7 +114,11 @@ git 히스토리에 영원히 남고 GitHub Pages 한도를 먹는다. 루트 �
 
 ### 블로그 — `content/blog/`
 
-앱 개발 문의를 푼 기록과 앱으로 끌어오는 글을 **영어로만** 발행한다(`.ko.md` 없음).
+앱 개발 문의를 푼 기록과 앱으로 끌어오는 글을 **영어로 먼저** 발행하고, 골라서 한국어로 현지화한다.
+
+- **한국어판(`index.ko.md`)은 두 조건이 다 맞을 때만 낸다**(2026-11-24 사용자): 네이버 블로그 발행 글(`marketing/blog.naver.com.*/발행한 글`)과 주제가 겹치지 않고, `/google-keyword` 한국어(`ko`·`2410`)에서 의도가 맞는 수요가 있다. 겹치는 글은 구글에서 서로 경쟁하므로 내지 않는다.
+- 현지화는 직역이 아니다. 구성은 영어 글을 따르되 제목·소제목·FAQ는 한국어 검색어로 다시 쓰고, 한국 사정이 다른 부분(갤럭시 메뉴 이름 등)을 바꾸고, 앱 화면은 한국어로 찍는다. 네이버 글 문장을 옮기지 않는다.
+- 한국어 글은 존댓말로 쓴다. 같은 번들에 두면 `/ko/blog/<slug>/` 로 나가고 hreflang 이 걸린다. 화면 파일은 `이름.ko.jpg` 로 두고 본문에서는 `이름.ko.jpg` 로 부른다.
 
 - 글 하나는 leaf bundle: `content/blog/<slug>/index.md` → `/blog/<slug>/`. 스크린샷은 같은 번들에 둔다.
 - **글만 있는 글은 내지 않는다**(2026-10-20 사용자). 앱 화면을 시뮬레이터·에뮬레이터 데모 장면(각 앱 `shoot.sh`의 `-demoScene`·`-demoVideos` 등)으로 찍어 번들에 JPG(긴 변 1000)로 넣고, `<div class="shots">` 안 `<figure>` 두 장을 나란히 둔다(한 장이면 `shots one`). 화면이 그대로 맞으면 앱 레포 `store-assets/screenshots/`의 영어 원본(문구·베젤 얹기 전)을 줄여 써도 된다(`magick 원본.png -resize x1000 -quality 82`). 비교 글은 같은 입력 파일로 두 앱을 찍는다. **비교는 표로 한다**(✓·✗), 구조 차이는 `.lanes` 블록 도식으로 보인다.
@@ -130,7 +134,7 @@ git 히스토리에 영원히 남고 GitHub Pages 한도를 먹는다. 루트 �
 - ⚠️ **앱 기능을 적기 전에 앱 레포를 본다.** `content/apps/<slug>/how-to/`만 믿으면 안 된다 — 이 사이트는 앱 릴리즈보다 늦게 갱신되므로 how-to 가 낡아 있을 수 있다(2026-09-24 JoinCut MKV 가 그랬다). 앱 레포의 `app-listing.md`(출시 노트·기능 목록)와 `AGENTS.md`를 대조하고, 어느 쪽에도 없는 사양(코덱·해상도 조건 등)은 지어내지 않는다. 글을 쓰다 how-to 가 낡은 걸 발견하면 how-to 도 같이 고친다.
 - **가격·무료 범위는 글마다 적혀 있어 앱이 바꾸면 한꺼번에 낡는다.** 새 글을 쓸 때 그 앱의 Plus 상품·무료 한도를 앱 코드(`PurchaseManager` 의 한도 상수)로 보고, `rg -n -i 'plus|free|lifetime' content/blog content/apps/<slug>` 로 같은 앱의 다른 글·앱 페이지도 맞춘다(2026-11-19 JoinSound 1주 구독·JoinPDF 무료 3→5쪽·Android 무료 압축이 글 6곳에서 낡아 있었다).
 - 글의 성과는 GA4 에서 본다. 페이지뷰는 `page_location`, 설치로 나가는 클릭은 `cta_click`(`store_ios`·`store_android` + `cta_app`)이라 "어느 글을 읽고 어느 스토어로 갔는지"가 둘의 교차로 나온다. 블로그로 들어가는 클릭은 헤더 탭 `nav_blog`와 홈의 최근 글·All posts `home_blog` 둘이다(2026-10-02 리디자인부터 — 그 전 `nav_blog` 수치와 비교할 때 둘을 더한다).
-- 헤더 Blog 탭은 `GetPage "/blog"`로 그린다. ko 사이트에는 블로그 페이지가 없어 탭이 안 뜬다(ko 탭은 앱·도구 둘).
+- 헤더 Blog 탭은 `GetPage "/blog"`로 그린다(ko 는 `content/blog/_index.ko.md`).
 - RSS는 `disableKinds`로 꺼져 있다. 구독을 열려면 블로그 섹션에만 `outputs`를 주고 켠다(전역 해제는 홈·앱 섹션 피드까지 만든다).
 
 ### 앱 메타데이터 단일 출처 — `data/apps.toml`
@@ -218,7 +222,7 @@ layouts/
 ├── app/list.html             # 앱 상세 (type="app" 섹션, 데모 GIF·사용법 카드·이 앱 이야기)
 └── partials/
     ├── app.html              # 슬러그 → apps.toml 항목(+ .page). 틀린 슬러그는 errorf 로 빌드 실패
-    ├── hub.html              # 홈 본문: h1 한 줄 소개 · 앱 목록 | 최근 글(en) + 도구
+    ├── hub.html              # 홈 본문: h1 한 줄 소개 · 앱 목록 | 최근 글 + 도구
     ├── applist.html          # 앱 목록 행 (아이콘·이름·한 줄·플랫폼·›, 배지 없음)
     ├── toolslist.html        # 도구 섹션 (#tools, data/tools.toml)
     ├── postlist.html         # 글 목록 한 벌 (블로그 목록·홈·앱 상세·글 끝 공용)
@@ -238,7 +242,7 @@ layouts/robots.txt              # robots + sitemap 위치 (enableRobotsTXT = tru
 - **컨테이너 폭:** 헤더·본문·푸터 모두 70rem. 홈(과 `/apps/`)만 `main.wide`로 두 칸을 쓰고, 나머지 페이지는 그 안에서 46rem 을 **왼쪽 정렬**로 읽는다 — 홈↔상세를 오갈 때 브랜드가 옆으로 튀지 않게. 블로그 글 본문·제목·앱 카드는 42.5rem(18px 에서 한 줄 약 75자).
 - 리스트 행은 `--rule` 구분선으로 나눈다. 테마별로 정해 둬서 양쪽 다 ~1.6:1 로 보인다(예전 pico 구분선은 다크에서 ~1.3:1 로 사라졌다).
 - `<link rel=canonical>`은 baseof에서 생성. front matter `canonicalHome: true`인 페이지(`content/apps/_index.md*`)는 홈을 가리켜 홈/`/apps/` 중복을 정리한다.
-- en·ko 짝이 있는 페이지는 baseof 가 `hreflang`(en·ko·x-default=en)을 건다(canonicalHome 페이지는 빼고). 짝이 없는 페이지(블로그·처리방침)의 언어 스위처는 다른 언어의 **홈**으로 간다.
+- en·ko 짝이 있는 페이지는 baseof 가 `hreflang`(en·ko·x-default=en)을 건다(canonicalHome 페이지는 빼고). 짝이 없는 페이지(번역 없는 블로그 글·처리방침)의 언어 스위처는 다른 언어의 **홈**으로 간다.
 - **한국어로만 된 앱**도 `name` 은 영어, 한글은 `name_ko` 다. 영어 본문 끝에 "The app is in Korean." 한 줄을 둔다(술술낱말·척척장기·포기하면 안돼).
 - 테마(라이트/다크) 토글은 헤더에 있으며 `data-theme` + `localStorage`로 유지. 미설정 시 `prefers-color-scheme` 따름.
 - 앱 아이콘은 `.app-ico`에 CSS 테두리(`--rule`)로 박스 경계를 통일.

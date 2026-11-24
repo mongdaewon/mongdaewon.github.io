@@ -7,7 +7,7 @@
        the date's and the date floated 16-20px off the title. */}}
   <header class="post-head">
     <h1>{{ .Title }}</h1>
-    <p class="post-date">{{ .Date.Format "Jan 2, 2006" }}</p>
+    <p class="post-date">{{ .Date.Format (cond (eq site.Language.Lang "ko") "2006년 1월 2일" "Jan 2, 2006") }}</p>
   </header>
   <article class="prose">{{ .Content }}</article>
 
@@ -20,7 +20,7 @@
     {{ partial "appcard.html" $a }}
     {{ with where (partial "appposts.html" $slug) "Permalink" "ne" $.Permalink }}
       <section class="related">
-        <h2 class="sec-h">More about {{ $a.name }}</h2>
+        <h2 class="sec-h">{{ if eq site.Language.Lang "ko" }}{{ $a.name }} 글 더 보기{{ else }}More about {{ $a.name }}{{ end }}</h2>
         {{ partial "postlist.html" (dict "pages" . "desc" false "app" false) }}
       </section>
     {{ end }}
