@@ -75,6 +75,14 @@
   googleplay = "https://play.google.com/store/apps/details?id=com.mongdaewon.joinpdf"
 
 [[app]]
+  slug = "joinphoto"
+  name = "JoinPhoto"
+  name_ko = "조인포토"
+  emoji = "🖼️"
+  color = "#2E9E5B"
+  appstore = "https://apps.apple.com/app/id6827548342"
+
+[[app]]
   slug = "recnow"
   name = "RecNow"
   emoji = "⏺"
