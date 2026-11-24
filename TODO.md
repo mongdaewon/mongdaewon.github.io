@@ -18,6 +18,11 @@
       앱마다 스토어 상위 경쟁 앱을 받아 보고, 우리가 확연히 나은 점(무손실·무료 범위·업로드 없음·광고 없음 등)이 앱 레포로 확인되는 것만 남긴다.
       `<경쟁앱> alternative`·`<경쟁앱> vs`·`best <분류> app` 을 /google-keyword 로 재고 의도가 기존 글과 겹치면 기존 글 표에 넣는다.
 
+## JoinPhoto Android 출시 준비
+- [ ] JoinPhoto 처리방침에 Android 추가(Play 제출 전)
+      `content/apps/joinphoto/privacy-policy`. 문구 예는 joincut 처리방침 25·61·73줄.
+      Google Play Billing, 저장은 갤러리(권한 요청 없음), 파일 고르기도 Android 포함, Android 는 매출에 Google Play 주문 번호도 보냄. 고치면 Last updated 도.
+
 ## 한국어 블로그 시험 3편 (2026-11-24 시작)
 규칙은 AGENTS §블로그. 우버서제스트 한국 검색량·난이도, 기준선 0.
 - [ ] 한국어 3편 4주 결과 보고 계속할지 정하기 @12/24
