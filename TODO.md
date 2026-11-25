@@ -2,8 +2,6 @@
 
 ## 블로그 새 글 (하루 1개, 2026-11-17 우버서제스트 미국 검색량)
 글 하나 = 그날 키워드로 `/google-keyword` 재확인 → 앱 레포 기능·스크린샷 대조 → 발행·색인·월간 리뷰 기준선.
-- [ ] 박스 호흡 앱 글 (Deep Breath) @11/25
-      box breathing app 480 · 26, how to do 4-7-8 breathing 70 · 10.
 - [ ] 아이폰 PDF 용량 줄이기 글 (JoinPDF) @11/26
       compress pdf iphone 390 · 30, reduce pdf size iphone 210 · 33. Size 무료/Plus 범위는 앱 레포에서 그날 다시 확인.
 - [ ] 아이폰 할 일 위젯 글 (Ivy To Do) @11/27
