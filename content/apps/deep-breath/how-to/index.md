@@ -14,7 +14,7 @@ Open the app and match your breathing to the petal animation. Inhale, hold, exha
 
 ## Pick a breathing pattern
 
-Five presets are built in, including 4-7-8 breathing and box breathing. If none of them fit, set your own pattern with custom timings (Plus).
+Five presets are built in, including 4-7-8 breathing and [box breathing](/blog/box-breathing-app/). If none of them fit, set your own pattern with custom timings (Plus).
 
 ## What is 4-7-8 breathing?
 
