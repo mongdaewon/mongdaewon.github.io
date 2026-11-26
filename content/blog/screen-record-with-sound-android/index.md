@@ -30,15 +30,24 @@ Wording changes between Android versions, so yours may look a little different.
 
 Some phones ship without a screen recorder. We make [RecNow](/apps/recnow/) for Android 10 and later. It is under 5 MB, with no ads and no watermark.
 
-<div class="shots">
-<figure><img src="recnow-home.jpg" alt="RecNow home screen: a large red record button with Tap to record, and Microphone and System audio buttons below it, both turned on" width="446" height="1000" loading="lazy"><figcaption>Microphone and System audio are both on</figcaption></figure>
-<figure><img src="recnow-audio-source.jpg" alt="RecNow settings with Audio source options No audio, Microphone, System audio, and Mic + System, which is selected" width="446" height="1000" loading="lazy"><figcaption>The same choice in Settings</figcaption></figure>
-</div>
+1. Open RecNow. Sound is off at first, so tap **System audio**, **Microphone**, or both. You can also pick **Mic + System** under **Audio source** in Settings.
+2. Tap the red button (**Tap to record**).
+3. Android asks to let RecNow record audio. Tap **While using the app**. It asks even when you record system audio only.
+4. In Android's own dialog, choose **Share entire screen** to record more than one app, then tap **Share screen**. Older Android versions show **Start now** instead.
+5. Tap the red square to stop. The video is in **Recordings** (the button next to Settings at the top), ready to play or share.
 
-1. Open RecNow. Sound is off at first, so tap **System audio**, **Microphone**, or both.
-2. Allow the microphone permission. Android requires it even when you record system audio only.
-3. Tap the red button, then confirm in Android's own dialog. To record more than one app, choose the entire screen if it asks.
-4. Tap stop when you are done. The video is in your recordings list, ready to play or share.
+<div class="shots">
+<figure><img src="recnow-sound.jpg" alt="RecNow home screen with the Microphone and System audio buttons, both off, marked 1 in red" width="416" height="1000" loading="lazy"><figcaption>1. Microphone, System audio or both</figcaption></figure>
+<figure><img src="recnow-record.jpg" alt="RecNow home screen with Microphone and System audio turned on and the red record button marked 2 in red" width="416" height="1000" loading="lazy"><figcaption>2. Tap to record</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="recnow-mic.jpg" alt="Android dialog Allow RecNow to record audio? with While using the app marked 3 in red" width="416" height="1000" loading="lazy"><figcaption>3. While using the app</figcaption></figure>
+<figure><img src="recnow-share.jpg" alt="Android dialog Share your screen with RecNow? with Share entire screen marked 4 in red and the Share screen button marked" width="416" height="1000" loading="lazy"><figcaption>4. Share entire screen, then Share screen</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="recnow-stop.jpg" alt="RecNow recording at 00:04 with Pause and 09:55 left, and the red stop square marked 5 in red" width="416" height="1000" loading="lazy"><figcaption>5. Stop</figcaption></figure>
+<figure><img src="recnow-list.jpg" alt="RecNow Recordings list with one 11-second recording and its info, share and delete buttons" width="446" height="1000" loading="lazy"><figcaption>The recording, ready to play or share</figcaption></figure>
+</div>
 
 Want to start without opening the app? Add the RecNow tile to Quick Settings.
 
