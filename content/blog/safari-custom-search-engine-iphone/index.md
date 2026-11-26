@@ -7,11 +7,6 @@ app: jumpbar
 
 Safari on iPhone has no button for adding your own search engine. You can only pick one from Apple's list. What you can do is search any other site straight from the address bar with a short keyword, the way site search shortcuts work in Chrome on a computer. Here is how.
 
-<div class="shots">
-<figure><img src="jumpbar-keywords.jpg" alt="Jumpbar keyword list: gh GitHub, hn Hacker News, mp Google Maps, st Steam under My keywords, and yt YouTube, wk Wikipedia, az Amazon, tr Google Translate, gg Google, dd DuckDuckGo under Built-in keywords" width="460" height="1000" loading="lazy"><figcaption>Each site gets a short keyword. Type it before your search in the address bar.</figcaption></figure>
-<figure><img src="jumpbar-add-site.jpg" alt="Jumpbar Add site screen with the search address https://www.imdb.com/find?q={query}, the name IMDb and two keywords, im and imdb" width="460" height="1000" loading="lazy"><figcaption>Adding a site: paste its search address, name it, pick a keyword</figcaption></figure>
-</div>
-
 ## Can you add a custom search engine to Safari on iPhone?
 
 No. In **Settings > Apps > Safari > Search Engine** you can choose only from the engines Apple lists, such as Google, Bing, DuckDuckGo and Ecosia. There is no field for your own address.
@@ -36,6 +31,15 @@ Quick Website Search is already on your iPhone, under **Settings > Apps > Safari
 4. Back in Safari settings, turn off **Preload Top Hit**. Leaving it on makes the jump miss sometimes.
 5. In Safari, type a keyword, a space and your search: `yt lofi`, `wk coffee`, `az usb c cable`.
 
+<div class="shots">
+<figure><img src="settings-allow-extension.jpg" alt="iPhone Settings, Apps, Safari, Extensions, Jumpbar page with the Allow Extension switch marked 2 in red" width="434" height="1000" loading="lazy"><figcaption>2. Extensions, Jumpbar, Allow Extension</figcaption></figure>
+<figure><img src="settings-all-websites.jpg" alt="The All Websites permission for Jumpbar with Ask, Deny and Allow, and Allow marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. All Websites: Allow</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="settings-preload-top-hit.jpg" alt="Safari settings with the Preload Top Hit switch marked 4 in red, to be turned off" width="434" height="1000" loading="lazy"><figcaption>4. Turn off Preload Top Hit</figcaption></figure>
+<figure><img src="safari-keyword.jpg" alt="Safari address bar with yt lofi typed in, marked 5 in red" width="434" height="1000" loading="lazy"><figcaption>5. Type a keyword and your search</figcaption></figure>
+</div>
+
 Safari sends the search to your default engine as usual. Jumpbar sees the keyword at the start and switches to that site's results before the page loads. A search without a keyword goes to your default engine as it always did.
 
 Type just the keyword, like `yt`, to open the site's home page.
@@ -45,7 +49,12 @@ Type just the keyword, like `yt`, to open the site's home page.
 1. On the site, search for anything, for example `coffee`.
 2. Copy the address of the results page. It looks like `https://www.imdb.com/find?q=coffee`.
 3. In Jumpbar, tap **Add a site** under My keywords and paste it. The app finds your search word and replaces it with `{query}`.
-4. Give it a name and a keyword, then tap **See if it works** to try it.
+4. Give it a name and a keyword, then tap **See if it works** to try it. Tap **Save** at the top right.
+
+<div class="shots">
+<figure><img src="jumpbar-add-a-site.jpg" alt="Jumpbar keyword list with Add a site under My keywords marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. Add a site</figcaption></figure>
+<figure><img src="jumpbar-see-if-it-works.jpg" alt="Jumpbar Add site screen for IMDb, address https://www.imdb.com/find?q={query} and keyword im, with See if it works marked 4 in red and Save marked" width="434" height="1000" loading="lazy"><figcaption>4. See if it works, then Save</figcaption></figure>
+</div>
 
 If you'd rather not look up addresses, the [keyword gallery](/apps/jumpbar/gallery/) has ready-made sites you can add with one tap. Each address there was checked against the live site.
 
