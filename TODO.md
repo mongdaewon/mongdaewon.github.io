@@ -1,14 +1,5 @@
 # TODO
 
-## 사이트
-
-- [ ] AudioJoin 처리방침 분석 항목에 "구매(상품·가격, 결제 정보 제외)" 한 줄
-      App Store 개인정보 라벨에 "구입 항목"(분석, 신원 연결 안 됨)을 2026-11-26 게시했다 — 앱이 구매를 GA4 로 보낸다(`Analytics.logTransaction`).
-      `content/apps/audiojoin/privacy-policy/index.md` §Firebase Analytics 수집 목록에 더하고 `Last updated` 를 바꾼다. 다른 언어 판도 같이.
-- [ ] 페이지에 og 태그(og:title·og:description·og:image) 넣기
-      네이버 블로그 글에 이 사이트 주소를 넣으면 카드 설명이 `description` 대신 본문 첫 줄(`← 블로그 …`)로 나오고 그림이 없다(2026-11-26 몽대원 블로그 3편 실측). `layouts/_default/baseof.html` 에 og 태그가 없다.
-      고친 뒤 몽대원 블로그 쪽에서 카드를 다시 붙여 갱신한다.
-
 ## 블로그 새 글 (하루 1개, 2026-11-17 우버서제스트 미국 검색량)
 글 하나 = 그날 키워드로 `/google-keyword` 재확인 → 앱 레포 기능·스크린샷 대조 → 발행·색인·월간 리뷰 기준선.
 - [ ] 아이폰 할 일 위젯 글 (Ivy To Do) @11/27
