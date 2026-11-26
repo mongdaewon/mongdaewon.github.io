@@ -27,7 +27,7 @@ tg() {  # 텔레그램 한 통(키체인 retro-telegram, 개인 자동화와 같
 git -C "$R" fetch -q origin main
 [[ -d "$W" ]] && git -C "$R" worktree remove --force "$W"   # 어제 초안 브랜치는 남는다(폴더만 치움)
 git -C "$R" worktree add -q -B "post/$today" "$W" origin/main || { tg "블로그 초안 실패: worktree"; exit 1; }
-drafts=$(git -C "$R" for-each-ref --format='%(refname:short) %(contents:subject)' 'refs/heads/post/*' | rg -v "^post/$today ")
+drafts=$(git -C "$R" for-each-ref --no-merged origin/main --format='%(refname:short) %(contents:subject)' 'refs/heads/post/*' | rg -v "^post/$today ")
 
 prompt="오늘($today) mongdaewon.com 블로그 새 글 한 편의 초안을 이 worktree(브랜치 post/$today, origin/main 기준)에 만든다.
 사람은 지금 없다. 묻지 말고 끝까지 하고, 막히면 거기까지 커밋한 뒤 무엇이 막혔는지 보고한다.
