@@ -10,7 +10,7 @@
       normalize audio volume 140 · 27, make audio louder iphone 30 · 30. 볼륨 맞추기는 무료(AudioJoin 엔 없음).
 - [ ] 아이폰 음성 메모 자르기 글 (AudioJoin) @11/30
       trim voice memo iphone 40 · 31, shorten audio file iphone 20 · 13. 자르기는 무료, 0.1초 단위.
-- [ ] 박스 호흡 vs 4-7-8 글 쓸지 정하기 (Deep Breath)
+- [ ] 박스 호흡 vs 4-7-8 글 (Deep Breath) @12/1
       box breathing vs 4-7-8 590 · 27, 4-7-8 breathing timer 110 · 14, how to do 4-7-8 breathing 70 · 10(11/25 우버서제스트). box-breathing-app 글의 비교 표와 안 겹치게.
 - [ ] 경쟁 앱 비교 글 후보 고르기 @12/1
       앱마다 스토어 상위 경쟁 앱을 받아 보고, 우리가 확연히 나은 점(무손실·무료 범위·업로드 없음·광고 없음 등)이 앱 레포로 확인되는 것만 남긴다.
