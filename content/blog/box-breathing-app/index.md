@@ -7,18 +7,26 @@ app: deep-breath
 
 A box breathing app counts the four sides of the box for you: breathe in for 4 seconds, hold for 4, breathe out for 4, hold for 4. Deep Breath does this for free on iPhone and Android, with no ads and no account.
 
-<div class="shots">
-<figure><img src="box-hold-full.jpg" alt="Deep Breath during Box Breathing 4-4-4-4: the petals are fully open, the number 4 and the word Hold are below them" width="460" height="1000" loading="lazy"><figcaption>Lungs full: the petals are open, hold for 4</figcaption></figure>
-<figure><img src="box-hold-empty.jpg" alt="Deep Breath during the second hold of Box Breathing: the petals have closed to a small dot, with the number 2 and the word Hold" width="460" height="1000" loading="lazy"><figcaption>Lungs empty: the petals are closed, hold again</figcaption></figure>
-</div>
-
 ## How to start a box breathing timer
 
 We make [Deep Breath](/apps/deep-breath/). Box breathing is one of its five built-in patterns.
 
-1. Open **Settings** in the app and choose **Box Breathing** as the breathing method.
-2. Choose a session length. The shortest is 1 minute, and you can also leave it unlimited.
-3. Go back and press the start button. Breathe with the petals.
+1. Tap **Settings** (the gear at the top right).
+2. Tap **Breathing method** and choose **Box Breathing**.
+3. Back in Settings, tap **Session Duration** and pick a length. The shortest is 1 minute, and you can also choose **Unlimited**.
+4. Go back. The top of the screen now says Box Breathing, 4 - 4 - 4 - 4. Tap **Play** and breathe with the petals.
+
+<div class="shots">
+<figure><img src="deepbreath-settings.jpg" alt="Deep Breath home screen with the Settings gear at the top right marked 1 in red" width="434" height="1000" loading="lazy"><figcaption>1. Settings</figcaption></figure>
+<figure><img src="deepbreath-box.jpg" alt="Deep Breath Breathing method list with Box Breathing, 4 - 4 - 4 - 4, marked 2 in red" width="434" height="1000" loading="lazy"><figcaption>2. Breathing method, then Box Breathing</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="deepbreath-duration.jpg" alt="Deep Breath Session Duration menu from 1 min to 30 min and Unlimited, marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. Session Duration</figcaption></figure>
+<figure><img src="deepbreath-play.jpg" alt="Deep Breath home screen showing Box Breathing (1 min), 4 - 4 - 4 - 4, with the Play button marked 4 in red" width="434" height="1000" loading="lazy"><figcaption>4. Play</figcaption></figure>
+</div>
+<div class="shots one">
+<figure><img src="box-hold-full.jpg" alt="Deep Breath during Box Breathing 4-4-4-4: the petals are fully open, the number 4 and the word Hold are below them" width="460" height="1000" loading="lazy"><figcaption>Lungs full: the petals are open, hold for 4</figcaption></figure>
+</div>
 
 The petals open as you breathe in and close as you breathe out. The word below them says what to do, and the number shows how many seconds are left. Sound and vibration mark each step too, which helps if you would rather close your eyes.
 
