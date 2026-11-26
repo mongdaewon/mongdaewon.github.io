@@ -43,18 +43,24 @@ If the files are already named in the right order and you need every page as it 
 
 We make [JoinPDF](/apps/joinpdf/) for the other case: when the order, or single pages, matter.
 
+1. Tap **Choose PDF or files** for your PDFs, and **Choose photos** for pictures. **Scan a document** takes a paper page with the camera.
+2. Every page appears on one board, numbered. A three-page PDF becomes three pages you can move on their own. Touch and hold a page, then drag it where it belongs.
+3. Tap pages to select them, then tap **Rotate**, **Duplicate** or **Remove** at the bottom. **Blank page** adds an empty page.
+4. Tap **Save**, then **Save to Files**. Turn on **Lock with a password** first if the PDF should be locked.
+
 <div class="shots">
-<figure><img src="joinpdf-board.jpg" alt="JoinPDF board titled 8 pages, A4: photos and the pages of a contract PDF side by side in a numbered grid, with a Save button at the top right" width="460" height="1000" loading="lazy"><figcaption>Every page of every file on one board</figcaption></figure>
+<figure><img src="joinpdf-choose.jpg" alt="JoinPDF first screen with Choose PDF or files marked 1 in red" width="434" height="1000" loading="lazy"><figcaption>1. Choose PDF or files</figcaption></figure>
+<figure><img src="joinpdf-drag.jpg" alt="JoinPDF board of nine numbered pages from PDFs and photos, with page 6 marked 2 in red to touch and hold and drag" width="434" height="1000" loading="lazy"><figcaption>2. Touch and hold a page, then drag</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="joinpdf-select.jpg" alt="JoinPDF with one page selected and the Rotate, Duplicate and Remove buttons marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. Select pages, then Rotate, Duplicate or Remove</figcaption></figure>
+<figure><img src="joinpdf-save.jpg" alt="JoinPDF Save PDF sheet with Save, the Lock with a password switch and Save to Files marked 4 in red" width="434" height="1000" loading="lazy"><figcaption>4. Save, then Save to Files</figcaption></figure>
+</div>
+<div class="shots one">
 <figure><img src="joinpdf-saved.jpg" alt="JoinPDF Saved to Files sheet showing JoinPDF-demo.pdf in Downloads, locked with a password" width="460" height="1000" loading="lazy"><figcaption>Saved as one PDF, here with a password</figcaption></figure>
 </div>
 
-1. Tap **Choose PDF or files** for your PDFs, and **Choose photos** for pictures. **Scan a document** takes a paper page with the camera.
-2. Every page appears on one board, numbered. A three-page PDF becomes three pages you can move on their own.
-3. Touch and hold a page, then drag it where it belongs.
-4. Tap pages to select them, then rotate, duplicate or remove them. **Blank** adds an empty page.
-5. Tap **Save**, then **Save to Files**. Turn on the password switch first if the PDF should be locked.
-
-Photos of different sizes can look messy next to document pages. Under **Paper**, choose A4 or Letter and a margin, and every page is placed on the same size of paper.
+Photos of different sizes can look messy next to document pages. Tap **Paper**, choose A4 or Letter and a margin, and every page is placed on the same size of paper.
 
 ## Is it free?
 
