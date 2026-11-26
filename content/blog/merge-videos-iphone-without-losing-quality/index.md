@@ -43,17 +43,29 @@ Clips shot on the same iPhone with the same camera setting almost always match. 
 
 ## How to combine videos on iPhone without losing quality
 
-1. Open [JoinCut](/apps/joincut/) and pick the videos you want to join. They are joined back to back in the order you picked them.
-2. Check the order, and drag to change it if you tapped one out of turn.
-3. Save straight to Photos.
+1. Open [JoinCut](/apps/joincut/), tap **Choose from Photos** and pick the videos you want to join. They are numbered in the order you picked them.
+2. To change the order, touch and hold a video and drag it up or down. The lines at the right of each row show it can be moved.
+3. Check for the green line **No re-encoding · original quality**, then tap **Merge into one**.
+4. The first time, JoinCut asks where to save. Tap **Photos**.
 
-Formats that match are joined losslessly, and saving is instant. Merging your clips and saving them this way is free, with no ads.
+<div class="shots">
+<figure><img src="joincut-choose.jpg" alt="JoinCut start screen with Choose from Photos marked 1 in red" width="434" height="1000" loading="lazy"><figcaption>1. Choose from Photos</figcaption></figure>
+<figure><img src="joincut-order.jpg" alt="JoinCut list of two videos with the drag handle of video 2 marked 2 in red" width="434" height="1000" loading="lazy"><figcaption>2. Hold a video and drag to reorder</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="joincut-merge.jpg" alt="JoinCut list with No re-encoding, original quality and the Merge into one button marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. Merge into one</figcaption></figure>
+<figure><img src="joincut-photos.jpg" alt="JoinCut asking Where should this be saved, with Photos marked 4 in red" width="434" height="1000" loading="lazy"><figcaption>4. Save to Photos</figcaption></figure>
+</div>
+<div class="shots one">
+<figure><img src="joincut-saved.jpg" alt="JoinCut showing Saved to Photos with Original quality kept and an Open Photos button" width="460" height="1000" loading="lazy"><figcaption>Saved to Photos, original quality kept</figcaption></figure>
+</div>
+
+Formats that match are joined losslessly, and saving takes seconds. Joining two videos and saving them is free, with no ads and no watermark. JoinCut Plus joins three or more videos at once.
 
 If one clip does not match the rest, JoinCut points out which video is forcing the re-encode. You can drop that one with a tap and keep the rest lossless, or let it re-encode if you need that clip in the video.
 
-<div class="shots">
-<figure><img src="joincut-lossless.jpg" alt="JoinCut list of three 1920x1080 H.264 clips with the green line No re-encoding, original quality above Merge into one" width="460" height="1000" loading="lazy"><figcaption>Clips that match: no re-encoding, original quality</figcaption></figure>
-<figure><img src="joincut-mismatch.jpg" alt="JoinCut list where the third clip is 1280x720 and marked with a warning, with a note offering to remove video 3 so the other two join at original quality" width="460" height="1000" loading="lazy"><figcaption>One clip that does not: JoinCut names it and offers to drop it</figcaption></figure>
+<div class="shots one">
+<figure><img src="joincut-mismatch.jpg" alt="JoinCut list where the third clip is 1280x720 and marked with a warning, with a note offering to remove video 3 so the other two join at original quality" width="460" height="1000" loading="lazy"><figcaption>One clip that does not match: JoinCut names it and offers to drop it</figcaption></figure>
 </div>
 
 ## Keeping only part of a video
