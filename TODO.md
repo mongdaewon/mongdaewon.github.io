@@ -18,6 +18,23 @@
       앱마다 스토어 상위 경쟁 앱을 받아 보고, 우리가 확연히 나은 점(무손실·무료 범위·업로드 없음·광고 없음 등)이 앱 레포로 확인되는 것만 남긴다.
       `<경쟁앱> alternative`·`<경쟁앱> vs`·`best <분류> app` 을 /google-keyword 로 재고 의도가 기존 글과 겹치면 기존 글 표에 넣는다.
 
+## 기존 사용법 글에 빨간 박스 단계 캡처 넣기 (2026-11-26 사용자)
+규칙은 AGENTS §블로그 "사용법 글은 보고 그대로 따라 할 수 있게". 글 하나 = 단계마다 시뮬레이터 캡처 + 빨간 박스·번호, 본문 단계 번호와 맞춤, 배포 후 GSC 색인 재요청은 안 한다(이미 요청함).
+- [ ] trim-video-iphone 시범 사용자 확인 (캡처 8장 넣음, 11/26)
+- [ ] merge-videos-iphone-without-losing-quality (JoinCut)
+- [ ] combine-pdf-files-iphone (JoinPDF)
+- [ ] make-pdf-from-photos-iphone (JoinPDF)
+- [ ] convert-voice-memo-to-mp3-iphone (AudioJoin + 음성 메모)
+- [ ] merge-voice-memos-iphone (JoinSound)
+- [ ] remove-silence-from-audio (JoinSound)
+- [ ] extract-audio-from-video-iphone (JoinSound)
+- [ ] box-breathing-app (Deep Breath)
+- [ ] safari-custom-search-engine-iphone (Jumpbar + 설정 앱)
+- [ ] combine-pdf-files-android (JoinPDF Android, 에뮬레이터)
+- [ ] screen-record-with-sound-android (Recnow, 에뮬레이터)
+- [ ] to-do-list-apple-watch-complication (Ivy To Do, 워치 시뮬레이터)
+      ivy-lee-method·open-mkv-files·combine-audio-files 는 앱 조작 단계가 적어 뺐다. 시범 뒤 다시 본다.
+
 ## 한국어 블로그 시험 3편 (2026-11-24 시작)
 규칙은 AGENTS §블로그. 우버서제스트 한국 검색량·난이도, 기준선 0.
 - [ ] 한국어 3편 4주 결과 보고 계속할지 정하기 @12/24

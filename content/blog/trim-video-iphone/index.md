@@ -9,9 +9,17 @@ To trim a video on iPhone, open it in Photos, tap **Edit** and drag the ends of 
 
 ## How to trim a video on iPhone with the Photos app
 
-1. Open the video in **Photos** and tap **Edit**.
-2. Drag either end of the frame strip under the video. The part outside the handles is cut.
-3. Tap **Done**, then **Save Video as New Clip** to keep the original as well, or **Save Video** to replace it.
+1. Open the video in **Photos** and tap **Edit** (the sliders icon at the bottom).
+2. Drag either end of the frame strip under the video. The strip turns yellow, and the part outside the handles is cut.
+3. Tap **Done** (the yellow check mark at the top right), then **Save Video as New Clip** to keep the original as well, or **Save Video** to replace it.
+
+<div class="shots">
+<figure><img src="photos-edit.jpg" alt="A video open in the iPhone Photos app with the Edit button marked 1 in red" width="434" height="1000" loading="lazy"><figcaption>1. Tap Edit</figcaption></figure>
+<figure><img src="photos-trim.jpg" alt="Photos video editor with the yellow trim strip marked 2 in red" width="434" height="1000" loading="lazy"><figcaption>2. Drag the ends of the strip</figcaption></figure>
+</div>
+<div class="shots one">
+<figure><img src="photos-save.jpg" alt="Photos save menu with Save Video as New Clip marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. Done, then Save Video as New Clip</figcaption></figure>
+</div>
 
 It is free, and it is the quickest way when the part you don't want is at the start or the end.
 
@@ -32,15 +40,23 @@ Not in Photos. The trim handles only move in from the two ends, so anything in t
 
 We make [JoinCut](/apps/joincut/) for this.
 
-<div class="shots">
-<figure><img src="joincut-trim.jpg" alt="JoinCut trimmer on a video of a dog: a filmstrip with yellow handles marking part 1, zoom options 1x to 8x, and an Add segment card" width="460" height="1000" loading="lazy"><figcaption>Drag the yellow handles to choose a part</figcaption></figure>
-<figure><img src="joincut-parts.jpg" alt="JoinCut trimmer with the video split into three parts, each shown as a card below the filmstrip" width="460" height="1000" loading="lazy"><figcaption>Several parts of one video, joined in order</figcaption></figure>
-</div>
-
-1. Tap **Choose from Photos** and pick the video. The trimmer opens.
+1. Tap **Choose from Photos** and pick the video. The video appears in a list; tap **Trim** (the scissors) next to it to open the trimmer.
 2. Drag the yellow handles around the first part you want to keep, the bit before the scene you want gone.
-3. Tap **Add segment** and set the second part, the bit after it.
-4. Tap the check mark, then **Merge into one**. The two parts are joined into one video and saved to Photos.
+3. Tap **Add segment** and drag the new yellow handles around the second part, the bit after it. Then tap the check mark at the top right.
+4. Tap **Merge into one**. The two parts are joined into one video.
+5. The first time, JoinCut asks where to save. Tap **Photos**.
+
+<div class="shots">
+<figure><img src="joincut-choose.jpg" alt="JoinCut start screen with Choose from Photos marked 1 in red" width="434" height="1000" loading="lazy"><figcaption>1. Choose from Photos</figcaption></figure>
+<figure><img src="joincut-part1.jpg" alt="JoinCut trimmer with the yellow handles around part 1 marked 2 in red" width="434" height="1000" loading="lazy"><figcaption>2. Drag the yellow handles around part 1</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="joincut-part2.jpg" alt="JoinCut trimmer with part 2 at the end of the video marked 3 and the check mark at the top right" width="434" height="1000" loading="lazy"><figcaption>3. Add segment, set part 2, tap the check mark</figcaption></figure>
+<figure><img src="joincut-merge.jpg" alt="JoinCut list with the Merge into one button marked 4 in red" width="434" height="1000" loading="lazy"><figcaption>4. Merge into one</figcaption></figure>
+</div>
+<div class="shots one">
+<figure><img src="joincut-photos.jpg" alt="JoinCut asking where to save, with Photos marked 5 in red" width="434" height="1000" loading="lazy"><figcaption>5. Save to Photos</figcaption></figure>
+</div>
 
 The middle is gone, and the cut is clean: JoinCut copies the frames you kept instead of drawing them again, so the video looks exactly like the original and saves in seconds. Zoom the strip to 2x, 4x or 8x when the cut has to land on a precise moment.
 
