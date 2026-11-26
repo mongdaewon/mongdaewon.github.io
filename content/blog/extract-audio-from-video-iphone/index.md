@@ -7,11 +7,6 @@ app: joinsound
 
 The iPhone has no button that turns a video into audio, but there are three ways to do it: a Shortcut you build once in the Shortcuts app, an online converter, or an app like JoinSound. The Shortcut is free and built in. An app takes fewer steps. Here is how each one works.
 
-<div class="shots">
-<figure><img src="joinsound-start.jpg" alt="JoinSound start screen with two buttons: Choose Audio Files and Get Sound from Videos" width="460" height="1000" loading="lazy"><figcaption>Get Sound from Videos opens your Photos library</figcaption></figure>
-<figure><img src="joinsound-sound-from-video.jpg" alt="JoinSound with one row named Beach Day showing a waveform. M4A is selected and marked No re-encoding, original quality, above a Save button" width="460" height="1000" loading="lazy"><figcaption>A video becomes an audio file, ready to trim and save</figcaption></figure>
-</div>
-
 ## Can you extract audio from a video on iPhone without an app?
 
 Yes, with the Shortcuts app or a website. Each way has a catch:
@@ -41,10 +36,22 @@ You are not alone. Since iOS 26, people on Apple's forums have reported that thi
 
 ## How to extract audio from a video with an app
 
-1. Open JoinSound and tap **Get Sound from Videos**. Your Photos library opens, showing only videos.
-2. Pick a video. JoinSound takes the sound and drops the picture, so a new row appears with a waveform.
-3. Tap the scissors on the row if you want only part of it. Long pauses can be [shortened there too](/blog/remove-silence-from-audio/).
-4. Tap **Preview Result** to listen, then tap **Save**.
+1. Open JoinSound and tap **Get Sound from Videos**. Your Photos library opens, showing only videos. Pick one. JoinSound takes the sound and drops the picture, so a new row appears with a waveform.
+2. Tap **Trim** (the scissors) on the row if you want only part of it. Long pauses can be [shortened there too](/blog/remove-silence-from-audio/).
+3. Tap **Preview Result** to listen.
+4. Tap **Save**. The share sheet opens with the new audio file: pick **Save to Files**, or send it straight to another app.
+
+<div class="shots">
+<figure><img src="joinsound-get-sound.jpg" alt="JoinSound start screen with Get Sound from Videos marked 1 in red" width="434" height="1000" loading="lazy"><figcaption>1. Get Sound from Videos</figcaption></figure>
+<figure><img src="joinsound-trim.jpg" alt="JoinSound with one row named Beach Day showing the sound of the video as a waveform, and the Trim scissors marked 2 in red" width="434" height="1000" loading="lazy"><figcaption>2. Trim (the scissors), if you need only part</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="joinsound-preview-button.jpg" alt="JoinSound with the Preview Result button marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. Preview Result</figcaption></figure>
+<figure><img src="joinsound-save.jpg" alt="JoinSound with M4A selected, marked No re-encoding, original quality, and the Save button marked 4 in red" width="434" height="1000" loading="lazy"><figcaption>4. Save</figcaption></figure>
+</div>
+<div class="shots one">
+<figure><img src="joinsound-file-ready.jpg" alt="JoinSound showing File ready with an M4A file name and a Share button" width="460" height="1000" loading="lazy"><figcaption>The sound is now an M4A file. Tap Share to send it again</figcaption></figure>
+</div>
 
 A video saved in Files works too. Tap **Choose Audio Files** and pick it there, or share it to JoinSound from Files.
 
