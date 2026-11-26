@@ -7,11 +7,6 @@ app: audiojoin
 
 The iPhone can't save a voice memo as MP3 by itself, so you need an app, a website, or a Mac. Voice Memos records M4A files, and the Shortcuts app only encodes audio to M4A or AIFF. Here is what each way costs and what gets uploaded.
 
-<div class="shots">
-<figure><img src="audiojoin-save-mp3.jpg" alt="AudioJoin Save screen with three formats: M4A, Plays on iPhone and most apps; MP3, Opens anywhere at all; WAV, Uncompressed. Below are the file name and length" width="460" height="1000" loading="lazy"><figcaption>Pick MP3 when you save. MP3 and WAV are Plus options.</figcaption></figure>
-<figure><img src="audiojoin-share.jpg" alt="iOS share sheet for the saved audio file, with Copy, Save to Files and Use as Ringtone" width="460" height="1000" loading="lazy"><figcaption>The share sheet opens on its own. Tap Save to Files.</figcaption></figure>
-</div>
-
 ## Do you need an MP3?
 
 Often not. An M4A voice memo plays on iPhone, Android, Mac and Windows, and most apps and websites take it. Convert it when something asks for MP3 by name, like an upload form or an older player that only reads MP3.
@@ -42,8 +37,16 @@ Each file can be up to 200 MB. For a recording longer than about an hour, use a 
 
 1. In Voice Memos, open the recording and tap the **Share** button. Pick **Add to AudioJoin**. If you don't see it, tap **More** at the end of the app row. Tap **Done** when it says the memo was added.
 2. Open AudioJoin. The memo is on the timeline. If you want to cut a false start or a long pause at the end, tap **Trim in Detail** first.
-3. Tap **Save**, choose **MP3** under Format, and change the name if you like.
-4. Tap **Save**. When the share sheet opens, tap **Save to Files**, or send the MP3 straight to a message or mail.
+3. Tap **Save** at the top right and choose **MP3** under Format. MP3 carries a Plus tag; on the free plan, M4A is the format you can save. Change the name if you like.
+4. Tap **Save** at the bottom. When the share sheet opens, tap **Save to Files**, or send the MP3 straight to a message or mail.
+
+<div class="shots">
+<figure><img src="audiojoin-trim.jpg" alt="AudioJoin with a voice memo, New Recording, on the timeline and the Trim in Detail button marked 2 in red" width="434" height="1000" loading="lazy"><figcaption>2. Trim in Detail, if you want to cut the ends</figcaption></figure>
+<figure><img src="audiojoin-mp3.jpg" alt="AudioJoin Save screen with the MP3 format, tagged Plus, marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. Save, then MP3 under Format</figcaption></figure>
+</div>
+<div class="shots one">
+<figure><img src="audiojoin-save.jpg" alt="AudioJoin Save screen with MP3 selected and the Save button at the bottom marked 4 in red" width="434" height="1000" loading="lazy"><figcaption>4. Save, then Save to Files</figcaption></figure>
+</div>
 
 Your original voice memo stays as it is. The MP3 is a new file.
 
