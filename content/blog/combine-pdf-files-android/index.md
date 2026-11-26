@@ -29,16 +29,24 @@ An online merger is fine for a menu or a public flyer. For a contract, a bank st
 
 We make [JoinPDF](/apps/joinpdf/) for this.
 
-<div class="shots">
-<figure><img src="joinpdf-board.jpg" alt="JoinPDF on Android: a board titled 8 pages, A4, with photos and the pages of a contract PDF side by side in a numbered grid" width="462" height="1000" loading="lazy"><figcaption>Every page of every file on one board</figcaption></figure>
-<figure><img src="joinpdf-save.jpg" alt="JoinPDF Save PDF sheet: 8 pages, 175 kB, a Lock with a password switch, and a Save to Files button" width="462" height="1000" loading="lazy"><figcaption>Check the page count and size, then save</figcaption></figure>
-</div>
+1. Tap **Choose PDF or files** and pick your PDFs. **Choose photos** adds pictures from your gallery, and **＋** on the board adds more later.
+2. Every page appears on one board, numbered. A three-page PDF becomes three pages you can move on their own. Touch and hold a page, then drag it where it belongs.
+3. Tap pages to select them, then tap **Rotate**, **Duplicate** or **Remove** at the bottom. **Blank** adds an empty page.
+4. Tap **Save**. The sheet shows the page count and file size. Turn on **Lock with a password** or **Compress** here if you need them, then tap **Save to Files**. **Share…** sends it straight to an email or chat instead.
+5. Pick a folder, then tap **SAVE**.
 
-1. Tap **Choose PDF or files** and pick your PDFs. Tap **＋** later to add more, or **Choose photos** for pictures from your gallery.
-2. Every page appears on one board, numbered. A three-page PDF becomes three pages you can move on their own.
-3. Touch and hold a page, then drag it where it belongs.
-4. Tap pages to select them, then **Rotate**, **Duplicate** or **Remove**. **Blank** adds an empty page.
-5. Tap **Save**. The sheet shows the page count and file size. Tap **Save to Files** and pick a folder, or **Share…** to send it straight to an email or chat.
+<div class="shots">
+<figure><img src="joinpdf-choose.jpg" alt="JoinPDF first screen on Android with Choose PDF or files marked 1 in red" width="416" height="1000" loading="lazy"><figcaption>1. Choose PDF or files</figcaption></figure>
+<figure><img src="joinpdf-drag.jpg" alt="JoinPDF board of seven numbered pages from photos and a contract PDF, with page 6 marked 2 in red to touch and hold and drag" width="416" height="1000" loading="lazy"><figcaption>2. Touch and hold a page, then drag</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="joinpdf-select.jpg" alt="JoinPDF with pages 2 and 4 selected and the Rotate, Duplicate and Remove buttons at the bottom marked 3 in red" width="416" height="1000" loading="lazy"><figcaption>3. Select pages, then Rotate, Duplicate or Remove</figcaption></figure>
+<figure><img src="joinpdf-save.jpg" alt="JoinPDF Save PDF sheet with 7 pages and 143 kB, Save marked at the top and Save to Files marked 4 in red" width="416" height="1000" loading="lazy"><figcaption>4. Save, then Save to Files</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="joinpdf-folder.jpg" alt="Android's save screen open at Downloads with the SAVE button marked 5 in red" width="416" height="1000" loading="lazy"><figcaption>5. Pick a folder, then SAVE</figcaption></figure>
+<figure><img src="joinpdf-saved.jpg" alt="JoinPDF Saved sheet showing the new PDF file name and a Done button" width="446" height="1000" loading="lazy"><figcaption>Saved as one PDF</figcaption></figure>
+</div>
 
 Have it on paper? **Scan a document** on the first screen takes the page with the camera, crops it, and puts it on the board like any other page.
 

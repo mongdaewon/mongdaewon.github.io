@@ -20,9 +20,6 @@
 
 ## 기존 사용법 글에 빨간 박스 단계 캡처 넣기 (2026-11-26 사용자)
 규칙은 AGENTS §블로그 "사용법 글은 보고 그대로 따라 할 수 있게". 글 하나 = 단계마다 시뮬레이터 캡처 + 빨간 박스·번호, 본문 단계 번호와 맞춤, 배포 후 GSC 색인 재요청은 안 한다(이미 요청함).
-- [ ] trim-video-iphone 시범 사용자 확인 (캡처 8장 넣음, 11/26)
-- [ ] combine-pdf-files-android (JoinPDF Android, 에뮬레이터)
-- [ ] screen-record-with-sound-android (Recnow, 에뮬레이터)
 - [ ] to-do-list-apple-watch-complication (Ivy To Do, 워치 시뮬레이터)
       ivy-lee-method·open-mkv-files·combine-audio-files 는 앱 조작 단계가 적어 뺐다. 시범 뒤 다시 본다.
 
