@@ -42,16 +42,22 @@ Photos straight from the camera are large. Ten of them can make a PDF too big fo
 
 We make [JoinPDF](/apps/joinpdf/) for this.
 
-<div class="shots">
-<figure><img src="joinpdf-home.jpg" alt="JoinPDF first screen with three choices: Choose photos, Choose PDF or files, and Scan a document. Below them: Files stay on your device." width="460" height="1000" loading="lazy"><figcaption>Start with Choose photos</figcaption></figure>
-<figure><img src="joinpdf-paper.jpg" alt="JoinPDF board with photos and document pages, and the Paper tab open: A4 and a Thin margin are selected" width="460" height="1000" loading="lazy"><figcaption>Paper: every photo on A4 with a thin margin</figcaption></figure>
-</div>
-
 1. Tap **Choose photos** and pick your pictures. Each one becomes a page on the board, numbered.
 2. Touch and hold a page, then drag it into place. Tap pages to rotate or remove them.
-3. Under **Paper**, pick **A4** or **Letter** and a margin, so a tall phone photo and a wide one sit on the same size of page. **Original** keeps each photo's own shape.
-4. Under **Size**, pick a smaller size if the file has to fit an email or an upload limit. Only the photos are made smaller.
-5. Tap **Save**, then **Save to Files**.
+3. Tap **Paper** and pick **A4** or **Letter** and a margin, so a tall phone photo and a wide one sit on the same size of page. **Original** keeps each photo's own shape.
+4. Tap **Save**. Turn on **Compress** if the file has to fit an email or an upload limit: the photos are made smaller, and text stays sharp. Then tap **Save to Files**.
+
+<div class="shots">
+<figure><img src="joinpdf-choose.jpg" alt="JoinPDF first screen with Choose photos marked 1 in red" width="434" height="1000" loading="lazy"><figcaption>1. Choose photos</figcaption></figure>
+<figure><img src="joinpdf-drag.jpg" alt="JoinPDF board of five numbered photo pages, with page 4 marked 2 in red to touch and hold and drag" width="434" height="1000" loading="lazy"><figcaption>2. Touch and hold a page, then drag</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="joinpdf-paper.jpg" alt="JoinPDF Paper panel with the paper sizes Original, A4 and Letter and the margins None, Thin and Wide marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. Paper: A4 or Letter, and a margin</figcaption></figure>
+<figure><img src="joinpdf-save.jpg" alt="JoinPDF Save PDF sheet with Save, the Compress switch and Save to Files marked 4 in red" width="434" height="1000" loading="lazy"><figcaption>4. Save, Compress if needed, then Save to Files</figcaption></figure>
+</div>
+<div class="shots one">
+<figure><img src="joinpdf-saved.jpg" alt="JoinPDF Saved to Files sheet showing JoinPDF-demo.pdf in Downloads" width="460" height="1000" loading="lazy"><figcaption>Five photos saved as one PDF</figcaption></figure>
+</div>
 
 Need a PDF you already have in the same file, like a form plus photos of your receipts? Tap **＋** and **Choose PDF or files**. Shooting a paper page right now? **Scan a document** crops it straight with the camera.
 
