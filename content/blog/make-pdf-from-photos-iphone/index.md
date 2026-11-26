@@ -36,7 +36,7 @@ The Print trick is fine for one or two pictures. With more, a few things get in 
 | Free | ✓ | ✓ up to 5 pages per PDF |
 | Photos leave your iPhone | No | No |
 
-Photos straight from the camera are large. Ten of them can make a PDF too big for an email or an upload form.
+Photos straight from the camera are large. Ten of them can make a PDF too big for an email or an upload form. Here is [how to compress a PDF on iPhone](/blog/compress-pdf-iphone/) when that happens.
 
 ## How to make one PDF from many photos
 

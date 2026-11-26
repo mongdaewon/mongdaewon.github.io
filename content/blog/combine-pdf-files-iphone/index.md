@@ -46,7 +46,7 @@ We make [JoinPDF](/apps/joinpdf/) for the other case: when the order, or single 
 1. Tap **Choose PDF or files** for your PDFs, and **Choose photos** for pictures. **Scan a document** takes a paper page with the camera.
 2. Every page appears on one board, numbered. A three-page PDF becomes three pages you can move on their own. Touch and hold a page, then drag it where it belongs.
 3. Tap pages to select them, then tap **Rotate**, **Duplicate** or **Remove** at the bottom. **Blank page** adds an empty page.
-4. Tap **Save**, then **Save to Files**. Turn on **Lock with a password** first if the PDF should be locked.
+4. Tap **Save**, then **Save to Files**. Turn on **Lock with a password** first if the PDF should be locked. If the result is too big to send, turn on **Compress** there too: see [how to compress a PDF on iPhone](/blog/compress-pdf-iphone/).
 
 <div class="shots">
 <figure><img src="joinpdf-choose.jpg" alt="JoinPDF first screen with Choose PDF or files marked 1 in red" width="434" height="1000" loading="lazy"><figcaption>1. Choose PDF or files</figcaption></figure>
