@@ -7,11 +7,6 @@ app: joinsound
 
 Voice Memos can't join two recordings on its own, so to combine a lecture, a meeting or a song idea recorded in parts, you need a second app. Here is the shortest way, and what each option costs.
 
-<div class="shots">
-<figure><img src="joinsound-list.jpg" alt="JoinSound with two voice memos, New Recording and New Recording 2, in a numbered list above the Merge into one button. M4A is selected and marked No re-encoding, original quality" width="460" height="1000" loading="lazy"><figcaption>Two voice memos, top to bottom. The red marks on the second are Shorten silences, a Plus option.</figcaption></figure>
-<figure><img src="joinsound-preview.jpg" alt="JoinSound Preview: one waveform made of both recordings, with a yellow line where the second one starts" width="460" height="1000" loading="lazy"><figcaption>Preview: hear the joined file before you save it</figcaption></figure>
-</div>
-
 ## Can you combine voice memos on iPhone without an app?
 
 No. Voice Memos lets you [trim a recording or replace part of it](https://support.apple.com/guide/iphone/edit-or-delete-a-recording-iphc9bdaee83/ios), but there is no button that joins two separate recordings into one.
@@ -29,14 +24,22 @@ GarageBand is free and works, but it is a music studio. You place each recording
 
 ## How to combine voice memos on iPhone
 
-1. In Voice Memos, open a recording and tap the **Share** button. Pick **Add to JoinSound**. If you don't see it, tap **More** at the end of the app row.
-2. Do the same for the next recording. Each one is added to the end of the list in JoinSound.
-3. In JoinSound, drag the rows into the order you want. Tap the scissors on a row to cut a cough or a false start from the beginning or end.
-4. Tap **Preview Result** to hear the whole thing, then tap **Merge into one**.
+1. In Voice Memos, open a recording and tap the **Share** button. Pick **Add to JoinSound**. If you don't see it, tap **More** at the end of the app row. Do the same for the next recording. Each one is added to the end of the list in JoinSound.
+2. In JoinSound, drag a row by its handle (the three lines on the right) to put the recordings in order. Tap **Trim** (the scissors) on a row to cut a cough or a false start from the beginning or end.
+3. Tap **Preview Result** to hear the whole thing.
+4. Tap **Merge into one**.
+5. The share sheet opens with the new file, named with the date and time. Pick **Save to Files**, send it in a message, or open it in another app. To bring the sheet back later, tap **Share**.
 
-The new file is named with the date and time. Tap **Share** where the save button was to save it to Files, send it in a message, or open it in another app.
+<div class="shots">
+<figure><img src="joinsound-drag.jpg" alt="JoinSound list of two voice memos with the drag handle marked 2 in red and the Trim scissors marked" width="434" height="1000" loading="lazy"><figcaption>2. Drag to reorder, Trim to cut</figcaption></figure>
+<figure><img src="joinsound-preview-button.jpg" alt="JoinSound list with the Preview Result button marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. Preview Result</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="joinsound-merge.jpg" alt="JoinSound list with the Merge into one button marked 4 in red. M4A is selected and marked No re-encoding, original quality" width="434" height="1000" loading="lazy"><figcaption>4. Merge into one</figcaption></figure>
+<figure><img src="joinsound-share.jpg" alt="JoinSound showing File ready with the Share button marked 5 in red" width="434" height="1000" loading="lazy"><figcaption>5. Share, then Save to Files</figcaption></figure>
+</div>
 
-You can also open JoinSound first and pick the recordings with **+**, if they are already saved in Files.
+You can also open JoinSound first and tap **Choose Audio Files**, or **+** in the list, if the recordings are already saved in Files.
 
 ## Does merging lower the quality?
 

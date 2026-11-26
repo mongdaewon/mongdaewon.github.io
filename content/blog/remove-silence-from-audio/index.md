@@ -7,11 +7,6 @@ app: joinsound
 
 To remove silence from audio on a phone, open the recording in an app that finds the quiet gaps and shortens them for you. In JoinSound, that is one tap: **Shorten silences**, then **Natural** or **Tight**. It works the same on iPhone and Android, and the short pauses between words stay, so the voice doesn't sound chopped.
 
-<div class="shots">
-<figure><img src="joinsound-silences-found.jpg" alt="JoinSound trim screen for Interview Part 1 with Shorten silences set to Off. Four silences are shaded orange on the waveform and the label reads 4 silences, 00:07.20" width="460" height="1000" loading="lazy"><figcaption>Off: the silences are marked in orange, with how many and how long</figcaption></figure>
-<figure><img src="joinsound-silences-shortened.jpg" alt="The same recording with Shorten silences set to Natural. Red marks show where silence was taken out, the text says Shortens 4 silences to 0.5s, and the length drops by 5.20 seconds" width="460" height="1000" loading="lazy"><figcaption>Natural: each long silence becomes half a second</figcaption></figure>
-</div>
-
 ## Remove silence or shorten it?
 
 Shorten it. If every quiet moment is cut out, words run into each other and the recording sounds rushed. What you usually want gone is the dead air: the five seconds while someone thinks, or the gap before the speaker starts.
@@ -29,11 +24,22 @@ What counts as silence is measured for each recording, so a quiet room and a noi
 ## How to shorten silences in a recording
 
 1. Open JoinSound and tap **Choose Audio Files**. Pick your recording from Files, or share it to JoinSound.
-2. Tap the scissors on the recording's row.
-3. Look at the orange marks and the count under the waveform. That is every long silence in the file.
-4. Under **Shorten silences**, tap **Natural** or **Tight**. The change happens right away, and the time saved shows in red.
-5. Play it back. If it sounds too tight, tap **Natural**. If you change your mind, tap **Off**.
-6. Tap **Done**, then save as M4A, MP3 or WAV. If MP3 is all you need, there are [free ways to convert a voice memo](/blog/convert-voice-memo-to-mp3-iphone/).
+2. Tap **Trim** (the scissors) on the recording's row.
+3. Look at the orange marks on the waveform and the count next to **Shorten silences**. That is every long silence in the file, and how long they add up to.
+4. Under **Shorten silences**, tap **Natural** or **Tight**. The change happens right away, and the time saved shows in red. Play it back. If it sounds too tight, tap **Natural**, or **Off** to undo it. Then tap **Done**.
+5. Pick M4A, MP3 or WAV and tap **Save**. If MP3 is all you need, there are [free ways to convert a voice memo](/blog/convert-voice-memo-to-mp3-iphone/).
+
+<div class="shots">
+<figure><img src="joinsound-choose.jpg" alt="JoinSound start screen with Choose Audio Files marked 1 in red" width="434" height="1000" loading="lazy"><figcaption>1. Choose Audio Files</figcaption></figure>
+<figure><img src="joinsound-trim.jpg" alt="JoinSound list with one recording, Interview Part 1, and its Trim scissors marked 2 in red" width="434" height="1000" loading="lazy"><figcaption>2. Tap Trim (the scissors)</figcaption></figure>
+</div>
+<div class="shots">
+<figure><img src="joinsound-silences-found.jpg" alt="JoinSound trim screen with four silences shaded orange on the waveform. Shorten silences is Off and the count 4 silences, 00:07.20 is marked 3 in red" width="434" height="1000" loading="lazy"><figcaption>3. Orange marks: 4 silences found</figcaption></figure>
+<figure><img src="joinsound-natural.jpg" alt="The same recording with Natural marked 4 in red. Red lines show where silence was taken out, the text says Shortens 4 silences to 0.5s, the length drops by 5.20 seconds, and Done is marked" width="434" height="1000" loading="lazy"><figcaption>4. Natural or Tight, then Done</figcaption></figure>
+</div>
+<div class="shots one">
+<figure><img src="joinsound-save.jpg" alt="JoinSound list with the recording marked Silences shortened and the Save button marked 5 in red" width="434" height="1000" loading="lazy"><figcaption>5. Save</figcaption></figure>
+</div>
 
 Have several recordings? Each file gets its own setting, so a music intro can stay as it is while the interview after it is tightened. JoinSound then joins them into one file, the same way it [combines voice memos](/blog/merge-voice-memos-iphone/).
 
