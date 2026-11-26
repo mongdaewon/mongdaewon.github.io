@@ -6,7 +6,7 @@ layout: "single"
 
 **AudioJoin - Merge and Trim Audio Files**
 
-Last updated: November 5, 2026
+Last updated: November 26, 2026
 
 *This Privacy Policy is provided in English only.*
 
@@ -22,6 +22,7 @@ The app uses Firebase Analytics to collect anonymous usage data to improve the a
 
 - Which screens and features are used, and how often
 - Device type and operating system version
+- Plus purchases: which plan was bought and its price, never your payment details
 
 This data is tied to a per-install identifier, never to an account. The app has no login. It cannot be used to identify you personally, and it never includes your audio, your file names, or anything you typed.
 
