@@ -30,8 +30,8 @@ If the file has to get under a real limit, like 2 MB on an upload form, you need
 4. Tap **Save to Files**. **Share…** sends it straight to Mail or a chat instead.
 
 <div class="shots">
-<figure><img src="joinpdf-choose.jpg" alt="JoinPDF first screen with Choose PDF or files marked 1 in red" width="434" height="1000" loading="lazy"><figcaption>1. Choose PDF or files</figcaption></figure>
-<figure><img src="joinpdf-save.jpg" alt="JoinPDF board with a 5-page scanned PDF and the Save button marked 2 in red" width="434" height="1000" loading="lazy"><figcaption>2. Save</figcaption></figure>
+<figure><img src="joinpdf-choose.jpg" alt="JoinPDF first screen with Choose PDF or files marked 1 in red" width="600" height="623" loading="lazy"><figcaption>1. Choose PDF or files</figcaption></figure>
+<figure><img src="joinpdf-save.jpg" alt="JoinPDF board with a 5-page scanned PDF and the Save button marked 2 in red" width="600" height="623" loading="lazy"><figcaption>2. Save</figcaption></figure>
 </div>
 <div class="shots">
 <figure><img src="joinpdf-compress.jpg" alt="JoinPDF Save PDF sheet with the Compress switch on and Size 4.9 MB to 973 KB marked 3 in red" width="600" height="623" loading="lazy"><figcaption>3. Turn on Compress: Size 4.9 MB → 973 KB</figcaption></figure>
