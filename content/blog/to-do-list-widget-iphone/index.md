@@ -8,18 +8,18 @@ app: ivy-todo
 To add a to-do list widget on iPhone, touch and hold an empty spot on your Home Screen, tap **Edit**, then **Add Widget**, and pick your to-do app. Today's tasks then sit on your Home Screen, and on iOS 17 or later you can check them off right on the widget.
 
 <div class="shots one">
-<figure><img src="ivy-widget-home.jpg" alt="iPhone Home Screen with a medium Ivy To Do widget listing six tasks: Call Mom +1d, Pay the rent +2d, Read 20 pages +4d, and three checked-off tasks below" width="600" height="395" loading="lazy"><figcaption>A to-do list widget on the Home Screen</figcaption></figure>
+<figure><img src="ivy-widget-home.jpg" alt="iPhone Home Screen with a medium Ivy To Do widget listing six tasks: Call Mom +1d, Pay the rent +2d, Read 20 pages +4d, and three checked-off tasks below" width="600" height="338" loading="lazy"><figcaption>A to-do list widget on the Home Screen</figcaption></figure>
 </div>
 
 ## How to add a to-do list widget on iPhone
 
 We make [Ivy To Do](/apps/ivy-todo/), a daily to-do list for iPhone. Its widget is free. Install the app and add a task or two first, so the widget has something to show.
 
-1. Touch and hold an empty spot on your Home Screen until the apps jiggle. Tap **Edit** (the brush button at the top left).
+1. Touch and hold an empty spot on your Home Screen until the apps jiggle. Tap **Edit** at the top left (a brush button on iOS 27).
 2. Tap **Add Widget**.
 3. Scroll the list and tap **Ivy To Do**.
 4. Swipe left or right to pick a size, then tap **Add Widget**.
-5. Drag the widget where you want it and tap **Done** (the check mark at the top right).
+5. Drag the widget where you want it and tap **Done** at the top right (a check mark on iOS 27).
 
 <div class="shots">
 <figure><img src="ivy-widget-step1-edit.jpg" alt="Home Screen in edit mode with the brush button at the top left marked 1, Edit" width="600" height="623" loading="lazy"><figcaption>1. Touch and hold, then tap Edit</figcaption></figure>
@@ -51,15 +51,15 @@ Medium fits six tasks, which is the number [the Ivy Lee Method](/blog/ivy-lee-me
 Tap the box next to a task. It gets a check mark and moves below the tasks still open, so what's left is always on top. Tap the task name instead to open the app on Today.
 
 <div class="shots">
-<figure><img src="ivy-widget-check.jpg" alt="Ivy To Do widget with the box next to Call Mom marked: Tap the box" width="600" height="473" loading="lazy"><figcaption>Tap the box next to a task</figcaption></figure>
-<figure><img src="ivy-widget-checked.jpg" alt="The same widget after the tap: Pay the rent and Read 20 pages on top, Call Mom checked off and moved down" width="600" height="395" loading="lazy"><figcaption>Done tasks move down</figcaption></figure>
+<figure><img src="ivy-widget-check.jpg" alt="Ivy To Do widget with the box next to Call Mom marked: Tap the box" width="600" height="415" loading="lazy"><figcaption>Tap the box next to a task</figcaption></figure>
+<figure><img src="ivy-widget-checked.jpg" alt="The same widget after the tap: Pay the rent and Read 20 pages on top, Call Mom checked off and moved down" width="600" height="338" loading="lazy"><figcaption>Done tasks move down</figcaption></figure>
 </div>
 
 The red **+2d** badge means a task has waited two days. Ivy To Do moves anything you don't finish to tomorrow on its own, so the widget never shows yesterday's leftovers as a separate list.
 
 ## Can I put my to-do list on the Lock Screen?
 
-Yes. Touch and hold the Lock Screen, tap **Customize**, then add Ivy To Do under the clock. It shows what's left as a short list, or as a ring like 2/6.
+Yes. Customize your Lock Screen and add Ivy To Do to the widget row under the clock. It shows what's left as a short list, or as a ring like 2/6.
 
 <div class="shots one">
 <figure><img src="ivy-lock-screen.jpg" alt="iPhone Lock Screen at 23:00 with an Ivy To Do widget under the clock listing Gym, 30 minutes, Call Mom, Pay the rent and Read 20 pages" width="460" height="1000" loading="lazy"><figcaption>The Lock Screen widget (Plus)</figcaption></figure>
