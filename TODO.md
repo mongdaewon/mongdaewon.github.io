@@ -2,8 +2,6 @@
 
 ## 블로그 새 글 (하루 1개, 2026-11-17 우버서제스트 미국 검색량)
 글 하나 = 그날 키워드로 `/google-keyword` 재확인 → 앱 레포 기능·스크린샷 대조 → 발행·색인·월간 리뷰 기준선.
-- [ ] 아이폰 할 일 위젯 글 (Ivy To Do) @11/27
-      to do list widget iphone 320 · 29, daily to-do list app 320 · 16.
 - [ ] 아이폰 영상 GIF 만들기 글 (JoinCut) @11/28
       video to gif iphone 320 · 46(어려움). 무료는 워터마크.
 - [ ] 오디오 볼륨 고르게 맞추기 글 (JoinSound) @11/29

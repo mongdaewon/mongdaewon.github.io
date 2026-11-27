@@ -53,6 +53,6 @@ Anything you don't finish moves to tomorrow on its own, with a badge like **+2d*
 
 ## Is it free?
 
-Tasks, reminders, history and Home Screen widgets are free, with no ads and no account. The Apple Watch app and its complications are part of Ivy To Do Plus, a one-time purchase that also adds Lock Screen widgets, iCloud sync and a choice of app icons. Family Sharing is included. Without Plus, the complication shows a "Tap to see Plus" note instead of your tasks.
+Tasks, reminders, history and [Home Screen widgets](/blog/to-do-list-widget-iphone/) are free, with no ads and no account. The Apple Watch app and its complications are part of Ivy To Do Plus, a one-time purchase that also adds Lock Screen widgets, iCloud sync and a choice of app icons. Family Sharing is included. Without Plus, the complication shows a "Tap to see Plus" note instead of your tasks.
 
 The watch app needs watchOS 10 or later.

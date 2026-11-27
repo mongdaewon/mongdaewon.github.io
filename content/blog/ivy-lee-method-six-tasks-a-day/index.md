@@ -74,7 +74,7 @@ That is what [Ivy To Do](/apps/ivy-todo/) is. Start with your six most important
 <figure><img src="ivy-tomorrow.jpg" alt="Ivy To Do Tomorrow tab: the three unfinished tasks already carried into Wednesday, in the same order" width="460" height="1000" loading="lazy"><figcaption>Tomorrow: the leftovers are already there, in order</figcaption></figure>
 </div>
 
-The list sits in a Home Screen widget, so it is in front of you without opening anything, and on iPhone you can check tasks off on the widget itself. With Ivy To Do Plus, the same list can sit [on your Apple Watch face](/blog/to-do-list-apple-watch-complication/). An evening reminder brings you back to plan tomorrow. The calendar keeps every day you have done, with a monthly line: tasks done, perfect days and your current streak.
+The list sits in a [Home Screen widget](/blog/to-do-list-widget-iphone/), so it is in front of you without opening anything, and on iPhone you can check tasks off on the widget itself. With Ivy To Do Plus, the same list can sit [on your Apple Watch face](/blog/to-do-list-apple-watch-complication/). An evening reminder brings you back to plan tomorrow. The calendar keeps every day you have done, with a monthly line: tasks done, perfect days and your current streak.
 
 All of that is free, with no ads and no account.
 
